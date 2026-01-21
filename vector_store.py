@@ -6,6 +6,7 @@ from typing import Any, Dict, List, Optional, Tuple
 
 import requests
 from qdrant_client import QdrantClient
+from qdrant_client.http.exceptions import UnexpectedResponse
 from qdrant_client.models import Distance, PointStruct, VectorParams
 
 
@@ -23,17 +24,29 @@ class OllamaEmbeddings:
         self.ollama_url = ollama_url or "http://127.0.0.1:11434/api/embeddings"
 
     def embed_batch(self, texts: List[str]) -> List[List[float]]:
+        """Call Ollama embeddings API. Uses per-item calls because the API expects a single prompt."""
         if not texts:
             return []
-        payload = {"model": self.model, "input": texts}
-        resp = requests.post(self.ollama_url, json=payload, timeout=30)
-        resp.raise_for_status()
-        data = resp.json()
-        if isinstance(data, dict) and "embeddings" in data:
-            return data["embeddings"]
-        if isinstance(data, list):
-            return data
-        raise ValueError("Unexpected response from Ollama embed endpoint: %r" % (data,))
+
+        vectors: List[List[float]] = []
+        for t in texts:
+            payload = {"model": self.model, "prompt": t or ""}
+            resp = requests.post(self.ollama_url, json=payload, timeout=60)
+            resp.raise_for_status()
+            data = resp.json()
+
+            if isinstance(data, dict):
+                if "embedding" in data and isinstance(data["embedding"], list) and data["embedding"]:
+                    vectors.append(data["embedding"])
+                    continue
+                if "embeddings" in data and isinstance(data["embeddings"], list) and data["embeddings"]:
+                    # Some variants return a list-of-vectors under "embeddings" even for single prompt.
+                    if isinstance(data["embeddings"][0], list):
+                        vectors.extend(data["embeddings"])
+                        continue
+            raise ValueError("Unexpected response from Ollama embed endpoint: %r" % (data,))
+
+        return vectors
 
 
 class MockEmbeddings:
@@ -80,13 +93,19 @@ class VectorStore:
         self,
         collection_name: str = "api_calls",
         persist_path: str = "qdrant_db",
-        ollama_model: str = "nomic-embed-text",
+        qdrant_url: Optional[str] = "http://localhost:6333",
+        ollama_model: str = "nomic-embed-text:latest",
         ollama_url: Optional[str] = None,
         force_mock_embed: bool = False,
     ) -> None:
         self.collection_name = collection_name
         self.persist_path = persist_path or "qdrant_db"
-        self.client = QdrantClient(path=self.persist_path)
+        if qdrant_url:
+            # Default to Docker/HTTP endpoint; override via constructor if needed.
+            self.client = QdrantClient(url=qdrant_url)
+        else:
+            # Fallback to embedded/local folder for tests or offline use.
+            self.client = QdrantClient(path=self.persist_path)
 
         self.embedder = OllamaEmbeddings(model=ollama_model, ollama_url=ollama_url)
         if force_mock_embed or os.environ.get("QDRANT_FORCE_MOCK_EMBED"):
@@ -94,30 +113,32 @@ class VectorStore:
             self.embedder = MockEmbeddings()
 
     def _ensure_collection(self, dim: int) -> None:
-        existing_size: Optional[int] = None
-        try:
-            if self.client.collection_exists(self.collection_name):
-                info = self.client.get_collection(self.collection_name)
-                vectors_cfg = getattr(info.config.params, "vectors", None)
-                if hasattr(vectors_cfg, "size"):
-                    existing_size = vectors_cfg.size
-                elif isinstance(vectors_cfg, dict):
-                    existing_size = vectors_cfg.get("size")
-                if existing_size and existing_size != dim:
-                    raise ValueError(
-                        f"Collection {self.collection_name} exists with dim={existing_size}, incoming dim={dim}. "
-                        "Drop or recreate the collection manually to proceed."
-                    )
-                if existing_size:
-                    return
-        except Exception:
-            pass
+        if self.client.collection_exists(self.collection_name):
+            info = self.client.get_collection(self.collection_name)
+            vectors_cfg = getattr(info.config.params, "vectors", None)
+            existing_size: Optional[int] = None
+            if hasattr(vectors_cfg, "size"):
+                existing_size = vectors_cfg.size
+            elif isinstance(vectors_cfg, dict):
+                existing_size = vectors_cfg.get("size")
+            if existing_size and existing_size != dim:
+                raise ValueError(
+                    f"Collection {self.collection_name} exists with dim={existing_size}, incoming dim={dim}. "
+                    "Drop or recreate the collection manually to proceed."
+                )
+            return
 
         print(f"VectorStore: creating Qdrant collection {self.collection_name} with dim={dim}")
-        self.client.create_collection(
-            collection_name=self.collection_name,
-            vectors_config=VectorParams(size=dim, distance=Distance.COSINE),
-        )
+        try:
+            self.client.create_collection(
+                collection_name=self.collection_name,
+                vectors_config=VectorParams(size=dim, distance=Distance.COSINE),
+            )
+        except UnexpectedResponse as e:
+            # Handle race/dup-create cases gracefully.
+            if getattr(e, "status_code", None) == 409 or "already exists" in str(e):
+                return
+            raise
 
     def store_response(self, text: str, metadata: Optional[Dict[str, Any]] = None, chunk_size: int = 2000, overlap: int = 400) -> None:
         metadata = metadata or {}
