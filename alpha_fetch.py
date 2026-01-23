@@ -19,10 +19,10 @@ import time
 from typing import Any, Dict, Optional
 
 import requests
+from config import get_settings
 from vector_store import VectorStore
 
 API_URL = "https://www.alphavantage.co/query"
-API_KEY = "9T1YDCYY8W5OLHJ4"
 
 def fetch_av(function: str, api_key: str, params: Dict[str, str], retries: int = 3, backoff: float = 1.0) -> Dict[str, Any]:
     params = dict(params)
@@ -57,7 +57,7 @@ def save_jsonl(items, path: str) -> None:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Fetch Alpha Vantage data and save to JSON/JSONL")
-    parser.add_argument("--apikey", required=True, help="Alpha Vantage API key")
+    parser.add_argument("--apikey", required=False, help="Alpha Vantage API key (overrides .env)")
     parser.add_argument("--function", required=True, help="Alpha Vantage function name, e.g. NEWS_SENTIMENT")
     parser.add_argument("--symbol", help="Symbol for single-symbol endpoints (e.g. IBM)")
     parser.add_argument("--tickers", help="Comma-separated tickers for NEWS_SENTIMENT")
@@ -67,6 +67,11 @@ def main() -> None:
     parser.add_argument("--limit", type=int, default=0, help="Limit number of items when writing feeds (0=all)")
     args = parser.parse_args()
 
+    cfg = get_settings()
+    api_key = args.apikey or cfg.alphavantage_api_key
+    if not api_key:
+        raise ValueError("Alpha Vantage API key is required. Set ALPHAVANTAGE_API_KEY in .env or pass --apikey.")
+
     params = {}
     if args.symbol:
         params["symbol"] = args.symbol
@@ -75,19 +80,23 @@ def main() -> None:
     if args.quarter:
         params["quarter"] = args.quarter
 
-    out_path = args.out or f"data/{args.function.lower()}"
+    out_path = args.out or cfg.default_output_path or f"{cfg.data_dir}/{args.function.lower()}"
     if not os.path.splitext(out_path)[1]:
         out_path += ".jsonl" if args.jsonl else ".json"
 
     # Fetch
     print(f"Fetching {args.function} with params={params}")
-    data = fetch_av(args.function, api_key=args.apikey, params=params)
+    data = fetch_av(args.function, api_key=api_key, params=params)
 
     # Store API response into vector DB (chunked + embeddings via Ollama)
     try:
         vs = VectorStore(
-            persist_path=os.environ.get("QDRANT_PATH", "qdrant_db"),
-            ollama_url=os.environ.get("OLLAMA_EMBED_URL"),
+            collection_name=cfg.qdrant_collection,
+            persist_path=cfg.qdrant_path,
+            qdrant_url=cfg.qdrant_url,
+            ollama_model=cfg.ollama_embed_model,
+            ollama_url=cfg.ollama_embed_url,
+            force_mock_embed=cfg.qdrant_force_mock_embed,
         )
         text_for_store = json.dumps(data, ensure_ascii=False)
         metadata = {
@@ -98,7 +107,7 @@ def main() -> None:
             "timestamp": int(time.time()),
             "type": "api_response",
         }
-        vs.store_response(text_for_store, metadata=metadata)
+        vs.store_response(text_for_store, metadata=metadata, chunk_size=cfg.chunk_size, overlap=cfg.chunk_overlap)
         print("Stored API response to vector DB (Qdrant)")
     except Exception as e:
         print(f"Warning: failed to store response to vector DB: {e}")

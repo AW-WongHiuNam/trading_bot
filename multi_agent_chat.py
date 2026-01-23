@@ -4,13 +4,17 @@ Agents take turns calling `ollama.chat` (or `ollama.generate` if preferred).
 """
 import time
 import ollama
+from config import get_settings
+
+_cfg = get_settings()
+DEFAULT_CHAT_MODEL = _cfg.ollama_chat_model or "qwen2.5:14b"
 
 class Agent:
-    def __init__(self, name: str, system_prompt: str, model: str = 'qwen2.5:14b'):
+    def __init__(self, name: str, system_prompt: str, model: str | None = None):
         self.name = name
         self.system = system_prompt
         self.private_memory = []  # list[str]
-        self.model = model
+        self.model = model or DEFAULT_CHAT_MODEL
 
     def make_messages(self, transcript):
         # transcript: list of (speaker, text)

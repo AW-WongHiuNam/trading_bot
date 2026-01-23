@@ -7,6 +7,7 @@ Usage example:
 import time
 from typing import List, Dict, Optional
 import requests
+from config import get_settings
 
 API_URL = "https://www.alphavantage.co/query"
 
@@ -56,17 +57,22 @@ if __name__ == "__main__":
     import json
 
     parser = argparse.ArgumentParser(description="Fetch news sentiment from Alpha Vantage")
-    parser.add_argument("--apikey", required=False, help="Alpha Vantage API key", default="BSE23K9THV7KR1X7")
+    parser.add_argument("--apikey", required=False, help="Alpha Vantage API key (overrides .env)", default=None)
     parser.add_argument("--tickers", required=False, help="Comma-separated tickers (default AAPL)", default="AAPL")
     parser.add_argument("--topics", required=False, help="Comma-separated topics", default=None)
     parser.add_argument("--limit", required=False, type=int, help="Max articles to print", default=10)
     args = parser.parse_args()
 
+    cfg = get_settings()
+    api_key = args.apikey or cfg.alphavantage_api_key
+    if not api_key:
+        raise ValueError("Alpha Vantage API key is required. Set ALPHAVANTAGE_API_KEY in .env or pass --apikey.")
+
     tickers = args.tickers.split(",") if args.tickers else None
     topics = args.topics.split(",") if args.topics else None
 
     try:
-        data = get_news_sentiment(api_key=args.apikey, tickers=tickers, topics=topics)
+        data = get_news_sentiment(api_key=api_key, tickers=tickers, topics=topics)
     except Exception as e:
         print(f"Failed to fetch news: {e}")
         raise
