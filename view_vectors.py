@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""列出 Qdrant 向量資料庫內容的小工具
+"""列出 SQLite + hnswlib 向量庫內容的小工具
 
 用法例子：
-  python view_vectors.py --path qdrant_db --collection api_calls --limit 200
-  python view_vectors.py --filter-key type --filter-value api_response
+    python view_vectors.py --sqlite ./vector_store.sqlite --table api_calls --limit 200
+    python view_vectors.py --sqlite ./vector_store.sqlite --filter-key type --filter-value api_response
 
 此腳本會印出每筆向量的 id、metadata 摘要與文件預覽（前 400 字元）。
 """
@@ -13,43 +13,38 @@ import argparse
 import json
 from typing import List, Tuple
 
-from qdrant_client import QdrantClient
+import sqlite3
+import json
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="View Qdrant vector DB contents")
-    parser.add_argument("--path", default="qdrant_db", help="Qdrant local path (folder)")
-    parser.add_argument("--collection", default="api_calls", help="Collection name")
+    parser = argparse.ArgumentParser(description="View SQLite vector contents")
+    parser.add_argument("--sqlite", default="vector_store.sqlite", help="Path to SQLite file")
+    parser.add_argument("--table", default="api_calls", help="Table name")
     parser.add_argument("--limit", type=int, default=1000, help="Max items to fetch")
     parser.add_argument("--filter-key", help="Metadata key to filter on (optional)")
     parser.add_argument("--filter-value", help="Metadata value to match (optional)")
     args = parser.parse_args()
 
-    client = QdrantClient(path=args.path)
-
     items: List[Tuple[str, str, dict]] = []
-    offset = None
-    while True:
-        points, offset = client.scroll(
-            collection_name=args.collection,
-            limit=args.limit,
-            with_payload=True,
-            with_vectors=False,
-            offset=offset,
-        )
-        if not points:
-            break
-        for p in points:
-            payload = p.payload or {}
-            if args.filter_key and args.filter_value is not None:
-                if str(payload.get(args.filter_key)) != args.filter_value:
-                    continue
-            doc = payload.get("document", "")
-            items.append((str(p.id), doc, payload))
-            if len(items) >= args.limit:
-                break
-        if not offset or len(items) >= args.limit:
-            break
+    where_clause = ""
+    params: List[str] = []
+    if args.filter_key and args.filter_value is not None:
+        where_clause = f"WHERE json_extract(metadata, '$."{args.filter_key}"') = ?"
+        params = [args.filter_value]
+
+    query = f"SELECT id, document, metadata FROM {args.table} {where_clause} ORDER BY created_at DESC LIMIT ?"
+    params.append(args.limit)
+
+    with sqlite3.connect(args.sqlite) as conn:
+        cur = conn.cursor()
+        cur.execute(query, params)
+        for pid, doc, payload in cur.fetchall():
+            try:
+                payload_obj = json.loads(payload) if payload else {}
+            except Exception:
+                payload_obj = {}
+            items.append((str(pid), doc or "", payload_obj or {}))
 
     print(f"Found {len(items)} items (showing up to {args.limit})")
     for idx, (pid, doc, payload) in enumerate(items, start=1):

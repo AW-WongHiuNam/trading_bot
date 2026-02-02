@@ -20,7 +20,7 @@ from typing import Any, Dict, Optional
 
 import requests
 from config import get_settings
-from vector_store import VectorStore
+from vector_store_sqlite import VectorStore
 
 API_URL = "https://www.alphavantage.co/query"
 
@@ -91,12 +91,16 @@ def main() -> None:
     # Store API response into vector DB (chunked + embeddings via Ollama)
     try:
         vs = VectorStore(
-            collection_name=cfg.qdrant_collection,
-            persist_path=cfg.qdrant_path,
-            qdrant_url=cfg.qdrant_url,
+            table_name=cfg.sqlite_table,
+            sqlite_path=cfg.sqlite_path,
+            index_path=cfg.vector_index_path,
+            vector_dim=cfg.vector_dim,
+            ann_space=cfg.ann_index_space,
+            ann_ef=cfg.ann_ef,
+            ann_m=cfg.ann_m,
             ollama_model=cfg.ollama_embed_model,
             ollama_url=cfg.ollama_embed_url,
-            force_mock_embed=cfg.qdrant_force_mock_embed,
+            force_mock_embed=False,
         )
         text_for_store = json.dumps(data, ensure_ascii=False)
         metadata = {
@@ -108,7 +112,7 @@ def main() -> None:
             "type": "api_response",
         }
         vs.store_response(text_for_store, metadata=metadata, chunk_size=cfg.chunk_size, overlap=cfg.chunk_overlap)
-        print("Stored API response to vector DB (Qdrant)")
+        print("Stored API response to vector DB (SQLite + hnswlib)")
     except Exception as e:
         print(f"Warning: failed to store response to vector DB: {e}")
 

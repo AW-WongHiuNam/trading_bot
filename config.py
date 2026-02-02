@@ -10,10 +10,13 @@ from dotenv import load_dotenv
 @dataclass
 class Settings:
     alphavantage_api_key: str = ""
-    qdrant_url: Optional[str] = "http://localhost:7500"
-    qdrant_path: str = "qdrant_db"
-    qdrant_collection: str = "api_calls"
-    qdrant_force_mock_embed: bool = False
+    sqlite_path: str = "vector_store.sqlite"
+    sqlite_table: str = "api_calls"
+    vector_index_path: str = "vector_index.bin"
+    ann_index_space: str = "ip"
+    ann_ef: int = 200
+    ann_m: int = 16
+    vector_dim: int = 768
     ollama_embed_url: Optional[str] = "http://127.0.0.1:11434/api/embeddings"
     ollama_embed_model: str = "nomic-embed-text:latest"
     ollama_completion_url: str = "http://127.0.0.1:11434/completion"
@@ -50,10 +53,13 @@ def load_config(dotenv_path: str = ".env") -> Settings:
 
     return Settings(
         alphavantage_api_key=os.getenv("ALPHAVANTAGE_API_KEY", ""),
-        qdrant_url=os.getenv("QDRANT_URL", "http://localhost:7500"),
-        qdrant_path=os.getenv("QDRANT_PATH", "qdrant_db"),
-        qdrant_collection=os.getenv("QDRANT_COLLECTION", "api_calls"),
-        qdrant_force_mock_embed=_get_bool("QDRANT_FORCE_MOCK_EMBED", False),
+        sqlite_path=os.getenv("SQLITE_PATH", "vector_store.sqlite"),
+        sqlite_table=os.getenv("SQLITE_TABLE", "api_calls"),
+        vector_index_path=os.getenv("VECTOR_INDEX_PATH", "vector_index.bin"),
+        ann_index_space=os.getenv("ANN_INDEX_SPACE", "ip"),
+        ann_ef=_get_int("ANN_EF", 200),
+        ann_m=_get_int("ANN_M", 16),
+        vector_dim=_get_int("VECTOR_DIM", 768),
         ollama_embed_url=os.getenv("OLLAMA_EMBED_URL", "http://127.0.0.1:11434/api/embeddings"),
         ollama_embed_model=os.getenv("OLLAMA_EMBED_MODEL", "nomic-embed-text:latest"),
         ollama_completion_url=os.getenv("OLLAMA_COMPLETION_URL", "http://127.0.0.1:11434/completion"),

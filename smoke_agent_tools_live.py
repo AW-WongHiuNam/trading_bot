@@ -1,30 +1,35 @@
-"""Live smoke test for multi_agent_chat tools using real services (Qdrant + Ollama).
+"""Live smoke test for multi_agent_chat tools using local SQLite + hnswlib + Ollama.
 
 Requires:
-- Qdrant reachable at cfg.qdrant_url (default http://localhost:7500)
-- Ollama embeddings endpoint reachable at cfg.ollama_embed_url
-- No mocks involved; uses a temporary collection to avoid polluting main data.
+- Writable `SQLITE_PATH` (default `vector_store.sqlite`)
+- Ollama embeddings endpoint reachable at `cfg.ollama_embed_url`
 
 Run:
-  python smoke_agent_tools_live.py
+    python smoke_agent_tools_live.py
 """
 from __future__ import annotations
 
 import time
 from config import get_settings
-from vector_store import VectorStore
+from vector_store_sqlite import VectorStore
 from multi_agent_chat import Agent, handle_tool_request
+import sqlite3
+import os
 
 
 def main() -> None:
     cfg = get_settings()
 
-    # Use a temp collection so we don't touch the main one.
-    coll = f"smoke_agent_{int(time.time())}"
+    # Use a temp table so we don't touch the main one.
+    table = f"smoke_agent_{int(time.time())}"
     vs = VectorStore(
-        collection_name=coll,
-        persist_path=cfg.qdrant_path,
-        qdrant_url=cfg.qdrant_url,
+        table_name=table,
+        sqlite_path=cfg.sqlite_path,
+        index_path=cfg.vector_index_path,
+        vector_dim=cfg.vector_dim,
+        ann_space=cfg.ann_index_space,
+        ann_ef=cfg.ann_ef,
+        ann_m=cfg.ann_m,
         ollama_model=cfg.ollama_embed_model,
         ollama_url=cfg.ollama_embed_url,
         force_mock_embed=False,
@@ -33,7 +38,7 @@ def main() -> None:
     sample_text = "AAPL releases new product and market reacts positively."
     metadata = {"source": "smoke", "function": "manual", "tickers": "AAPL", "timestamp": int(time.time())}
     vs.store_response(sample_text, metadata=metadata, chunk_size=cfg.chunk_size, overlap=cfg.chunk_overlap)
-    print(f"Stored sample text into collection {coll}")
+    print(f"Stored sample text into table {table}")
 
     hits = vs.retrieve("AAPL product news", top_k=3)
     print("Retrieved hits:")
@@ -49,12 +54,19 @@ def main() -> None:
     tool_out = handle_tool_request("TOOL: search_news=AAPL")
     print(f"handle_tool_request returned: {tool_out}")
 
-    # Clean up the temp collection to keep state clean.
+    # Clean up the temp table and index file to keep state clean.
     try:
-        vs.client.delete_collection(coll)
-        print(f"Deleted temp collection {coll}")
+        with sqlite3.connect(cfg.sqlite_path) as conn:
+            cur = conn.cursor()
+            cur.execute(f"DROP TABLE IF EXISTS {table}")
+        if os.path.exists(cfg.vector_index_path):
+            try:
+                os.remove(cfg.vector_index_path)
+            except Exception:
+                pass
+        print(f"Deleted temp table {table} and index file if present")
     except Exception as e:
-        print(f"Warning: failed to delete temp collection {coll}: {e}")
+        print(f"Warning: failed to delete temp table {table}: {e}")
 
 
 if __name__ == "__main__":

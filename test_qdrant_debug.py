@@ -1,51 +1,47 @@
-"""Qdrant embedded quickstart (file-backed).
+"""SQLite + hnswlib quickstart using the project's VectorStore.
 
-Creates a local Qdrant collection under ./qdrant_test_db, inserts a few points,
-searches, and prints results. Useful for verifying the Qdrant Python client is
-working without any running server.
+Creates a temporary SQLite table, inserts a few sample documents using
+`force_mock_embed=True`, searches, prints results, and cleans up.
 """
-import sys
-
-from qdrant_client import QdrantClient
-from qdrant_client.models import Distance, PointStruct, VectorParams
+import time
+import os
+from vector_store_sqlite import VectorStore
 
 
 def main() -> None:
-    print(f"python: {sys.version}")
-    try:
-        from importlib.metadata import PackageNotFoundError, version
+    table = f"sqlite_quickstart_{int(time.time())}"
+    vs = VectorStore(table_name=table, sqlite_path="vector_store.sqlite", index_path="vector_index.bin", vector_dim=128, force_mock_embed=True)
 
-        try:
-            qc_ver = version("qdrant-client")
-        except PackageNotFoundError:
-            qc_ver = "unknown"
-    except Exception:
-        qc_ver = "unknown"
-    print(f"qdrant-client: {qc_ver}")
-
-    client = QdrantClient(path="qdrant_test_db")
-    collection = "quickstart"
-    if not client.collection_exists(collection):
-        client.create_collection(
-            collection_name=collection,
-            vectors_config=VectorParams(size=4, distance=Distance.COSINE),
-        )
-
-    points = [
-        PointStruct(id=1, vector=[0.1, 0.2, 0.3, 0.4], payload={"text": "alpha"}),
-        PointStruct(id=2, vector=[0.9, 0.1, 0.2, 0.0], payload={"text": "bravo"}),
-        PointStruct(id=3, vector=[0.0, 0.1, 0.9, 0.2], payload={"text": "charlie"}),
+    samples = [
+        ("alpha text about apples", {"text": "alpha"}),
+        ("bravo text about bananas", {"text": "bravo"}),
+        ("charlie text about cherries", {"text": "charlie"}),
     ]
-    client.upsert(collection_name=collection, points=points, wait=True)
-    print("inserted", len(points), "points")
 
-    query_vec = [0.05, 0.15, 0.85, 0.2]
-    res = client.query_points(collection_name=collection, query=query_vec, limit=3, with_payload=True)
+    for txt, md in samples:
+        vs.store_response(txt, metadata=md, chunk_size=64, overlap=0)
+
+    res = vs.retrieve("tell me about cherries", top_k=3)
     print("search results:")
-    for point in res.points:
-        print(f"id={point.id} score={point.score:.4f} payload={point.payload}")
+    for doc, payload, score in res:
+        print({"score": score, "payload": payload, "snippet": doc[:80]})
 
-    print("done")
+    # cleanup
+    try:
+        import sqlite3
+        conn = sqlite3.connect("vector_store.sqlite")
+        cur = conn.cursor()
+        cur.execute(f"DROP TABLE IF EXISTS {table}")
+        conn.commit()
+        conn.close()
+        if os.path.exists("vector_index.bin"):
+            try:
+                os.remove("vector_index.bin")
+            except Exception:
+                pass
+        print("cleaned up")
+    except Exception as e:
+        print("cleanup warning:", e)
 
 
 if __name__ == "__main__":

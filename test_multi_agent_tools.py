@@ -1,8 +1,8 @@
 """Lightweight tests for multi_agent_chat tools and agent message wiring.
 
-These tests avoid real network calls by stubbing Qdrant vector store, Alpha Vantage
+These tests avoid real network calls by stubbing vector store, Alpha Vantage
 fetching, and Ollama. Run with:
-  python -m unittest test_multi_agent_tools.py
+    python -m unittest test_multi_agent_tools.py
 """
 from __future__ import annotations
 
@@ -72,7 +72,7 @@ class ToolsTest(unittest.TestCase):
     def test_handle_tool_request_parses(self):
         out = mac.handle_tool_request("TOOL: search_news=ai chips")
         self.assertIsInstance(out, tuple)
-        name, payload = out
+        name, payload, _raw = out
         self.assertEqual(name, "search_news")
         self.assertIn("hits", payload)
 

@@ -6,7 +6,7 @@ import json
 import time
 import ollama
 from config import get_settings
-from vector_store import VectorStore
+from vector_store_sqlite import VectorStore
 from alpha_fetch import fetch_av
 
 _cfg = get_settings()
@@ -14,12 +14,16 @@ DEFAULT_CHAT_MODEL = _cfg.ollama_chat_model or "qwen2.5:14b"
 
 # Shared vector store for retrieval and grounding
 _vector_store = VectorStore(
-    collection_name=_cfg.qdrant_collection,
-    persist_path=_cfg.qdrant_path,
-    qdrant_url=_cfg.qdrant_url,
+    table_name=_cfg.sqlite_table,
+    sqlite_path=_cfg.sqlite_path,
+    index_path=_cfg.vector_index_path,
+    vector_dim=_cfg.vector_dim,
+    ann_space=_cfg.ann_index_space,
+    ann_ef=_cfg.ann_ef,
+    ann_m=_cfg.ann_m,
     ollama_model=_cfg.ollama_embed_model,
     ollama_url=_cfg.ollama_embed_url,
-    force_mock_embed=_cfg.qdrant_force_mock_embed,
+    force_mock_embed=False,
 )
 
 
@@ -97,14 +101,14 @@ def extract_response_text(resp):
 
 
 def search_qdrant(query: str, top_k: int | None = None):
-    """Vector search against Qdrant and return compact rows for the agent."""
+    """Vector search against the configured vector store and return compact rows for the agent."""
     if not query:
         return {"error": "missing query"}
     k = top_k or _cfg.vector_top_k or 5
     try:
         items = _vector_store.retrieve(query, top_k=k)
     except Exception as e:
-        return {"error": f"qdrant query failed: {e}"}
+        return {"error": f"vector query failed: {e}"}
 
     results = []
     for doc, payload, score in items:
@@ -144,7 +148,7 @@ def fetch_and_store_news(
     do_search: bool = False,
     return_full_feed: bool = False,
 ):
-    """Call Alpha Vantage NEWS_SENTIMENT, store to Qdrant, optionally return feed preview & immediate search hits."""
+    """Call Alpha Vantage NEWS_SENTIMENT, store to PostgreSQL, optionally return feed preview & immediate search hits."""
     api_key = _cfg.alphavantage_api_key
     if not api_key:
         return {"error": "ALPHAVANTAGE_API_KEY missing"}

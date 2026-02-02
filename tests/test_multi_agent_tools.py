@@ -1,10 +1,10 @@
 """Lightweight logic tests for multi_agent_chat tools and Agent wiring.
 
-Uses in-process fakes for Qdrant, Alpha Vantage fetch, and Ollama so it runs
+Uses in-process fakes for vector store, Alpha Vantage fetch, and Ollama so it runs
 without network access.
 
 Run:
-  python -m unittest tests.test_multi_agent_tools
+    python -m unittest tests.test_multi_agent_tools
 """
 from __future__ import annotations
 
@@ -74,7 +74,7 @@ class ToolsTest(unittest.TestCase):
     def test_handle_tool_request_parses(self):
         out = mac.handle_tool_request("TOOL: search_news=ai chips")
         self.assertIsInstance(out, tuple)
-        name, payload = out
+        name, payload, _raw = out
         self.assertEqual(name, "search_news")
         self.assertIn("hits", payload)
 

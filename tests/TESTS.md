@@ -4,7 +4,7 @@ This folder groups both fast logic tests and a live smoke check for the multi-ag
 
 ## tests/test_multi_agent_tools.py
 - Purpose: logic-level validation without hitting external services.
-- Strategy: stub Qdrant, Alpha Vantage fetch, and Ollama so the core wiring is exercised offline.
+- Strategy: stub vector store, Alpha Vantage fetch, and Ollama so the core wiring is exercised offline.
 - Covers:
   - `search_qdrant`: formats hits (score/source/symbol/chunk/snippet).
   - `fetch_and_store_news`: calls fetch, stores into vector store with proper metadata, returns feed count.
@@ -13,9 +13,9 @@ This folder groups both fast logic tests and a live smoke check for the multi-ag
 - Run: `python -m unittest tests.test_multi_agent_tools`
 
 ## tests/smoke_agent_tools_live.py
-- Purpose: live end-to-end smoke using real Qdrant + Ollama (no mocks).
-- Strategy: write a sample doc to a temporary collection, retrieve it, exercise tool parsing, and clean up.
-- Prereqs: Qdrant reachable at `cfg.qdrant_url` (default http://localhost:7500) and an Ollama embeddings endpoint at `cfg.ollama_embed_url` with the model available.
+- Purpose: live end-to-end smoke using local SQLite + hnswlib + Ollama (no mocks).
+- Strategy: write a sample doc to a temporary table, retrieve it, exercise tool parsing, and clean up.
+- Prereqs: local SQLite file (or writable path) and an Ollama embeddings endpoint at `cfg.ollama_embed_url` with the model available.
 - Covers:
   - `VectorStore.store_response`/`retrieve` against live services.
   - `Agent.make_messages` role wiring.

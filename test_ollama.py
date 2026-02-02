@@ -6,12 +6,12 @@ try:
     from ollama import Client
 except Exception as e:
     print('Failed to import ollama Python package:', e)
-    raise
+    Client = None
 
 def main():
     print('\nUsing ollama Python package')
     try:
-        client = Client()
+        client = Client() if Client is not None else None
         print('Client created:', type(client))
     except Exception as e:
         print('Failed to create Client:', e)
