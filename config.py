@@ -10,7 +10,7 @@ from dotenv import load_dotenv
 @dataclass
 class Settings:
     alphavantage_api_key: str = ""
-    qdrant_url: Optional[str] = "http://localhost:6333"
+    qdrant_url: Optional[str] = "http://localhost:7500"
     qdrant_path: str = "qdrant_db"
     qdrant_collection: str = "api_calls"
     qdrant_force_mock_embed: bool = False
@@ -50,7 +50,7 @@ def load_config(dotenv_path: str = ".env") -> Settings:
 
     return Settings(
         alphavantage_api_key=os.getenv("ALPHAVANTAGE_API_KEY", ""),
-        qdrant_url=os.getenv("QDRANT_URL", "http://localhost:6333"),
+        qdrant_url=os.getenv("QDRANT_URL", "http://localhost:7500"),
         qdrant_path=os.getenv("QDRANT_PATH", "qdrant_db"),
         qdrant_collection=os.getenv("QDRANT_COLLECTION", "api_calls"),
         qdrant_force_mock_embed=_get_bool("QDRANT_FORCE_MOCK_EMBED", False),

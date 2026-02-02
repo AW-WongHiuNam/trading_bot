@@ -24,12 +24,11 @@
 - 建立資料卷：`docker volume create qdrant_storage`
 - 啟動：
 ```
-docker run -d -p 6333:6333 -p 6334:6334 \
-  --mount type=volume,source=qdrant_storage,target=/qdrant/storage \
-  qdrant/qdrant
+docker run -d --name qdrant -p 7500:6333 -p 7501:6334 --mount type=volume,source=qdrant_storage,target=/qdrant/storage qdrant/qdrant:latest
 ```
-- 預設服務位址：`http://localhost:6333`（REST），`6334`（gRPC）。
-- 本專案 `VectorStore` 預設用 `qdrant_url="http://localhost:6333"`，故直接連 Docker 服務；若 qdrant_url=None 才會回到本機檔案模式。
+- 預設服務位址：`http://localhost:7500`（REST），`7501`（gRPC）。
+- 若你希望沿用 Qdrant 容器預設的 6333/6334，也可把 `-p 7500:6333 -p 7501:6334` 改回 `-p 6333:6333 -p 6334:6334`，但 volume 映射仍然會讓資料持久化。
+- 本專案 `VectorStore` 預設用 `qdrant_url="http://localhost:7500"`，故直接連 Docker 服務；若 qdrant_url=None 才會回到本機檔案模式。
 
 **資料結構（schema）**
 - `id`：UUID（在 `store_response` 內產生）。
@@ -61,9 +60,9 @@ docker run -d -p 6333:6333 -p 6334:6334 \
 - `QDRANT_FORCE_MOCK_EMBED`: 設為任意值可強制使用內建 MockEmbeddings（不需要 Ollama）。
 
 **常用 REST 操作（PowerShell 範例，Docker 服務模式）**
-- 查看 collections：`Invoke-RestMethod http://localhost:6333/collections`
-- 查看 collection 資訊：`Invoke-RestMethod http://localhost:6333/collections/api_calls`
-- 刪除 collection：`Invoke-RestMethod http://localhost:6333/collections/api_calls -Method Delete`
+- 查看 collections：`Invoke-RestMethod http://localhost:7500/collections`
+- 查看 collection 資訊：`Invoke-RestMethod http://localhost:7500/collections/api_calls`
+- 刪除 collection：`Invoke-RestMethod http://localhost:7500/collections/api_calls -Method Delete`
 
 **查看資料**
 - 列出向量：
@@ -80,3 +79,4 @@ python view_vectors.py --filter-key type --filter-value api_response
 - 若更換嵌入模型導致維度不同，需重建 collection（Qdrant 需要固定維度）。
 - 向量數量變大時，可改用 Qdrant 伺服器模式或雲端服務；封裝接口可沿用。
 - Docker 模式的資料存於 `qdrant_storage` volume；重新建立 volume 會清空資料。
+

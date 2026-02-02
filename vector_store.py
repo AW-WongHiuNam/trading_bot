@@ -10,6 +10,13 @@ from qdrant_client.http.exceptions import UnexpectedResponse
 from qdrant_client.models import Distance, PointStruct, VectorParams
 
 
+def _env_truthy(name: str) -> bool:
+    raw = os.environ.get(name)
+    if raw is None:
+        return False
+    return raw.strip().lower() in {"1", "true", "yes", "on"}
+
+
 class OllamaEmbeddings:
     """Simple Ollama embedding wrapper.
 
@@ -93,7 +100,7 @@ class VectorStore:
         self,
         collection_name: str = "api_calls",
         persist_path: str = "qdrant_db",
-        qdrant_url: Optional[str] = "http://localhost:6333",
+        qdrant_url: Optional[str] = "http://localhost:7500",
         ollama_model: str = "nomic-embed-text:latest",
         ollama_url: Optional[str] = None,
         force_mock_embed: bool = False,
@@ -108,7 +115,7 @@ class VectorStore:
             self.client = QdrantClient(path=self.persist_path)
 
         self.embedder = OllamaEmbeddings(model=ollama_model, ollama_url=ollama_url)
-        if force_mock_embed or os.environ.get("QDRANT_FORCE_MOCK_EMBED"):
+        if force_mock_embed or _env_truthy("QDRANT_FORCE_MOCK_EMBED"):
             print("VectorStore: using MockEmbeddings (forced)")
             self.embedder = MockEmbeddings()
 
