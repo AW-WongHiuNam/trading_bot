@@ -1,0 +1,296 @@
+{
+  "analysts": {
+    "market": {
+      "role": "MARKET_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-12T10:09:56.065046",
+      "summary": "Tesla is showing bullish signs with moving averages in place, but the report is incomplete due to missing data.",
+      "key_points": [
+        "10 EMA above 50 SMA and 200 SMA",
+        "Moving averages indicate upward trend"
+      ],
+      "confidence": 0.5,
+      "recommendation_hint": "Consider short-term buying opportunities"
+    },
+    "social": {
+      "role": "SOCIAL_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-12T10:10:00.843562",
+      "summary": "Tesla faces mixed sentiment from shareholder approval of Musk's compensation package and ongoing market dynamics.",
+      "key_points": [
+        "Shareholder approval of $1 trillion pay package for Elon Musk.",
+        "Market sentiment influenced by regulatory scrutiny and competitive pressures.",
+        "Need for additional data on market trends and financial metrics."
+      ],
+      "confidence": 0.6,
+      "recommendation_hint": "Monitor regulatory developments and competitive landscape for better insights."
+    },
+    "news": {
+      "role": "NEWS_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-12T10:10:07.127021",
+      "summary": "Tesla's stock price increased by 0.7196% to $428.27, following news about a $1 trillion pay package approved by shareholders. The company's high price and low volume indicate moderate interest. News sentiment for Tesla is currently neutral.",
+      "key_points": [
+        "Tesla stock price: $428.27",
+        "Open: $427.9550",
+        "High: $428.27",
+        "Low: $420.0300",
+        "Volume: 57,161,046 shares",
+        "Change: $3.06 (0.7196%)",
+        "Previous close: $425.21",
+        "Shareholder approval of $1 trillion Musk pay package",
+        "Neutral news sentiment score"
+      ],
+      "confidence": 0.8,
+      "recommendation_hint": "Hold position; monitor developments on the $1 trillion pay package and macro trends."
+    },
+    "fundamentals": {
+      "role": "FUNDAMENTALS_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-12T10:10:13.240237",
+      "summary": "Tesla's comprehensive fundamental analysis shows a leader in EVs and clean energy with recent challenges but potential for recovery. The company has a strong market position, innovative products, and a diverse product pipeline, but faces risks in production, competition, and macroeconomic conditions. The final recommendation is to hold.",
+      "key_points": [
+        "Tesla is a leader in electric vehicles and clean energy solutions.",
+        "The company has a strong brand and innovative technology.",
+        "Recent challenges include production delays, competition, and supply chain issues.",
+        "Tesla's valuation is high relative to historical performance.",
+        "The company has a diversified product pipeline including energy storage, solar, and autonomous driving.",
+        "Market sentiment is mixed, with regulatory support for EVs but risks from macroeconomic factors.",
+        "The company has a history of innovation and resilience, but faces intense competition in the EV market.",
+        "Tesla's financials show high revenue potential but also high volatility."
+      ],
+      "confidence": 0.7,
+      "recommendation_hint": "Hold due to balanced view of strengths and risks"
+    }
+  },
+  "researchers": {
+    "bull": {
+      "stance": "BULL",
+      "final_label": "BULLISH",
+      "consensus_summary": "Tesla remains a leader in the EV market with strong innovation and product pipeline despite recent challenges. The company's fundamentals and recent developments support a positive long-term outlook.",
+      "evidence": [
+        "Tesla leads in EV and clean energy, maintaining a strong market position with innovative products.",
+        "Shareholder approval of Musk's compensation package indicates strong support from investors.",
+        "Stock price increase of 0.7196% to $428.27 following the approval news suggests positive sentiment.",
+        "Moderate stock performance with a high price and low volume reflects cautious interest but not negative sentiment."
+      ],
+      "counterarguments": [
+        "Headwinds from production challenges, competition, and macro conditions could impact Tesla.",
+        "Governance concerns from Musk's compensation package may raise eyebrows among some investors."
+      ],
+      "confidence": 0.75
+    },
+    "bear": {
+      "stance": "BEAR",
+      "final_label": "BEARISH",
+      "consensus_summary": "Tesla faces significant risks despite its leadership in EVs.",
+      "evidence": [
+        "Tesla's fundamentals indicate challenges in production and competition.",
+        "The company's stock shows moderate interest with high price and low volume.",
+        "Shareholder approval of Musk's compensation package may not align with long-term value creation."
+      ],
+      "counterarguments": [
+        "Tesla's strong market position and innovative products could mitigate risks.",
+        "Recent positive developments, such as the $1 trillion pay package approval, may boost morale and innovation."
+      ],
+      "confidence": 0.75
+    },
+    "bull_rounds": [
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla remains a strong contender in the EV market with innovative products and a resilient financial position, despite recent challenges.",
+        "evidence": [
+          "Tesla's stock price increased following shareholder approval of Musk's compensation package.",
+          "Tesla leads in EVs and clean energy, with a strong market position and diverse product pipeline.",
+          "Fundamental analysis indicates potential for recovery despite risks."
+        ],
+        "counterarguments": [
+          "Market dynamics and competition pose risks to Tesla's growth.",
+          "Moderate stock volume suggests limited investor interest."
+        ],
+        "confidence": 0.8
+      },
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla remains a strong leader in the EV market with innovative products and shareholder approval of Musk's compensation package providing stability. Despite risks, the company's fundamentals and recent stock performance suggest continued growth potential.",
+        "evidence": [
+          "Tesla's stock price increased by 0.7196% following shareholder approval of Musk's compensation package.",
+          "Tesla is a leader in the EV and clean energy market with a strong market position and innovative products.",
+          "Moving averages are in place, indicating bullish technical signs for Tesla."
+        ],
+        "counterarguments": [
+          "Shareholder concerns over Musk's compensation package.",
+          "Market volatility and operational risks.",
+          "Tesla's high price and low volume indicate moderate interest."
+        ],
+        "confidence": 0.85
+      },
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla remains a leader in the EV market with strong innovation and product pipeline despite recent challenges. The company's fundamentals and recent developments support a positive long-term outlook.",
+        "evidence": [
+          "Tesla leads in EV and clean energy, maintaining a strong market position with innovative products.",
+          "Shareholder approval of Musk's compensation package indicates strong support from investors.",
+          "Stock price increase of 0.7196% to $428.27 following the approval news suggests positive sentiment.",
+          "Moderate stock performance with a high price and low volume reflects cautious interest but not negative sentiment."
+        ],
+        "counterarguments": [
+          "Headwinds from production challenges, competition, and macro conditions could impact Tesla.",
+          "Governance concerns from Musk's compensation package may raise eyebrows among some investors."
+        ],
+        "confidence": 0.75
+      }
+    ],
+    "bear_rounds": [
+      {
+        "stance": "BEAR",
+        "final_label": "BEARISH",
+        "consensus_summary": "Tesla faces headwinds from shareholder concerns over Musk's compensation, market volatility, and operational risks despite recent positive developments.",
+        "evidence": [
+          "Shareholder disapproval of Elon Musk's $1 trillion pay package despite the stock increase.",
+          "Moderate stock volume indicates limited investor interest despite price increase.",
+          "Fundamentals highlight risks in production, competition, and macroeconomic conditions.",
+          "News sentiment is neutral, suggesting no strong positive momentum.",
+          "Social media shows mixed sentiment, with shareholder concerns offset by market dynamics."
+        ],
+        "counterarguments": [
+          "Tesla's strong market position in EVs and innovative products could drive future growth.",
+          "Recent stock increase and leadership in clean energy may indicate underlying strength.",
+          "The company's diverse product pipeline and resilience in the face of challenges could lead to recovery."
+        ],
+        "confidence": 0.8
+      },
+      {
+        "stance": "BEAR",
+        "final_label": "BEARISH",
+        "consensus_summary": "Tesla faces headwinds with mixed market sentiment, shareholder approval of Musk's compensation raises concerns about governance, moderate stock performance with high price and low volume, and risks in production, competition, and macro conditions.",
+        "evidence": [
+          "Tesla's stock shows moderate interest with high price and low volume.",
+          "The company faces risks in production, competition, and macro conditions despite strong fundamentals.",
+          "The compensation package approval may indicate internal challenges or governance concerns.",
+          "The company's recent challenges include production issues and competitive pressures in the EV market."
+        ],
+        "counterarguments": [
+          "The company's leadership in EVs and innovative products could drive future growth.",
+          "Shareholder approval suggests confidence in the company's strategy.",
+          "The stock's recent increase may indicate positive momentum despite the neutral sentiment.",
+          "Fundamentals highlight Tesla's strong market position and potential for recovery."
+        ],
+        "confidence": 0.85
+      },
+      {
+        "stance": "BEAR",
+        "final_label": "BEARISH",
+        "consensus_summary": "Tesla faces significant risks despite its leadership in EVs.",
+        "evidence": [
+          "Tesla's fundamentals indicate challenges in production and competition.",
+          "The company's stock shows moderate interest with high price and low volume.",
+          "Shareholder approval of Musk's compensation package may not align with long-term value creation."
+        ],
+        "counterarguments": [
+          "Tesla's strong market position and innovative products could mitigate risks.",
+          "Recent positive developments, such as the $1 trillion pay package approval, may boost morale and innovation."
+        ],
+        "confidence": 0.75
+      }
+    ],
+    "discussion": "Tesla remains a leader in the EV market with strong innovation and product pipeline despite recent challenges. The company's fundamentals and recent developments support a positive long-term outlook.\n\nTesla faces significant risks despite its leadership in EVs."
+  },
+  "risk": {
+    "risk_score": 30,
+    "breach_flags": [
+      "Market competition",
+      "Operational risks"
+    ],
+    "explainers": [
+      "Tesla's strong position in EV market but faces competition from other automakers and tech companies.",
+      "Potential risks from production delays, supply chain issues, or regulatory changes."
+    ]
+  },
+  "manager_decision": {
+    "decision": "require_manual",
+    "reason": "The analysis presents both bullish and bearish arguments with equal confidence, and the risk score indicates significant competition and operational risks.",
+    "next_steps": "Consider using the RAG search tool to fetch past decisions on Tesla and then re-evaluate the risk factors.",
+    "role": "RISK_MANAGER",
+    "timestamp": "2026-02-12T10:10:51.060838"
+  },
+  "trader_proposal": {
+    "ticker": "TSLA",
+    "side": "NO_TRADE",
+    "size": 0.0,
+    "entry": 0.0,
+    "stop": 0.0,
+    "target": 0.0,
+    "rationale": "The analysis presents both bullish and bearish arguments with equal confidence, and the risk score indicates significant competition and operational risks. Re-evaluation with additional data recommended.",
+    "confidence": 0.5,
+    "created_by": "TRADER",
+    "timestamp": "2026-02-12T10:10:55.163883"
+  },
+  "trace": [
+    {
+      "at": "2026-02-12T10:09:48.276327",
+      "stage": "PREFETCH",
+      "tool": "alpha_fetch",
+      "function": "GLOBAL_QUOTE",
+      "symbol": "TSLA",
+      "tickers": null,
+      "params": {},
+      "status": "ok",
+      "tool_called": true,
+      "cache_hit": false,
+      "response_keys": [
+        "Global Quote"
+      ],
+      "response_preview": "{\"Global Quote\": {\"01. symbol\": \"TSLA\", \"02. open\": \"427.9550\", \"03. high\": \"436.3500\", \"04. low\": \"420.0300\", \"05. price\": \"428.2700\", \"06. volume\": \"57161046\", \"07. latest trading day\": \"2026-02-11\", \"08. previous close\": \"425.2100\", \"09. change\": \"3.0600\", \"10. change percent\": \"0.7196%\"}}",
+      "rag_error_type": "store_failed",
+      "rag_error": "Traceback (most recent call last):\n  File \"D:\\school\\fyp\\bot_v1\\chains\\langchain_chains.py\", line 131, in _rag_store_json\n    vs.store_json(payload, metadata=md)\n    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\school\\fyp\\bot_v1\\vector_store_sqlite.py\", line 359, in store_json\n    self.store_response(text, metadata=metadata, chunk_size=0, overlap=0)\n    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\school\\fyp\\bot_v1\\vector_store_sqlite.py\", line 447, in store_response\n    self.index.add_items(arr, ids)\n    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^\nRuntimeError: The number of elements exceeds the specified limit\n",
+      "rag_stored": false
+    },
+    {
+      "at": "2026-02-12T10:09:49.298338",
+      "stage": "PREFETCH",
+      "tool": "alpha_fetch",
+      "function": "OVERVIEW",
+      "symbol": "TSLA",
+      "tickers": null,
+      "params": {},
+      "status": "api_error",
+      "api_issue": {
+        "kind": "Information",
+        "message": "Thank you for using Alpha Vantage! Please consider spreading out your free API requests more sparingly (1 request per second). You may subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to lift the free key rate limit (25 requests per day), raise the per-second burst limit, and instantly unlock all premium endpoints"
+      },
+      "tool_called": true,
+      "cache_hit": false,
+      "response_keys": [
+        "Information"
+      ],
+      "response_preview": "{\"Information\": \"Thank you for using Alpha Vantage! Please consider spreading out your free API requests more sparingly (1 request per second). You may subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to lift the free key rate limit (25 requests per day), raise the per-second burst limit, and instantly unlock all premium endpoints\"}",
+      "rag_stored": false
+    },
+    {
+      "at": "2026-02-12T10:09:49.822374",
+      "stage": "PREFETCH",
+      "tool": "alpha_fetch",
+      "function": "NEWS_SENTIMENT",
+      "symbol": null,
+      "tickers": "TSLA",
+      "params": {},
+      "status": "ok",
+      "tool_called": true,
+      "cache_hit": false,
+      "response_keys": [
+        "items",
+        "sentiment_score_definition",
+        "relevance_score_definition",
+        "feed"
+      ],
+      "response_preview": "{\"items\": \"50\", \"sentiment_score_definition\": \"x <= -0.35: Bearish; -0.35 < x <= -0.15: Somewhat-Bearish; -0.15 < x < 0.15: Neutral; 0.15 <= x < 0.35: Somewhat_Bullish; x >= 0.35: Bullish\", \"relevance_score_definition\": \"0 < x <= 1, with a higher score indicating higher relevance.\", \"feed\": [{\"title\": \"PepsiCo, Inc. (PEP) Price Target Increased to $160 at Barclays Post-Earnings Update\", \"url\": \"https://finviz.com/news/308379/pepsico-inc-pep-price-target-increased-to-160-at-barclays-post-earnings-update\", \"time_published\": \"20260212T013347\", \"authors\": [\"Vardah Gill\"], \"summary\": \"Barclays has increased its price target for PepsiCo, Inc. (PEP) to $160 from $148, maintaining an Equal Weight rating, following the company's Q4 2025 earnings report. CEO Ramon Laguarta outlined a plan to boost category growth by focusing on affordability for low- and middle-income consumers, supported by teste...",
+      "rag_error_type": "store_failed",
+      "rag_error": "Traceback (most recent call last):\n  File \"D:\\school\\fyp\\bot_v1\\chains\\langchain_chains.py\", line 131, in _rag_store_json\n    vs.store_json(payload, metadata=md)\n    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\school\\fyp\\bot_v1\\vector_store_sqlite.py\", line 359, in store_json\n    self.store_response(text, metadata=metadata, chunk_size=0, overlap=0)\n    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\school\\fyp\\bot_v1\\vector_store_sqlite.py\", line 447, in store_response\n    self.index.add_items(arr, ids)\n    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^\nRuntimeError: The number of elements exceeds the specified limit\n",
+      "rag_stored": false
+    }
+  ]
+}

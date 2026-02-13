@@ -1,0 +1,256 @@
+{
+  "analysts": {
+    "market": {
+      "role": "MARKET_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-11T13:10:34.323896",
+      "summary": "TSLA is showing bullish momentum with moving averages aligning and positive sentiment indicators, suggesting a potential upward trend continuation.",
+      "key_points": [
+        "EMA and SMA alignment indicates strong upward momentum.",
+        "RSI suggests overbought conditions but not extreme.",
+        "MACD bullish crossover signals potential buy opportunity.",
+        "High volume supports recent price movements.",
+        "Bullish divergence in stochastics may indicate further upside."
+      ],
+      "confidence": 0.8,
+      "recommendation_hint": "Hold or consider buying on dips due to strong technical indicators."
+    },
+    "social": {
+      "role": "SOCIAL_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-11T13:10:39.305856",
+      "summary": "Tesla shareholders have approved Elon Musk's $1 trillion pay package, despite significant market sentiment concerns. The approval is expected to have a positive impact on the company's long-term strategy and innovation, though it has raised questions about governance and shareholder value.",
+      "key_points": [
+        "Shareholder approval of Musk's compensation package.",
+        "Market sentiment is mixed but leaning towards supporting the decision.",
+        "Potential for increased innovation and long-term growth.",
+        "Governance concerns may persist despite the approval.",
+        "Need for more data on the impact of the pay package on company performance."
+      ],
+      "confidence": 0.7,
+      "recommendation_hint": "Monitor the company's performance and market sentiment for further insights."
+    },
+    "news": {
+      "role": "NEWS_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-11T13:10:44.550373",
+      "summary": "Tesla faces shareholder discontent over Musk's $1 trillion pay package, while maintaining strong market performance with a 1.89% price increase.",
+      "key_points": [
+        "Approval of Elon Musk's massive compensation package, raising equity dilution concerns.",
+        "Positive market sentiment reflected in Tesla's stock price increase of 7.89%.",
+        "Shareholder approval despite potential dilution, indicating strong investor confidence.",
+        "Need for sentiment analysis to gauge market reaction beyond price movement."
+      ],
+      "confidence": 0.7,
+      "recommendation_hint": "Analyze sentiment of news related to the pay package to determine long-term impact on Tesla's stock."
+    },
+    "fundamentals": {
+      "role": "FUNDAMENTALS_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-11T13:10:49.507787",
+      "summary": "Tesla Inc. is a leader in electric vehicles and clean energy. The company has shown strong performance in its core business segments, including automotive and energy storage. However, the provided report does not offer detailed analysis on recent performance or future outlook.",
+      "key_points": [
+        "Company Overview: Tesla is a leader in electric vehicles and clean energy solutions.",
+        "Recent Performance: The report does not provide specific data on Tesla's performance metrics or market position."
+      ],
+      "confidence": 0.5,
+      "recommendation_hint": "Hold position as the final transaction proposal is to hold."
+    }
+  },
+  "researchers": {
+    "bull": {
+      "stance": "BULL",
+      "final_label": "BULLISH",
+      "consensus_summary": "Tesla maintains strong market performance and leadership in electric vehicles, with shareholder approval of Musk's compensation package potentially boosting long-term strategy and innovation.",
+      "evidence": [
+        "Tesla shows bullish momentum with moving averages aligning and positive sentiment indicators.",
+        "The approval of Musk's pay package is expected to positively impact the company's long-term strategy and innovation.",
+        "Tesla has a 1.89% price increase, reflecting continued market confidence.",
+        "Tesla remains a leader in electric vehicles and clean energy with strong performance in automotive and energy storage."
+      ],
+      "counterarguments": [
+        "Governance concerns and shareholder discontent over the $1 trillion pay package.",
+        "Mixed signals from market performance and shareholder sentiment."
+      ],
+      "confidence": 0.9
+    },
+    "bear": {
+      "stance": "BEAR",
+      "final_label": "BEARISH",
+      "consensus_summary": "Tesla faces mixed signals with bullish market indicators overshadowed by governance concerns and shareholder discontent over Musk's compensation package.",
+      "evidence": [
+        "Tesla's fundamentals report lacks detailed analysis on recent performance, raising questions about the company's ability to sustain growth without addressing governance issues.",
+        "The $1 trillion pay package approval, while boosting short-term sentiment, may hinder long-term innovation and alienate stakeholders, potentially leading to reputational damage.",
+        "Market sentiment is polarized, with approval from shareholders masking underlying discontent, which could impact future investor relations and stock performance."
+      ],
+      "counterarguments": [
+        "Bullish arguments highlight Tesla's leadership in electric vehicles and recent market gains, suggesting resilience despite governance concerns.",
+        "The compensation package is framed as a reward for past success and a motivator for future innovation, aligning with the company's aggressive growth targets."
+      ],
+      "confidence": 0.85
+    },
+    "bull_rounds": [
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla shows strong bullish momentum with positive sentiment indicators, shareholder approval of Musk's pay package expected to boost long-term strategy, and fundamentals as a leader in electric vehicles and clean energy.",
+        "evidence": [
+          "TSLA is showing bullish momentum with moving averages aligning and positive sentiment indicators, suggesting a potential upward trend continuation.",
+          "Tesla shareholders have approved Elon Musk's $1 trillion pay package, which is expected to positively impact the company's long-term strategy and innovation.",
+          "Tesla maintains strong market performance with a 1.89% price increase despite shareholder discontent."
+        ],
+        "counterarguments": [
+          "Some shareholders are concerned about the governance and shareholder value implications of the $1 trillion pay package."
+        ],
+        "confidence": 0.95
+      },
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla's strong fundamentals, shareholder approval of Musk's compensation package, and positive market sentiment support a bullish outlook despite governance concerns.",
+        "evidence": [
+          "Tesla's leadership in electric vehicles and clean energy, demonstrated by strong performance in automotive and energy storage segments.",
+          "Shareholder approval of Elon Musk's $1 trillion pay package, expected to boost long-term strategy and innovation.",
+          "Positive market sentiment with bullish momentum, moving averages aligning, and price increase.",
+          "Strong fundamentals despite high volatility in the electric vehicle market, indicating resilience and market leadership."
+        ],
+        "counterarguments": [
+          "Governance concerns surrounding Musk's pay package may raise questions about shareholder value.",
+          "High volatility in the EV market could pose risks to Tesla's long-term growth.",
+          "Discontent among shareholders may impact future decisions and company culture."
+        ],
+        "confidence": 0.85
+      },
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla maintains strong market performance and leadership in electric vehicles, with shareholder approval of Musk's compensation package potentially boosting long-term strategy and innovation.",
+        "evidence": [
+          "Tesla shows bullish momentum with moving averages aligning and positive sentiment indicators.",
+          "The approval of Musk's pay package is expected to positively impact the company's long-term strategy and innovation.",
+          "Tesla has a 1.89% price increase, reflecting continued market confidence.",
+          "Tesla remains a leader in electric vehicles and clean energy with strong performance in automotive and energy storage."
+        ],
+        "counterarguments": [
+          "Governance concerns and shareholder discontent over the $1 trillion pay package.",
+          "Mixed signals from market performance and shareholder sentiment."
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "bear_rounds": [
+      {
+        "stance": "BEAR",
+        "final_label": "BEARISH",
+        "consensus_summary": "Tesla faces governance concerns and short-term risks despite positive sentiment indicators, shareholder approval of Musk's pay package raises questions about value creation and long-term strategy, fundamentals show strong but high volatility in the electric vehicle market.",
+        "evidence": [
+          "Tesla's stock price increase is minimal (1.89%) despite shareholder approval, indicating limited market confidence in the pay package's impact.",
+          "Fundamentals highlight Tesla's leadership but also high volatility in the EV market, which could pose risks to sustained growth.",
+          "Governance concerns from shareholder discontent may affect future investor confidence and company reputation."
+        ],
+        "counterarguments": [
+          "Positive sentiment indicators and moving averages alignment suggest continued upward trend, but these are short-term technical signals that may not reflect underlying value.",
+          "Musk's pay package approval is expected to drive innovation, but there are concerns about prioritizing executive compensation over shareholder returns.",
+          "Tesla's strong position in EVs and energy storage could lead to long-term dominance, but competition and regulatory changes could challenge this."
+        ],
+        "confidence": 0.85
+      },
+      {
+        "stance": "BEAR",
+        "final_label": "BEARISH",
+        "consensus_summary": "Tesla faces governance concerns and mixed signals despite strong market performance.",
+        "evidence": [
+          "Tesla's fundamentals are strong but lack detailed recent performance analysis.",
+          "Shareholder approval of Musk's $1 trillion pay package raises governance concerns despite potential long-term benefits.",
+          "Positive market sentiment and moving averages may not sustain if governance issues persist."
+        ],
+        "counterarguments": [
+          "Governance concerns may not impact short-term performance.",
+          "Market sentiment indicators might be temporary.",
+          "Strong fundamentals in EV and energy storage could drive future growth."
+        ],
+        "confidence": 0.75
+      },
+      {
+        "stance": "BEAR",
+        "final_label": "BEARISH",
+        "consensus_summary": "Tesla faces mixed signals with bullish market indicators overshadowed by governance concerns and shareholder discontent over Musk's compensation package.",
+        "evidence": [
+          "Tesla's fundamentals report lacks detailed analysis on recent performance, raising questions about the company's ability to sustain growth without addressing governance issues.",
+          "The $1 trillion pay package approval, while boosting short-term sentiment, may hinder long-term innovation and alienate stakeholders, potentially leading to reputational damage.",
+          "Market sentiment is polarized, with approval from shareholders masking underlying discontent, which could impact future investor relations and stock performance."
+        ],
+        "counterarguments": [
+          "Bullish arguments highlight Tesla's leadership in electric vehicles and recent market gains, suggesting resilience despite governance concerns.",
+          "The compensation package is framed as a reward for past success and a motivator for future innovation, aligning with the company's aggressive growth targets."
+        ],
+        "confidence": 0.85
+      }
+    ],
+    "discussion": "Tesla maintains strong market performance and leadership in electric vehicles, with shareholder approval of Musk's compensation package potentially boosting long-term strategy and innovation.\n\nTesla faces mixed signals with bullish market indicators overshadowed by governance concerns and shareholder discontent over Musk's compensation package."
+  },
+  "risk": {
+    "risk_score": 75,
+    "breach_flags": [
+      "Governance concerns",
+      "Shareholder discontent",
+      "Potential impact on long-term strategy"
+    ],
+    "explainers": [
+      "Governance concerns and shareholder discontent over Elon Musk's compensation package could affect Tesla's long-term strategy and innovation.",
+      "Bullish market indicators are overshadowed by these governance issues, creating a mixed signals environment for Tesla.",
+      "The recent shareholder approval of Musk's compensation package may boost long-term strategy, but underlying governance concerns remain."
+    ]
+  },
+  "manager_decision": {
+    "decision": "require_manual",
+    "reason": "The bullish and bearish arguments are evenly balanced with high confidence, and the risk score indicates significant governance concerns.",
+    "next_steps": "Conduct a deeper analysis of Tesla's governance issues and shareholder sentiment before making a final decision.",
+    "role": "RISK_MANAGER",
+    "timestamp": "2026-02-11T13:11:28.584016"
+  },
+  "trader_proposal": {
+    "ticker": "TSLA",
+    "side": "NO_TRADE",
+    "size": 0.0,
+    "entry": 0.0,
+    "stop": 0.0,
+    "target": 0.0,
+    "rationale": "Tesla faces a balanced market with strong performance but significant governance concerns and shareholder discontent. Further analysis is required before a trade decision.",
+    "confidence": 0.5,
+    "created_by": "TRADER",
+    "timestamp": "2026-02-11T13:11:32.572733"
+  },
+  "trace": [
+    {
+      "at": "2026-02-11T13:10:26.302498",
+      "stage": "PREFETCH",
+      "tool": "alpha_fetch",
+      "function": "GLOBAL_QUOTE",
+      "symbol": "TSLA",
+      "tickers": null,
+      "params": {},
+      "status": "ok"
+    },
+    {
+      "at": "2026-02-11T13:10:27.235727",
+      "stage": "PREFETCH",
+      "tool": "alpha_fetch",
+      "function": "OVERVIEW",
+      "symbol": "TSLA",
+      "tickers": null,
+      "params": {},
+      "status": "ok"
+    },
+    {
+      "at": "2026-02-11T13:10:27.654413",
+      "stage": "PREFETCH",
+      "tool": "alpha_fetch",
+      "function": "NEWS_SENTIMENT",
+      "symbol": null,
+      "tickers": "TSLA",
+      "params": {},
+      "status": "ok"
+    }
+  ]
+}

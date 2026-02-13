@@ -1,4 +1,6 @@
-from vector_store_sqlite import VectorStore
-print('instantiating VectorStore to trigger _ensure_db/migration')
-vs = VectorStore()
-print('done')
+"""Compatibility stub.
+
+The implementation lives in scripts/run_migrate.py.
+"""
+
+from scripts.run_migrate import *  # noqa: F401,F403

@@ -182,7 +182,82 @@ class VectorStore:
             conn.commit()
 
     def _conn(self):
-        return sqlite3.connect(self.sqlite_path)
+        conn = sqlite3.connect(self.sqlite_path, timeout=30)
+        try:
+            conn.execute("PRAGMA journal_mode=WAL;")
+            conn.execute("PRAGMA synchronous=NORMAL;")
+            conn.execute("PRAGMA busy_timeout=5000;")
+        except Exception:
+            pass
+        return conn
+
+    def get_latest(
+        self,
+        *,
+        source: Optional[str] = None,
+        tool: Optional[str] = None,
+        function: Optional[str] = None,
+        symbol: Optional[str] = None,
+        tickers: Optional[str] = None,
+        type: Optional[str] = None,
+        meta_equals: Optional[Dict[str, Any]] = None,
+        min_created_at: Optional[float] = None,
+        max_scan: int = 500,
+    ) -> Optional[Tuple[str, Dict[str, Any], float]]:
+        """Return the most recent (document, metadata, created_at) matching metadata filters.
+
+        This does a small reverse scan over SQLite rows and filters in Python,
+        so it doesn't depend on SQLite JSON extensions.
+        """
+        max_scan = max(int(max_scan), 1)
+        with self._conn() as conn:
+            cur = conn.cursor()
+            cur.execute(
+                f"SELECT document, metadata, created_at FROM {self.table_name} ORDER BY idx DESC LIMIT ?",
+                (max_scan,),
+            )
+            rows = cur.fetchall() or []
+
+        for doc, md_raw, created_at in rows:
+            if min_created_at is not None:
+                try:
+                    if float(created_at) < float(min_created_at):
+                        continue
+                except Exception:
+                    pass
+
+            try:
+                md = json.loads(md_raw) if isinstance(md_raw, str) else {}
+            except Exception:
+                md = {}
+
+            if source is not None and md.get("source") != source:
+                continue
+            if tool is not None and md.get("tool") != tool:
+                continue
+            if function is not None and md.get("function") != function:
+                continue
+            if symbol is not None and (md.get("symbol") or md.get("tickers")) != symbol:
+                continue
+            if tickers is not None and (md.get("tickers") or md.get("symbol")) != tickers:
+                continue
+            if type is not None and md.get("type") != type:
+                continue
+
+            if meta_equals:
+                ok = True
+                for k, v in meta_equals.items():
+                    if md.get(k) != v:
+                        ok = False
+                        break
+                if not ok:
+                    continue
+
+            try:
+                return (str(doc or ""), dict(md or {}), float(created_at))
+            except Exception:
+                return (str(doc or ""), dict(md or {}), 0.0)
+        return None
 
     def _load_or_create_index(self):
         space = self.ann_space
@@ -198,6 +273,67 @@ class VectorStore:
                 self.index.init_index(max_elements=self._max_elements, ef_construction=self.ann_ef, M=self.ann_m)
         else:
             self.index.init_index(max_elements=self._max_elements, ef_construction=self.ann_ef, M=self.ann_m)
+
+    def rebuild_index_from_sqlite(self, *, batch_size: int = 32) -> int:
+        """Rebuild the ANN index from the SQLite table.
+
+        This is useful if `index_path` has become out-of-sync with the SQLite
+        table (e.g. shared index file reused across tables or dim changes).
+
+        Returns the number of vectors indexed.
+        """
+        # Load all rows first to avoid holding the DB lock while embedding.
+        with self._conn() as conn:
+            cur = conn.cursor()
+            cur.execute(f"SELECT idx, document FROM {self.table_name} ORDER BY idx")
+            rows = [(int(r[0]), (r[1] or "")) for r in cur.fetchall() if r and r[1]]
+
+        space = self.ann_space
+        dim = self.vector_dim
+        new_index = hnswlib.Index(space=space, dim=dim)
+        # Add headroom so future inserts don't immediately exceed capacity.
+        headroom = max(int(len(rows) * 2), 1000, 1)
+        new_index.init_index(max_elements=headroom, ef_construction=self.ann_ef, M=self.ann_m)
+        new_index.set_ef(self.ann_ef)
+
+        total = 0
+        i = 0
+        while i < len(rows):
+            batch = rows[i : i + int(batch_size)]
+            ids = [b[0] for b in batch]
+            docs = [b[1] for b in batch]
+            try:
+                embs = self.embedder.embed_batch(docs)
+            except Exception:
+                import traceback
+
+                traceback.print_exc()
+                if not isinstance(self.embedder, MockEmbeddings):
+                    self.embedder = MockEmbeddings(dim=self.vector_dim)
+                    embs = self.embedder.embed_batch(docs)
+                else:
+                    raise
+
+            vecs = []
+            for emb in embs:
+                if self.ann_space == "ip":
+                    vecs.append(np.array(self._normalize(emb), dtype="float32"))
+                else:
+                    vecs.append(np.array(emb, dtype="float32"))
+
+            if vecs:
+                arr = np.vstack(vecs)
+                new_index.add_items(arr, np.array(ids, dtype="int64"))
+                total += len(vecs)
+            i += int(batch_size)
+
+        with self._conn_lock:
+            self.index = new_index
+            try:
+                self.index.save_index(self.index_path)
+            except Exception:
+                pass
+        return total
 
     def _next_idx(self) -> int:
         with self._conn_lock:
@@ -216,15 +352,39 @@ class VectorStore:
             return a.tolist()
         return (a / norm).tolist()
 
-    def store_response(self, text: str, metadata: Optional[Dict[str, Any]] = None, chunk_size: int = 2000, overlap: int = 400) -> None:
-        metadata = metadata or {}
-        chunks = chunk_text(text, chunk_size=chunk_size, overlap=overlap)
-        if not chunks:
-            return
-        print(f"VectorStore.store_response: chunked into {len(chunks)} chunks")
+    def store_json(self, obj: Any, metadata: Optional[Dict[str, Any]] = None) -> None:
+        """Store a single JSON object as one vector item (no chunking)."""
         try:
-            embeddings = self.embedder.embed_batch(chunks)
-            print(f"VectorStore.store_response: got {len(embeddings)} embeddings")
+            text = json.dumps(obj, ensure_ascii=False)
+        except Exception:
+            text = str(obj)
+        self.store_response(text, metadata=metadata, chunk_size=0, overlap=0)
+
+    def store_response(self, text: Any, metadata: Optional[Dict[str, Any]] = None, chunk_size: int = 0, overlap: int = 0) -> None:
+        """Store a single document as one vector item.
+
+        Note: chunking is intentionally disabled (one JSON/text == one row).
+        The chunk_size/overlap arguments are accepted for backward compatibility
+        but ignored.
+        """
+        metadata = metadata or {}
+        if not isinstance(text, str):
+            try:
+                text = json.dumps(text, ensure_ascii=False)
+            except Exception:
+                text = str(text)
+
+        doc = (text or "").strip()
+        if not doc:
+            return
+
+        payload = metadata.copy()
+        payload.setdefault("chunk", 0)
+        payload.setdefault("is_test", _env_truthy("RAG_IS_TEST"))
+
+        try:
+            embeddings = self.embedder.embed_batch([doc])
+            print("VectorStore.store_response: got 1 embedding")
         except Exception:
             import traceback
 
@@ -234,8 +394,8 @@ class VectorStore:
                 try:
                     print("VectorStore.store_response: falling back to MockEmbeddings and retrying")
                     self.embedder = MockEmbeddings(dim=self.vector_dim)
-                    embeddings = self.embedder.embed_batch(chunks)
-                    print(f"VectorStore.store_response: got {len(embeddings)} mock embeddings")
+                    embeddings = self.embedder.embed_batch([doc])
+                    print("VectorStore.store_response: got 1 mock embedding")
                 except Exception:
                     traceback.print_exc()
                     raise
@@ -249,39 +409,73 @@ class VectorStore:
         if dim != self.vector_dim:
             raise ValueError(f"Embedding dim {dim} does not match configured vector_dim {self.vector_dim}.")
 
-        rows = []
-        vecs = []
-        for idx_local, (doc, emb) in enumerate(zip(chunks, embeddings)):
-            payload = metadata.copy()
-            payload.setdefault("chunk", idx_local)
-            uid = str(uuid.uuid4())
-            rows.append((uid, doc, json.dumps(payload), time.time()))
-            if self.ann_space == "ip":
-                vec = np.array(self._normalize(emb), dtype="float32")
-            else:
-                vec = np.array(emb, dtype="float32")
-            vecs.append(vec)
+        emb = embeddings[0]
+        uid = str(uuid.uuid4())
+        created = time.time()
+        row = (uid, doc, json.dumps(payload, ensure_ascii=False), created)
+        if self.ann_space == "ip":
+            vec = np.array(self._normalize(emb), dtype="float32")
+        else:
+            vec = np.array(emb, dtype="float32")
 
         with self._conn_lock:
-            idxs = []
-            with self._conn() as conn:
-                cur = conn.cursor()
-                # insert rows one-by-one to capture lastrowid (the assigned idx)
-                for uid, doc, md_json, created in rows:
-                    cur.execute(f"INSERT INTO {self.table_name} (id, document, metadata, created_at) VALUES (?,?,?,?)", (uid, doc, md_json, created))
-                    idxs.append(cur.lastrowid)
-                conn.commit()
-            if vecs:
-                arr = np.vstack(vecs)
-                ids = np.array(idxs, dtype="int64")
-                self.index.add_items(arr, ids)
-                self.index.set_ef(self.ann_ef)
+            assigned_idx = None
+            last_exc: Exception | None = None
+            for attempt in range(5):
                 try:
-                    self.index.save_index(self.index_path)
-                except Exception:
-                    pass
+                    with self._conn() as conn:
+                        cur = conn.cursor()
+                        cur.execute(
+                            f"INSERT INTO {self.table_name} (id, document, metadata, created_at) VALUES (?,?,?,?)",
+                            row,
+                        )
+                        assigned_idx = cur.lastrowid
+                        conn.commit()
+                    break
+                except sqlite3.OperationalError as e:
+                    last_exc = e
+                    # Common under concurrent writers / multi-instance stores.
+                    if "locked" in str(e).lower():
+                        time.sleep(0.1 * (attempt + 1))
+                        continue
+                    raise
 
-    def retrieve(self, query: str, top_k: int = 5) -> List[Tuple[str, Dict[str, Any], float]]:
+            if assigned_idx is None:
+                if last_exc is not None:
+                    raise last_exc
+                raise RuntimeError("Failed to insert vector store row")
+            arr = np.vstack([vec])
+            ids = np.array([assigned_idx], dtype="int64")
+            # Ensure index has capacity; hnswlib enforces a fixed max_elements.
+            try:
+                cur_n = int(self.index.get_current_count())
+                max_n = int(self.index.get_max_elements())
+                if cur_n + 1 > max_n:
+                    new_max = max(max_n * 2, cur_n + 1, 1000)
+                    self.index.resize_index(int(new_max))
+            except Exception:
+                pass
+            self.index.add_items(arr, ids)
+            self.index.set_ef(self.ann_ef)
+            try:
+                self.index.save_index(self.index_path)
+            except Exception:
+                pass
+
+    def retrieve(
+        self,
+        query: str,
+        top_k: int = 5,
+        *,
+        symbol: Optional[str] = None,
+        types: Optional[List[str]] = None,
+        stage: Optional[str] = None,
+        source: Optional[str] = None,
+        run_id: Optional[str] = None,
+        include_test: Optional[bool] = None,
+        min_created_at: Optional[float] = None,
+        candidate_k: Optional[int] = None,
+    ) -> List[Tuple[str, Dict[str, Any], float]]:
         emb = self.embedder.embed_batch([query])[0]
         if len(emb) != self.vector_dim:
             raise ValueError(f"Query embedding dim {len(emb)} does not match configured vector_dim {self.vector_dim}.")
@@ -298,7 +492,12 @@ class VectorStore:
             n = 0
         if n == 0:
             return []
-        k = min(top_k, int(n))
+        if include_test is None:
+            include_test = _env_truthy("RAG_INCLUDE_TEST")
+        if candidate_k is None:
+            candidate_k = max(int(top_k) * 10, 50)
+
+        k = min(int(candidate_k), int(n))
         # ensure ef is sufficiently large for the query
         try:
             self.index.set_ef(max(self.ann_ef, k * 2))
@@ -324,19 +523,43 @@ class VectorStore:
                 # sqlite INTEGER is signed 64-bit; skip out-of-range values
                 if idx_int < -2**63 or idx_int > 2**63 - 1:
                     continue
-                cur.execute(f"SELECT id, document, metadata FROM {self.table_name} WHERE idx=?", (idx_int,))
+                cur.execute(f"SELECT id, document, metadata, created_at FROM {self.table_name} WHERE idx=?", (idx_int,))
                 row = cur.fetchone()
                 if not row:
                     continue
-                uid, doc, md = row
+                uid, doc, md, created_at = row
                 try:
                     payload = json.loads(md)
                 except Exception:
                     payload = {}
+
+                # default missing to False
+                is_test = bool(payload.get("is_test", False))
+                if not include_test and is_test:
+                    continue
+                if symbol is not None and (payload.get("symbol") or payload.get("tickers")) != symbol:
+                    continue
+                if types is not None and payload.get("type") not in set(types):
+                    continue
+                if stage is not None and payload.get("stage") != stage:
+                    continue
+                if source is not None and payload.get("source") != source:
+                    continue
+                if run_id is not None and payload.get("run_id") != run_id:
+                    continue
+                if min_created_at is not None:
+                    try:
+                        if float(created_at) < float(min_created_at):
+                            continue
+                    except Exception:
+                        pass
+
                 score = float(dist)
                 if self.ann_space != "ip":
                     score = -score
                 items.append((doc or "", payload or {}, score))
+                if len(items) >= int(top_k):
+                    break
         return items
 
     def build_context(self, items: List[Tuple[str, Dict[str, Any], float]], max_chars: int = 3000) -> str:

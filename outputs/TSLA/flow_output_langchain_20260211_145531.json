@@ -1,0 +1,269 @@
+{
+  "analysts": {
+    "market": {
+      "role": "MARKET_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-11T14:54:31.493306",
+      "summary": "TSLA shows bullish trend with strong moving averages and positive RSI, but high volatility and overbought conditions present risks.",
+      "key_points": [
+        "10 EMA above 50 SMA and 200 SMA, indicating strong upward momentum.",
+        "RSI at 72, suggesting overbought conditions with potential for pullback.",
+        "MACD bullish crossover, reinforcing trend confirmation.",
+        "High volatility due to earnings announcement and market sentiment.",
+        "Bollinger Bands suggest room for price increase but with tightening channels."
+      ],
+      "confidence": 0.8,
+      "recommendation_hint": "Hold position, consider selling if overbought signals persist or earnings miss."
+    },
+    "social": {
+      "role": "SOCIAL_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-11T14:54:36.181131",
+      "summary": "Tesla Inc. recently received shareholder approval for Elon Musk's $1 trillion pay package, which has generated mixed sentiment in the market. The company is also facing a class action lawsuit related to the disclosure of this compensation plan.",
+      "key_points": [
+        "Shareholder approval of Musk's compensation package",
+        "Class action lawsuit filed against Tesla regarding Musk's pay",
+        "Legal risks and potential financial liabilities"
+      ],
+      "confidence": 0.7,
+      "recommendation_hint": "Monitor the legal outcomes and their impact on Tesla's financials."
+    },
+    "news": {
+      "role": "NEWS_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-11T14:54:41.206206",
+      "summary": "Tesla's market position remains strong with recent developments including the approval of Musk's pay package and advancements in sustainable energy. The company maintains a leading role in electric vehicles and battery technology, with solid financial metrics.",
+      "key_points": [
+        "Approval of $1 trillion Musk pay package",
+        "Leading in global plug-in vehicle market (16%) and battery-electric vehicles (23%)",
+        "Strong financial performance with positive profit margins and revenue growth",
+        "Focus on sustainable energy solutions through Tesla Energy"
+      ],
+      "confidence": 0.8,
+      "recommendation_hint": "Hold"
+    },
+    "fundamentals": {
+      "role": "FUNDAMENTALS_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-11T14:54:46.922592",
+      "summary": "Tesla, Inc. maintains its position as a leader in electric vehicles and clean energy, with a strong market presence and consistent revenue growth. However, challenges such as high valuation, increasing competition, and profitability concerns persist.",
+      "key_points": [
+        "Strong market share in global plug-in vehicles (16%) and battery-electric vehicles (23%)",
+        "High valuation with P/E ratio of 401.14",
+        "Low profitability metrics (Profit Margin: 0.04, Operating Margin: 0.047)",
+        "Consistent revenue growth (Revenue Per Share TTM: $29.4)",
+        "Limited dividend yield (None)",
+        "Final transaction proposal from report: HOLD"
+      ],
+      "confidence": 0.6,
+      "recommendation_hint": "Hold position based on current fundamentals and market conditions."
+    }
+  },
+  "researchers": {
+    "bull": {
+      "stance": "BULL",
+      "final_label": "BULLISH",
+      "consensus_summary": "Tesla maintains its leadership in the electric vehicle and energy sectors with strong fundamentals, despite challenges. Its recent developments, including shareholder approval of Musk's pay package and advancements in technology, support continued growth.",
+      "evidence": [
+        "Tesla's strong market position in electric vehicles and battery technology.",
+        "Consistent revenue growth and solid financial metrics.",
+        "Positive RSI and bullish trend indicators in the market data.",
+        "Advancements in sustainable energy and electric vehicle technology."
+      ],
+      "counterarguments": [
+        "High valuation and competition risks mentioned by the opponent.",
+        "Regulatory scrutiny and profitability concerns from fundamentals."
+      ],
+      "confidence": 0.9
+    },
+    "bear": {
+      "stance": "BEAR",
+      "final_label": "BEARISH",
+      "consensus_summary": "Tesla faces significant risks despite strong market position. High valuation, legal issues, and competition threaten its growth.",
+      "evidence": [
+        "TSLA shows bullish trend but with high volatility and overbought conditions.",
+        "Recent shareholder approval of Musk's pay package has generated mixed sentiment and potential legal risks.",
+        "Class action lawsuit related to compensation disclosure adds financial uncertainty.",
+        "Increasing competition and profitability concerns challenge Tesla's dominance.",
+        "High valuation may lead to downward pressure on stock price."
+      ],
+      "counterarguments": [
+        "Despite challenges, Tesla's leadership in electric vehicles and technology advancements supports continued growth.",
+        "Recent developments like Musk's pay package approval and advancements in sustainable energy indicate strong market confidence.",
+        "Fundamentals show consistent revenue growth and strong market presence, suggesting resilience."
+      ],
+      "confidence": 0.8
+    },
+    "bull_rounds": [
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla remains a strong contender in the electric vehicle market with innovative technologies and solid financial performance, despite challenges.",
+        "evidence": [
+          "Strong moving averages and positive RSI in the market data indicate a bullish trend.",
+          "Tesla's leadership in electric vehicles and battery technology is maintained with consistent revenue growth.",
+          "Recent developments like the approval of Musk's pay package and advancements in sustainable energy reinforce the company's market position.",
+          "The company's strong market presence and innovative edge in clean energy provide a competitive advantage."
+        ],
+        "counterarguments": [
+          "High volatility and overbought conditions in the market data present risks.",
+          "Mixed sentiment from the shareholder approval of the pay package could impact investor confidence.",
+          "Class action lawsuit related to compensation disclosure may introduce legal risks.",
+          "Fundamentals highlight profitability concerns and increasing competition as challenges."
+        ],
+        "confidence": 0.7
+      },
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Despite risks highlighted by the opponent, Tesla's strong fundamentals, shareholder approval of Musk's compensation, and leadership in electric vehicles and energy storage position it for continued growth.",
+        "evidence": [
+          "Tesla maintains a leading role in electric vehicles and battery technology with solid financial metrics.",
+          "Musk's $1 trillion pay package was approved by shareholders, indicating confidence in Tesla's future prospects.",
+          "Tesla's advancements in sustainable energy and electric vehicles solidify its market position.",
+          "Strong market trend with bullish moving averages and positive RSI, despite volatility."
+        ],
+        "counterarguments": [
+          "High valuation and competition risks are overstated given Tesla's market dominance and innovation leadership.",
+          "Legal issues are isolated and unlikely to impact Tesla's long-term trajectory.",
+          "Volatility is a feature of being a leader, not a flaw, and presents opportunities for growth investors."
+        ],
+        "confidence": 0.85
+      },
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla maintains its leadership in the electric vehicle and energy sectors with strong fundamentals, despite challenges. Its recent developments, including shareholder approval of Musk's pay package and advancements in technology, support continued growth.",
+        "evidence": [
+          "Tesla's strong market position in electric vehicles and battery technology.",
+          "Consistent revenue growth and solid financial metrics.",
+          "Positive RSI and bullish trend indicators in the market data.",
+          "Advancements in sustainable energy and electric vehicle technology."
+        ],
+        "counterarguments": [
+          "High valuation and competition risks mentioned by the opponent.",
+          "Regulatory scrutiny and profitability concerns from fundamentals."
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "bear_rounds": [
+      {
+        "stance": "BEAR",
+        "final_label": "BEARISH",
+        "consensus_summary": "Tesla faces significant risks despite strong market position, including high valuation, legal issues, and competitive pressures.",
+        "evidence": [
+          "Tesla's high valuation and overbought conditions indicate potential for a pullback.",
+          "Legal challenges related to Musk's pay package could lead to increased costs and shareholder dissatisfaction.",
+          "Fundamentals show profitability concerns and increasing competition in the EV market."
+        ],
+        "counterarguments": [
+          "The company's innovations in EV and battery technology and strong brand loyalty could mitigate risks.",
+          "Recent positive developments, such as shareholder approval of the pay package, may boost short-term sentiment."
+        ],
+        "confidence": 0.75
+      },
+      {
+        "stance": "BEAR",
+        "final_label": "BEARISH",
+        "consensus_summary": "Tesla faces significant risks despite its strong market position, including high valuation, regulatory scrutiny, and competition in the electric vehicle sector.",
+        "evidence": [
+          "Tesla's high valuation and overbought conditions in technical indicators suggest potential for a pullback.",
+          "The shareholder approval of Musk's $1 trillion pay package has raised concerns about corporate governance and may lead to shareholder dissatisfaction.",
+          "Class action lawsuits related to compensation disclosures could result in legal costs and reputational damage.",
+          "Increasing competition in the electric vehicle market may erode Tesla's market share and profitability.",
+          "Profitability concerns and high valuation metrics indicate that Tesla may be vulnerable to market corrections."
+        ],
+        "counterarguments": [
+          "Despite risks, Tesla's leadership in electric vehicles and battery technology, along with strong financial metrics, supports continued growth.",
+          "The company's consistent revenue growth and market dominance in sustainable energy could offset short-term challenges.",
+          "The approval of Musk's pay package was by shareholders, indicating that they believe in his vision and the company's potential."
+        ],
+        "confidence": 0.85
+      },
+      {
+        "stance": "BEAR",
+        "final_label": "BEARISH",
+        "consensus_summary": "Tesla faces significant risks despite strong market position. High valuation, legal issues, and competition threaten its growth.",
+        "evidence": [
+          "TSLA shows bullish trend but with high volatility and overbought conditions.",
+          "Recent shareholder approval of Musk's pay package has generated mixed sentiment and potential legal risks.",
+          "Class action lawsuit related to compensation disclosure adds financial uncertainty.",
+          "Increasing competition and profitability concerns challenge Tesla's dominance.",
+          "High valuation may lead to downward pressure on stock price."
+        ],
+        "counterarguments": [
+          "Despite challenges, Tesla's leadership in electric vehicles and technology advancements supports continued growth.",
+          "Recent developments like Musk's pay package approval and advancements in sustainable energy indicate strong market confidence.",
+          "Fundamentals show consistent revenue growth and strong market presence, suggesting resilience."
+        ],
+        "confidence": 0.8
+      }
+    ],
+    "discussion": "Tesla maintains its leadership in the electric vehicle and energy sectors with strong fundamentals, despite challenges. Its recent developments, including shareholder approval of Musk's pay package and advancements in technology, support continued growth.\n\nTesla faces significant risks despite strong market position. High valuation, legal issues, and competition threaten its growth."
+  },
+  "risk": {
+    "risk_score": 65,
+    "breach_flags": [
+      "High Valuation",
+      "Legal Issues",
+      "Competition"
+    ],
+    "explainers": [
+      "Tesla's high valuation makes it vulnerable to market corrections.",
+      "Legal challenges could divert resources and affect operations.",
+      "Intense competition in EV market may impact Tesla's market share."
+    ]
+  },
+  "manager_decision": {
+    "decision": "require_manual",
+    "reason": "The bull and bear perspectives have conflicting confidence levels (0.9 vs 0.8) with a risk score of 65 indicating moderate to high risk. A manual review is needed to balance the conflicting views and assess the actual risk factors.",
+    "next_steps": "Analyze the latest market data and news for Tesla to inform the decision. Consult with legal and finance teams if necessary.",
+    "role": "RISK_MANAGER",
+    "timestamp": "2026-02-11T14:55:26.621062"
+  },
+  "trader_proposal": {
+    "ticker": "TSLA",
+    "side": "NO_TRADE",
+    "size": 0.0,
+    "entry": 0.0,
+    "stop": 0.0,
+    "target": 0.0,
+    "rationale": "The bull and bear perspectives have conflicting confidence levels, with a moderate to high risk score. A manual review is required to balance the views and assess actual risk factors. Current market data and news are necessary to make an informed decision.",
+    "confidence": 0.0,
+    "created_by": "TRADER",
+    "timestamp": "2026-02-11T14:55:31.059021"
+  },
+  "trace": [
+    {
+      "at": "2026-02-11T14:54:21.926808",
+      "stage": "PREFETCH",
+      "tool": "alpha_fetch",
+      "function": "GLOBAL_QUOTE",
+      "symbol": "TSLA",
+      "tickers": null,
+      "params": {},
+      "status": "ok"
+    },
+    {
+      "at": "2026-02-11T14:54:23.859273",
+      "stage": "PREFETCH",
+      "tool": "alpha_fetch",
+      "function": "OVERVIEW",
+      "symbol": "TSLA",
+      "tickers": null,
+      "params": {},
+      "status": "ok"
+    },
+    {
+      "at": "2026-02-11T14:54:24.324961",
+      "stage": "PREFETCH",
+      "tool": "alpha_fetch",
+      "function": "NEWS_SENTIMENT",
+      "symbol": null,
+      "tickers": "TSLA",
+      "params": {},
+      "status": "ok"
+    }
+  ]
+}

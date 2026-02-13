@@ -1,0 +1,91 @@
+{
+  "analysts": {
+    "market": {
+      "role": "MARKET_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-07T13:47:57.390700",
+      "summary": "{\"error\":\"model 'ollama/llama2' not found\"}",
+      "key_points": [],
+      "confidence": 0.8,
+      "recommendation_hint": "HOLD"
+    },
+    "social": {
+      "role": "SOCIAL_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-07T13:47:59.481146",
+      "summary": "{\"error\":\"model 'ollama/llama2' not found\"}",
+      "key_points": [],
+      "confidence": 0.75,
+      "recommendation_hint": "HOLD"
+    },
+    "news": {
+      "role": "NEWS_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-07T13:48:01.529595",
+      "summary": "{\"error\":\"model 'ollama/llama2' not found\"}",
+      "key_points": [],
+      "confidence": 0.8,
+      "recommendation_hint": "HOLD"
+    },
+    "fundamentals": {
+      "role": "FUNDAMENTALS_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-07T13:48:03.622723",
+      "summary": "{\"error\":\"model 'ollama/llama2' not found\"}",
+      "key_points": [],
+      "confidence": 0.85,
+      "recommendation_hint": "HOLD"
+    }
+  },
+  "researchers": {
+    "bull": {
+      "stance": "BULL",
+      "evidence": [
+        "{\"error\":\"model 'ollama/llama2' not found\"}"
+      ],
+      "counterarguments": [],
+      "consensus_summary": "{\"error\":\"model 'ollama/llama2' not found\"}",
+      "final_label": "HOLD",
+      "confidence": 0.7
+    },
+    "bear": {
+      "stance": "BEAR",
+      "evidence": [
+        "{\"error\":\"model 'ollama/llama2' not found\"}"
+      ],
+      "counterarguments": [],
+      "consensus_summary": "{\"error\":\"model 'ollama/llama2' not found\"}",
+      "final_label": "HOLD",
+      "confidence": 0.7
+    },
+    "discussion": {
+      "consensus": "{\"error\":\"model 'ollama/llama2' not found\"}",
+      "final_label": "HOLD",
+      "confidence": 0.75
+    }
+  },
+  "risk": {
+    "risk_score": 60,
+    "breach_flags": [],
+    "explainers": [
+      "{\"error\":\"model 'ollama/llama2' not found\"}"
+    ]
+  },
+  "manager_decision": {
+    "decision": "require_manual",
+    "reason": "{\"error\":\"model 'ollama/llama2' not found\"}",
+    "next_steps": "execute"
+  },
+  "trader_proposal": {
+    "ticker": "TSLA",
+    "side": "SELL",
+    "size": 100,
+    "entry": 243.75,
+    "stop": 255.0,
+    "target": 210.0,
+    "rationale": "{\"error\":\"model 'ollama/llama2' not found\"}",
+    "confidence": 0.7,
+    "created_by": "TRADER",
+    "timestamp": "2026-02-07T13:48:15.990803"
+  }
+}

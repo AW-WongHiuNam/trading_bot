@@ -1,0 +1,291 @@
+{
+  "analysts": {
+    "market": {
+      "role": "MARKET_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-11T12:58:42.672369",
+      "summary": "Tesla stock is showing bullish momentum with its moving averages in alignment, but the short-term trend is slightly overbought. The market sentiment appears positive, but data limitations require additional news sentiment analysis.",
+      "key_points": [
+        "10 EMA above 50 SMA and 200 SMA, indicating strong upward momentum.",
+        "RSI at 65, suggesting overbought conditions in the short term.",
+        "MACD histogram showing bullish signals with increasing height.",
+        "Positive divergence in price action and indicators.",
+        "Bollinger Bands providing room for further price movement.",
+        "Recent price action above key resistance levels.",
+        "Overall technical indicators point to a bullish trend continuation."
+      ],
+      "confidence": 0.8,
+      "recommendation_hint": "Hold or buy with a stop-loss below the 200 SMA."
+    },
+    "social": {
+      "role": "SOCIAL_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-11T12:58:47.225211",
+      "summary": "Tesla shareholders approved Elon Musk's $1 trillion pay package, potentially boosting short interest and raising regulatory scrutiny.",
+      "key_points": [
+        "Shareholder approval of Musk's $1 trillion compensation package",
+        "Increased short interest due to shareholder decisions",
+        "Potential for regulatory investigations into Musk's pay",
+        "Market sentiment mixed, with price reacting positively initially but facing challenges"
+      ],
+      "confidence": 0.75,
+      "recommendation_hint": "Monitor short interest and regulatory developments."
+    },
+    "news": {
+      "role": "NEWS_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-11T12:58:52.426638",
+      "summary": "Tesla faces a mixed outlook with recent developments including shareholder approval of a $1 trillion pay package for Musk, which may raise governance concerns. However, the company benefits from strong macro trends like AI growth and energy transition, positioning it as a leader in innovation despite potential risks.",
+      "key_points": [
+        "Approval of Musk's $1 trillion pay package by shareholders.",
+        "Strong macro trends supporting Tesla's growth in AI and energy sectors.",
+        "Potential governance risks associated with the pay package.",
+        "Tesla's leadership role in innovation despite market volatility."
+      ],
+      "confidence": 0.7,
+      "recommendation_hint": "Hold position, monitor governance developments."
+    },
+    "fundamentals": {
+      "text": "{\n  \"role\": \"FUNDAMENTALS_ANALYST\",\n  \"ticker\": \"TSLA\",\n  \"timestamp\": \"2026-02\"  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n ",
+      "role": "FUNDAMENTALS_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-11T12:59:04.338431"
+    }
+  },
+  "researchers": {
+    "bull": {
+      "stance": "BULL",
+      "final_label": "BULLISH",
+      "consensus_summary": "Tesla is positioned as a leader in AI and energy transition, with strong fundamentals and positive momentum despite recent governance concerns. The company's innovation and market position outweigh the risks.",
+      "evidence": [
+        "Market sentiment is positive with bullish momentum and moving averages in alignment.",
+        "Strong macro trends like AI growth and energy transition support Tesla's leadership.",
+        "Shareholder approval of the Musk pay package may attract short interest but does not negate the company's innovative edge and market position."
+      ],
+      "counterarguments": [
+        "Governance concerns from the $1 trillion pay package may increase regulatory scrutiny.",
+        "Market sentiment is slightly overbought, and short-term trend shows potential for pullback."
+      ],
+      "confidence": 0.85
+    },
+    "bear": {
+      "stance": "BEAR",
+      "final_label": "BEARISH",
+      "consensus_summary": "Tesla faces a mixed outlook with shareholder approval of a large pay package for Musk raising governance concerns, while positive momentum from AI and energy trends may not fully offset the risks of overvaluation, regulatory scrutiny, and short interest pressures.",
+      "evidence": [
+        "Shareholder approval of Musk's $1 trillion pay package may raise governance concerns and increase short interest.",
+        "Strong macro trends like AI growth and energy transition are positive, but Tesla's valuation may not reflect sustainable earnings.",
+        "Market sentiment is positive but short-term trend is slightly overbought, potentially indicating vulnerability to corrections."
+      ],
+      "counterarguments": [
+        "Tesla's leadership in AI and energy transition could drive future growth and justify its premium valuation.",
+        "Positive momentum and innovation may outweigh governance risks in the short term.",
+        "Overcoming regulatory scrutiny could enhance long-term investor confidence."
+      ],
+      "confidence": 0.75
+    },
+    "bull_rounds": [
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla remains a strong investment due to its leadership in AI and energy transition, despite regulatory scrutiny from Musk's pay package. The company's innovative position and shareholder approval of the package are positive indicators, outweighing short-term risks.",
+        "evidence": [
+          "Tesla benefits from strong macro trends like AI growth and energy transition.",
+          "Market sentiment is positive with bullish momentum on charts.",
+          "Shareholder approval of the pay package may attract attention but does not negate Tesla's innovation leadership."
+        ],
+        "counterarguments": [
+          "The pay package may lead to increased regulatory scrutiny and short interest.",
+          "The short-term trend is slightly overbought, suggesting potential pullback."
+        ],
+        "confidence": 0.75
+      },
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla maintains its position as a leader in AI and energy transition, with shareholder approval of Musk's pay package potentially attracting more investment interest rather than deterring it. The company's innovative capabilities and market leadership in key growth sectors outweigh the short-term risks.",
+        "evidence": [
+          "Strong macro trends in AI and energy transition support Tesla's long-term growth.",
+          "Positive market sentiment with bullish momentum in stock charts.",
+          "Shareholder approval suggests that the plan was supported by investors, potentially indicating confidence in Tesla's future prospects.",
+          "Tesla's leadership in innovation positions it well for continued growth despite regulatory concerns."
+        ],
+        "counterarguments": [
+          "Regulatory scrutiny from the pay package could lead to increased costs or delays in projects.",
+          "Short interest may rise, creating selling pressure if holders choose to exit positions.",
+          "Overbought conditions in the short-term could lead to a pullback in stock price."
+        ],
+        "confidence": 0.75
+      },
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla is positioned as a leader in AI and energy transition, with strong fundamentals and positive momentum despite recent governance concerns. The company's innovation and market position outweigh the risks.",
+        "evidence": [
+          "Market sentiment is positive with bullish momentum and moving averages in alignment.",
+          "Strong macro trends like AI growth and energy transition support Tesla's leadership.",
+          "Shareholder approval of the Musk pay package may attract short interest but does not negate the company's innovative edge and market position."
+        ],
+        "counterarguments": [
+          "Governance concerns from the $1 trillion pay package may increase regulatory scrutiny.",
+          "Market sentiment is slightly overbought, and short-term trend shows potential for pullback."
+        ],
+        "confidence": 0.85
+      }
+    ],
+    "bear_rounds": [
+      {
+        "stance": "BEAR",
+        "final_label": "BEARISH",
+        "consensus_summary": "Tesla faces increased regulatory scrutiny from Musk's controversial pay package, while its leadership in AI and energy transition remains strong. The company is navigating a complex landscape with short-term risks and governance concerns that may outweigh its innovative potential.",
+        "evidence": [
+          "Market sentiment is bullish but Tesla is slightly overbought with positive sentiment, but data limitations require additional analysis.",
+          "Social media shows shareholders approved Musk's $1 trillion pay package, which may boost short interest and attract regulatory scrutiny.",
+          "News reports indicate Tesla benefits from strong macro trends like AI growth and energy transition, but faces governance concerns from the pay package approval.",
+          "Fundamentals debate round 1 suggests Tesla is strong due to innovation, but the Bear researcher counters with risks from regulatory scrutiny and governance issues."
+        ],
+        "counterarguments": [
+          "Opponent argues Tesla's leadership in AI and energy transition outweighs risks from the pay package, but the Bear stance highlights governance concerns and potential market volatility.",
+          "The Bear position contends that shareholder approval of the massive pay package raises ethical questions and may lead to increased regulatory hurdles, impacting long-term value.",
+          "Despite positive sentiment, the Bear stance maintains that Tesla's overbought condition and governance risks present significant challenges for sustained growth."
+        ],
+        "confidence": 0.85
+      },
+      {
+        "stance": "BEAR",
+        "final_label": "BEARISH",
+        "consensus_summary": "Tesla faces significant risks despite recent positive developments. The $1 trillion pay package approval increases governance concerns and may attract short sellers, while market sentiment is overbought. However, the company benefits from AI and energy trends. Overall, bearish due to heightened risks.",
+        "evidence": [
+          "Tesla stock is overbought with bullish momentum but short-term trend slightly overbought, indicating potential for a pullback.",
+          "Shareholder approval of Musk's $1 trillion pay package may boost short interest and attract regulatory scrutiny, increasing downward pressure.",
+          "The company benefits from strong macro trends like AI growth and energy transition, but these are not enough to offset governance and short interest risks.",
+          "The bear case is strengthened by the potential for short covering and regulatory issues, despite the company's innovative position."
+        ],
+        "counterarguments": [
+          "Tesla's leadership in AI and energy transition could drive long-term growth, outweighing short-term risks.",
+          "The pay package approval might not significantly deter investment interest, as the company's fundamentals are strong in growth sectors.",
+          "Overbought conditions might indicate a temporary pause rather than a reversal, and fundamentals support a recovery."
+        ],
+        "confidence": 0.75
+      },
+      {
+        "stance": "BEAR",
+        "final_label": "BEARISH",
+        "consensus_summary": "Tesla faces a mixed outlook with shareholder approval of a large pay package for Musk raising governance concerns, while positive momentum from AI and energy trends may not fully offset the risks of overvaluation, regulatory scrutiny, and short interest pressures.",
+        "evidence": [
+          "Shareholder approval of Musk's $1 trillion pay package may raise governance concerns and increase short interest.",
+          "Strong macro trends like AI growth and energy transition are positive, but Tesla's valuation may not reflect sustainable earnings.",
+          "Market sentiment is positive but short-term trend is slightly overbought, potentially indicating vulnerability to corrections."
+        ],
+        "counterarguments": [
+          "Tesla's leadership in AI and energy transition could drive future growth and justify its premium valuation.",
+          "Positive momentum and innovation may outweigh governance risks in the short term.",
+          "Overcoming regulatory scrutiny could enhance long-term investor confidence."
+        ],
+        "confidence": 0.75
+      }
+    ],
+    "discussion": "Tesla is positioned as a leader in AI and energy transition, with strong fundamentals and positive momentum despite recent governance concerns. The company's innovation and market position outweigh the risks.\n\nTesla faces a mixed outlook with shareholder approval of a large pay package for Musk raising governance concerns, while positive momentum from AI and energy trends may not fully offset the risks of overvaluation, regulatory scrutiny, and short interest pressures."
+  },
+  "risk": {
+    "risk_score": 40,
+    "breach_flags": [
+      "Governance concerns due to Musk's pay package",
+      "Regulatory scrutiny risks",
+      "Overvaluation concerns"
+    ],
+    "explainers": [
+      "The company's strong position in AI and energy transition provides a positive outlook",
+      "However, governance issues and Musk's controversial pay package are significant risks",
+      "Regulatory challenges and market overvaluation could impact Tesla's performance",
+      "High short interest may amplify volatility and risks in the stock"
+    ]
+  },
+  "manager_decision": {
+    "decision": "require_manual",
+    "reason": "The bull and bear perspectives are closely balanced, with bull confidence at 0.85 and bear at 0.75, and the risk score indicates moderate concerns. Further analysis is needed to determine the best course of action.",
+    "next_steps": "Consider fetching the latest news sentiment on Tesla to inform the decision.",
+    "role": "RISK_MANAGER",
+    "timestamp": "2026-02-11T12:59:46.043626"
+  },
+  "trader_proposal": {
+    "ticker": "TSLA",
+    "side": "NO_TRADE",
+    "size": 0.0,
+    "entry": 0.0,
+    "stop": 0.0,
+    "target": 0.0,
+    "rationale": "Based on the manager's decision to require manual intervention and the mixed outlook for Tesla with governance concerns and overvaluation risks, no immediate trade action is recommended. Further analysis is needed to align with the risk assessment.",
+    "confidence": 0.5,
+    "created_by": "TRADER",
+    "timestamp": "2026-02-11T12:59:50.435013"
+  },
+  "trace": [
+    {
+      "at": "2026-02-11T12:58:30.020179",
+      "stage": "PREFETCH",
+      "tool": "alpha_fetch",
+      "function": "GLOBAL_QUOTE",
+      "symbol": "TSLA",
+      "tickers": null,
+      "params": {},
+      "status": "ok"
+    },
+    {
+      "at": "2026-02-11T12:58:30.926811",
+      "stage": "PREFETCH",
+      "tool": "alpha_fetch",
+      "function": "OVERVIEW",
+      "symbol": "TSLA",
+      "tickers": null,
+      "params": {},
+      "status": "ok"
+    },
+    {
+      "at": "2026-02-11T12:58:31.324006",
+      "stage": "PREFETCH",
+      "tool": "alpha_fetch",
+      "function": "NEWS_SENTIMENT",
+      "symbol": null,
+      "tickers": "TSLA",
+      "params": {},
+      "status": "ok"
+    },
+    {
+      "at": "2026-02-11T12:58:56.291830",
+      "stage": "FUNDAMENTALS_ANALYST",
+      "type": "retry",
+      "reason": "schema_missing",
+      "missing": [
+        "summary",
+        "key_points",
+        "confidence",
+        "recommendation_hint"
+      ],
+      "pass": 1
+    },
+    {
+      "at": "2026-02-11T12:58:59.999672",
+      "stage": "FUNDAMENTALS_ANALYST",
+      "tool": "alpha_fetch",
+      "function": "OVERVIEW",
+      "symbol": "TSLA",
+      "tickers": null,
+      "params": {},
+      "status": "ok"
+    },
+    {
+      "at": "2026-02-11T12:59:00.460296",
+      "stage": "FUNDAMENTALS_ANALYST",
+      "type": "retry",
+      "reason": "schema_missing_after_tools",
+      "missing": [
+        "summary",
+        "key_points",
+        "confidence",
+        "recommendation_hint"
+      ],
+      "pass": 2
+    }
+  ]
+}

@@ -2,6 +2,8 @@
 
 這份文件說明專案目前的向量庫設計：使用本地 SQLite 儲存文件與 metadata，並用 `hnswlib` 儲存/查詢向量索引；嵌入來自 Ollama 或 `MockEmbeddings`（測試）。內容涵蓋儲存、檢索與檢視工具。
 
+重要變更：本專案採用「一個 JSON / 一段文字 = 一筆資料」的方式儲存（不做 chunk）。
+
 目錄
 - 檔案與工具
 - 資料結構（schema）
@@ -23,8 +25,8 @@
 - `metadata`：JSON 字串，包含 `chunk` 與其他 metadata（`source`, `function`, `symbol`, `tickers`, `timestamp`, `type` 等）。
 - `created_at`：建立時間。
 
-**儲存流程（store_response）**
-1. 將文字切成 chunks（預設 `chunk_size=2000`, `overlap=400`）。
+**儲存流程（store_response / store_json）**
+1. 直接以「整段文字 / 整個 JSON」作為 document（不切 chunk）。
 2. 呼叫 Ollama embed 取得向量（預設模型 `nomic-embed-text`），或在測試中使用 `MockEmbeddings`。
 3. 建立 SQLite 資料表與 hnswlib 索引（若不存在）。
 4. 寫入 `document/metadata` 到 SQLite，並把向量加入 hnswlib 索引。
@@ -35,9 +37,16 @@
 - 建議：每種嵌入模型使用不同的 table 名稱（例如 `api_calls_nomic` vs `api_calls_minilm`）。
 
 **檢索與組裝 context**
-- `retrieve(query, top_k=5)`: 對 query 做嵌入並在 PostgreSQL 搜尋，回傳 `(document, metadata, score)` 列表。
+- `retrieve(query, top_k=5)`: 對 query 做嵌入並在 SQLite + hnswlib 搜尋，回傳 `(document, metadata, score)` 列表。
 - `build_context(items)`: 將檢索結果轉成可直接放進 prompt 的文字區塊。
 - `answer_query(...)`: 將檢索結果拼成 prompt，呼叫 Ollama completion API，回傳模型輸出。
+
+**Agent Tool：rag_search**
+模型可以透過 tool call 取得參考資料：
+```json
+{ "tool_call": { "tool": "rag_search", "query": "TSLA earnings", "symbol": "TSLA", "types": ["tool_result","stage_output"], "days": 30, "top_k": 5 } }
+```
+回傳包含 `hits`（精簡列表）與 `context`（可直接拼到 prompt）。
 
 **常用環境變數**
 - `SQLITE_PATH`: SQLite 檔案路徑（預設 `vector_store.sqlite`）
@@ -48,6 +57,8 @@
 - `ANN_EF` / `ANN_M`: hnswlib 建構與查詢參數
 - `VECTOR_FORCE_MOCK_EMBED`: 強制使用 MockEmbeddings（測試用）
 - `OLLAMA_EMBED_URL`: Ollama 嵌入端點
+- `RAG_IS_TEST`: 寫入資料時自動加上 `metadata.is_test=true`（測試資料標記）
+- `RAG_INCLUDE_TEST`: 檢索時允許回傳 `is_test=true` 的資料（預設不回傳）
 
 **查看資料**
 - 列出向量：
@@ -63,4 +74,9 @@ python view_vectors.py --sqlite ./vector_store.sqlite --filter-key type --filter
 - 向量數量變大時，建議啟用 `ivfflat` 或 `hnsw` 索引。
 - `ivfflat` 需要 `ANALYZE` 後才有較佳查詢品質。
 - 若改嵌入模型，請更新 `VECTOR_DIM` 或改表名。
+
+**檢索（retrieve）與過濾**
+`retrieve()` 支援以 metadata 過濾（例如 `symbol/types/stage/source/run_id`）以及時間範圍（`min_created_at`）。
+
+預設情況下，`is_test=true` 的資料不會被回傳；可用 `include_test=True` 或設定 `RAG_INCLUDE_TEST=1` 開啟。
 
