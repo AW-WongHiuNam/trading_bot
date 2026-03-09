@@ -2,7 +2,7 @@
 """Simple Alpha Vantage NEWS_SENTIMENT helper.
 
 Usage example:
-  python get_news.py --apikey BSE23K9THV7KR1X7 --tickers AAPL --limit 5
+    python scripts/get_news.py --apikey BSE23K9THV7KR1X7 --tickers AAPL --limit 5
 """
 import time
 from typing import List, Dict, Optional

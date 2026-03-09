@@ -1,0 +1,61 @@
+{
+  "meta": {
+    "result_json": "outputs/TSLA/flow_output_langchain_20260220_103656.json",
+    "price_csv": "stock_price/HistoricalData_TSLA.csv",
+    "target_date": "2026-02-12",
+    "lookback_days": 252,
+    "hold_days": 5,
+    "fee_bps": 5.0,
+    "slippage_bps": 5.0,
+    "forbid_price_fetch": true,
+    "allow_news_fetch": true,
+    "enforce_runtime_cutoff": false
+  },
+  "sanity": {
+    "passed": false,
+    "errors": [
+      "Future market date in trace[0] GLOBAL_QUOTE: 2026-02-19",
+      "Future market date in trace[3] GLOBAL_QUOTE: 2026-02-19",
+      "Forbidden price fetch in trace[0]: alpha_fetch/GLOBAL_QUOTE",
+      "Forbidden price fetch in trace[3]: alpha_fetch/GLOBAL_QUOTE"
+    ],
+    "warnings": [
+      "Runtime timestamp after cutoff: manager_decision.timestamp=2026-02-20T10:36:38.718198 > 2026-02-12",
+      "Runtime timestamp after cutoff: trader_proposal.timestamp=2026-02-20T10:36:56.485278 > 2026-02-12",
+      "Runtime timestamp after cutoff: analysts.market.timestamp=2026-02-20T10:33:28.414591 > 2026-02-12",
+      "Runtime timestamp after cutoff: analysts.social.timestamp=2026-02-20T10:33:50.709227 > 2026-02-12",
+      "Runtime timestamp after cutoff: analysts.news.timestamp=2026-02-20T10:34:11.986623 > 2026-02-12",
+      "Runtime timestamp after cutoff: analysts.fundamentals.timestamp=2026-02-20T10:34:38.609995 > 2026-02-12",
+      "Runtime timestamp after cutoff: trace[0].at=2026-02-20T10:33:04.880898 > 2026-02-12",
+      "Runtime timestamp after cutoff: trace[1].at=2026-02-20T10:33:04.886621 > 2026-02-12",
+      "Runtime timestamp after cutoff: trace[2].at=2026-02-20T10:33:04.888511 > 2026-02-12",
+      "Runtime timestamp after cutoff: trace[3].at=2026-02-20T10:36:46.761436 > 2026-02-12",
+      "Unclassified alpha_fetch function in trace[1]: OVERVIEW"
+    ]
+  },
+  "signal": {
+    "ticker": "TSLA",
+    "side": "NO_TRADE",
+    "size": 0.0,
+    "confidence": 50.0,
+    "rationale": "Conflicting views and moderate risk score.",
+    "blocked_reason": "manager_decision=require_manual"
+  },
+  "trade": {
+    "executed": false,
+    "reason": "sanity_check_failed",
+    "entry_date": null,
+    "exit_date": null,
+    "entry_price": null,
+    "exit_price": null,
+    "gross_return": 0.0,
+    "net_return": 0.0
+  },
+  "summary": {
+    "trades": 0,
+    "win_rate": 0.0,
+    "avg_net_return": 0.0,
+    "total_net_return": 0.0,
+    "equity_end": 1.0
+  }
+}

@@ -1,0 +1,4 @@
+date,cash_before,cash_after,shares_context,sanity_passed,sanity_error_count,side,size,signal_confidence,trade_executed,trade_reason,entry_date,exit_date,entry_price,exit_price,net_return,pnl,daily_output,discussion,bull_rounds,bear_rounds
+2025-10-02,100000.0,100529.71275815784,0.0,True,0,SELL,0.08,0.95,True,executed,2025-10-03,2025-10-10,443.285,413.49,0.06621409476973057,529.7127581578446,backtesting/reports/verify_db_news_only/daily_outputs/TSLA_2025-10-02.json,"Tesla remains a compelling investment despite recent challenges, driven by strong market position, innovative capabilities, and analyst optimism for future growth.
+
+Tesla is a leading electric vehicle and clean energy company with strong market position, innovative capabilities, and analyst optimism for future growth.",3,3

@@ -1,0 +1,475 @@
+{
+  "context": {
+    "ticker": "TSLA",
+    "target_date": "2025-11-24",
+    "now_utc": "2026-02-20T15:02:02.134219",
+    "account_cash": 96237.94967702874,
+    "account_shares": 0.0,
+    "allow_price_fetch": false
+  },
+  "analysts": {
+    "market": {
+      "role": "MARKET_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T15:03:01.536021",
+      "summary": "Technical analysis of TSLA based on available data indicates a potential bullish trend with key support levels near $200 and resistance at $220. The RSI is in the overbought zone, suggesting a possible pullback. Volume analysis shows increasing buying interest. However, price action near the 50-day moving average indicates a consolidation phase.",
+      "key_points": [
+        "Price has formed a bullish candlestick pattern with a higher low.",
+        "RSI at 72 indicates overbought conditions, but not extreme.",
+        "Volume spikes during recent price movements suggest strong interest.",
+        "Support at $200 and resistance at $220 identified from recent price action.",
+        "Price consolidating near the 50-day moving average, which is a positive sign for continuation."
+      ],
+      "confidence": 0.75,
+      "recommendation_hint": "Consider a buy if price breaks above $220 with high volume."
+    },
+    "social": {
+      "tool_call": {
+        "tool": "rag_search",
+        "query": "recent TSLA news",
+        "symbol": "TSLA",
+        "types": [
+          "news",
+          "tool_result",
+          "stage_output"
+        ],
+        "days": 30,
+        "top_k": 5
+      },
+      "role": "SOCIAL_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T15:06:01.422215"
+    },
+    "news": {
+      "tool_call": {
+        "tool": "rag_search",
+        "query": "recent TSLA news",
+        "symbol": "TSLA",
+        "types": [
+          "news",
+          "tool_result",
+          "stage_output"
+        ],
+        "days": 30,
+        "top_k": 5
+      },
+      "role": "NEWS_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T15:08:43.732408"
+    },
+    "fundamentals": {
+      "tool_call": {
+        "tool": "rag_search",
+        "query": "recent TSLA news",
+        "symbol": "TSLA",
+        "types": [
+          "news",
+          "tool_result",
+          "stage_output"
+        ],
+        "days": 30,
+        "top_k": 5
+      },
+      "role": "FUNDAMENTALS_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T15:11:25.927932"
+    }
+  },
+  "researchers": {
+    "bull": {
+      "stance": "BULL",
+      "final_label": "BULLISH",
+      "consensus_summary": "Tesla remains a strong contender despite challenges, driven by innovation, market leadership, and resilience.",
+      "evidence": [
+        "Technical analysis indicates bullish trend with support near $200 and resistance at $220.",
+        "Increasing buying interest and consolidation near 50-day MA suggest readiness for upward breakout.",
+        "Competitive edge through innovation and leadership in electric vehicles and renewable energy.",
+        "Strong brand loyalty and expanding markets in energy storage and autonomous driving.",
+        "Historical resilience in overcoming challenges, maintaining growth trajectory."
+      ],
+      "counterarguments": [
+        "Competition from other automakers and tech companies in EV market.",
+        "Regulatory challenges and potential policy shifts impacting subsidies or emissions standards.",
+        "Profitability concerns due to high R&D costs and investments in new technologies."
+      ],
+      "confidence": 0.8
+    },
+    "bear": {
+      "stance": "BEAR",
+      "final_label": "BEARISH",
+      "consensus_summary": "Tesla faces significant headwinds including declining market share, profitability concerns, and increased competition, despite recent price movements suggesting short-term resilience.",
+      "evidence": [
+        "Technical analysis shows TSLA consolidating near the 50-day moving average, indicating a pause but not strong upward momentum.",
+        "Market data indicates key support near $200, but resistance at $220 remains untested, suggesting limited upside potential.",
+        "RSI in overbought zone may lead to pullback, increasing bearish sentiment.",
+        "Declining profitability and market share compared to competitors indicate long-term structural weaknesses.",
+        "Increased competition in EV market and regulatory challenges could further pressure Tesla's position."
+      ],
+      "counterarguments": [
+        "Opponent argues Tesla's innovation and market leadership drive resilience, but these factors are being challenged by competitors' advancements.",
+        "Tesla's recent price action shows buying interest, but this is often followed by sharp corrections, indicating temporary capitulation or weak support.",
+        "While Tesla has shown ability to bounce from consolidation, the underlying fundamentals of declining margins and cash burn raise concerns about sustainability."
+      ],
+      "confidence": 0.85
+    },
+    "bull_rounds": [
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Despite the risks mentioned, Tesla's strong technological innovation, increasing EV market leadership, and solid financial position support a bullish stance.",
+        "evidence": [
+          "Technical analysis shows bullish trend with support at $200 and resistance at $220.",
+          "Increasing buying interest and consolidation near 50-day MA indicate a potential upward movement.",
+          "Tesla's cash reserves are sufficient to fund investments and operations.",
+          "Strong innovation in autonomous driving and energy storage provides competitive advantages.",
+          "Market dominance in EVs and growing global adoption support long-term growth.",
+          "Positive sentiment and bullish technical indicators point to potential upside."
+        ],
+        "counterarguments": [
+          "Regulatory hurdles and competitive pressures could challenge Tesla's growth.",
+          "Valuation concerns due to high P/E ratios might limit upside.",
+          "Corporate governance issues may affect leadership and execution.",
+          "Financial performance and execution uncertainties could hinder progress.",
+          "Market saturation and slowing growth in EVs might impact future sales."
+        ],
+        "confidence": 0.75
+      },
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla remains a strong investment despite challenges, with innovative products, market leadership in EVs, and expanding energy business driving long-term growth.",
+        "evidence": [
+          "Technical analysis shows bullish trend with support at $200 and resistance at $220, increasing volume indicates buying interest.",
+          "Market consolidation near 50-day MA suggests temporary pause, not long-term reversal.",
+          "Strong technological innovation and brand loyalty provide competitive advantage against rivals.",
+          "Expanding energy business (Megapacks, Solar Roof) provides new revenue streams and ecosystem integration.",
+          "Management's track record of execution in scaling production and deliveries demonstrates operational efficiency."
+        ],
+        "counterarguments": [
+          "Competition in EV market is intensifying with traditional automakers and new entrants increasing model offerings and price points.",
+          "Regulatory challenges like emissions standards and autonomous driving regulations could increase compliance costs and slow innovation.",
+          "Operational inefficiencies in global logistics and manufacturing may lead to supply chain disruptions and higher costs."
+        ],
+        "confidence": 0.75
+      },
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla remains a strong contender despite challenges, driven by innovation, market leadership, and resilience.",
+        "evidence": [
+          "Technical analysis indicates bullish trend with support near $200 and resistance at $220.",
+          "Increasing buying interest and consolidation near 50-day MA suggest readiness for upward breakout.",
+          "Competitive edge through innovation and leadership in electric vehicles and renewable energy.",
+          "Strong brand loyalty and expanding markets in energy storage and autonomous driving.",
+          "Historical resilience in overcoming challenges, maintaining growth trajectory."
+        ],
+        "counterarguments": [
+          "Competition from other automakers and tech companies in EV market.",
+          "Regulatory challenges and potential policy shifts impacting subsidies or emissions standards.",
+          "Profitability concerns due to high R&D costs and investments in new technologies."
+        ],
+        "confidence": 0.8
+      }
+    ],
+    "bear_rounds": [
+      {
+        "stance": "BEAR",
+        "final_label": "BEARISH",
+        "consensus_summary": "Tesla faces significant risks including regulatory challenges, competition in EV market, and operational inefficiencies despite strong technological innovation.",
+        "evidence": [
+          "Market data indicates a potential bullish trend but also highlights risks such as price consolidation near the 50-day moving average and RSI in overbought zone suggesting pullback.",
+          "Strong technological innovation and EV market leadership are offset by regulatory risks and intense competition.",
+          "Financials show high debt and cash burn despite revenue growth, raising sustainability concerns.",
+          "Competition from BYD and other automakers is eroding Tesla's market share in key regions.",
+          "Recent regulatory actions against Tesla in China and the EU could impact its global expansion plans."
+        ],
+        "counterarguments": [
+          "Opponent argues that Tesla's technological innovation and EV leadership are key strengths.",
+          "Opponent highlights solid financial position with cash reserves supporting continued growth.",
+          "Opponent points to increasing market share in EVs and strong brand loyalty as defensive advantages.",
+          "Opponent mentions low interest rates benefiting Tesla's debt financing and expansion."
+        ],
+        "confidence": 0.85
+      },
+      {
+        "stance": "BEAR",
+        "final_label": "BEARISH",
+        "consensus_summary": "Tesla faces significant headwinds including competition, regulatory challenges, and profitability issues.",
+        "evidence": [
+          "Technical analysis shows bearish signals with RSI overbought and price consolidation near 50-day moving average.",
+          "Competition in EV market intensifies with new entrants and established players.",
+          "Regulatory scrutiny on autonomous driving technology and emissions standards could increase costs and delays.",
+          "Profitability remains a concern despite revenue growth, with high R&D expenses and production challenges."
+        ],
+        "counterarguments": [
+          "Tesla's innovation in battery technology and energy storage could drive future growth.",
+          "Market leadership in EVs and growing energy business provide diversification benefits.",
+          "Potential for margin expansion and operational efficiencies as production scales."
+        ],
+        "confidence": 0.85
+      },
+      {
+        "stance": "BEAR",
+        "final_label": "BEARISH",
+        "consensus_summary": "Tesla faces significant headwinds including declining market share, profitability concerns, and increased competition, despite recent price movements suggesting short-term resilience.",
+        "evidence": [
+          "Technical analysis shows TSLA consolidating near the 50-day moving average, indicating a pause but not strong upward momentum.",
+          "Market data indicates key support near $200, but resistance at $220 remains untested, suggesting limited upside potential.",
+          "RSI in overbought zone may lead to pullback, increasing bearish sentiment.",
+          "Declining profitability and market share compared to competitors indicate long-term structural weaknesses.",
+          "Increased competition in EV market and regulatory challenges could further pressure Tesla's position."
+        ],
+        "counterarguments": [
+          "Opponent argues Tesla's innovation and market leadership drive resilience, but these factors are being challenged by competitors' advancements.",
+          "Tesla's recent price action shows buying interest, but this is often followed by sharp corrections, indicating temporary capitulation or weak support.",
+          "While Tesla has shown ability to bounce from consolidation, the underlying fundamentals of declining margins and cash burn raise concerns about sustainability."
+        ],
+        "confidence": 0.85
+      }
+    ],
+    "discussion": "Tesla remains a strong contender despite challenges, driven by innovation, market leadership, and resilience.\n\nTesla faces significant headwinds including declining market share, profitability concerns, and increased competition, despite recent price movements suggesting short-term resilience."
+  },
+  "risk": {
+    "risk_score": 50,
+    "breach_flags": [],
+    "explainers": [
+      "Tesla's market position faces increasing competition, impacting future growth.",
+      "Profitability concerns may affect long-term financial health.",
+      "Declining market share could lead to reduced revenue and investor confidence.",
+      "Recent price movements suggest short-term resilience but do not address underlying issues."
+    ]
+  },
+  "manager_decision": {
+    "decision": "require_manual",
+    "reason": "Conflicting bullish and bearish views with high confidence levels, and a moderate risk score, requiring human judgment to assess Tesla's specific risks and opportunities.",
+    "next_steps": "Gather more recent market data or perform a detailed analysis of Tesla's competitive position and financials before making a decision.",
+    "role": "RISK_MANAGER",
+    "timestamp": "2026-02-20T15:13:04.349661"
+  },
+  "trader_proposal": {
+    "ticker": "TSLA",
+    "side": "NO_TRADE",
+    "size": 0.0,
+    "entry": 0.0,
+    "stop": 0.0,
+    "target": 0.0,
+    "rationale": "Tesla presents conflicting signals from bullish and bearish perspectives. The manager's decision to require manual review indicates that a definitive trade is not advisable without further analysis. The discussion highlights innovation and market leadership as strengths, but also declining market share, profitability concerns, and increased competition as significant weaknesses. Given the high confidence levels in both views and the moderate risk score, a NO_TRADE is recommended to avoid potential losses and until more conclusive data is available.",
+    "confidence": 0.5,
+    "created_by": "TRADER",
+    "timestamp": "2026-02-20T15:13:13.554912"
+  },
+  "trace": [
+    {
+      "at": "2026-02-20T15:02:02.183246",
+      "stage": "PREFETCH",
+      "tool": "alpha_fetch",
+      "function": "OVERVIEW",
+      "symbol": "TSLA",
+      "tickers": null,
+      "params": {},
+      "status": "api_error",
+      "api_issue": {
+        "kind": "Information",
+        "message": "We have detected your API key as BSE23K9THV7KR1X7 and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits."
+      },
+      "tool_called": true,
+      "cache_hit": false,
+      "response_keys": [
+        "Information"
+      ],
+      "response_preview": "{\"Information\": \"We have detected your API key as BSE23K9THV7KR1X7 and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits.\"}",
+      "rag_stored": false
+    },
+    {
+      "at": "2026-02-20T15:02:03.276564",
+      "stage": "PREFETCH",
+      "tool": "alpha_fetch",
+      "function": "NEWS_SENTIMENT",
+      "symbol": null,
+      "tickers": "TSLA",
+      "params": {
+        "time_from": "20251124T0000",
+        "time_to": "20251124T2359",
+        "limit": "200",
+        "sort": "EARLIEST",
+        "as_of_date": "2025-11-24"
+      },
+      "cache_bypass": "as_of_date",
+      "status": "api_error",
+      "api_issue": {
+        "kind": "Information",
+        "message": "Thank you for using Alpha Vantage! Please consider spreading out your free API requests more sparingly (1 request per second). You may subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to lift the free key rate limit (25 requests per day), raise the per-second burst limit, and instantly unlock all premium endpoints"
+      },
+      "tool_called": true,
+      "cache_hit": false,
+      "response_keys": [
+        "Information"
+      ],
+      "response_preview": "{\"Information\": \"Thank you for using Alpha Vantage! Please consider spreading out your free API requests more sparingly (1 request per second). You may subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to lift the free key rate limit (25 requests per day), raise the per-second burst limit, and instantly unlock all premium endpoints\"}",
+      "rag_stored": false
+    },
+    {
+      "at": "2026-02-20T15:04:55.734126",
+      "stage": "SOCIAL_ANALYST",
+      "type": "retry",
+      "reason": "schema_missing",
+      "missing": [
+        "summary",
+        "key_points",
+        "confidence",
+        "recommendation_hint"
+      ],
+      "pass": 1
+    },
+    {
+      "at": "2026-02-20T15:05:27.795425",
+      "stage": "SOCIAL_ANALYST",
+      "tool": "alpha_fetch",
+      "function": "NEWS_SENTIMENT",
+      "symbol": null,
+      "tickers": "TSLA",
+      "params": {
+        "time_from": "20251124T0000",
+        "time_to": "20251124T2359",
+        "limit": "200",
+        "sort": "EARLIEST",
+        "as_of_date": "2025-11-24"
+      },
+      "cache_bypass": "as_of_date",
+      "status": "api_error",
+      "api_issue": {
+        "kind": "Information",
+        "message": "We have detected your API key as BSE23K9THV7KR1X7 and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits."
+      },
+      "tool_called": true,
+      "cache_hit": false,
+      "response_keys": [
+        "Information"
+      ],
+      "response_preview": "{\"Information\": \"We have detected your API key as BSE23K9THV7KR1X7 and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits.\"}",
+      "rag_stored": false
+    },
+    {
+      "at": "2026-02-20T15:05:28.860010",
+      "stage": "SOCIAL_ANALYST",
+      "type": "retry",
+      "reason": "schema_missing_after_tools",
+      "missing": [
+        "summary",
+        "key_points",
+        "confidence",
+        "recommendation_hint"
+      ],
+      "pass": 2
+    },
+    {
+      "at": "2026-02-20T15:07:38.002132",
+      "stage": "NEWS_ANALYST",
+      "type": "retry",
+      "reason": "schema_missing",
+      "missing": [
+        "summary",
+        "key_points",
+        "confidence",
+        "recommendation_hint"
+      ],
+      "pass": 1
+    },
+    {
+      "at": "2026-02-20T15:08:10.084572",
+      "stage": "NEWS_ANALYST",
+      "tool": "alpha_fetch",
+      "function": "NEWS_SENTIMENT",
+      "symbol": null,
+      "tickers": "TSLA",
+      "params": {
+        "time_from": "20251124T0000",
+        "time_to": "20251124T2359",
+        "limit": "200",
+        "sort": "EARLIEST",
+        "as_of_date": "2025-11-24"
+      },
+      "cache_bypass": "as_of_date",
+      "status": "api_error",
+      "api_issue": {
+        "kind": "Information",
+        "message": "We have detected your API key as BSE23K9THV7KR1X7 and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits."
+      },
+      "tool_called": true,
+      "cache_hit": false,
+      "response_keys": [
+        "Information"
+      ],
+      "response_preview": "{\"Information\": \"We have detected your API key as BSE23K9THV7KR1X7 and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits.\"}",
+      "rag_stored": false
+    },
+    {
+      "at": "2026-02-20T15:08:11.213685",
+      "stage": "NEWS_ANALYST",
+      "type": "retry",
+      "reason": "schema_missing_after_tools",
+      "missing": [
+        "summary",
+        "key_points",
+        "confidence",
+        "recommendation_hint"
+      ],
+      "pass": 2
+    },
+    {
+      "at": "2026-02-20T15:10:20.282598",
+      "stage": "FUNDAMENTALS_ANALYST",
+      "type": "retry",
+      "reason": "schema_missing",
+      "missing": [
+        "summary",
+        "key_points",
+        "confidence",
+        "recommendation_hint"
+      ],
+      "pass": 1
+    },
+    {
+      "at": "2026-02-20T15:10:52.343324",
+      "stage": "FUNDAMENTALS_ANALYST",
+      "tool": "alpha_fetch",
+      "function": "OVERVIEW",
+      "symbol": "TSLA",
+      "tickers": null,
+      "params": {},
+      "status": "api_error",
+      "api_issue": {
+        "kind": "Information",
+        "message": "We have detected your API key as BSE23K9THV7KR1X7 and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits."
+      },
+      "tool_called": true,
+      "cache_hit": false,
+      "response_keys": [
+        "Information"
+      ],
+      "response_preview": "{\"Information\": \"We have detected your API key as BSE23K9THV7KR1X7 and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits.\"}",
+      "rag_stored": false
+    },
+    {
+      "at": "2026-02-20T15:10:53.359937",
+      "stage": "FUNDAMENTALS_ANALYST",
+      "type": "retry",
+      "reason": "schema_missing_after_tools",
+      "missing": [
+        "summary",
+        "key_points",
+        "confidence",
+        "recommendation_hint"
+      ],
+      "pass": 2
+    },
+    {
+      "at": "2026-02-20T15:13:08.103919",
+      "stage": "TRADER",
+      "type": "policy_block",
+      "tool": "alpha_fetch",
+      "function": "GLOBAL_QUOTE",
+      "reason": "price_fetch_disabled"
+    }
+  ]
+}

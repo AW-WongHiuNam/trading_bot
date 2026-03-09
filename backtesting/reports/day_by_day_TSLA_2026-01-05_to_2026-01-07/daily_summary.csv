@@ -1,0 +1,10 @@
+date,cash_before,cash_after,shares_context,sanity_passed,sanity_error_count,side,size,signal_confidence,trade_executed,trade_reason,entry_date,exit_date,entry_price,exit_price,net_return,pnl,daily_output,discussion,bull_rounds,bear_rounds
+2026-01-05,100000.0,100008.36999865585,0.0,True,0,BUY,0.1,0.85,True,executed,2026-01-06,2026-01-13,446.38,447.2,0.0008369998655853605,8.369998655853605,backtesting/reports/day_by_day_TSLA_2026-01-05_to_2026-01-07/daily_outputs/TSLA_2026-01-05.json,"Tesla continues to demonstrate resilience in its core business and emerging technologies, despite facing industry-wide challenges.
+
+Tesla faces significant challenges in production, competition, and market sentiment, despite potential in autonomous driving and energy storage.",3,3
+2026-01-06,100008.36999865585,100008.36999865585,0.0,True,0,NO_TRADE,0.0,0.8,False,risk_score=85.0 >= 80,,,,,0.0,0.0,backtesting/reports/day_by_day_TSLA_2026-01-05_to_2026-01-07/daily_outputs/TSLA_2026-01-06.json,"Tesla remains a strong investment despite challenges, with innovative leadership in EVs and autonomous driving.
+
+Tesla maintains strong positions in EV market and autonomous driving, with positive sentiment and technical indicators supporting growth.",3,3
+2026-01-07,100008.36999865585,100008.36999865585,0.0,True,0,NO_TRADE,0.0,0.0,False,backtest_policy_no_edge,,,,,0.0,0.0,backtesting/reports/day_by_day_TSLA_2026-01-05_to_2026-01-07/daily_outputs/TSLA_2026-01-07.json,"Tesla remains a compelling investment despite risks, with strong fundamentals and innovation potential.
+
+Tesla faces increased competition, regulatory risks, and valuation concerns despite positive innovations.",3,3

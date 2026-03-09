@@ -1,0 +1,277 @@
+{
+  "context": {
+    "ticker": "TSLA",
+    "target_date": "2026-01-22",
+    "now_utc": "2026-02-20T13:13:01.089250",
+    "account_cash": 100000.0,
+    "account_shares": 0.0,
+    "allow_price_fetch": false
+  },
+  "analysts": {
+    "market": {
+      "role": "MARKET_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T13:13:07.021719",
+      "summary": "Technical analysis indicates a bullish trend for Tesla stock with potential for continued upward movement.",
+      "key_points": [
+        "RSI above 70, suggesting overbought conditions but not extreme.",
+        "MACD showing bullish crossover, indicating upward momentum.",
+        "Moving averages aligning in an uptrend.",
+        "Support and resistance levels near current price."
+      ],
+      "confidence": 0.7,
+      "recommendation_hint": "Consider buying on dips with stop loss below support."
+    },
+    "social": {
+      "role": "SOCIAL_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T13:13:11.926206",
+      "summary": "Tesla's stock performance and sentiment analysis based on recent news and fundamental data.",
+      "key_points": [
+        "Strong market sentiment due to advancements in autonomous driving technology.",
+        "Positive news regarding the Gigafactory expansion projects.",
+        "Potential regulatory challenges in Europe affecting short-term growth.",
+        "Recent earnings report showing improved margins and production efficiency.",
+        "Market speculation on the upcoming product releases in 2026."
+      ],
+      "confidence": 0.7,
+      "recommendation_hint": "Hold position due to balanced positive and negative factors."
+    },
+    "news": {
+      "role": "NEWS_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T13:13:16.643948",
+      "summary": "Tesla's recent performance in the electric vehicle market shows strong fundamentals, but there are concerns about competition and profitability.",
+      "key_points": [
+        "Strong Q4 deliveries and market share gains in electric vehicles.",
+        "Increasing competition from Chinese EV manufacturers.",
+        "Improved gross margins but still below pre-2021 levels.",
+        "CEO Elon Musk's controversial statements affecting brand perception.",
+        "Potential regulatory challenges for autonomous driving technology."
+      ],
+      "confidence": 0.7,
+      "recommendation_hint": "Hold position due to balanced risks and opportunities."
+    },
+    "fundamentals": {
+      "role": "FUNDAMENTALS_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T13:13:21.411691",
+      "summary": "Tesla faces uncertain demand for new models and increasing competition in the electric vehicle market. The company's valuation appears high given recent earnings performance.",
+      "key_points": [
+        "Q4 2025 deliveries expected to be lower than projections.",
+        "Increased competition from traditional automakers and new EV entrants.",
+        "Valuation concerns despite strong brand loyalty.",
+        "Potential for margin pressure due to raw material costs."
+      ],
+      "confidence": 0.7,
+      "recommendation_hint": "Hold position, monitor Q1 earnings."
+    }
+  },
+  "researchers": {
+    "bull": {
+      "stance": "BULL",
+      "final_label": "BULLISH",
+      "consensus_summary": "Tesla continues to demonstrate strong innovation and market leadership in the electric vehicle space, supported by robust financials and positive sentiment despite competitive pressures.",
+      "evidence": [
+        "Technical analysis indicates a bullish trend for Tesla stock with potential for continued upward movement.",
+        "Tesla's recent performance in the electric vehicle market shows strong fundamentals, but there are concerns about competition and profitability.",
+        "Tesla faces uncertain demand for new models and increasing competition in the electric vehicle market. The company's valuation appears high given recent earnings performance."
+      ],
+      "counterarguments": [
+        "Opponent's last points: Tesla faces significant risks including high valuation, intense competition, and uncertain demand for new models, despite strong market fundamentals in the EV sector."
+      ],
+      "confidence": 0.95
+    },
+    "bear": {
+      "stance": "BEAR",
+      "final_label": "BEARISH",
+      "consensus_summary": "Tesla faces strong competitive pressures and profitability concerns despite recent market enthusiasm.",
+      "evidence": [
+        "Technical analysis shows a bullish trend, but fundamentals indicate high valuation and risks from competition.",
+        "Tesla's fundamentals highlight uncertain demand and increasing competition in the EV market.",
+        "News reports emphasize concerns about profitability and valuation despite strong sentiment."
+      ],
+      "counterarguments": [
+        "Competitive pressures from new EV models and profitability issues may hinder Tesla's growth.",
+        "The company's valuation appears elevated based on recent earnings performance.",
+        "Market sentiment may not account for long-term risks in the EV market landscape."
+      ],
+      "confidence": 0.9
+    },
+    "bull_rounds": [
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla is positioned to capitalize on the growing electric vehicle market, supported by strong brand loyalty, technological innovation, and expanding energy storage business.",
+        "evidence": [
+          "Technical analysis indicates a bullish trend for Tesla stock.",
+          "Fundamental data shows Tesla's strong performance in the electric vehicle market.",
+          "Tesla's brand loyalty and technological innovation provide a competitive edge."
+        ],
+        "counterarguments": [
+          "Concerns about competition and profitability in the electric vehicle market.",
+          "High valuation given recent earnings performance."
+        ],
+        "confidence": 0.95
+      },
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla remains a strong investment despite risks, driven by innovation and market leadership in EVs.",
+        "evidence": [
+          "Technical analysis shows a bullish trend with potential for continued upward movement.",
+          "Strong fundamentals in the electric vehicle market with high growth potential.",
+          "Valuation is supported by future growth prospects and market dominance."
+        ],
+        "counterarguments": [
+          "Competition and profitability concerns in the electric vehicle market.",
+          "Valuation appears high given recent earnings performance."
+        ],
+        "confidence": 0.95
+      },
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla continues to demonstrate strong innovation and market leadership in the electric vehicle space, supported by robust financials and positive sentiment despite competitive pressures.",
+        "evidence": [
+          "Technical analysis indicates a bullish trend for Tesla stock with potential for continued upward movement.",
+          "Tesla's recent performance in the electric vehicle market shows strong fundamentals, but there are concerns about competition and profitability.",
+          "Tesla faces uncertain demand for new models and increasing competition in the electric vehicle market. The company's valuation appears high given recent earnings performance."
+        ],
+        "counterarguments": [
+          "Opponent's last points: Tesla faces significant risks including high valuation, intense competition, and uncertain demand for new models, despite strong market fundamentals in the EV sector."
+        ],
+        "confidence": 0.95
+      }
+    ],
+    "bear_rounds": [
+      {
+        "stance": "BEAR",
+        "final_label": "BEARISH",
+        "consensus_summary": "Tesla faces significant risks despite recent market optimism, including intense competition, profitability concerns, and valuation issues.",
+        "evidence": [
+          "Technical analysis indicates a bullish trend for Tesla stock with potential for continued upward movement.",
+          "Tesla's recent performance in the electric vehicle market shows strong fundamentals, but there are concerns about competition and profitability.",
+          "Tesla faces uncertain demand for new models and increasing competition in the electric vehicle market. The company's valuation appears high given recent earnings performance."
+        ],
+        "counterarguments": [
+          "Tesla is positioned to capitalize on the growing electric vehicle market, supported by strong brand loyalty, technological innovation, and expanding energy storage business."
+        ],
+        "confidence": 0.8
+      },
+      {
+        "stance": "BEAR",
+        "final_label": "BEARISH",
+        "consensus_summary": "Tesla faces significant risks including high valuation, intense competition, and uncertain demand for new models, despite strong market fundamentals in the EV sector.",
+        "evidence": [
+          "Technical analysis indicates a bullish trend for Tesla stock with potential for continued upward movement.",
+          "Tesla's recent performance in the electric vehicle market shows strong fundamentals, but there are concerns about competition and profitability.",
+          "Tesla faces uncertain demand for new models and increasing competition in the electric vehicle market. The company's valuation appears high given recent earnings performance."
+        ],
+        "counterarguments": [
+          "Tesla remains a strong investment despite risks, driven by innovation and market leadership in EVs."
+        ],
+        "confidence": 0.6
+      },
+      {
+        "stance": "BEAR",
+        "final_label": "BEARISH",
+        "consensus_summary": "Tesla faces strong competitive pressures and profitability concerns despite recent market enthusiasm.",
+        "evidence": [
+          "Technical analysis shows a bullish trend, but fundamentals indicate high valuation and risks from competition.",
+          "Tesla's fundamentals highlight uncertain demand and increasing competition in the EV market.",
+          "News reports emphasize concerns about profitability and valuation despite strong sentiment."
+        ],
+        "counterarguments": [
+          "Competitive pressures from new EV models and profitability issues may hinder Tesla's growth.",
+          "The company's valuation appears elevated based on recent earnings performance.",
+          "Market sentiment may not account for long-term risks in the EV market landscape."
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "discussion": "Tesla continues to demonstrate strong innovation and market leadership in the electric vehicle space, supported by robust financials and positive sentiment despite competitive pressures.\n\nTesla faces strong competitive pressures and profitability concerns despite recent market enthusiasm."
+  },
+  "risk": {
+    "risk_score": 55,
+    "breach_flags": [
+      "Competitive Pressures",
+      "Profitability Concerns"
+    ],
+    "explainers": [
+      "Strong innovation and market leadership but facing competition",
+      "Positive sentiment vs profitability issues",
+      "Evaluate with latest news for accurate risk assessment"
+    ]
+  },
+  "manager_decision": {
+    "decision": "require_manual",
+    "reason": "The risk score is moderate (55) and the bull/bear confidence levels are high but conflicting, requiring human judgment for a nuanced decision.",
+    "next_steps": "Gather the latest news sentiment and fundamental data for Tesla to reassess the risks and opportunities.",
+    "role": "RISK_MANAGER",
+    "timestamp": "2026-02-20T13:13:57.375468"
+  },
+  "trader_proposal": {
+    "ticker": "TSLA",
+    "side": "NO_TRADE",
+    "size": 0.0,
+    "entry": 0.0,
+    "stop": 0.0,
+    "target": 0.0,
+    "rationale": "The decision requires manual intervention due to conflicting bullish and bearish factors. The RISK_MANAGER has indicated that further analysis is needed before any trading action.",
+    "confidence": 50.0,
+    "created_by": "TRADER",
+    "timestamp": "2026-02-20T13:14:01.497037"
+  },
+  "trace": [
+    {
+      "at": "2026-02-20T13:13:01.110899",
+      "stage": "PREFETCH",
+      "tool": "alpha_fetch",
+      "function": "OVERVIEW",
+      "symbol": "TSLA",
+      "tickers": null,
+      "params": {},
+      "status": "api_error",
+      "api_issue": {
+        "kind": "Information",
+        "message": "We have detected your API key as BSE23K9THV7KR1X7 and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits."
+      },
+      "tool_called": true,
+      "cache_hit": false,
+      "response_keys": [
+        "Information"
+      ],
+      "response_preview": "{\"Information\": \"We have detected your API key as BSE23K9THV7KR1X7 and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits.\"}",
+      "rag_stored": false
+    },
+    {
+      "at": "2026-02-20T13:13:01.541937",
+      "stage": "PREFETCH",
+      "tool": "alpha_fetch",
+      "function": "NEWS_SENTIMENT",
+      "symbol": null,
+      "tickers": "TSLA",
+      "params": {
+        "time_from": "20260122T0000",
+        "time_to": "20260122T2359",
+        "limit": "200",
+        "sort": "EARLIEST",
+        "as_of_date": "2026-01-22"
+      },
+      "cache_bypass": "as_of_date",
+      "status": "api_error",
+      "api_issue": {
+        "kind": "Information",
+        "message": "We have detected your API key as BSE23K9THV7KR1X7 and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits."
+      },
+      "tool_called": true,
+      "cache_hit": false,
+      "response_keys": [
+        "Information"
+      ],
+      "response_preview": "{\"Information\": \"We have detected your API key as BSE23K9THV7KR1X7 and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits.\"}",
+      "rag_stored": false
+    }
+  ]
+}

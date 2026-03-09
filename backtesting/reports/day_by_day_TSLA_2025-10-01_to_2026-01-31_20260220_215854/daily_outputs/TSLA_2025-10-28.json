@@ -1,0 +1,301 @@
+{
+  "context": {
+    "ticker": "TSLA",
+    "target_date": "2025-10-28",
+    "now_utc": "2026-02-20T14:24:08.629631",
+    "account_cash": 99796.78977208438,
+    "account_shares": 0.0,
+    "allow_price_fetch": false
+  },
+  "analysts": {
+    "market": {
+      "role": "MARKET_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T14:24:17.033281",
+      "summary": "Technical analysis of TSLA shows mixed signals with recent price consolidation after a sharp drop from all-time high. Key indicators suggest potential for a recovery but also highlight risks from overbought conditions and high volatility.",
+      "key_points": [
+        "RSI at 65, indicating mildly overbought conditions but still within recovery range.",
+        "MACD histogram showing bullish signal with price crossing 50 EMA.",
+        "Bollinger Bands suggesting possible continuation of upward trend if price holds above the upper band.",
+        "Support at $200 level, resistance near $250.",
+        "Ongoing volatility due to market sentiment shifts and upcoming earnings."
+      ],
+      "confidence": 0.75,
+      "recommendation_hint": "Consider long positions with stop-loss below $200 and take-profit at $250."
+    },
+    "social": {
+      "role": "SOCIAL_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T14:24:22.535806",
+      "summary": "Tesla's stock performance and sentiment analysis based on recent news and fundamental data.",
+      "key_points": [
+        "Tesla has shown resilience in the market despite challenges in the auto industry.",
+        "Recent regulatory changes may impact Tesla's growth in Europe.",
+        "The company's focus on energy storage and renewable energy could drive future growth."
+      ],
+      "confidence": 0.7,
+      "recommendation_hint": "Hold position until more data is available."
+    },
+    "news": {
+      "role": "NEWS_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T14:24:28.877017",
+      "summary": "Tesla Inc. continues to face challenges in its market position despite recent advancements in electric vehicle technology. The company's focus on innovation in autonomous driving and energy storage solutions has generated significant investor interest, but operational hurdles and competitive pressures from traditional automakers and new EV entrants remain.",
+      "key_points": [
+        "Tesla maintains a leading position in electric vehicle market share in the US.",
+        "Recent developments in autonomous driving technology have positioned Tesla favorably for future growth.",
+        "Competition from traditional automakers and new EV manufacturers continues to intensify.",
+        "Tesla's energy storage business has shown strong growth potential.",
+        "Supply chain disruptions have impacted production targets in the past quarter."
+      ],
+      "confidence": 0.7,
+      "recommendation_hint": "Hold position; monitor developments in autonomous driving technology and competitive landscape."
+    },
+    "fundamentals": {
+      "role": "FUNDAMENTALS_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T14:24:36.764478",
+      "summary": "Tesla Inc. (TSLA) continues to be a subject of intense interest in the market, with recent regulatory developments in the autonomous driving sector potentially affecting its valuation. The company's focus on innovation and electric vehicle technology remains a key driver for its stock performance. However, the upcoming regulatory changes could introduce new compliance requirements and costs, which may impact future earnings. Despite these potential headwinds, Tesla's strong brand recognition and leadership in EV technology provide a solid foundation for continued growth.",
+      "key_points": [
+        "Regulatory scrutiny on autonomous driving technology may lead to increased compliance costs for Tesla.",
+        "Tesla's leadership in electric vehicle technology and battery innovation supports its long-term growth prospects.",
+        "The company's recent product launches, including the Optimus robotaxi and advancements in energy storage, position it well for future market expansion.",
+        "Market sentiment remains bullish, but regulatory risks could temper investor enthusiasm."
+      ],
+      "confidence": 0.75,
+      "recommendation_hint": "Hold position until regulatory clarity improves; consider long-term investment if fundamentals support growth."
+    }
+  },
+  "researchers": {
+    "bull": {
+      "stance": "BULL",
+      "final_label": "BULLISH",
+      "consensus_summary": "Tesla's innovative leadership in electric vehicles and autonomous driving, combined with strong brand recognition, positions it well despite challenges. Regulatory and competitive risks are mitigated by Tesla's proactive approach and resilience.",
+      "evidence": [
+        "Tesla's advancements in autonomous driving and energy storage solutions have generated significant investor interest and maintain its edge in the EV market.",
+        "The company's strong brand recognition and leadership in EV technology provide a solid foundation for continued growth.",
+        "Recent technical indicators suggest potential for recovery, despite consolidation and volatility."
+      ],
+      "counterarguments": [
+        "Competitive pressures from traditional automakers and new EV entrants may erode Tesla's market share.",
+        "Regulatory changes could increase compliance costs and negatively impact earnings.",
+        "Operational hurdles may hinder Tesla's ability to execute on its innovation roadmap."
+      ],
+      "confidence": 0.8
+    },
+    "bear": {
+      "stance": "BEAR",
+      "final_label": "BEARISH",
+      "consensus_summary": "Tesla faces significant headwinds from competitive pressures, operational challenges, and upcoming regulatory changes, despite its innovative strengths. The consensus suggests a cautious bearish outlook.",
+      "evidence": [
+        "Technical analysis indicates potential risks from overbought conditions and high volatility, with recent consolidation after a sharp drop.",
+        "Fundamentals highlight regulatory developments in autonomous driving that could introduce compliance costs and impact earnings.",
+        "News reports emphasize operational hurdles and competitive pressures from traditional automakers and new EV entrants."
+      ],
+      "counterarguments": [
+        "Competitive pressures are mitigated by Tesla's strong brand and innovation leadership.",
+        "Operational hurdles are outweighed by Tesla's resilience and proactive approach.",
+        "Regulatory risks are manageable and may not significantly impact long-term growth."
+      ],
+      "confidence": 0.8
+    },
+    "bull_rounds": [
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla's stock is expected to recover due to its leadership in EV technology and innovation, despite regulatory challenges. Strong brand recognition and recent advancements support continued growth.",
+        "evidence": [
+          "Technical analysis shows potential for recovery with price consolidation after a sharp drop.",
+          "Tesla's focus on innovation in autonomous driving and energy storage generates investor interest.",
+          "Strong brand recognition and leadership in EV technology provide a solid foundation for growth."
+        ],
+        "counterarguments": [
+          "Operational hurdles and competitive pressures from traditional automakers and new EV entrants remain.",
+          "Regulatory developments in autonomous driving could introduce compliance costs and impact earnings."
+        ],
+        "confidence": 0.9
+      },
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Despite challenges, Tesla's innovative leadership, strong brand, and potential for growth in autonomous driving and energy storage position it for continued success.",
+        "evidence": [
+          "Tesla's advancements in electric vehicle technology and autonomous driving continue to attract investor interest.",
+          "Strong brand recognition and market leadership in EVs provide a solid foundation for growth.",
+          "Potential for growth in autonomous driving and energy storage sectors, despite regulatory risks."
+        ],
+        "counterarguments": [
+          "Operational challenges and competitive pressures from traditional automakers and new EV entrants.",
+          "Regulatory risks and compliance costs from new autonomous driving regulations."
+        ],
+        "confidence": 0.95
+      },
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla's innovative leadership in electric vehicles and autonomous driving, combined with strong brand recognition, positions it well despite challenges. Regulatory and competitive risks are mitigated by Tesla's proactive approach and resilience.",
+        "evidence": [
+          "Tesla's advancements in autonomous driving and energy storage solutions have generated significant investor interest and maintain its edge in the EV market.",
+          "The company's strong brand recognition and leadership in EV technology provide a solid foundation for continued growth.",
+          "Recent technical indicators suggest potential for recovery, despite consolidation and volatility."
+        ],
+        "counterarguments": [
+          "Competitive pressures from traditional automakers and new EV entrants may erode Tesla's market share.",
+          "Regulatory changes could increase compliance costs and negatively impact earnings.",
+          "Operational hurdles may hinder Tesla's ability to execute on its innovation roadmap."
+        ],
+        "confidence": 0.8
+      }
+    ],
+    "bear_rounds": [
+      {
+        "stance": "BEAR",
+        "final_label": "BEARISH",
+        "consensus_summary": "Tesla faces significant headwinds including operational challenges, competitive pressures, and regulatory risks despite its technological leadership.",
+        "evidence": [
+          "Technical analysis shows price consolidation after sharp drop, with indicators suggesting potential recovery but also risks from overbought conditions and high volatility.",
+          "Fundamentals indicate regulatory challenges in autonomous driving sector may introduce compliance costs impacting earnings.",
+          "News highlights Tesla's challenges in maintaining market position amid competition from traditional automakers and new EV entrants."
+        ],
+        "counterarguments": [
+          "Tesla's strong brand recognition and leadership in EV technology provide a solid foundation for continued growth.",
+          "Recent advancements in autonomous driving and energy storage generate investor interest.",
+          "Market expects recovery due to leadership in EV technology despite regulatory challenges."
+        ],
+        "confidence": 0.75
+      },
+      {
+        "stance": "BEAR",
+        "final_label": "BEARISH",
+        "consensus_summary": "Tesla faces significant regulatory headwinds, operational hurdles, and competitive pressures despite its innovations, casting doubt on its long-term growth prospects.",
+        "evidence": [
+          "Regulatory changes in autonomous driving may increase compliance costs.",
+          "Operational hurdles and competitive pressures from traditional automakers and new EV entrants threaten Tesla's market position.",
+          "Mixed technical signals and overbought conditions indicate potential for a sharp decline.",
+          "Recent advancements in EV technology have not translated into sustained market leadership.",
+          "Strong brand recognition may not be enough to offset execution risks and competitive threats."
+        ],
+        "counterarguments": [
+          "Tesla's leadership in EV technology and innovation provides a competitive edge.",
+          "Autonomous driving advancements could lead to significant future growth.",
+          "Recent price consolidation suggests a recovery is imminent.",
+          "Competitive pressures may be overstated given Tesla's first-mover advantage.",
+          "Brand strength ensures resilience in the face of challenges."
+        ],
+        "confidence": 0.85
+      },
+      {
+        "stance": "BEAR",
+        "final_label": "BEARISH",
+        "consensus_summary": "Tesla faces significant headwinds from competitive pressures, operational challenges, and upcoming regulatory changes, despite its innovative strengths. The consensus suggests a cautious bearish outlook.",
+        "evidence": [
+          "Technical analysis indicates potential risks from overbought conditions and high volatility, with recent consolidation after a sharp drop.",
+          "Fundamentals highlight regulatory developments in autonomous driving that could introduce compliance costs and impact earnings.",
+          "News reports emphasize operational hurdles and competitive pressures from traditional automakers and new EV entrants."
+        ],
+        "counterarguments": [
+          "Competitive pressures are mitigated by Tesla's strong brand and innovation leadership.",
+          "Operational hurdles are outweighed by Tesla's resilience and proactive approach.",
+          "Regulatory risks are manageable and may not significantly impact long-term growth."
+        ],
+        "confidence": 0.8
+      }
+    ],
+    "discussion": "Tesla's innovative leadership in electric vehicles and autonomous driving, combined with strong brand recognition, positions it well despite challenges. Regulatory and competitive risks are mitigated by Tesla's proactive approach and resilience.\n\nTesla faces significant headwinds from competitive pressures, operational challenges, and upcoming regulatory changes, despite its innovative strengths. The consensus suggests a cautious bearish outlook."
+  },
+  "risk": {
+    "risk_score": 55,
+    "breach_flags": [
+      "Competitive Pressures",
+      "Operational Challenges",
+      "Regulatory Changes"
+    ],
+    "explainers": [
+      "Tesla faces competition from traditional automakers and new EV companies, potentially impacting market share and profitability.",
+      "Operational issues such as production delays or supply chain disruptions could affect Tesla's financial performance.",
+      "Upcoming regulatory changes might increase compliance costs or restrict Tesla's business operations."
+    ]
+  },
+  "manager_decision": {
+    "decision": "require_manual",
+    "reason": "The bull and bear confidence levels are both high, and the risk score indicates moderate risk with several key concerns. Further analysis is needed to determine the best course of action given the conflicting signals.",
+    "next_steps": "Request additional data on Tesla's recent operational performance, competitive landscape, and regulatory developments to inform the decision.",
+    "role": "RISK_MANAGER",
+    "timestamp": "2026-02-20T14:25:24.529523"
+  },
+  "trader_proposal": {
+    "ticker": "TSLA",
+    "side": "NO_TRADE",
+    "size": 0.0,
+    "entry": 0.0,
+    "stop": 0.0,
+    "target": 0.0,
+    "rationale": "The manager's decision requires further analysis, and the conflicting signals in the market data prevent a confident trade recommendation. A NO_TRADE is recommended to avoid unnecessary risk given the high bull/bear confidence levels and moderate risk score.",
+    "confidence": 0.5,
+    "created_by": "TRADER",
+    "timestamp": "2026-02-20T14:25:32.996940"
+  },
+  "trace": [
+    {
+      "at": "2026-02-20T14:24:08.674862",
+      "stage": "PREFETCH",
+      "tool": "alpha_fetch",
+      "function": "OVERVIEW",
+      "symbol": "TSLA",
+      "tickers": null,
+      "params": {},
+      "status": "api_error",
+      "api_issue": {
+        "kind": "Information",
+        "message": "We have detected your API key as BSE23K9THV7KR1X7 and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits."
+      },
+      "tool_called": true,
+      "cache_hit": false,
+      "response_keys": [
+        "Information"
+      ],
+      "response_preview": "{\"Information\": \"We have detected your API key as BSE23K9THV7KR1X7 and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits.\"}",
+      "rag_stored": false
+    },
+    {
+      "at": "2026-02-20T14:24:09.629476",
+      "stage": "PREFETCH",
+      "tool": "alpha_fetch",
+      "function": "NEWS_SENTIMENT",
+      "symbol": null,
+      "tickers": "TSLA",
+      "params": {
+        "time_from": "20251028T0000",
+        "time_to": "20251028T2359",
+        "limit": "200",
+        "sort": "EARLIEST",
+        "as_of_date": "2025-10-28"
+      },
+      "cache_bypass": "as_of_date",
+      "status": "api_error",
+      "api_issue": {
+        "kind": "Information",
+        "message": "Thank you for using Alpha Vantage! Please consider spreading out your free API requests more sparingly (1 request per second). You may subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to lift the free key rate limit (25 requests per day), raise the per-second burst limit, and instantly unlock all premium endpoints"
+      },
+      "tool_called": true,
+      "cache_hit": false,
+      "response_keys": [
+        "Information"
+      ],
+      "response_preview": "{\"Information\": \"Thank you for using Alpha Vantage! Please consider spreading out your free API requests more sparingly (1 request per second). You may subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to lift the free key rate limit (25 requests per day), raise the per-second burst limit, and instantly unlock all premium endpoints\"}",
+      "rag_stored": false
+    },
+    {
+      "at": "2026-02-20T14:25:28.215698",
+      "stage": "TRADER",
+      "type": "policy_block",
+      "tool": "alpha_fetch",
+      "function": "GLOBAL_QUOTE",
+      "reason": "price_fetch_disabled"
+    }
+  ],
+  "output_paths": {
+    "latest": "flow_output_langchain.json",
+    "archive": "outputs/TSLA/flow_output_langchain_20260220_142532.json"
+  }
+}

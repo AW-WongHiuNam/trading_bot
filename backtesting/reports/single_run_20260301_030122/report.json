@@ -1,0 +1,55 @@
+{
+  "meta": {
+    "result_json": "outputs/TSLA/flow_output_langchain_20260220_151928.json",
+    "price_csv": "stock_price/HistoricalData_TSLA.csv",
+    "target_date": "2025-11-26",
+    "lookback_days": 252,
+    "hold_days": 5,
+    "fee_bps": 5.0,
+    "slippage_bps": 5.0,
+    "forbid_price_fetch": true,
+    "allow_news_fetch": true,
+    "enforce_runtime_cutoff": false,
+    "decision_policy": "auto"
+  },
+  "sanity": {
+    "passed": true,
+    "errors": [],
+    "warnings": [
+      "Runtime timestamp after cutoff: manager_decision.timestamp=2026-02-20T15:19:05.712559 > 2025-11-26",
+      "Runtime timestamp after cutoff: trader_proposal.timestamp=2026-02-20T15:19:28.222526 > 2025-11-26",
+      "Runtime timestamp after cutoff: analysts.market.timestamp=2026-02-20T15:15:02.625625 > 2025-11-26",
+      "Runtime timestamp after cutoff: analysts.social.timestamp=2026-02-20T15:15:28.853728 > 2025-11-26",
+      "Runtime timestamp after cutoff: analysts.news.timestamp=2026-02-20T15:15:40.858206 > 2025-11-26",
+      "Runtime timestamp after cutoff: analysts.fundamentals.timestamp=2026-02-20T15:15:51.555266 > 2025-11-26",
+      "Runtime timestamp after cutoff: trace[0].at=2026-02-20T15:14:49.733890 > 2025-11-26",
+      "Runtime timestamp after cutoff: trace[1].at=2026-02-20T15:14:50.867790 > 2025-11-26",
+      "Unclassified alpha_fetch function in trace[0]: OVERVIEW"
+    ]
+  },
+  "signal": {
+    "ticker": "TSLA",
+    "side": "SELL",
+    "size": 0.1,
+    "confidence": 5.0,
+    "rationale": "Based on the manager's decision to reject the trade due to bearish consensus, high confidence, and high risk score, no trade is recommended for Tesla. | policy=auto manager=reject spread=-0.1000 bull=0.7500 bear=0.8500 risk=40.00",
+    "blocked_reason": "auto_policy_execute(risk=40.0,spread=-0.1000)"
+  },
+  "trade": {
+    "executed": false,
+    "reason": "no_next_bar_for_entry",
+    "entry_date": null,
+    "exit_date": null,
+    "entry_price": null,
+    "exit_price": null,
+    "gross_return": 0.0,
+    "net_return": 0.0
+  },
+  "summary": {
+    "trades": 0,
+    "win_rate": 0.0,
+    "avg_net_return": 0.0,
+    "total_net_return": 0.0,
+    "equity_end": 1.0
+  }
+}

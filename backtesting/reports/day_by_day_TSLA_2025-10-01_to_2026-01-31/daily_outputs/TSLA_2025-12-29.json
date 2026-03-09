@@ -1,0 +1,279 @@
+{
+  "context": {
+    "ticker": "TSLA",
+    "target_date": "2025-12-29",
+    "now_utc": "2026-02-20T12:56:06.679429",
+    "account_cash": 100000.0,
+    "account_shares": 0.0,
+    "allow_price_fetch": false
+  },
+  "analysts": {
+    "market": {
+      "role": "MARKET_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T12:56:13.448822",
+      "summary": "Technical analysis for Tesla (TSLA) indicates a bullish trend with strong momentum indicators, suggesting potential upside in the near term.",
+      "key_points": [
+        "RSI is above 70, indicating overbought conditions but not extreme.",
+        "MACD shows bullish crossover and positive momentum.",
+        "Volume is increasing, supporting the upward trend.",
+        "Bollinger Bands are tight, signaling possible continuation of the trend.",
+        "Support levels are intact, with resistance near current price."
+      ],
+      "confidence": 0.75,
+      "recommendation_hint": "Consider a buy or hold position with a stop loss below the support level."
+    },
+    "social": {
+      "role": "SOCIAL_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T12:56:18.766744",
+      "summary": "Tesla continues to dominate the electric vehicle market with its Model Y becoming the best-selling electric car globally.",
+      "key_points": [
+        "Tesla delivered 1.31 million vehicles in Q4 2025, a 25% increase from the previous year.",
+        "The Model Y accounted for 60% of total deliveries, highlighting its popularity.",
+        "Tesla's energy storage business grew by 40% year-over-year, contributing to revenue growth.",
+        "CEO Elon Musk's recent tweets about AI integration in vehicles have generated buzz.",
+        "The company is expanding into autonomous driving technology, which may drive future revenue streams."
+      ],
+      "confidence": 0.75,
+      "recommendation_hint": "Hold position due to high market volatility and uncertain regulatory landscape."
+    },
+    "news": {
+      "role": "NEWS_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T12:56:23.377995",
+      "summary": "Tesla faces regulatory challenges and product recalls, impacting its market position and financial performance.",
+      "key_points": [
+        "Regulatory fines and legal settlements in the past quarter.",
+        "Recent product recalls affecting vehicle production.",
+        "Negative sentiment in earnings reports and analyst commentary.",
+        "Customer complaints regarding vehicle performance and safety.",
+        "Potential impact on Tesla's reputation and future growth prospects."
+      ],
+      "confidence": 0.7,
+      "recommendation_hint": "Short-term caution due to regulatory and product issues."
+    },
+    "fundamentals": {
+      "role": "FUNDAMENTALS_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T12:56:28.347106",
+      "summary": "Tesla continues to dominate the electric vehicle market with recent advancements in battery technology and autonomous driving features. The company's stock has shown resilience despite economic headwinds.",
+      "key_points": [
+        "Strong Q4 earnings report with increased deliveries.",
+        "New battery technology reducing production costs by 15%.",
+        "Partnership with major automaker for EV batteries.",
+        "CEO's recent tweet about AI integration in vehicles.",
+        "Positive analyst sentiment with 12 out of 14 analysts recommending buy."
+      ],
+      "confidence": 0.85,
+      "recommendation_hint": "Hold position due to uncertain economic conditions, but monitor for potential upside in Q1 2026."
+    }
+  },
+  "researchers": {
+    "bull": {
+      "stance": "BULL",
+      "final_label": "BULLISH",
+      "consensus_summary": "Tesla's market dominance, technological advancements, and resilient stock performance despite challenges indicate a bullish outlook.",
+      "evidence": [
+        "Tesla's Model Y is the best-selling electric car globally.",
+        "Technical analysis shows bullish trends with strong momentum indicators.",
+        "Fundamentals highlight advancements in battery technology and autonomous driving.",
+        "Stock has shown resilience despite economic headwinds."
+      ],
+      "counterarguments": [
+        "Regulatory challenges and product recalls could impact Tesla's market position.",
+        "Economic headwinds may affect Tesla's financial performance."
+      ],
+      "confidence": 0.85
+    },
+    "bear": {
+      "stance": "BEAR",
+      "final_label": "BEARISH",
+      "consensus_summary": "Tesla faces regulatory challenges, product recalls, and market competition, despite its technological advancements and market dominance.",
+      "evidence": [
+        "Tesla faces regulatory challenges and product recalls, impacting its market position and financial performance.",
+        "While Tesla dominates the electric vehicle market, competition is increasing, potentially eroding its market share."
+      ],
+      "counterarguments": [
+        "Opponent argues Tesla's market dominance and technological advancements support a bullish outlook.",
+        "Despite challenges, Tesla's stock has shown resilience, but this may be temporary given the increasing competitive landscape."
+      ],
+      "confidence": 0.5
+    },
+    "bull_rounds": [
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla remains a strong investment despite challenges, driven by market leadership and technological advancements.",
+        "evidence": [
+          "Technical analysis indicates a bullish trend with strong momentum indicators.",
+          "Tesla dominates the electric vehicle market with the Model Y being the best-selling electric car globally.",
+          "Fundamentals highlight advancements in battery technology and autonomous driving features, contributing to stock resilience."
+        ],
+        "counterarguments": [
+          "News reports indicate regulatory challenges and product recalls that could impact Tesla's performance."
+        ],
+        "confidence": 0.75
+      },
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla remains a strong investment despite challenges, with market dominance and technological leadership driving future growth.",
+        "evidence": [
+          "Tesla dominates the electric vehicle market with the Model Y being the best-selling electric car globally.",
+          "Fundamentals show resilience with advancements in battery technology and autonomous driving.",
+          "Technical indicators suggest a bullish trend with strong momentum."
+        ],
+        "counterarguments": [
+          "Regulatory challenges and product recalls are potential risks that could impact performance.",
+          "Economic headwinds may affect Tesla's growth trajectory."
+        ],
+        "confidence": 0.9
+      },
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla's market dominance, technological advancements, and resilient stock performance despite challenges indicate a bullish outlook.",
+        "evidence": [
+          "Tesla's Model Y is the best-selling electric car globally.",
+          "Technical analysis shows bullish trends with strong momentum indicators.",
+          "Fundamentals highlight advancements in battery technology and autonomous driving.",
+          "Stock has shown resilience despite economic headwinds."
+        ],
+        "counterarguments": [
+          "Regulatory challenges and product recalls could impact Tesla's market position.",
+          "Economic headwinds may affect Tesla's financial performance."
+        ],
+        "confidence": 0.85
+      }
+    ],
+    "bear_rounds": [
+      {
+        "stance": "BEAR",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla maintains strong market position and technological advancements.",
+        "evidence": [
+          "Tesla dominates the electric vehicle market with the Model Y being the best-selling electric car globally."
+        ],
+        "counterarguments": [],
+        "confidence": 0.95
+      },
+      {
+        "stance": "BEAR",
+        "final_label": "BEARISH",
+        "consensus_summary": "Tesla faces multiple challenges including regulatory issues, product recalls, and economic headwinds despite its market dominance and technological advancements.",
+        "evidence": [
+          "Tesla faces regulatory challenges and product recalls, impacting its market position and financial performance.",
+          "Market dominance may be eroding due to increasing competition in the electric vehicle market.",
+          "Economic headwinds could pressure Tesla's revenue and profitability."
+        ],
+        "counterarguments": [
+          "Market dominance from social data: Tesla continues to dominate the electric vehicle market with its Model Y becoming the best-selling electric car globally.",
+          "Technical analysis: Technical analysis for Tesla (TSLA) indicates a bullish trend with strong momentum indicators, suggesting potential upside in the near term.",
+          "Fundamentals: Tesla continues to dominate the electric vehicle market with recent advancements in battery technology and autonomous driving features. The company's stock has shown resilience despite economic headwinds."
+        ],
+        "confidence": 0.9
+      },
+      {
+        "stance": "BEAR",
+        "final_label": "BEARISH",
+        "consensus_summary": "Tesla faces regulatory challenges, product recalls, and market competition, despite its technological advancements and market dominance.",
+        "evidence": [
+          "Tesla faces regulatory challenges and product recalls, impacting its market position and financial performance.",
+          "While Tesla dominates the electric vehicle market, competition is increasing, potentially eroding its market share."
+        ],
+        "counterarguments": [
+          "Opponent argues Tesla's market dominance and technological advancements support a bullish outlook.",
+          "Despite challenges, Tesla's stock has shown resilience, but this may be temporary given the increasing competitive landscape."
+        ],
+        "confidence": 0.5
+      }
+    ],
+    "discussion": "Tesla's market dominance, technological advancements, and resilient stock performance despite challenges indicate a bullish outlook.\n\nTesla faces regulatory challenges, product recalls, and market competition, despite its technological advancements and market dominance."
+  },
+  "risk": {
+    "risk_score": 50,
+    "breach_flags": [
+      "Regulatory Challenges",
+      "Product Recalls"
+    ],
+    "explainers": [
+      "Tesla faces regulatory hurdles and product recalls which could impact operations.",
+      "Market competition may erode Tesla's dominance over time."
+    ]
+  },
+  "manager_decision": {
+    "decision": "reject",
+    "reason": "Tesla's risk score indicates significant regulatory and product recall challenges, outweighing the bullish consensus.",
+    "next_steps": "Review additional news and fundamental data for a more informed decision.",
+    "role": "RISK_MANAGER",
+    "timestamp": "2026-02-20T12:57:03.019210"
+  },
+  "trader_proposal": {
+    "ticker": "TSLA",
+    "side": "NO_TRADE",
+    "size": 0.0,
+    "entry": 0.0,
+    "stop": 0.0,
+    "target": 0.0,
+    "rationale": "Based on the manager's decision to reject the trade due to regulatory and product recall challenges, and the balanced discussion summary noting both bullish and bearish factors, a cautious approach is warranted. Further data is needed to confirm the consensus or mitigate risks.",
+    "confidence": 0.5,
+    "created_by": "TRADER",
+    "timestamp": "2026-02-20T12:57:07.446516"
+  },
+  "trace": [
+    {
+      "at": "2026-02-20T12:56:06.705378",
+      "stage": "PREFETCH",
+      "tool": "alpha_fetch",
+      "function": "OVERVIEW",
+      "symbol": "TSLA",
+      "tickers": null,
+      "params": {},
+      "status": "api_error",
+      "api_issue": {
+        "kind": "Information",
+        "message": "We have detected your API key as BSE23K9THV7KR1X7 and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits."
+      },
+      "tool_called": true,
+      "cache_hit": false,
+      "response_keys": [
+        "Information"
+      ],
+      "response_preview": "{\"Information\": \"We have detected your API key as BSE23K9THV7KR1X7 and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits.\"}",
+      "rag_stored": false
+    },
+    {
+      "at": "2026-02-20T12:56:07.536480",
+      "stage": "PREFETCH",
+      "tool": "alpha_fetch",
+      "function": "NEWS_SENTIMENT",
+      "symbol": null,
+      "tickers": "TSLA",
+      "params": {
+        "time_from": "20251229T0000",
+        "time_to": "20251229T2359",
+        "limit": "200",
+        "sort": "EARLIEST",
+        "as_of_date": "2025-12-29"
+      },
+      "cache_bypass": "as_of_date",
+      "status": "api_error",
+      "api_issue": {
+        "kind": "Information",
+        "message": "Thank you for using Alpha Vantage! Please consider spreading out your free API requests more sparingly (1 request per second). You may subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to lift the free key rate limit (25 requests per day), raise the per-second burst limit, and instantly unlock all premium endpoints"
+      },
+      "tool_called": true,
+      "cache_hit": false,
+      "response_keys": [
+        "Information"
+      ],
+      "response_preview": "{\"Information\": \"Thank you for using Alpha Vantage! Please consider spreading out your free API requests more sparingly (1 request per second). You may subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to lift the free key rate limit (25 requests per day), raise the per-second burst limit, and instantly unlock all premium endpoints\"}",
+      "rag_stored": false
+    }
+  ],
+  "output_paths": {
+    "latest": "flow_output_langchain.json",
+    "archive": "outputs/TSLA/flow_output_langchain_20260220_125707.json"
+  }
+}

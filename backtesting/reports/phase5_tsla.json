@@ -1,0 +1,866 @@
+{
+  "meta": {
+    "results_dir": "outputs/TSLA",
+    "price_csv": "stock_price/HistoricalData_TSLA.csv",
+    "target_date": "2026-02-12",
+    "lookback_days": 252,
+    "hold_days": 5,
+    "fee_bps": 5.0,
+    "slippage_bps": 5.0,
+    "forbid_price_fetch": true,
+    "allow_news_fetch": true,
+    "file_count": 16
+  },
+  "aggregate": {
+    "total_files": 16,
+    "sanity_passed": 0,
+    "sanity_failed": 16,
+    "executed_trades": 0,
+    "win_rate_executed": 0.0,
+    "total_net_return": 0.0,
+    "equity_end": 1.0,
+    "top_sanity_errors": [
+      [
+        "Forbidden price fetch in trace[0]: alpha_fetch/GLOBAL_QUOTE",
+        16
+      ],
+      [
+        "Future market date in trace[3] GLOBAL_QUOTE: 2026-02-19",
+        3
+      ],
+      [
+        "Forbidden price fetch in trace[3]: alpha_fetch/GLOBAL_QUOTE",
+        3
+      ],
+      [
+        "Future market date in trace[0] GLOBAL_QUOTE: 2026-02-19",
+        2
+      ]
+    ]
+  },
+  "reports": [
+    {
+      "meta": {
+        "result_json": "outputs/TSLA/flow_output_langchain_20260211_125950.json",
+        "price_csv": "stock_price/HistoricalData_TSLA.csv",
+        "target_date": "2026-02-12",
+        "lookback_days": 252,
+        "hold_days": 5,
+        "fee_bps": 5.0,
+        "slippage_bps": 5.0,
+        "forbid_price_fetch": true,
+        "allow_news_fetch": true,
+        "enforce_runtime_cutoff": false
+      },
+      "sanity": {
+        "passed": false,
+        "errors": [
+          "Forbidden price fetch in trace[0]: alpha_fetch/GLOBAL_QUOTE"
+        ],
+        "warnings": [
+          "Unclassified alpha_fetch function in trace[1]: OVERVIEW",
+          "Unclassified alpha_fetch function in trace[4]: OVERVIEW"
+        ]
+      },
+      "signal": {
+        "ticker": "TSLA",
+        "side": "NO_TRADE",
+        "size": 0.0,
+        "confidence": 0.5,
+        "rationale": "Based on the manager's decision to require manual intervention and the mixed outlook for Tesla with governance concerns and overvaluation risks, no immediate trade action is recommended. Further analysis is needed to align with the risk assessment.",
+        "blocked_reason": "manager_decision=require_manual"
+      },
+      "trade": {
+        "executed": false,
+        "reason": "sanity_check_failed",
+        "entry_date": null,
+        "exit_date": null,
+        "entry_price": null,
+        "exit_price": null,
+        "gross_return": 0.0,
+        "net_return": 0.0
+      },
+      "summary": {
+        "trades": 0,
+        "win_rate": 0.0,
+        "avg_net_return": 0.0,
+        "total_net_return": 0.0,
+        "equity_end": 1.0
+      },
+      "_file": "outputs/TSLA/flow_output_langchain_20260211_125950.json"
+    },
+    {
+      "meta": {
+        "result_json": "outputs/TSLA/flow_output_langchain_20260211_131132.json",
+        "price_csv": "stock_price/HistoricalData_TSLA.csv",
+        "target_date": "2026-02-12",
+        "lookback_days": 252,
+        "hold_days": 5,
+        "fee_bps": 5.0,
+        "slippage_bps": 5.0,
+        "forbid_price_fetch": true,
+        "allow_news_fetch": true,
+        "enforce_runtime_cutoff": false
+      },
+      "sanity": {
+        "passed": false,
+        "errors": [
+          "Forbidden price fetch in trace[0]: alpha_fetch/GLOBAL_QUOTE"
+        ],
+        "warnings": [
+          "Unclassified alpha_fetch function in trace[1]: OVERVIEW"
+        ]
+      },
+      "signal": {
+        "ticker": "TSLA",
+        "side": "NO_TRADE",
+        "size": 0.0,
+        "confidence": 0.5,
+        "rationale": "Tesla faces a balanced market with strong performance but significant governance concerns and shareholder discontent. Further analysis is required before a trade decision.",
+        "blocked_reason": "manager_decision=require_manual"
+      },
+      "trade": {
+        "executed": false,
+        "reason": "sanity_check_failed",
+        "entry_date": null,
+        "exit_date": null,
+        "entry_price": null,
+        "exit_price": null,
+        "gross_return": 0.0,
+        "net_return": 0.0
+      },
+      "summary": {
+        "trades": 0,
+        "win_rate": 0.0,
+        "avg_net_return": 0.0,
+        "total_net_return": 0.0,
+        "equity_end": 1.0
+      },
+      "_file": "outputs/TSLA/flow_output_langchain_20260211_131132.json"
+    },
+    {
+      "meta": {
+        "result_json": "outputs/TSLA/flow_output_langchain_20260211_144657.json",
+        "price_csv": "stock_price/HistoricalData_TSLA.csv",
+        "target_date": "2026-02-12",
+        "lookback_days": 252,
+        "hold_days": 5,
+        "fee_bps": 5.0,
+        "slippage_bps": 5.0,
+        "forbid_price_fetch": true,
+        "allow_news_fetch": true,
+        "enforce_runtime_cutoff": false
+      },
+      "sanity": {
+        "passed": false,
+        "errors": [
+          "Forbidden price fetch in trace[0]: alpha_fetch/GLOBAL_QUOTE"
+        ],
+        "warnings": [
+          "Unclassified alpha_fetch function in trace[1]: OVERVIEW"
+        ]
+      },
+      "signal": {
+        "ticker": "TSLA",
+        "side": "NO_TRADE",
+        "size": 0.0,
+        "confidence": 0.5,
+        "rationale": "Based on conflicting signals and need for additional sentiment data, no immediate trade action is recommended.",
+        "blocked_reason": "manager_decision=require_manual"
+      },
+      "trade": {
+        "executed": false,
+        "reason": "sanity_check_failed",
+        "entry_date": null,
+        "exit_date": null,
+        "entry_price": null,
+        "exit_price": null,
+        "gross_return": 0.0,
+        "net_return": 0.0
+      },
+      "summary": {
+        "trades": 0,
+        "win_rate": 0.0,
+        "avg_net_return": 0.0,
+        "total_net_return": 0.0,
+        "equity_end": 1.0
+      },
+      "_file": "outputs/TSLA/flow_output_langchain_20260211_144657.json"
+    },
+    {
+      "meta": {
+        "result_json": "outputs/TSLA/flow_output_langchain_20260211_145531.json",
+        "price_csv": "stock_price/HistoricalData_TSLA.csv",
+        "target_date": "2026-02-12",
+        "lookback_days": 252,
+        "hold_days": 5,
+        "fee_bps": 5.0,
+        "slippage_bps": 5.0,
+        "forbid_price_fetch": true,
+        "allow_news_fetch": true,
+        "enforce_runtime_cutoff": false
+      },
+      "sanity": {
+        "passed": false,
+        "errors": [
+          "Forbidden price fetch in trace[0]: alpha_fetch/GLOBAL_QUOTE"
+        ],
+        "warnings": [
+          "Unclassified alpha_fetch function in trace[1]: OVERVIEW"
+        ]
+      },
+      "signal": {
+        "ticker": "TSLA",
+        "side": "NO_TRADE",
+        "size": 0.0,
+        "confidence": 0.0,
+        "rationale": "The bull and bear perspectives have conflicting confidence levels, with a moderate to high risk score. A manual review is required to balance the views and assess actual risk factors. Current market data and news are necessary to make an informed decision.",
+        "blocked_reason": "manager_decision=require_manual"
+      },
+      "trade": {
+        "executed": false,
+        "reason": "sanity_check_failed",
+        "entry_date": null,
+        "exit_date": null,
+        "entry_price": null,
+        "exit_price": null,
+        "gross_return": 0.0,
+        "net_return": 0.0
+      },
+      "summary": {
+        "trades": 0,
+        "win_rate": 0.0,
+        "avg_net_return": 0.0,
+        "total_net_return": 0.0,
+        "equity_end": 1.0
+      },
+      "_file": "outputs/TSLA/flow_output_langchain_20260211_145531.json"
+    },
+    {
+      "meta": {
+        "result_json": "outputs/TSLA/flow_output_langchain_20260211_145936.json",
+        "price_csv": "stock_price/HistoricalData_TSLA.csv",
+        "target_date": "2026-02-12",
+        "lookback_days": 252,
+        "hold_days": 5,
+        "fee_bps": 5.0,
+        "slippage_bps": 5.0,
+        "forbid_price_fetch": true,
+        "allow_news_fetch": true,
+        "enforce_runtime_cutoff": false
+      },
+      "sanity": {
+        "passed": false,
+        "errors": [
+          "Forbidden price fetch in trace[0]: alpha_fetch/GLOBAL_QUOTE"
+        ],
+        "warnings": [
+          "Unclassified alpha_fetch function in trace[1]: OVERVIEW"
+        ]
+      },
+      "signal": {
+        "ticker": "TSLA",
+        "side": "NO_TRADE",
+        "size": 0.0,
+        "confidence": 5.0,
+        "rationale": "Conflicting views with moderate confidence in both bullish and bearish stances, and a risk score of 60 indicating significant uncertainty. Recommend further analysis before trading.",
+        "blocked_reason": "manager_decision=require_manual"
+      },
+      "trade": {
+        "executed": false,
+        "reason": "sanity_check_failed",
+        "entry_date": null,
+        "exit_date": null,
+        "entry_price": null,
+        "exit_price": null,
+        "gross_return": 0.0,
+        "net_return": 0.0
+      },
+      "summary": {
+        "trades": 0,
+        "win_rate": 0.0,
+        "avg_net_return": 0.0,
+        "total_net_return": 0.0,
+        "equity_end": 1.0
+      },
+      "_file": "outputs/TSLA/flow_output_langchain_20260211_145936.json"
+    },
+    {
+      "meta": {
+        "result_json": "outputs/TSLA/flow_output_langchain_20260212_094056.json",
+        "price_csv": "stock_price/HistoricalData_TSLA.csv",
+        "target_date": "2026-02-12",
+        "lookback_days": 252,
+        "hold_days": 5,
+        "fee_bps": 5.0,
+        "slippage_bps": 5.0,
+        "forbid_price_fetch": true,
+        "allow_news_fetch": true,
+        "enforce_runtime_cutoff": false
+      },
+      "sanity": {
+        "passed": false,
+        "errors": [
+          "Forbidden price fetch in trace[0]: alpha_fetch/GLOBAL_QUOTE"
+        ],
+        "warnings": [
+          "Unclassified alpha_fetch function in trace[1]: OVERVIEW"
+        ]
+      },
+      "signal": {
+        "ticker": "TSLA",
+        "side": "NO_TRADE",
+        "size": 0.0,
+        "confidence": 7.0,
+        "rationale": "Tesla has strong innovation leadership and shareholder support despite financial challenges. The conflicting consensus requires more data but current sentiment leans bullish. Relying on the RAG search to get the latest context.",
+        "blocked_reason": "manager_decision=require_manual"
+      },
+      "trade": {
+        "executed": false,
+        "reason": "sanity_check_failed",
+        "entry_date": null,
+        "exit_date": null,
+        "entry_price": null,
+        "exit_price": null,
+        "gross_return": 0.0,
+        "net_return": 0.0
+      },
+      "summary": {
+        "trades": 0,
+        "win_rate": 0.0,
+        "avg_net_return": 0.0,
+        "total_net_return": 0.0,
+        "equity_end": 1.0
+      },
+      "_file": "outputs/TSLA/flow_output_langchain_20260212_094056.json"
+    },
+    {
+      "meta": {
+        "result_json": "outputs/TSLA/flow_output_langchain_20260212_095325.json",
+        "price_csv": "stock_price/HistoricalData_TSLA.csv",
+        "target_date": "2026-02-12",
+        "lookback_days": 252,
+        "hold_days": 5,
+        "fee_bps": 5.0,
+        "slippage_bps": 5.0,
+        "forbid_price_fetch": true,
+        "allow_news_fetch": true,
+        "enforce_runtime_cutoff": false
+      },
+      "sanity": {
+        "passed": false,
+        "errors": [
+          "Forbidden price fetch in trace[0]: alpha_fetch/GLOBAL_QUOTE"
+        ],
+        "warnings": [
+          "Unclassified alpha_fetch function in trace[1]: OVERVIEW"
+        ]
+      },
+      "signal": {
+        "ticker": "TSLA",
+        "side": "NO_TRADE",
+        "size": 0.0,
+        "confidence": 5.0,
+        "rationale": "Conflicting market signals with moderate risk score and high confidence in both bullish and bearish views. The company maintains strong market position but faces intense competition and profitability challenges. Further investigation is required before any trading decision.",
+        "blocked_reason": "manager_decision=require_manual"
+      },
+      "trade": {
+        "executed": false,
+        "reason": "sanity_check_failed",
+        "entry_date": null,
+        "exit_date": null,
+        "entry_price": null,
+        "exit_price": null,
+        "gross_return": 0.0,
+        "net_return": 0.0
+      },
+      "summary": {
+        "trades": 0,
+        "win_rate": 0.0,
+        "avg_net_return": 0.0,
+        "total_net_return": 0.0,
+        "equity_end": 1.0
+      },
+      "_file": "outputs/TSLA/flow_output_langchain_20260212_095325.json"
+    },
+    {
+      "meta": {
+        "result_json": "outputs/TSLA/flow_output_langchain_20260212_100813.json",
+        "price_csv": "stock_price/HistoricalData_TSLA.csv",
+        "target_date": "2026-02-12",
+        "lookback_days": 252,
+        "hold_days": 5,
+        "fee_bps": 5.0,
+        "slippage_bps": 5.0,
+        "forbid_price_fetch": true,
+        "allow_news_fetch": true,
+        "enforce_runtime_cutoff": false
+      },
+      "sanity": {
+        "passed": false,
+        "errors": [
+          "Forbidden price fetch in trace[0]: alpha_fetch/GLOBAL_QUOTE"
+        ],
+        "warnings": [
+          "Unclassified alpha_fetch function in trace[1]: OVERVIEW"
+        ]
+      },
+      "signal": {
+        "ticker": "TSLA",
+        "side": "NO_TRADE",
+        "size": 0.0,
+        "confidence": 0.0,
+        "rationale": "Tesla has conflicting bullish and bearish signals with high confidence in both views, and moderate risk score indicates significant uncertainty. Discussion summary highlights both strong financial metrics and leadership challenges. Need additional data to inform decision.",
+        "blocked_reason": "manager_decision=require_manual"
+      },
+      "trade": {
+        "executed": false,
+        "reason": "sanity_check_failed",
+        "entry_date": null,
+        "exit_date": null,
+        "entry_price": null,
+        "exit_price": null,
+        "gross_return": 0.0,
+        "net_return": 0.0
+      },
+      "summary": {
+        "trades": 0,
+        "win_rate": 0.0,
+        "avg_net_return": 0.0,
+        "total_net_return": 0.0,
+        "equity_end": 1.0
+      },
+      "_file": "outputs/TSLA/flow_output_langchain_20260212_100813.json"
+    },
+    {
+      "meta": {
+        "result_json": "outputs/TSLA/flow_output_langchain_20260212_101055.json",
+        "price_csv": "stock_price/HistoricalData_TSLA.csv",
+        "target_date": "2026-02-12",
+        "lookback_days": 252,
+        "hold_days": 5,
+        "fee_bps": 5.0,
+        "slippage_bps": 5.0,
+        "forbid_price_fetch": true,
+        "allow_news_fetch": true,
+        "enforce_runtime_cutoff": false
+      },
+      "sanity": {
+        "passed": false,
+        "errors": [
+          "Forbidden price fetch in trace[0]: alpha_fetch/GLOBAL_QUOTE"
+        ],
+        "warnings": [
+          "Unclassified alpha_fetch function in trace[1]: OVERVIEW"
+        ]
+      },
+      "signal": {
+        "ticker": "TSLA",
+        "side": "NO_TRADE",
+        "size": 0.0,
+        "confidence": 0.5,
+        "rationale": "The analysis presents both bullish and bearish arguments with equal confidence, and the risk score indicates significant competition and operational risks. Re-evaluation with additional data recommended.",
+        "blocked_reason": "manager_decision=require_manual"
+      },
+      "trade": {
+        "executed": false,
+        "reason": "sanity_check_failed",
+        "entry_date": null,
+        "exit_date": null,
+        "entry_price": null,
+        "exit_price": null,
+        "gross_return": 0.0,
+        "net_return": 0.0
+      },
+      "summary": {
+        "trades": 0,
+        "win_rate": 0.0,
+        "avg_net_return": 0.0,
+        "total_net_return": 0.0,
+        "equity_end": 1.0
+      },
+      "_file": "outputs/TSLA/flow_output_langchain_20260212_101055.json"
+    },
+    {
+      "meta": {
+        "result_json": "outputs/TSLA/flow_output_langchain_20260212_101320.json",
+        "price_csv": "stock_price/HistoricalData_TSLA.csv",
+        "target_date": "2026-02-12",
+        "lookback_days": 252,
+        "hold_days": 5,
+        "fee_bps": 5.0,
+        "slippage_bps": 5.0,
+        "forbid_price_fetch": true,
+        "allow_news_fetch": true,
+        "enforce_runtime_cutoff": false
+      },
+      "sanity": {
+        "passed": false,
+        "errors": [
+          "Forbidden price fetch in trace[0]: alpha_fetch/GLOBAL_QUOTE"
+        ],
+        "warnings": [
+          "Unclassified alpha_fetch function in trace[1]: OVERVIEW"
+        ]
+      },
+      "signal": {
+        "ticker": "TSLA",
+        "side": "NO_TRADE",
+        "size": 0.0,
+        "confidence": 0.5,
+        "rationale": "The bull and bear confidence levels are close (0.75 vs 0.8), and the risk_score indicates significant risks (45/100). Further analysis is needed to determine the appropriate action.",
+        "blocked_reason": "manager_decision=require_manual"
+      },
+      "trade": {
+        "executed": false,
+        "reason": "sanity_check_failed",
+        "entry_date": null,
+        "exit_date": null,
+        "entry_price": null,
+        "exit_price": null,
+        "gross_return": 0.0,
+        "net_return": 0.0
+      },
+      "summary": {
+        "trades": 0,
+        "win_rate": 0.0,
+        "avg_net_return": 0.0,
+        "total_net_return": 0.0,
+        "equity_end": 1.0
+      },
+      "_file": "outputs/TSLA/flow_output_langchain_20260212_101320.json"
+    },
+    {
+      "meta": {
+        "result_json": "outputs/TSLA/flow_output_langchain_20260212_101824.json",
+        "price_csv": "stock_price/HistoricalData_TSLA.csv",
+        "target_date": "2026-02-12",
+        "lookback_days": 252,
+        "hold_days": 5,
+        "fee_bps": 5.0,
+        "slippage_bps": 5.0,
+        "forbid_price_fetch": true,
+        "allow_news_fetch": true,
+        "enforce_runtime_cutoff": false
+      },
+      "sanity": {
+        "passed": false,
+        "errors": [
+          "Forbidden price fetch in trace[0]: alpha_fetch/GLOBAL_QUOTE"
+        ],
+        "warnings": [
+          "Unclassified alpha_fetch function in trace[1]: OVERVIEW"
+        ]
+      },
+      "signal": {
+        "ticker": "TSLA",
+        "side": "NO_TRADE",
+        "size": 0.0,
+        "confidence": 0.5,
+        "rationale": "Based on the mixed signals from Tesla, with strong market position but significant governance and profitability risks, a trade is not recommended at this time. Further analysis is required.",
+        "blocked_reason": "manager_decision=require_manual"
+      },
+      "trade": {
+        "executed": false,
+        "reason": "sanity_check_failed",
+        "entry_date": null,
+        "exit_date": null,
+        "entry_price": null,
+        "exit_price": null,
+        "gross_return": 0.0,
+        "net_return": 0.0
+      },
+      "summary": {
+        "trades": 0,
+        "win_rate": 0.0,
+        "avg_net_return": 0.0,
+        "total_net_return": 0.0,
+        "equity_end": 1.0
+      },
+      "_file": "outputs/TSLA/flow_output_langchain_20260212_101824.json"
+    },
+    {
+      "meta": {
+        "result_json": "outputs/TSLA/flow_output_langchain_20260212_102420.json",
+        "price_csv": "stock_price/HistoricalData_TSLA.csv",
+        "target_date": "2026-02-12",
+        "lookback_days": 252,
+        "hold_days": 5,
+        "fee_bps": 5.0,
+        "slippage_bps": 5.0,
+        "forbid_price_fetch": true,
+        "allow_news_fetch": true,
+        "enforce_runtime_cutoff": false
+      },
+      "sanity": {
+        "passed": false,
+        "errors": [
+          "Forbidden price fetch in trace[0]: alpha_fetch/GLOBAL_QUOTE"
+        ],
+        "warnings": [
+          "Unclassified alpha_fetch function in trace[1]: OVERVIEW"
+        ]
+      },
+      "signal": {
+        "ticker": "TSLA",
+        "side": "NO_TRADE",
+        "size": 0.0,
+        "confidence": 0.5,
+        "rationale": "Conflicting high confidence and moderate risk score with operational inefficiencies and governance concerns. Further investigation required.",
+        "blocked_reason": "manager_decision=require_manual"
+      },
+      "trade": {
+        "executed": false,
+        "reason": "sanity_check_failed",
+        "entry_date": null,
+        "exit_date": null,
+        "entry_price": null,
+        "exit_price": null,
+        "gross_return": 0.0,
+        "net_return": 0.0
+      },
+      "summary": {
+        "trades": 0,
+        "win_rate": 0.0,
+        "avg_net_return": 0.0,
+        "total_net_return": 0.0,
+        "equity_end": 1.0
+      },
+      "_file": "outputs/TSLA/flow_output_langchain_20260212_102420.json"
+    },
+    {
+      "meta": {
+        "result_json": "outputs/TSLA/flow_output_langchain_20260212_102653.json",
+        "price_csv": "stock_price/HistoricalData_TSLA.csv",
+        "target_date": "2026-02-12",
+        "lookback_days": 252,
+        "hold_days": 5,
+        "fee_bps": 5.0,
+        "slippage_bps": 5.0,
+        "forbid_price_fetch": true,
+        "allow_news_fetch": true,
+        "enforce_runtime_cutoff": false
+      },
+      "sanity": {
+        "passed": false,
+        "errors": [
+          "Forbidden price fetch in trace[0]: alpha_fetch/GLOBAL_QUOTE"
+        ],
+        "warnings": [
+          "Unclassified alpha_fetch function in trace[1]: OVERVIEW"
+        ]
+      },
+      "signal": {
+        "ticker": "TSLA",
+        "side": "NO_TRADE",
+        "size": 0.0,
+        "confidence": 0.0,
+        "rationale": "Tesla presents conflicting views with high confidence in both bullish and bearish stances. Risk score indicates financial and governance concerns, but innovation remains strong. Further analysis needed.\n\nFurther investigation required on Tesla's financial performance, corporate governance, and the impact of the pay package on sentiment.",
+        "blocked_reason": "manager_decision=require_manual"
+      },
+      "trade": {
+        "executed": false,
+        "reason": "sanity_check_failed",
+        "entry_date": null,
+        "exit_date": null,
+        "entry_price": null,
+        "exit_price": null,
+        "gross_return": 0.0,
+        "net_return": 0.0
+      },
+      "summary": {
+        "trades": 0,
+        "win_rate": 0.0,
+        "avg_net_return": 0.0,
+        "total_net_return": 0.0,
+        "equity_end": 1.0
+      },
+      "_file": "outputs/TSLA/flow_output_langchain_20260212_102653.json"
+    },
+    {
+      "meta": {
+        "result_json": "outputs/TSLA/flow_output_langchain_20260220_084301.json",
+        "price_csv": "stock_price/HistoricalData_TSLA.csv",
+        "target_date": "2026-02-12",
+        "lookback_days": 252,
+        "hold_days": 5,
+        "fee_bps": 5.0,
+        "slippage_bps": 5.0,
+        "forbid_price_fetch": true,
+        "allow_news_fetch": true,
+        "enforce_runtime_cutoff": false
+      },
+      "sanity": {
+        "passed": false,
+        "errors": [
+          "Future market date in trace[3] GLOBAL_QUOTE: 2026-02-19",
+          "Forbidden price fetch in trace[0]: alpha_fetch/GLOBAL_QUOTE",
+          "Forbidden price fetch in trace[3]: alpha_fetch/GLOBAL_QUOTE"
+        ],
+        "warnings": [
+          "Runtime timestamp after cutoff: manager_decision.timestamp=2026-02-20T08:42:47.267106 > 2026-02-12",
+          "Runtime timestamp after cutoff: trader_proposal.timestamp=2026-02-20T08:43:01.032415 > 2026-02-12",
+          "Runtime timestamp after cutoff: analysts.market.timestamp=2026-02-20T08:40:07.276268 > 2026-02-12",
+          "Runtime timestamp after cutoff: analysts.social.timestamp=2026-02-20T08:40:28.635682 > 2026-02-12",
+          "Runtime timestamp after cutoff: analysts.news.timestamp=2026-02-20T08:40:52.338281 > 2026-02-12",
+          "Runtime timestamp after cutoff: analysts.fundamentals.timestamp=2026-02-20T08:41:11.488681 > 2026-02-12",
+          "Runtime timestamp after cutoff: trace[0].at=2026-02-20T08:39:37.107183 > 2026-02-12",
+          "Runtime timestamp after cutoff: trace[1].at=2026-02-20T08:39:37.565091 > 2026-02-12",
+          "Runtime timestamp after cutoff: trace[2].at=2026-02-20T08:39:39.752802 > 2026-02-12",
+          "Runtime timestamp after cutoff: trace[3].at=2026-02-20T08:42:51.980700 > 2026-02-12",
+          "Unclassified alpha_fetch function in trace[1]: OVERVIEW"
+        ]
+      },
+      "signal": {
+        "ticker": "TSLA",
+        "side": "NO_TRADE",
+        "size": 0.0,
+        "confidence": 0.3,
+        "rationale": "Conflicting views on financial stability and market position.",
+        "blocked_reason": "manager_decision=require_manual"
+      },
+      "trade": {
+        "executed": false,
+        "reason": "sanity_check_failed",
+        "entry_date": null,
+        "exit_date": null,
+        "entry_price": null,
+        "exit_price": null,
+        "gross_return": 0.0,
+        "net_return": 0.0
+      },
+      "summary": {
+        "trades": 0,
+        "win_rate": 0.0,
+        "avg_net_return": 0.0,
+        "total_net_return": 0.0,
+        "equity_end": 1.0
+      },
+      "_file": "outputs/TSLA/flow_output_langchain_20260220_084301.json"
+    },
+    {
+      "meta": {
+        "result_json": "outputs/TSLA/flow_output_langchain_20260220_095825.json",
+        "price_csv": "stock_price/HistoricalData_TSLA.csv",
+        "target_date": "2026-02-12",
+        "lookback_days": 252,
+        "hold_days": 5,
+        "fee_bps": 5.0,
+        "slippage_bps": 5.0,
+        "forbid_price_fetch": true,
+        "allow_news_fetch": true,
+        "enforce_runtime_cutoff": false
+      },
+      "sanity": {
+        "passed": false,
+        "errors": [
+          "Future market date in trace[0] GLOBAL_QUOTE: 2026-02-19",
+          "Future market date in trace[3] GLOBAL_QUOTE: 2026-02-19",
+          "Forbidden price fetch in trace[0]: alpha_fetch/GLOBAL_QUOTE",
+          "Forbidden price fetch in trace[3]: alpha_fetch/GLOBAL_QUOTE"
+        ],
+        "warnings": [
+          "Runtime timestamp after cutoff: manager_decision.timestamp=2026-02-20T09:58:06.818439 > 2026-02-12",
+          "Runtime timestamp after cutoff: trader_proposal.timestamp=2026-02-20T09:58:25.401415 > 2026-02-12",
+          "Runtime timestamp after cutoff: analysts.market.timestamp=2026-02-20T09:54:30.224453 > 2026-02-12",
+          "Runtime timestamp after cutoff: analysts.social.timestamp=2026-02-20T09:54:51.982335 > 2026-02-12",
+          "Runtime timestamp after cutoff: analysts.news.timestamp=2026-02-20T09:55:24.163432 > 2026-02-12",
+          "Runtime timestamp after cutoff: analysts.fundamentals.timestamp=2026-02-20T09:55:49.917869 > 2026-02-12",
+          "Runtime timestamp after cutoff: trace[0].at=2026-02-20T09:54:06.081540 > 2026-02-12",
+          "Runtime timestamp after cutoff: trace[1].at=2026-02-20T09:54:06.086472 > 2026-02-12",
+          "Runtime timestamp after cutoff: trace[2].at=2026-02-20T09:54:06.088120 > 2026-02-12",
+          "Runtime timestamp after cutoff: trace[3].at=2026-02-20T09:58:15.286292 > 2026-02-12",
+          "Unclassified alpha_fetch function in trace[1]: OVERVIEW"
+        ]
+      },
+      "signal": {
+        "ticker": "TSLA",
+        "side": "NO_TRADE",
+        "size": 0.0,
+        "confidence": 50.0,
+        "rationale": "Conflicting bull and bear analyses with significant confidence levels.",
+        "blocked_reason": "manager_decision=require_manual"
+      },
+      "trade": {
+        "executed": false,
+        "reason": "sanity_check_failed",
+        "entry_date": null,
+        "exit_date": null,
+        "entry_price": null,
+        "exit_price": null,
+        "gross_return": 0.0,
+        "net_return": 0.0
+      },
+      "summary": {
+        "trades": 0,
+        "win_rate": 0.0,
+        "avg_net_return": 0.0,
+        "total_net_return": 0.0,
+        "equity_end": 1.0
+      },
+      "_file": "outputs/TSLA/flow_output_langchain_20260220_095825.json"
+    },
+    {
+      "meta": {
+        "result_json": "outputs/TSLA/flow_output_langchain_20260220_103656.json",
+        "price_csv": "stock_price/HistoricalData_TSLA.csv",
+        "target_date": "2026-02-12",
+        "lookback_days": 252,
+        "hold_days": 5,
+        "fee_bps": 5.0,
+        "slippage_bps": 5.0,
+        "forbid_price_fetch": true,
+        "allow_news_fetch": true,
+        "enforce_runtime_cutoff": false
+      },
+      "sanity": {
+        "passed": false,
+        "errors": [
+          "Future market date in trace[0] GLOBAL_QUOTE: 2026-02-19",
+          "Future market date in trace[3] GLOBAL_QUOTE: 2026-02-19",
+          "Forbidden price fetch in trace[0]: alpha_fetch/GLOBAL_QUOTE",
+          "Forbidden price fetch in trace[3]: alpha_fetch/GLOBAL_QUOTE"
+        ],
+        "warnings": [
+          "Runtime timestamp after cutoff: manager_decision.timestamp=2026-02-20T10:36:38.718198 > 2026-02-12",
+          "Runtime timestamp after cutoff: trader_proposal.timestamp=2026-02-20T10:36:56.485278 > 2026-02-12",
+          "Runtime timestamp after cutoff: analysts.market.timestamp=2026-02-20T10:33:28.414591 > 2026-02-12",
+          "Runtime timestamp after cutoff: analysts.social.timestamp=2026-02-20T10:33:50.709227 > 2026-02-12",
+          "Runtime timestamp after cutoff: analysts.news.timestamp=2026-02-20T10:34:11.986623 > 2026-02-12",
+          "Runtime timestamp after cutoff: analysts.fundamentals.timestamp=2026-02-20T10:34:38.609995 > 2026-02-12",
+          "Runtime timestamp after cutoff: trace[0].at=2026-02-20T10:33:04.880898 > 2026-02-12",
+          "Runtime timestamp after cutoff: trace[1].at=2026-02-20T10:33:04.886621 > 2026-02-12",
+          "Runtime timestamp after cutoff: trace[2].at=2026-02-20T10:33:04.888511 > 2026-02-12",
+          "Runtime timestamp after cutoff: trace[3].at=2026-02-20T10:36:46.761436 > 2026-02-12",
+          "Unclassified alpha_fetch function in trace[1]: OVERVIEW"
+        ]
+      },
+      "signal": {
+        "ticker": "TSLA",
+        "side": "NO_TRADE",
+        "size": 0.0,
+        "confidence": 50.0,
+        "rationale": "Conflicting views and moderate risk score.",
+        "blocked_reason": "manager_decision=require_manual"
+      },
+      "trade": {
+        "executed": false,
+        "reason": "sanity_check_failed",
+        "entry_date": null,
+        "exit_date": null,
+        "entry_price": null,
+        "exit_price": null,
+        "gross_return": 0.0,
+        "net_return": 0.0
+      },
+      "summary": {
+        "trades": 0,
+        "win_rate": 0.0,
+        "avg_net_return": 0.0,
+        "total_net_return": 0.0,
+        "equity_end": 1.0
+      },
+      "_file": "outputs/TSLA/flow_output_langchain_20260220_103656.json"
+    }
+  ]
+}

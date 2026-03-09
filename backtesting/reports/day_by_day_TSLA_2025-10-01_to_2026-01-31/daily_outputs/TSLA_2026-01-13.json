@@ -1,0 +1,293 @@
+{
+  "context": {
+    "ticker": "TSLA",
+    "target_date": "2026-01-13",
+    "now_utc": "2026-02-20T13:06:42.588132",
+    "account_cash": 100000.0,
+    "account_shares": 0.0,
+    "allow_price_fetch": false
+  },
+  "analysts": {
+    "market": {
+      "role": "MARKET_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T13:06:49.061084",
+      "summary": "Technical analysis indicates a bearish trend for Tesla stock with resistance near $200 and support at $180. The RSI suggests overbought conditions, and the MACD shows a potential bearish crossover.",
+      "key_points": [
+        "Bearish price action with resistance at $200 and support at $180.",
+        "RSI indicates overbought conditions.",
+        "MACD may signal a bearish crossover."
+      ],
+      "confidence": 0.6,
+      "recommendation_hint": "Consider shorting or waiting for a pullback to the support level."
+    },
+    "social": {
+      "role": "SOCIAL_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T13:06:53.408847",
+      "summary": "Tesla's stock performance and market sentiment analysis based on recent news and fundamental data.",
+      "key_points": [
+        "Strong positive sentiment from recent news releases.",
+        "Fundamental factors show potential for growth despite market volatility.",
+        "Social media buzz indicates high interest in Tesla's product developments."
+      ],
+      "confidence": 0.75,
+      "recommendation_hint": "Hold position until further market data is available."
+    },
+    "news": {
+      "role": "NEWS_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T13:06:57.591037",
+      "summary": "Tesla's stock is expected to benefit from strong demand for electric vehicles and advancements in battery technology.",
+      "key_points": [
+        "Projected growth in EV market adoption.",
+        "Innovations in battery technology expected to enhance vehicle performance.",
+        "Potential for increased market share in the competitive EV sector."
+      ],
+      "confidence": 0.7,
+      "recommendation_hint": "Hold for medium-term growth potential."
+    },
+    "fundamentals": {
+      "role": "FUNDAMENTALS_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T13:07:02.609196",
+      "summary": "Tesla Inc. (TSLA) has been in the news recently with various developments affecting its stock performance and market position. The company continues to face regulatory challenges and supply chain issues while also making strides in autonomous driving technology.",
+      "key_points": [
+        "Recent regulatory challenges in the European market could impact Tesla's expansion plans.",
+        "Supply chain disruptions have affected production and delivery timelines for Tesla vehicles.",
+        "Positive developments in Tesla's autonomous driving technology received significant media attention."
+      ],
+      "confidence": 0.7,
+      "recommendation_hint": "Hold position due to mixed news and regulatory risks, while monitoring autonomous technology advancements."
+    }
+  },
+  "researchers": {
+    "bull": {
+      "stance": "BULL",
+      "final_label": "BULLISH",
+      "consensus_summary": "Tesla's stock is expected to benefit from strong demand for electric vehicles and advancements in battery technology, despite regulatory and supply chain challenges. The company's leadership in autonomous driving technology and potential for market growth in the EV sector support a bullish stance.",
+      "evidence": [
+        "Technical analysis indicates a bearish trend, but Tesla has historically recovered from such predictions, suggesting that technical indicators may not capture the company's long-term potential.",
+        "Tesla's advancements in battery technology and autonomous driving are set to drive future growth, outweighing current challenges.",
+        "Strong demand for electric vehicles globally positions Tesla well for continued market expansion."
+      ],
+      "counterarguments": [
+        "Regulatory challenges and supply chain issues could negatively impact Tesla's operations and profitability.",
+        "Competition in the EV market may erode Tesla's market share and pricing power.",
+        "Overbought conditions and bearish technical indicators suggest a potential decline in stock price."
+      ],
+      "confidence": 0.75
+    },
+    "bear": {
+      "stance": "BEAR",
+      "final_label": "BEARISH",
+      "consensus_summary": "Tesla faces multiple risks including high valuation, regulatory challenges, and supply chain issues, despite potential for growth in the EV sector.",
+      "evidence": [
+        "Technical analysis shows bearish trend with resistance near $200 and support at $180.",
+        "RSI indicates overbought conditions, suggesting potential for a pullback.",
+        "MACD shows bearish crossover, indicating weakening momentum.",
+        "Fundamentals highlight regulatory challenges and supply chain issues that could hinder growth.",
+        "News emphasizes risks rather than solely focusing on potential benefits."
+      ],
+      "counterarguments": [
+        "Opponent argues that strong EV demand and battery tech advancements will drive growth.",
+        "Counter: While these factors exist, they are not sufficient to overcome current challenges and high valuation.",
+        "Opponent mentions autonomous driving technology as a potential differentiator.",
+        "Counter: Autonomous technology faces regulatory hurdles and high development costs, posing significant risks."
+      ],
+      "confidence": 0.85
+    },
+    "bull_rounds": [
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla's stock is expected to benefit from strong demand for electric vehicles and advancements in battery technology, despite regulatory challenges and supply chain issues.",
+        "evidence": [
+          "Tesla's stock is expected to benefit from strong demand for electric vehicles and advancements in battery technology (news).",
+          "Tesla Inc. has been making strides in autonomous driving technology (fundamentals).",
+          "Technical analysis shows bearish trend but RSI suggests overbought conditions which might indicate a potential reversal (market)."
+        ],
+        "counterarguments": [
+          "Technical analysis indicates a bearish trend with resistance near $200 and support at $180 (market).",
+          "The company faces regulatory challenges and supply chain issues (fundamentals)."
+        ],
+        "confidence": 0.7
+      },
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Despite regulatory challenges and supply chain issues, Tesla's long-term prospects remain strong due to EV demand, battery innovation, and leadership in autonomous driving. Recent technical indicators show support and potential for a rebound.",
+        "evidence": [
+          "Technical analysis shows bearish trend but with support at $180, suggesting potential for a rebound.",
+          "News highlights strong demand for electric vehicles and advancements in battery technology.",
+          "Fundamentals mention Tesla's progress in autonomous driving technology.",
+          "Market sentiment analysis indicates a bearish trend, but Tesla's core business remains strong."
+        ],
+        "counterarguments": [
+          "Opponent's point on regulatory challenges and supply chain issues is partially valid, but Tesla has been actively addressing these issues and has a history of innovation.",
+          "While the stock may be overvalued in the short-term, the long-term growth potential justifies the valuation for long-term investors.",
+          "Tesla's advancements in battery technology and autonomous driving could disrupt the market and drive future growth."
+        ],
+        "confidence": 0.95
+      },
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla's stock is expected to benefit from strong demand for electric vehicles and advancements in battery technology, despite regulatory and supply chain challenges. The company's leadership in autonomous driving technology and potential for market growth in the EV sector support a bullish stance.",
+        "evidence": [
+          "Technical analysis indicates a bearish trend, but Tesla has historically recovered from such predictions, suggesting that technical indicators may not capture the company's long-term potential.",
+          "Tesla's advancements in battery technology and autonomous driving are set to drive future growth, outweighing current challenges.",
+          "Strong demand for electric vehicles globally positions Tesla well for continued market expansion."
+        ],
+        "counterarguments": [
+          "Regulatory challenges and supply chain issues could negatively impact Tesla's operations and profitability.",
+          "Competition in the EV market may erode Tesla's market share and pricing power.",
+          "Overbought conditions and bearish technical indicators suggest a potential decline in stock price."
+        ],
+        "confidence": 0.75
+      }
+    ],
+    "bear_rounds": [
+      {
+        "stance": "BEAR",
+        "final_label": "BEARISH",
+        "consensus_summary": "Tesla faces multiple headwinds including regulatory challenges, supply chain disruptions, and overvalued stock despite potential EV demand and battery tech advancements.",
+        "evidence": [
+          "Technical indicators show bearish trend with resistance near $200 and support at $180.",
+          "RSI indicates overbought conditions, suggesting potential for a pullback.",
+          "MACD shows bearish crossover, signaling weakening momentum."
+        ],
+        "counterarguments": [
+          "Opponent argues that strong EV demand and battery tech advancements will drive Tesla stock up.",
+          "Counterargument: Regulatory challenges and supply chain issues are significant barriers that could hinder Tesla's growth and profitability, potentially offsetting the benefits of EV demand and battery tech."
+        ],
+        "confidence": 0.9
+      },
+      {
+        "stance": "BEAR",
+        "final_label": "BEARISH",
+        "consensus_summary": "Tesla faces regulatory and supply chain challenges, weak technical indicators, and risks from EV market competition, despite positive demand for EVs and battery tech.",
+        "evidence": [
+          "Technical analysis shows bearish trend with resistance near $200 and support at $180.",
+          "RSI indicates overbought conditions, and MACD shows potential bearish crossover.",
+          "Tesla faces regulatory challenges and supply chain issues that could hinder performance.",
+          "Competition in the EV market may impact Tesla's leadership.",
+          "Battery technology advancements could be competitive, not solely Tesla-driven."
+        ],
+        "counterarguments": [
+          "Strong EV demand and battery innovation could drive Tesla's growth.",
+          "Autonomous driving technology leadership may provide a competitive edge.",
+          "Recent news suggests Tesla benefits from EV demand and tech advancements."
+        ],
+        "confidence": 0.8
+      },
+      {
+        "stance": "BEAR",
+        "final_label": "BEARISH",
+        "consensus_summary": "Tesla faces multiple risks including high valuation, regulatory challenges, and supply chain issues, despite potential for growth in the EV sector.",
+        "evidence": [
+          "Technical analysis shows bearish trend with resistance near $200 and support at $180.",
+          "RSI indicates overbought conditions, suggesting potential for a pullback.",
+          "MACD shows bearish crossover, indicating weakening momentum.",
+          "Fundamentals highlight regulatory challenges and supply chain issues that could hinder growth.",
+          "News emphasizes risks rather than solely focusing on potential benefits."
+        ],
+        "counterarguments": [
+          "Opponent argues that strong EV demand and battery tech advancements will drive growth.",
+          "Counter: While these factors exist, they are not sufficient to overcome current challenges and high valuation.",
+          "Opponent mentions autonomous driving technology as a potential differentiator.",
+          "Counter: Autonomous technology faces regulatory hurdles and high development costs, posing significant risks."
+        ],
+        "confidence": 0.85
+      }
+    ],
+    "discussion": "Tesla's stock is expected to benefit from strong demand for electric vehicles and advancements in battery technology, despite regulatory and supply chain challenges. The company's leadership in autonomous driving technology and potential for market growth in the EV sector support a bullish stance.\n\nTesla faces multiple risks including high valuation, regulatory challenges, and supply chain issues, despite potential for growth in the EV sector."
+  },
+  "risk": {
+    "risk_score": 65,
+    "breach_flags": [
+      "High Valuation",
+      "Regulatory Challenges",
+      "Supply Chain Vulnerabilities"
+    ],
+    "explainers": [
+      "Tesla's high stock valuation may indicate overextension, making the company susceptible to market downturns or competitive pressures.",
+      "Regulatory challenges in the EV sector could lead to compliance costs or delays, impacting Tesla's financial performance.",
+      "Supply chain issues with battery components or raw materials could disrupt production, affecting Tesla's ability to meet demand."
+    ]
+  },
+  "manager_decision": {
+    "decision": "require_manual",
+    "reason": "The bull and bear confidence levels are close, and the risk score indicates significant risks despite potential growth.",
+    "next_steps": "Review Tesla's latest financial reports, assess current market conditions, and consult with the investment committee before making a decision.",
+    "role": "RISK_MANAGER",
+    "timestamp": "2026-02-20T13:07:43.300522"
+  },
+  "trader_proposal": {
+    "ticker": "TSLA",
+    "side": "NO_TRADE",
+    "size": 0.0,
+    "entry": 0.0,
+    "stop": 0.0,
+    "target": 0.0,
+    "rationale": "The decision requires manual review due to close bull/bear confidence levels and significant risks despite potential growth. Further analysis needed.",
+    "confidence": 5.0,
+    "created_by": "TRADER",
+    "timestamp": "2026-02-20T13:07:47.442867"
+  },
+  "trace": [
+    {
+      "at": "2026-02-20T13:06:42.609236",
+      "stage": "PREFETCH",
+      "tool": "alpha_fetch",
+      "function": "OVERVIEW",
+      "symbol": "TSLA",
+      "tickers": null,
+      "params": {},
+      "status": "api_error",
+      "api_issue": {
+        "kind": "Information",
+        "message": "We have detected your API key as BSE23K9THV7KR1X7 and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits."
+      },
+      "tool_called": true,
+      "cache_hit": false,
+      "response_keys": [
+        "Information"
+      ],
+      "response_preview": "{\"Information\": \"We have detected your API key as BSE23K9THV7KR1X7 and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits.\"}",
+      "rag_stored": false
+    },
+    {
+      "at": "2026-02-20T13:06:43.601484",
+      "stage": "PREFETCH",
+      "tool": "alpha_fetch",
+      "function": "NEWS_SENTIMENT",
+      "symbol": null,
+      "tickers": "TSLA",
+      "params": {
+        "time_from": "20260113T0000",
+        "time_to": "20260113T2359",
+        "limit": "200",
+        "sort": "EARLIEST",
+        "as_of_date": "2026-01-13"
+      },
+      "cache_bypass": "as_of_date",
+      "status": "api_error",
+      "api_issue": {
+        "kind": "Information",
+        "message": "Thank you for using Alpha Vantage! Please consider spreading out your free API requests more sparingly (1 request per second). You may subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to lift the free key rate limit (25 requests per day), raise the per-second burst limit, and instantly unlock all premium endpoints"
+      },
+      "tool_called": true,
+      "cache_hit": false,
+      "response_keys": [
+        "Information"
+      ],
+      "response_preview": "{\"Information\": \"Thank you for using Alpha Vantage! Please consider spreading out your free API requests more sparingly (1 request per second). You may subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to lift the free key rate limit (25 requests per day), raise the per-second burst limit, and instantly unlock all premium endpoints\"}",
+      "rag_stored": false
+    }
+  ],
+  "output_paths": {
+    "latest": "flow_output_langchain.json",
+    "archive": "outputs/TSLA/flow_output_langchain_20260220_130747.json"
+  }
+}

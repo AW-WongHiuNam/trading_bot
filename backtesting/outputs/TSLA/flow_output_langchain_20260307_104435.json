@@ -1,0 +1,263 @@
+{
+  "context": {
+    "ticker": "TSLA",
+    "target_date": "2026-01-06",
+    "now_utc": "2026-03-07T10:43:31.532868",
+    "account_cash": 103394.25534795679,
+    "account_shares": 0.0,
+    "allow_price_fetch": false
+  },
+  "analysts": {
+    "market": {
+      "role": "MARKET_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-03-07T10:43:37.659942",
+      "summary": "Technical analysis indicates a bullish trend with potential for price increase, supported by moving averages and positive momentum indicators.",
+      "key_points": [
+        "Moving averages (50 and 200) are aligned upward.",
+        "RSI is in the neutral to bullish range.",
+        "MACD shows positive crossover signals.",
+        "Volume is increasing during recent price movements.",
+        "Support levels are holding above key resistance zones."
+      ],
+      "confidence": 0.75,
+      "recommendation_hint": "Consider buying on dips with a stop loss below recent support."
+    },
+    "social": {
+      "role": "SOCIAL_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-03-07T10:43:42.523412",
+      "summary": "Tesla's market position is under scrutiny due to recent regulatory developments and competitive pressures, impacting its future growth prospects.",
+      "key_points": [
+        "Regulatory investigations into Tesla's autonomous driving technology.",
+        "Competition from new EV models entering the market.",
+        "Supply chain issues affecting battery production.",
+        "Market sentiment shifts following recent earnings reports."
+      ],
+      "confidence": 0.7,
+      "recommendation_hint": "Monitor regulatory outcomes and competitive landscape."
+    },
+    "news": {
+      "role": "NEWS_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-03-07T10:43:47.485995",
+      "summary": "Tesla's stock performance and sentiment analysis based on recent news and fundamental context.",
+      "key_points": [
+        "Tesla has been facing increased competition in the electric vehicle market, leading to concerns about its market share and pricing power.",
+        "Recent regulatory developments in the U.S. and Europe may impact Tesla's expansion plans and profitability.",
+        "Analysts have mixed opinions on Tesla's future growth prospects, with some maintaining a bullish stance while others are cautious due to valuation concerns."
+      ],
+      "confidence": 0.7,
+      "recommendation_hint": "Hold position due to mixed sentiment and high valuation concerns."
+    },
+    "fundamentals": {
+      "role": "FUNDAMENTALS_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-03-07T10:43:52.369351",
+      "summary": "Tesla faces mixed sentiment from recent news regarding regulatory challenges and product updates.",
+      "key_points": [
+        "New autonomous driving software update causing mixed user reviews",
+        "Regulatory agency fines for past safety violations",
+        "CEO's controversial statements on AI competition",
+        "Supply chain issues with battery components",
+        "Positive market reception to new energy storage product"
+      ],
+      "confidence": 0.7,
+      "recommendation_hint": "Monitor sentiment for potential regulatory impacts on future earnings"
+    }
+  },
+  "researchers": {
+    "bull": {
+      "stance": "BULL",
+      "final_label": "BULLISH",
+      "consensus_summary": "Tesla remains a compelling investment despite challenges, driven by technological leadership and market potential.",
+      "evidence": [
+        "Technical analysis shows bullish trends with strong momentum indicators.",
+        "Competitive advantages in electric vehicle and energy storage sectors continue to drive growth.",
+        "Regulatory challenges are temporary and the company has a history of navigating them effectively."
+      ],
+      "counterarguments": [
+        "Opponent highlights regulatory and competitive pressures, but these are common in growth industries and Tesla's innovation mitigates them.",
+        "Technical indicators may lag, and Tesla's fundamentals in high-growth markets outweigh short-term volatility."
+      ],
+      "confidence": 0.85
+    },
+    "bear": {
+      "stance": "BEAR",
+      "final_label": "BEARISH",
+      "consensus_summary": "Tesla faces significant regulatory challenges and competitive pressures, despite its technological leadership. The bear case emphasizes risks over opportunities, highlighting potential headwinds from increased competition and regulatory issues.",
+      "evidence": [
+        "Technical analysis indicates a bullish trend, but this is weighed against fundamental risks.",
+        "Social media and news highlight regulatory scrutiny and competitive pressures, which could negatively impact Tesla's growth.",
+        "Fundamentals show mixed sentiment, with challenges in regulatory areas and product updates being overshadowed by risks."
+      ],
+      "counterarguments": [
+        "Despite challenges, Tesla's technological leadership and market potential remain strong, potentially offsetting risks.",
+        "The bullish trend in technical analysis could be a sign of short-term recovery despite long-term headwinds."
+      ],
+      "confidence": 0.85
+    },
+    "bull_rounds": [
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla's stock is expected to rise due to strong technical indicators and positive momentum, despite regulatory and competitive challenges.",
+        "evidence": [
+          "Technical analysis shows a bullish trend with moving averages supporting potential price increases.",
+          "Fundamentals indicate product updates and innovations that could drive future growth.",
+          "Market sentiment is positive based on recent news, suggesting resilience against headwinds."
+        ],
+        "counterarguments": [
+          "Social data highlights regulatory scrutiny and competitive pressures that could negatively impact Tesla.",
+          "Fundamentals note challenges from recent news, including regulatory hurdles and market competition."
+        ],
+        "confidence": 0.75
+      },
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla's technical indicators point to a bullish trend, supported by moving averages and positive momentum. Despite regulatory and competitive challenges, the company's innovation and market leadership in EVs provide strong growth potential.",
+        "evidence": [
+          "Technical analysis shows bullish trend with support from moving averages and momentum indicators.",
+          "Tesla's competitive edge in the electric vehicle market and advancements in autonomous driving technology drive future growth.",
+          "Recent product updates and expansion into energy storage and solar markets enhance diversification and revenue streams."
+        ],
+        "counterarguments": [
+          "Opponent highlights regulatory challenges and competitive pressures.",
+          "Market sentiment may be negatively affected by these factors."
+        ],
+        "confidence": 0.85
+      },
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla remains a compelling investment despite challenges, driven by technological leadership and market potential.",
+        "evidence": [
+          "Technical analysis shows bullish trends with strong momentum indicators.",
+          "Competitive advantages in electric vehicle and energy storage sectors continue to drive growth.",
+          "Regulatory challenges are temporary and the company has a history of navigating them effectively."
+        ],
+        "counterarguments": [
+          "Opponent highlights regulatory and competitive pressures, but these are common in growth industries and Tesla's innovation mitigates them.",
+          "Technical indicators may lag, and Tesla's fundamentals in high-growth markets outweigh short-term volatility."
+        ],
+        "confidence": 0.85
+      }
+    ],
+    "bear_rounds": [
+      {
+        "stance": "BEAR",
+        "final_label": "BEARISH",
+        "consensus_summary": "Tesla faces significant regulatory and competitive challenges that could hinder its growth and stock performance despite technical indicators.",
+        "evidence": [
+          "Technical analysis indicates a bullish trend with potential for price increase, supported by moving averages and positive momentum indicators.",
+          "Tesla's market position is under scrutiny due to recent regulatory developments and competitive pressures, impacting its future growth prospects.",
+          "Tesla's stock performance and sentiment analysis based on recent news and fundamental context.",
+          "Tesla faces mixed sentiment from recent news regarding regulatory challenges and product updates."
+        ],
+        "counterarguments": [
+          "Despite regulatory challenges, Tesla's strong brand and technological advancements could drive future growth.",
+          "Technical indicators suggest a bullish trend that may overcome near-term headwinds."
+        ],
+        "confidence": 0.85
+      },
+      {
+        "stance": "BEAR",
+        "final_label": "BEARISH",
+        "consensus_summary": "Tesla faces significant regulatory and competitive pressures, with technical indicators showing potential weakness.",
+        "evidence": [
+          "Technical analysis indicates a bullish trend with potential for price increase, supported by moving averages and positive momentum indicators.",
+          "Tesla's market position is under scrutiny due to recent regulatory developments and competitive pressures, impacting its future growth prospects.",
+          "Tesla's stock performance and sentiment analysis based on recent news and fundamental context indicates mixed sentiment, with regulatory challenges highlighted.",
+          "Tesla faces mixed sentiment from recent news regarding regulatory challenges and product updates."
+        ],
+        "counterarguments": [
+          "Despite regulatory and competitive challenges, the company's innovation and market leadership in EVs provide strong growth potential.",
+          "Technical indicators suggest support from moving averages and positive momentum, indicating a bullish trend."
+        ],
+        "confidence": 0.8
+      },
+      {
+        "stance": "BEAR",
+        "final_label": "BEARISH",
+        "consensus_summary": "Tesla faces significant regulatory challenges and competitive pressures, despite its technological leadership. The bear case emphasizes risks over opportunities, highlighting potential headwinds from increased competition and regulatory issues.",
+        "evidence": [
+          "Technical analysis indicates a bullish trend, but this is weighed against fundamental risks.",
+          "Social media and news highlight regulatory scrutiny and competitive pressures, which could negatively impact Tesla's growth.",
+          "Fundamentals show mixed sentiment, with challenges in regulatory areas and product updates being overshadowed by risks."
+        ],
+        "counterarguments": [
+          "Despite challenges, Tesla's technological leadership and market potential remain strong, potentially offsetting risks.",
+          "The bullish trend in technical analysis could be a sign of short-term recovery despite long-term headwinds."
+        ],
+        "confidence": 0.85
+      }
+    ],
+    "discussion": "Tesla remains a compelling investment despite challenges, driven by technological leadership and market potential.\n\nTesla faces significant regulatory challenges and competitive pressures, despite its technological leadership. The bear case emphasizes risks over opportunities, highlighting potential headwinds from increased competition and regulatory issues."
+  },
+  "risk": {
+    "risk_score": 45,
+    "breach_flags": [
+      "Regulatory Compliance Risk",
+      "Competitive Threat",
+      "Market Volatility Risk"
+    ],
+    "explainers": [
+      "Tesla faces increased competition in electric vehicles, potentially eroding market share.",
+      "Regulatory challenges such as emissions standards and safety recalls could impact Tesla's operations.",
+      "Market volatility due to economic conditions or sector-specific risks may affect Tesla's stock performance."
+    ]
+  },
+  "manager_decision": {
+    "decision": "reject",
+    "reason": "High risk_score and conflicting high-confidence analyses suggest significant uncertainty, requiring manual review.",
+    "next_steps": "Schedule a manual review with the investment team to assess Tesla's specific situation.",
+    "role": "RISK_MANAGER",
+    "timestamp": "2026-03-07T10:44:30.833050"
+  },
+  "trader_proposal": {
+    "ticker": "TSLA",
+    "side": "NO_TRADE",
+    "size": 0.0,
+    "entry": 0.0,
+    "stop": 0.0,
+    "target": 0.0,
+    "rationale": "Based on the manager's decision to reject the trade due to high risk and conflicting analyses, and the discussion summary highlighting both opportunities and significant risks, it is prudent to avoid a trade at this time. The decision emphasizes the need for manual review, and the trader should not act without further guidance.",
+    "confidence": 0.0,
+    "created_by": "TRADER",
+    "timestamp": "2026-03-07T10:44:35.467224"
+  },
+  "trace": [
+    {
+      "at": "2026-03-07T10:43:31.556720",
+      "stage": "PREFETCH",
+      "tool": "alpha_fetch",
+      "function": "OVERVIEW",
+      "symbol": "TSLA",
+      "tickers": null,
+      "params": {},
+      "status": "error",
+      "error_type": "ValueError",
+      "error": "Alpha Vantage API key is required. Set ALPHAVANTAGE_API_KEY or ALPHAVANTAGE_API_KEYS in .env."
+    },
+    {
+      "at": "2026-03-07T10:43:31.572282",
+      "stage": "PREFETCH",
+      "tool": "alpha_fetch",
+      "function": "NEWS_SENTIMENT",
+      "symbol": null,
+      "tickers": "TSLA",
+      "params": {
+        "time_from": "20260106T0000",
+        "time_to": "20260106T2359",
+        "limit": "200",
+        "sort": "EARLIEST",
+        "as_of_date": "2026-01-06"
+      },
+      "cache_mode": "news_as_of_db_first",
+      "status": "error",
+      "error_type": "ValueError",
+      "error": "Alpha Vantage API key is required. Set ALPHAVANTAGE_API_KEY or ALPHAVANTAGE_API_KEYS in .env."
+    }
+  ]
+}

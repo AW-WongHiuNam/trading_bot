@@ -45,9 +45,9 @@ def get_job_status(db: Session, job_id: int) -> dict | None:
     }
 
 
-def run_job(db: Session, job_id: int, ticker: str, target_date: str) -> None:
+def run_job(db: Session, job_id: int, ticker: str, target_date: str, account_cash: float = 100000.0, account_shares: float = 0.0) -> None:
     set_job_status(db, job_id, "running")
-    result = run_analysis_job(ticker, target_date)
+    result = run_analysis_job(ticker, target_date, account_cash=account_cash, account_shares=account_shares)
     if "error" in result:
         set_job_status(db, job_id, "failed", error=result["error"])
     else:

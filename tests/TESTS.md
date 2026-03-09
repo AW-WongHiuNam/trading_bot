@@ -27,3 +27,7 @@ This folder groups both fast logic tests and a live smoke check for the multi-ag
 - Strategy: try `ollama.generate` first, fallback to `ollama.chat`, print raw responses.
 - Prereqs: Ollama daemon running and model `qwen2.5:14b` available (or edit the script to the model you have).
 - Run: `python tests/test_ollama.py`
+
+## Notes
+- Root-level duplicate test scripts have been removed to keep a single source of truth under `tests/`.
+- Preferred runnable scripts are under `scripts/`.

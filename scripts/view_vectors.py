@@ -2,8 +2,8 @@
 """列出 SQLite + hnswlib 向量庫內容的小工具
 
 用法例子：
-    python view_vectors.py --sqlite ./vector_store.sqlite --table api_calls --limit 200
-    python view_vectors.py --sqlite ./vector_store.sqlite --filter-key type --filter-value api_response
+    python scripts/view_vectors.py --sqlite ./vector_store.sqlite --table api_calls --limit 200
+    python scripts/view_vectors.py --sqlite ./vector_store.sqlite --filter-key type --filter-value api_response
 
 此腳本會印出每筆向量的 id、metadata 摘要與文件預覽（前 400 字元）。
 """

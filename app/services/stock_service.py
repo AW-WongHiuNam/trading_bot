@@ -1,8 +1,8 @@
 import csv
-import json
 import os
 from datetime import datetime, timedelta
-from urllib.request import urlopen
+
+from scripts.alpha_fetch import fetch_av
 from app.config import settings
 
 
@@ -60,15 +60,7 @@ def _load_csv(path: str) -> list[dict]:
 
 
 def _fetch_alpha_vantage(ticker: str) -> dict:
-    if not settings.alpha_vantage_api_key:
-        raise RuntimeError("ALPHAVANTAGE_API_KEY is not set")
-    url = (
-        "https://www.alphavantage.co/query"
-        f"?function=TIME_SERIES_DAILY&symbol={ticker}"
-        f"&apikey={settings.alpha_vantage_api_key}"
-    )
-    with urlopen(url) as resp:
-        payload = json.loads(resp.read().decode("utf-8"))
+    payload = fetch_av("TIME_SERIES_DAILY", api_key=None, params={"symbol": ticker})
     if isinstance(payload, dict):
         for key in ("Error Message", "Note", "Information"):
             msg = payload.get(key)

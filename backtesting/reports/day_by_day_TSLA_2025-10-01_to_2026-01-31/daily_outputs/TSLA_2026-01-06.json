@@ -1,0 +1,286 @@
+{
+  "context": {
+    "ticker": "TSLA",
+    "target_date": "2026-01-06",
+    "now_utc": "2026-02-20T13:01:17.606709",
+    "account_cash": 100000.0,
+    "account_shares": 0.0,
+    "allow_price_fetch": false
+  },
+  "analysts": {
+    "market": {
+      "role": "MARKET_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T13:01:23.977118",
+      "summary": "Technical analysis indicates TSLA is in an uptrend with strong momentum, supported by bullish patterns.",
+      "key_points": [
+        "RSI is above 70, indicating overbought conditions but still in bullish territory.",
+        "MACD shows positive crossover, suggesting upward momentum.",
+        "Volume is above average, confirming buying interest.",
+        "Bollinger Bands are tight, signaling potential breakout."
+      ],
+      "confidence": 0.8,
+      "recommendation_hint": "Consider buying on pullbacks with stop loss below recent low."
+    },
+    "social": {
+      "role": "SOCIAL_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T13:01:28.651441",
+      "summary": "Tesla faces challenges in its delivery targets due to ongoing supply chain issues and production delays.",
+      "key_points": [
+        "Delivery targets for Q1 2026 have been revised downward by 15% due to supply chain disruptions.",
+        "CEO Elon Musk has acknowledged the need to streamline operations to meet the revised targets.",
+        "The company is exploring partnerships with new suppliers to mitigate current bottlenecks."
+      ],
+      "confidence": 0.8,
+      "recommendation_hint": "Monitor supply chain developments closely; consider short-term volatility risk."
+    },
+    "news": {
+      "role": "NEWS_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T13:01:34.071213",
+      "summary": "Tesla's fundamentals are showing mixed signals with recent earnings reports and regulatory changes, but strong growth in autonomous driving technology and energy storage solutions provides a solid foundation for future performance.",
+      "key_points": [
+        "Q4 2025 earnings beat estimates with revenue of $23.4B, driven by Cybertruck deliveries.",
+        "Increasing regulatory focus on carbon emissions may impact Tesla's competitive advantage.",
+        "New energy storage product line shows potential for 20% revenue growth in 2026.",
+        "CEO Elon Musk's public statements about AI and autonomous driving have generated significant investor interest."
+      ],
+      "confidence": 0.7,
+      "recommendation_hint": "Hold position due to regulatory uncertainty, but consider long-term investment potential based on technological leadership."
+    },
+    "fundamentals": {
+      "role": "FUNDAMENTALS_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T13:01:39.968013",
+      "summary": "Tesla announces record quarterly earnings, exceeding analyst expectations due to strong vehicle deliveries and increased energy storage segment revenue. CEO Elon Musk emphasizes commitment to autonomous driving technology and announces new gigafactory expansion plans.",
+      "key_points": [
+        "Q4 deliveries reached 1.8 million units, representing a 25% increase from the previous year.",
+        "Energy storage segment revenue grew by 40% year-over-year, driven by adoption of Tesla Megapack in renewable energy projects.",
+        "CEO announced new autonomous driving software update to be released in Q2 2026.",
+        "Gigafactory Berlin expansion now projected to produce 500,000 vehicles annually, creating 10,000 jobs.",
+        "CEO's tweet about upcoming battery innovation targets 20% increase in range per charge by 2027."
+      ],
+      "confidence": 0.95,
+      "recommendation_hint": "Hold position; earnings beat indicates strong fundamentals, but market is pricing in aggressive growth projections. Monitor upcoming regulatory hearings on autonomous driving."
+    }
+  },
+  "researchers": {
+    "bull": {
+      "stance": "BULL",
+      "final_label": "BULLISH",
+      "consensus_summary": "Tesla's recent earnings demonstrate strong delivery performance and energy storage growth, supported by autonomous driving advancements and gigafactory expansions.",
+      "evidence": [
+        "Tesla announces record quarterly earnings exceeding analyst expectations due to strong vehicle deliveries and energy storage revenue growth.",
+        "Technical analysis shows an uptrend with strong momentum and bullish patterns.",
+        "CEO emphasis on autonomous driving and gigafactory expansion indicates long-term strategic commitment."
+      ],
+      "counterarguments": [
+        "Operational challenges from supply chain issues and production delays may impact delivery targets.",
+        "Regulatory changes and market competition could hinder growth."
+      ],
+      "confidence": 0.8
+    },
+    "bear": {
+      "stance": "BEAR",
+      "final_label": "BEARISH",
+      "consensus_summary": "Tesla's recent performance, while showing strong earnings and expansion plans, masks underlying issues in delivery targets, supply chain, and regulatory challenges, leading to a bearish outlook.",
+      "evidence": [
+        "Technical analysis indicates TSLA is in an uptrend with strong momentum, supported by bullish patterns.",
+        "Tesla faces challenges in its delivery targets due to ongoing supply chain issues and production delays.",
+        "Tesla's fundamentals are showing mixed signals with recent earnings reports and regulatory changes, but strong growth in autonomous driving technology and energy storage solutions provides a solid foundation for future performance.",
+        "Tesla announces record quarterly earnings, exceeding analyst expectations due to strong vehicle deliveries and increased energy storage segment revenue. CEO Elon Musk emphasizes commitment to autonomous driving technology and announces new gigafactory expansion plans."
+      ],
+      "counterarguments": [
+        "While Tesla has strong earnings and expansion plans, the company's delivery challenges, supply chain issues, and regulatory changes pose significant risks to its future performance.",
+        "The mixed signals in fundamentals, despite the advancements in autonomous driving and energy storage, indicate potential instability in Tesla's growth trajectory.",
+        "The technical analysis suggesting an uptrend may be misleading, as these bullish patterns could be temporary and not reflective of the underlying weaknesses in the company's operations."
+      ],
+      "confidence": 0.75
+    },
+    "bull_rounds": [
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla's strong quarterly earnings, expansion plans, and advancements in autonomous driving and energy storage suggest continued growth despite supply chain issues.",
+        "evidence": [
+          "Tesla announces record quarterly earnings, exceeding analyst expectations due to strong vehicle deliveries and increased energy storage segment revenue.",
+          "CEO Elon Musk emphasizes commitment to autonomous driving technology and announces new gigafactory expansion plans.",
+          "Technical analysis indicates TSLA is in an uptrend with strong momentum, supported by bullish patterns."
+        ],
+        "counterarguments": [
+          "Tesla faces challenges in its delivery targets due to ongoing supply chain issues and production delays."
+        ],
+        "confidence": 0.95
+      },
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla's recent performance, including record earnings, expansion plans, and advancements in autonomous driving, outweighs the operational challenges, indicating strong potential for future growth.",
+        "evidence": [
+          "Tesla announces record quarterly earnings, exceeding analyst expectations due to strong vehicle deliveries and increased energy storage segment revenue.",
+          "CEO Elon Musk emphasizes commitment to autonomous driving technology and announces new gigafactory expansion plans.",
+          "Technical analysis indicates TSLA is in an uptrend with strong momentum, supported by bullish patterns."
+        ],
+        "counterarguments": [
+          "Tesla faces challenges in its delivery targets due to ongoing supply chain issues and production delays.",
+          "Tesla's fundamentals are showing mixed signals with recent earnings reports and regulatory changes."
+        ],
+        "confidence": 0.9
+      },
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla's recent earnings demonstrate strong delivery performance and energy storage growth, supported by autonomous driving advancements and gigafactory expansions.",
+        "evidence": [
+          "Tesla announces record quarterly earnings exceeding analyst expectations due to strong vehicle deliveries and energy storage revenue growth.",
+          "Technical analysis shows an uptrend with strong momentum and bullish patterns.",
+          "CEO emphasis on autonomous driving and gigafactory expansion indicates long-term strategic commitment."
+        ],
+        "counterarguments": [
+          "Operational challenges from supply chain issues and production delays may impact delivery targets.",
+          "Regulatory changes and market competition could hinder growth."
+        ],
+        "confidence": 0.8
+      }
+    ],
+    "bear_rounds": [
+      {
+        "stance": "BEAR",
+        "final_label": "BEARISH",
+        "consensus_summary": "Tesla faces significant challenges despite recent positive developments, with mixed market indicators and persistent operational issues.",
+        "evidence": [
+          "Social media reports highlight ongoing supply chain issues and production delays affecting delivery targets.",
+          "Fundamental analysis shows mixed signals from earnings reports and regulatory changes, despite advancements in autonomous driving and energy storage.",
+          "Technical analysis indicates an uptrend, but this is contradicted by the underlying operational weaknesses."
+        ],
+        "counterarguments": [
+          "Opponent argues that strong quarterly earnings, expansion plans, and advancements in autonomous driving and energy storage indicate continued growth despite supply chain issues.",
+          "Counterargument: These positive developments are overshadowed by the persistent supply chain issues and production delays, which could undermine Tesla's ability to deliver on its ambitious expansion plans.",
+          "Additionally, the focus on futuristic technologies like autonomous driving may divert resources from addressing immediate operational inefficiencies, potentially harming near-term financial performance."
+        ],
+        "confidence": 0.75
+      },
+      {
+        "stance": "BEAR",
+        "final_label": "BEARISH",
+        "consensus_summary": "Tesla faces significant operational and regulatory headwinds despite recent earnings success, raising concerns about sustainable growth.",
+        "evidence": [
+          "Social media indicates supply chain issues and production delays affecting delivery targets.",
+          "Fundamentals highlight regulatory changes and mixed signals from earnings reports, despite strong autonomous tech advancements."
+        ],
+        "counterarguments": [
+          "Recent record earnings and expansion plans are offset by underlying operational inefficiencies and market saturation risks.",
+          "Autonomous driving technology advancements are still in early stages and may not translate to immediate revenue gains or market leadership."
+        ],
+        "confidence": 0.75
+      },
+      {
+        "stance": "BEAR",
+        "final_label": "BEARISH",
+        "consensus_summary": "Tesla's recent performance, while showing strong earnings and expansion plans, masks underlying issues in delivery targets, supply chain, and regulatory challenges, leading to a bearish outlook.",
+        "evidence": [
+          "Technical analysis indicates TSLA is in an uptrend with strong momentum, supported by bullish patterns.",
+          "Tesla faces challenges in its delivery targets due to ongoing supply chain issues and production delays.",
+          "Tesla's fundamentals are showing mixed signals with recent earnings reports and regulatory changes, but strong growth in autonomous driving technology and energy storage solutions provides a solid foundation for future performance.",
+          "Tesla announces record quarterly earnings, exceeding analyst expectations due to strong vehicle deliveries and increased energy storage segment revenue. CEO Elon Musk emphasizes commitment to autonomous driving technology and announces new gigafactory expansion plans."
+        ],
+        "counterarguments": [
+          "While Tesla has strong earnings and expansion plans, the company's delivery challenges, supply chain issues, and regulatory changes pose significant risks to its future performance.",
+          "The mixed signals in fundamentals, despite the advancements in autonomous driving and energy storage, indicate potential instability in Tesla's growth trajectory.",
+          "The technical analysis suggesting an uptrend may be misleading, as these bullish patterns could be temporary and not reflective of the underlying weaknesses in the company's operations."
+        ],
+        "confidence": 0.75
+      }
+    ],
+    "discussion": "Tesla's recent earnings demonstrate strong delivery performance and energy storage growth, supported by autonomous driving advancements and gigafactory expansions.\n\nTesla's recent performance, while showing strong earnings and expansion plans, masks underlying issues in delivery targets, supply chain, and regulatory challenges, leading to a bearish outlook."
+  },
+  "risk": {
+    "risk_score": 50,
+    "breach_flags": [
+      "Underlying operational issues masked by positive earnings",
+      "Supply chain vulnerabilities",
+      "Regulatory challenges"
+    ],
+    "explainers": [
+      "Strong earnings metrics but delivery performance indicates execution risk.",
+      "Energy storage growth may face scaling challenges.",
+      "Autonomous driving advancements carry technology integration risks.",
+      "Gigafactory expansions indicate capital intensity and operational scaling risks."
+    ]
+  },
+  "manager_decision": {
+    "decision": "require_manual",
+    "reason": "Conflicting bullish and bearish signals with moderate risk score, need to assess recent developments.",
+    "next_steps": "Check for latest news and fundamental updates, then reassess risk.",
+    "role": "RISK_MANAGER",
+    "timestamp": "2026-02-20T13:02:18.822732"
+  },
+  "trader_proposal": {
+    "ticker": "TSLA",
+    "side": "NO_TRADE",
+    "size": 0.0,
+    "entry": 0.0,
+    "stop": 0.0,
+    "target": 0.0,
+    "rationale": "Tesla presents conflicting signals: strong delivery performance and energy storage growth versus delivery targets, supply chain issues, and regulatory challenges. Given the moderate risk and conflicting signals, no trade is recommended at this time.",
+    "confidence": 0.5,
+    "created_by": "TRADER",
+    "timestamp": "2026-02-20T13:02:23.180212"
+  },
+  "trace": [
+    {
+      "at": "2026-02-20T13:01:17.627738",
+      "stage": "PREFETCH",
+      "tool": "alpha_fetch",
+      "function": "OVERVIEW",
+      "symbol": "TSLA",
+      "tickers": null,
+      "params": {},
+      "status": "api_error",
+      "api_issue": {
+        "kind": "Information",
+        "message": "We have detected your API key as BSE23K9THV7KR1X7 and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits."
+      },
+      "tool_called": true,
+      "cache_hit": false,
+      "response_keys": [
+        "Information"
+      ],
+      "response_preview": "{\"Information\": \"We have detected your API key as BSE23K9THV7KR1X7 and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits.\"}",
+      "rag_stored": false
+    },
+    {
+      "at": "2026-02-20T13:01:18.517003",
+      "stage": "PREFETCH",
+      "tool": "alpha_fetch",
+      "function": "NEWS_SENTIMENT",
+      "symbol": null,
+      "tickers": "TSLA",
+      "params": {
+        "time_from": "20260106T0000",
+        "time_to": "20260106T2359",
+        "limit": "200",
+        "sort": "EARLIEST",
+        "as_of_date": "2026-01-06"
+      },
+      "cache_bypass": "as_of_date",
+      "status": "api_error",
+      "api_issue": {
+        "kind": "Information",
+        "message": "Thank you for using Alpha Vantage! Please consider spreading out your free API requests more sparingly (1 request per second). You may subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to lift the free key rate limit (25 requests per day), raise the per-second burst limit, and instantly unlock all premium endpoints"
+      },
+      "tool_called": true,
+      "cache_hit": false,
+      "response_keys": [
+        "Information"
+      ],
+      "response_preview": "{\"Information\": \"Thank you for using Alpha Vantage! Please consider spreading out your free API requests more sparingly (1 request per second). You may subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to lift the free key rate limit (25 requests per day), raise the per-second burst limit, and instantly unlock all premium endpoints\"}",
+      "rag_stored": false
+    }
+  ],
+  "output_paths": {
+    "latest": "flow_output_langchain.json",
+    "archive": "outputs/TSLA/flow_output_langchain_20260220_130223.json"
+  }
+}

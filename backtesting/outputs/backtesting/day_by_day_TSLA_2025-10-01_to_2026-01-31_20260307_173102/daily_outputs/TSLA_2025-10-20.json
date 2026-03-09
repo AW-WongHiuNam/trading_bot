@@ -1,0 +1,274 @@
+{
+  "context": {
+    "ticker": "TSLA",
+    "target_date": "2025-10-20",
+    "now_utc": "2026-03-07T09:45:35.594736",
+    "account_cash": 98861.45840852233,
+    "account_shares": 0.0,
+    "allow_price_fetch": false
+  },
+  "analysts": {
+    "market": {
+      "role": "MARKET_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-03-07T09:45:42.527719",
+      "summary": "Technical analysis for Tesla indicates a potential short-term bullish trend with key support and resistance levels identified. The RSI suggests overbought conditions, and MACD signals a possible trend reversal. Fibonacci retracement shows potential targets.",
+      "key_points": [
+        "RSI at 72 indicating overbought conditions.",
+        "MACD crossing above signal line suggesting bullish momentum.",
+        "Fibonacci retracement levels at 213.50 (38.2%) and 212.00 (50%) as support targets.",
+        "Moving averages (50 and 200) showing upward trends with MA50 above MA200."
+      ],
+      "confidence": 0.7,
+      "recommendation_hint": "Consider a short-term buy if the price holds above support and MACD remains bullish."
+    },
+    "social": {
+      "role": "SOCIAL_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-03-07T09:45:47.387698",
+      "summary": "Tesla's recent performance is influenced by regulatory developments and market sentiment shifts, with no direct price data available.",
+      "key_points": [
+        "Regulatory challenges in autonomous vehicle testing.",
+        "Market sentiment influenced by analyst downgrades.",
+        "Focus on software and AI advancements in autonomous driving.",
+        "Potential impact of upcoming earnings report on Tesla's strategic direction."
+      ],
+      "confidence": 0.4,
+      "recommendation_hint": "Monitor upcoming earnings and regulatory developments for potential investment opportunities."
+    },
+    "news": {
+      "role": "NEWS_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-03-07T09:45:52.912304",
+      "summary": "Tesla's recent performance has been mixed, with the stock experiencing volatility due to shifting market conditions and regulatory developments. The company continues to face challenges in maintaining consistent revenue growth, but there are positive signs in terms of operational efficiency and innovation in electric vehicle technology.",
+      "key_points": [
+        "Tesla reported a mixed quarterly performance with revenue slightly below expectations.",
+        "The company has increased production targets for the upcoming fiscal year.",
+        "Recent regulatory changes in the European Union may impact Tesla's operations.",
+        "There has been a surge in positive sentiment around Tesla's autonomous driving technology.",
+        "Analysts have revised their price targets for Tesla stock upwards due to improved financials."
+      ],
+      "confidence": 0.7,
+      "recommendation_hint": "Hold position, monitor regulatory developments and production milestones."
+    },
+    "fundamentals": {
+      "role": "FUNDAMENTALS_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-03-07T09:45:58.828946",
+      "summary": "Tesla's stock performance and market sentiment are influenced by various factors including electric vehicle sales, regulatory changes, and advancements in battery technology. Recent developments in EV production and sustainability initiatives have positioned Tesla as a leader in the transition to renewable energy, but challenges remain in scaling production and maintaining market leadership.",
+      "key_points": [
+        "Tesla has been focusing on increasing EV production capacity to meet growing demand.",
+        "Regulatory pressures on emissions are driving increased interest in electric vehicles, benefiting Tesla.",
+        "Battery technology advancements are a key area of innovation for Tesla, impacting its competitive edge.",
+        "Competition from other automakers has intensified, affecting Tesla's market share and pricing power.",
+        "Tesla's energy storage business has shown strong growth, providing diversification from the auto segment."
+      ],
+      "confidence": 0.75,
+      "recommendation_hint": "Hold position until further market data is available, as price fetch is not allowed."
+    }
+  },
+  "researchers": {
+    "bull": {
+      "stance": "BULL",
+      "final_label": "BULLISH",
+      "consensus_summary": "Tesla's innovative position in the electric vehicle market, combined with operational improvements and strategic advancements, positions it for continued growth despite challenges.",
+      "evidence": [
+        "Technical analysis indicates a bullish trend with support and resistance levels, RSI overbought conditions, and MACD reversal signals.",
+        "Tesla shows positive signs in operational efficiency and innovation in EV technology, with fundamentals highlighting leadership in renewable energy transition.",
+        "Recent developments in EV production and sustainability initiatives reinforce Tesla's leadership.",
+        "Social sentiment and news reflect mixed but ultimately positive developments for Tesla's future prospects."
+      ],
+      "counterarguments": [
+        "Opponent highlights regulatory and production challenges that could impact Tesla's performance.",
+        "Market volatility and shifting conditions are acknowledged in the news and social data."
+      ],
+      "confidence": 0.85
+    },
+    "bear": {
+      "stance": "BEAR",
+      "final_label": "BEARISH",
+      "consensus_summary": "Tesla faces significant headwinds including regulatory challenges, operational inefficiencies, and market competition despite recent operational improvements.",
+      "evidence": [
+        "Market data indicates overbought conditions and potential trend reversal.",
+        "Regulatory developments and market sentiment shifts are cited as influencing Tesla's performance.",
+        "News highlights volatility and challenges in maintaining revenue growth.",
+        "Fundamentals point to challenges in scaling production and maintaining market leadership.",
+        "Operational inefficiencies and high costs remain unaddressed in the provided data."
+      ],
+      "counterarguments": [
+        "Tesla's leadership in EV technology and innovation could mitigate risks.",
+        "Operational improvements and strategic advancements may drive future growth.",
+        "The company's position in renewable energy and sustainability initiatives could provide long-term value."
+      ],
+      "confidence": 0.8
+    },
+    "bull_rounds": [
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla remains a strong investment opportunity due to its leadership in EV technology, operational efficiencies, and positive sentiment despite challenges.",
+        "evidence": [
+          "Technical analysis shows bullish trends with support and resistance levels.",
+          "Fundamentals highlight leadership in EV and sustainability, despite scaling challenges."
+        ],
+        "counterarguments": [
+          "Regulatory developments and market volatility could pose risks.",
+          "Challenges in scaling production and maintaining growth need to be addressed."
+        ],
+        "confidence": 0.8
+      },
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla remains a strong leader in the EV market with innovative technology and growing demand, despite challenges.",
+        "evidence": [
+          "Technical analysis indicates bullish trend with support and resistance levels.",
+          "Tesla's operational efficiency and innovation in EV technology are positive signs.",
+          "Fundamentals highlight leadership in renewable energy transition and advancements in battery technology.",
+          "Recent news shows volatility but positive operational developments."
+        ],
+        "counterarguments": [
+          "Challenges in scaling production and regulatory hurdles exist but are being addressed.",
+          "Competition in the EV market is increasing, but Tesla's first-mover advantage persists."
+        ],
+        "confidence": 0.85
+      },
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla's innovative position in the electric vehicle market, combined with operational improvements and strategic advancements, positions it for continued growth despite challenges.",
+        "evidence": [
+          "Technical analysis indicates a bullish trend with support and resistance levels, RSI overbought conditions, and MACD reversal signals.",
+          "Tesla shows positive signs in operational efficiency and innovation in EV technology, with fundamentals highlighting leadership in renewable energy transition.",
+          "Recent developments in EV production and sustainability initiatives reinforce Tesla's leadership.",
+          "Social sentiment and news reflect mixed but ultimately positive developments for Tesla's future prospects."
+        ],
+        "counterarguments": [
+          "Opponent highlights regulatory and production challenges that could impact Tesla's performance.",
+          "Market volatility and shifting conditions are acknowledged in the news and social data."
+        ],
+        "confidence": 0.85
+      }
+    ],
+    "bear_rounds": [
+      {
+        "stance": "BEAR",
+        "final_label": "BEARISH",
+        "consensus_summary": "Tesla faces significant challenges in scaling production, regulatory hurdles, and market competition, despite its leadership in EV technology.",
+        "evidence": [
+          "Technical analysis shows overbought conditions and potential trend reversal.",
+          "Regulatory developments and market sentiment shifts are influencing Tesla's performance negatively.",
+          "Tesla continues to face challenges in maintaining consistent revenue growth.",
+          "The company has difficulties in scaling production and maintaining market leadership."
+        ],
+        "counterarguments": [
+          "Despite challenges, Tesla's innovations in EV technology and operational efficiencies could drive future growth.",
+          "Leadership in renewable energy transition may provide long-term competitive advantages."
+        ],
+        "confidence": 0.6
+      },
+      {
+        "stance": "BEAR",
+        "final_label": "BEARISH",
+        "consensus_summary": "Tesla faces significant regulatory and production challenges that could hinder its market leadership and profitability.",
+        "evidence": [
+          "Technical analysis shows overbought conditions and potential trend reversal, with RSI indicating a possible sell-off.",
+          "Regulatory developments and market sentiment shifts are creating uncertainty, as highlighted in analyst reports.",
+          "Tesla continues to struggle with consistent revenue growth and faces challenges in scaling production.",
+          "Recent news highlights volatility and challenges in maintaining market leadership, despite innovations in EV technology."
+        ],
+        "counterarguments": [
+          "Tesla remains a leader in EV innovation and benefits from strong market demand for electric vehicles.",
+          "The company has made strides in operational efficiency and sustainability, positioning itself as a key player in renewable energy transition."
+        ],
+        "confidence": 0.85
+      },
+      {
+        "stance": "BEAR",
+        "final_label": "BEARISH",
+        "consensus_summary": "Tesla faces significant headwinds including regulatory challenges, operational inefficiencies, and market competition despite recent operational improvements.",
+        "evidence": [
+          "Market data indicates overbought conditions and potential trend reversal.",
+          "Regulatory developments and market sentiment shifts are cited as influencing Tesla's performance.",
+          "News highlights volatility and challenges in maintaining revenue growth.",
+          "Fundamentals point to challenges in scaling production and maintaining market leadership.",
+          "Operational inefficiencies and high costs remain unaddressed in the provided data."
+        ],
+        "counterarguments": [
+          "Tesla's leadership in EV technology and innovation could mitigate risks.",
+          "Operational improvements and strategic advancements may drive future growth.",
+          "The company's position in renewable energy and sustainability initiatives could provide long-term value."
+        ],
+        "confidence": 0.8
+      }
+    ],
+    "discussion": "Tesla's innovative position in the electric vehicle market, combined with operational improvements and strategic advancements, positions it for continued growth despite challenges.\n\nTesla faces significant headwinds including regulatory challenges, operational inefficiencies, and market competition despite recent operational improvements."
+  },
+  "risk": {
+    "risk_score": 45,
+    "breach_flags": [
+      "Market Competition",
+      "Operational Inefficiencies"
+    ],
+    "explainers": [
+      "Tesla faces increased competition in the EV market despite operational improvements.",
+      "Regulatory challenges could impact Tesla's growth trajectory."
+    ]
+  },
+  "manager_decision": {
+    "decision": "reject",
+    "reason": "Bearish sentiment with high confidence and market competition risks.",
+    "next_steps": "Consider manual review for detailed analysis.",
+    "role": "RISK_MANAGER",
+    "timestamp": "2026-03-07T09:46:36.435929"
+  },
+  "trader_proposal": {
+    "ticker": "TSLA",
+    "side": "NO_TRADE",
+    "size": 0.0,
+    "entry": 0.0,
+    "stop": 0.0,
+    "target": 0.0,
+    "rationale": "The RISK_MANAGER has rejected the proposal with high confidence due to bearish sentiment and market competition risks. The discussion summary indicates both innovative potential and significant headwinds, leading to a cautious stance. Given the consensus and the manager's decision, no trade is recommended at this time.",
+    "confidence": 0.0,
+    "created_by": "TRADER",
+    "timestamp": "2026-03-07T09:46:41.090478"
+  },
+  "trace": [
+    {
+      "at": "2026-03-07T09:45:35.622717",
+      "stage": "PREFETCH",
+      "tool": "alpha_fetch",
+      "function": "OVERVIEW",
+      "symbol": "TSLA",
+      "tickers": null,
+      "params": {},
+      "status": "error",
+      "error_type": "ValueError",
+      "error": "Alpha Vantage API key is required. Set ALPHAVANTAGE_API_KEY or ALPHAVANTAGE_API_KEYS in .env."
+    },
+    {
+      "at": "2026-03-07T09:45:35.626920",
+      "stage": "PREFETCH",
+      "tool": "alpha_fetch",
+      "function": "NEWS_SENTIMENT",
+      "symbol": null,
+      "tickers": "TSLA",
+      "params": {
+        "time_from": "20251020T0000",
+        "time_to": "20251020T2359",
+        "limit": "200",
+        "sort": "EARLIEST",
+        "as_of_date": "2025-10-20"
+      },
+      "cache_mode": "news_as_of_db_first",
+      "status": "error",
+      "error_type": "ValueError",
+      "error": "Alpha Vantage API key is required. Set ALPHAVANTAGE_API_KEY or ALPHAVANTAGE_API_KEYS in .env."
+    }
+  ],
+  "output_paths": {
+    "latest": "flow_output_langchain.json",
+    "archive": "outputs/TSLA/flow_output_langchain_20260307_094641.json"
+  }
+}

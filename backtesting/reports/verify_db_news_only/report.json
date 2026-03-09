@@ -1,0 +1,58 @@
+{
+  "meta": {
+    "ticker": "TSLA",
+    "start_date": "2025-10-02",
+    "end_date": "2025-10-02",
+    "price_csv": "stock_price/HistoricalData_TSLA.csv",
+    "template_path": "OUTPUT_TEMPLATE.TXT",
+    "model": null,
+    "initial_cash": 100000.0,
+    "initial_shares": 0.0,
+    "hold_days": 5,
+    "fee_bps": 5.0,
+    "slippage_bps": 5.0,
+    "allow_price_fetch": false,
+    "allow_news_fetch": true,
+    "enforce_runtime_cutoff": false,
+    "decision_policy": "auto",
+    "trading_days": 1
+  },
+  "summary": {
+    "trades": 1,
+    "win_rate": 1.0,
+    "avg_net_return": 0.06621409476973057,
+    "total_net_return": 0.06621409476973057,
+    "equity_end": 1.0662140947697305,
+    "final_cash": 100529.71275815784,
+    "trading_days": 1
+  },
+  "artifacts": {
+    "daily_outputs_dir": "backtesting/reports/verify_db_news_only/daily_outputs",
+    "daily_summary_csv": "backtesting/reports/verify_db_news_only/daily_summary.csv"
+  },
+  "days": [
+    {
+      "date": "2025-10-02",
+      "cash_before": 100000.0,
+      "cash_after": 100529.71275815784,
+      "shares_context": 0.0,
+      "sanity_passed": true,
+      "sanity_error_count": 0,
+      "side": "SELL",
+      "size": 0.08,
+      "signal_confidence": 0.95,
+      "trade_executed": true,
+      "trade_reason": "executed",
+      "entry_date": "2025-10-03",
+      "exit_date": "2025-10-10",
+      "entry_price": 443.285,
+      "exit_price": 413.49,
+      "net_return": 0.06621409476973057,
+      "pnl": 529.7127581578446,
+      "daily_output": "backtesting/reports/verify_db_news_only/daily_outputs/TSLA_2025-10-02.json",
+      "discussion": "Tesla remains a compelling investment despite recent challenges, driven by strong market position, innovative capabilities, and analyst optimism for future growth.\n\nTesla is a leading electric vehicle and clean energy company with strong market position, innovative capabilities, and analyst optimism for future growth.",
+      "bull_rounds": 3,
+      "bear_rounds": 3
+    }
+  ]
+}

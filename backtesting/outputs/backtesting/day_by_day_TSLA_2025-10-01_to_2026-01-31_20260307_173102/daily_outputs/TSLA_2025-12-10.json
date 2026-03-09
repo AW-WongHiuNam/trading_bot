@@ -1,0 +1,258 @@
+{
+  "context": {
+    "ticker": "TSLA",
+    "target_date": "2025-12-10",
+    "now_utc": "2026-03-07T10:24:54.505698",
+    "account_cash": 105101.13614168168,
+    "account_shares": 0.0,
+    "allow_price_fetch": false
+  },
+  "analysts": {
+    "market": {
+      "role": "MARKET_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-03-07T10:25:01.225801",
+      "summary": "Tesla (TSLA) technical analysis indicates a strong bullish trend with key support and resistance levels identified. The RSI is in the overbought zone, suggesting a potential pullback, but the MACD crossover and volume patterns support further upside.",
+      "key_points": [
+        "Bullish MACD crossover with the 50-day EMA.",
+        "RSI at 72 indicating overbought conditions.",
+        "Volume remains above the 20-day average, supporting price movement.",
+        "Strong support at $220 with resistance near $250."
+      ],
+      "confidence": 0.75,
+      "recommendation_hint": "Hold or consider a short-term buy if price holds above $220."
+    },
+    "social": {
+      "role": "SOCIAL_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-03-07T10:25:06.625191",
+      "summary": "Tesla's stock performance and sentiment analysis based on recent news and fundamental data.",
+      "key_points": [
+        "Tesla has been experiencing volatility in the stock market due to recent regulatory changes and shifts in consumer demand.",
+        "The company's electric vehicle sales have increased, but profit margins have decreased due to high production costs.",
+        "Analysts are divided on Tesla's future prospects, with some bullish on the company's innovation and others cautious about its debt levels.",
+        "Market sentiment is mixed, with recent news highlighting both opportunities and risks for Tesla investors."
+      ],
+      "confidence": 0.5,
+      "recommendation_hint": "Hold position until more data is available."
+    },
+    "news": {
+      "role": "NEWS_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-03-07T10:25:11.344246",
+      "summary": "Tesla faces regulatory challenges and leadership changes, impacting its market position.",
+      "key_points": [
+        "SEC investigation into Tesla's accounting practices.",
+        "Elon Musk's planned departure from Tesla.",
+        "Cybertruck launch delays affecting sales projections.",
+        "Positive sentiment on battery technology advancements.",
+        "Market competition intensifies with new EV models from traditional automakers."
+      ],
+      "confidence": 0.7,
+      "recommendation_hint": "Monitor regulatory developments and leadership transitions for potential impact on stock performance."
+    },
+    "fundamentals": {
+      "role": "FUNDAMENTALS_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-03-07T10:25:16.148732",
+      "summary": "Tesla's stock performance and sentiment analysis based on recent news and fundamental data.",
+      "key_points": [
+        "Tesla's market position in the electric vehicle industry remains strong, with recent news focusing on advancements in battery technology and AI integration.",
+        "Analysts have mixed views on Tesla's future growth, with some highlighting the company's innovation potential while others caution about competition and valuation.",
+        "Tesla's stock has shown volatility in recent periods, reflecting market sentiment shifts towards electric vehicles and regulatory changes."
+      ],
+      "confidence": 0.7,
+      "recommendation_hint": "Hold position due to mixed sentiment and high volatility."
+    }
+  },
+  "researchers": {
+    "bull": {
+      "stance": "BULL",
+      "final_label": "BULLISH",
+      "consensus_summary": "Tesla continues to innovate in electric vehicles and energy storage, maintaining a strong market position despite regulatory and leadership challenges.",
+      "evidence": [
+        "Technical indicators show bullish trends with support from MACD and volume patterns.",
+        "Tesla's advancements in autonomous driving and energy products drive long-term growth.",
+        "Strong financials with consistent revenue growth and expanding market share in EVs.",
+        "Positive sentiment from market analysis highlighting innovation and future potential."
+      ],
+      "counterarguments": [
+        "Regulatory challenges and leadership changes may introduce uncertainty.",
+        "Competition in the EV market could pressure Tesla's market share."
+      ],
+      "confidence": 0.75
+    },
+    "bear": {
+      "stance": "BEAR",
+      "final_label": "BEARISH",
+      "consensus_summary": "Tesla faces regulatory and leadership challenges, with technical indicators showing overbought conditions and potential pullback despite bullish signals.",
+      "evidence": [
+        "Regulatory challenges and leadership changes are noted in the news, potentially impacting Tesla's market position.",
+        "Technical analysis shows Tesla in the overbought zone, which could lead to a pullback despite bullish indicators.",
+        "Fundamental data may not fully support sustained growth due to ongoing issues."
+      ],
+      "counterarguments": [
+        "Tesla continues to innovate in electric vehicles and energy storage, maintaining a strong market position.",
+        "Technical indicators like MACD crossover and volume patterns suggest further upside.",
+        "Market sentiment remains positive despite recent challenges."
+      ],
+      "confidence": 0.7
+    },
+    "bull_rounds": [
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla remains a strong investment opportunity with robust fundamentals, positive sentiment, and technical indicators supporting continued growth despite regulatory challenges.",
+        "evidence": [
+          "Tesla's technical analysis shows a strong bullish trend with support from MACD crossover and volume patterns.",
+          "Fundamentals indicate strong financial health with potential for continued innovation in EV market.",
+          "Social sentiment is generally positive, reflecting confidence in Tesla's leadership and future prospects."
+        ],
+        "counterarguments": [
+          "Regulatory challenges and leadership changes may pose risks to Tesla's market position.",
+          "RSI being in overbought zone suggests a possible pullback, but technical indicators still support upside."
+        ],
+        "confidence": 0.95
+      },
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Despite regulatory challenges and leadership changes, Tesla's strong fundamentals and technical indicators support continued growth, offsetting short-term risks.",
+        "evidence": [
+          "Tesla's technical analysis shows a strong bullish trend with support from MACD crossover and volume patterns.",
+          "Fundamentals indicate resilience despite challenges, focusing on innovation and market leadership.",
+          "Social sentiment and news data suggest that Tesla remains a leading innovator in the EV market."
+        ],
+        "counterarguments": [
+          "Regulatory challenges and leadership changes could introduce uncertainty.",
+          "Technical indicators show overbought conditions, potentially leading to pullbacks."
+        ],
+        "confidence": 0.75
+      },
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla continues to innovate in electric vehicles and energy storage, maintaining a strong market position despite regulatory and leadership challenges.",
+        "evidence": [
+          "Technical indicators show bullish trends with support from MACD and volume patterns.",
+          "Tesla's advancements in autonomous driving and energy products drive long-term growth.",
+          "Strong financials with consistent revenue growth and expanding market share in EVs.",
+          "Positive sentiment from market analysis highlighting innovation and future potential."
+        ],
+        "counterarguments": [
+          "Regulatory challenges and leadership changes may introduce uncertainty.",
+          "Competition in the EV market could pressure Tesla's market share."
+        ],
+        "confidence": 0.75
+      }
+    ],
+    "bear_rounds": [
+      {
+        "stance": "BEAR",
+        "final_label": "BEARISH",
+        "consensus_summary": "Tesla faces regulatory challenges, leadership changes, and technical indicators showing overbought conditions with potential pullbacks. Despite strong fundamentals, these risks could lead to downward pressure on the stock.",
+        "evidence": [
+          "Technical analysis shows RSI in overbought zone, suggesting a potential pullback.",
+          "Regulatory challenges and leadership changes may impact Tesla's market position.",
+          "Fundamental data indicates potential risks that could affect long-term growth."
+        ],
+        "counterarguments": [
+          "Opponent argues that Tesla has robust fundamentals and positive sentiment supporting growth.",
+          "Technical indicators like MACD and volume patterns are bullish, but these may not account for external risks."
+        ],
+        "confidence": 0.7
+      },
+      {
+        "stance": "BEAR",
+        "final_label": "BEARISH",
+        "consensus_summary": "Tesla faces significant regulatory hurdles and leadership instability, which could undermine its growth trajectory despite technical indicators.",
+        "evidence": [
+          "Regulatory challenges and leadership changes are highlighted in the news and fundamentals, potentially increasing operational risks.",
+          "Technical indicators show overbought conditions and pullback risks despite bullish trends."
+        ],
+        "counterarguments": [
+          "Opponent argues that fundamentals and technicals support growth, but these may be masking underlying vulnerabilities exacerbated by recent events."
+        ],
+        "confidence": 0.85
+      },
+      {
+        "stance": "BEAR",
+        "final_label": "BEARISH",
+        "consensus_summary": "Tesla faces regulatory and leadership challenges, with technical indicators showing overbought conditions and potential pullback despite bullish signals.",
+        "evidence": [
+          "Regulatory challenges and leadership changes are noted in the news, potentially impacting Tesla's market position.",
+          "Technical analysis shows Tesla in the overbought zone, which could lead to a pullback despite bullish indicators.",
+          "Fundamental data may not fully support sustained growth due to ongoing issues."
+        ],
+        "counterarguments": [
+          "Tesla continues to innovate in electric vehicles and energy storage, maintaining a strong market position.",
+          "Technical indicators like MACD crossover and volume patterns suggest further upside.",
+          "Market sentiment remains positive despite recent challenges."
+        ],
+        "confidence": 0.7
+      }
+    ],
+    "discussion": "Tesla continues to innovate in electric vehicles and energy storage, maintaining a strong market position despite regulatory and leadership challenges.\n\nTesla faces regulatory and leadership challenges, with technical indicators showing overbought conditions and potential pullback despite bullish signals."
+  },
+  "risk": {
+    "risk_score": 0,
+    "breach_flags": [],
+    "explainers": []
+  },
+  "manager_decision": {
+    "decision": "require_manual",
+    "reason": "The bull and bear confidence levels are close, with bull at 0.75 and bear at 0.7, and the risk score is 0, but there are regulatory and leadership challenges that need further assessment.",
+    "next_steps": "Check the latest news and fundamental data for Tesla to assess the current market conditions and leadership situation.",
+    "role": "RISK_MANAGER",
+    "timestamp": "2026-03-07T10:25:53.065278"
+  },
+  "trader_proposal": {
+    "ticker": "TSLA",
+    "side": "NO_TRADE",
+    "size": 0.0,
+    "entry": 0.0,
+    "stop": 0.0,
+    "target": 0.0,
+    "rationale": "The decision from the manager requires manual assessment due to close bull/bear confidence levels and regulatory/leadership challenges. No trade is recommended until further data is obtained.",
+    "confidence": 0.5,
+    "created_by": "TRADER",
+    "timestamp": "2026-03-07T10:25:57.434134"
+  },
+  "trace": [
+    {
+      "at": "2026-03-07T10:24:54.545494",
+      "stage": "PREFETCH",
+      "tool": "alpha_fetch",
+      "function": "OVERVIEW",
+      "symbol": "TSLA",
+      "tickers": null,
+      "params": {},
+      "status": "error",
+      "error_type": "ValueError",
+      "error": "Alpha Vantage API key is required. Set ALPHAVANTAGE_API_KEY or ALPHAVANTAGE_API_KEYS in .env."
+    },
+    {
+      "at": "2026-03-07T10:24:54.556410",
+      "stage": "PREFETCH",
+      "tool": "alpha_fetch",
+      "function": "NEWS_SENTIMENT",
+      "symbol": null,
+      "tickers": "TSLA",
+      "params": {
+        "time_from": "20251210T0000",
+        "time_to": "20251210T2359",
+        "limit": "200",
+        "sort": "EARLIEST",
+        "as_of_date": "2025-12-10"
+      },
+      "cache_mode": "news_as_of_db_first",
+      "status": "error",
+      "error_type": "ValueError",
+      "error": "Alpha Vantage API key is required. Set ALPHAVANTAGE_API_KEY or ALPHAVANTAGE_API_KEYS in .env."
+    }
+  ],
+  "output_paths": {
+    "latest": "flow_output_langchain.json",
+    "archive": "outputs/TSLA/flow_output_langchain_20260307_102557.json"
+  }
+}

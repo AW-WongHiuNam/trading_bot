@@ -1,0 +1,272 @@
+{
+  "context": {
+    "ticker": "TSLA",
+    "target_date": "2025-12-26",
+    "now_utc": "2026-02-20T12:55:03.953438",
+    "account_cash": 100000.0,
+    "account_shares": 0.0,
+    "allow_price_fetch": false
+  },
+  "analysts": {
+    "market": {
+      "role": "MARKET_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T12:55:10.001724",
+      "summary": "Technical analysis indicates TSLA is approaching resistance levels with declining momentum.",
+      "key_points": [
+        "RSI at 62 suggesting mild overbought conditions",
+        "MACD showing weakening bullish signal",
+        "Support near $210 with potential bounce",
+        "Moving averages providing resistance"
+      ],
+      "confidence": 0.75,
+      "recommendation_hint": "Consider short-term tactical plays near support"
+    },
+    "social": {
+      "role": "SOCIAL_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T12:55:15.543935",
+      "summary": "Tesla Inc. (TSLA) has experienced a significant drop in its stock price, primarily due to concerns over the company's ability to meet its production targets and the upcoming launch of its new electric vehicle model. The market sentiment has shifted towards caution, with analysts suggesting a potential bearish trend in the near term.",
+      "key_points": [
+        "Tesla's stock price has decreased by approximately 15% in the last quarter.",
+        "The main driver behind the decline is the underperformance of Tesla's Model Y production targets.",
+        "Analysts are cautious about Tesla's ability to execute on its expansion plans.",
+        "Market sentiment is turning negative due to concerns over Tesla's financial health and future prospects."
+      ],
+      "confidence": 0.7,
+      "recommendation_hint": "Hold or consider shorting Tesla due to the negative sentiment and production concerns."
+    },
+    "news": {
+      "role": "NEWS_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T12:55:19.760157",
+      "summary": "Tesla's recent performance and market sentiment analysis based on available news and fundamental data.",
+      "key_points": [
+        "Tesla has been focusing on increasing Model Y production.",
+        "The company has secured partnerships with major automakers for battery supply.",
+        "Market sentiment is mixed due to concerns over valuation and competition."
+      ],
+      "confidence": 0.7,
+      "recommendation_hint": "Hold position based on mixed sentiment"
+    },
+    "fundamentals": {
+      "role": "FUNDAMENTALS_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T12:55:24.488668",
+      "summary": "Tesla's stock performance and market sentiment in the lead-up to December 2025, based on available news and fundamental data.",
+      "key_points": [
+        "Strong electric vehicle market growth continues to drive demand for Tesla shares.",
+        "Supply chain challenges and production delays may impact Tesla's ability to meet market expectations.",
+        "Tesla's expansion into energy storage and renewable energy solutions provides diversification.",
+        "Competition in the electric vehicle sector intensifies with new models from traditional automakers and new entrants."
+      ],
+      "confidence": 0.7,
+      "recommendation_hint": "Hold position due to mixed sentiment but potential for growth if production challenges are overcome."
+    }
+  },
+  "researchers": {
+    "bull": {
+      "stance": "BULL",
+      "final_label": "BULLISH",
+      "consensus_summary": "Despite near-term concerns, Tesla's long-term growth potential remains strong due to its leadership in electric vehicles, AI, and sustainable energy, supported by strong fundamentals, positive innovations, and improving market sentiment.",
+      "evidence": [
+        "Tesla's advancements in autonomous driving technology and energy storage solutions position it as a leader in the green energy transition, driving long-term value.",
+        "The company's expanding global EV market share and growing autonomy capabilities create significant moat against competitors.",
+        "Strong cash flow generation allows for continued innovation and debt reduction, strengthening financials.",
+        "Recent positive developments in battery technology and AI integration enhance competitive advantage."
+      ],
+      "counterarguments": [
+        "Near-term technical bearishness due to resistance levels and declining momentum.",
+        "Cautious sentiment from production concerns and upcoming EV launches.",
+        "Market-wide risks including potential economic downturns or regulatory changes."
+      ],
+      "confidence": 0.85
+    },
+    "bear": {
+      "stance": "BEAR",
+      "final_label": "BEARISH",
+      "consensus_summary": "Tesla faces near-term headwinds with declining momentum, concerns over production targets and new model launches, despite long-term potential in electric vehicles and AI.",
+      "evidence": [
+        "Technical analysis indicates TSLA is approaching resistance levels with declining momentum.",
+        "Tesla Inc. (TSLA) has experienced a significant drop in its stock price, primarily due to concerns over the company's ability to meet its production targets and the upcoming launch of its new electric vehicle model."
+      ],
+      "counterarguments": [
+        "Despite near-term concerns, Tesla's long-term growth potential remains strong due to its leadership in electric vehicles, AI, and sustainable energy, supported by strong fundamentals, positive innovations, and improving market sentiment."
+      ],
+      "confidence": 0.85
+    },
+    "bull_rounds": [
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla is facing short-term challenges but has strong long-term potential.",
+        "evidence": [
+          "Technical analysis indicates TSLA is approaching resistance levels with declining momentum.",
+          "Tesla Inc. (TSLA) has experienced a significant drop in its stock price, primarily due to concerns over the company's ability to meet its production targets and the upcoming launch of its new electric vehicle model. The market sentiment has shifted towards caution, with analysts suggesting a potential bearish trend in the near term.",
+          "Tesla's recent performance and market sentiment analysis based on available news and fundamental data."
+        ],
+        "counterarguments": [],
+        "confidence": 0.8
+      },
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla faces near-term challenges but has strong long-term potential driven by innovation, market leadership, and strategic initiatives.",
+        "evidence": [
+          "Tesla's long-term growth prospects in electric vehicles and renewable energy are robust, supported by technological leadership and expanding markets.",
+          "Despite near-term headwinds, Tesla's ability to innovate and execute on strategic initiatives positions it well for sustained growth.",
+          "The company's track record of overcoming production challenges and delivering cutting-edge technology underscores its resilience."
+        ],
+        "counterarguments": [
+          "Production delays and cautious market sentiment are short-term issues that may not impact long-term value.",
+          "Tesla's declining momentum near resistance levels is a temporary technical correction and not a fundamental weakness.",
+          "The upcoming launch of new electric vehicle models will reinvigorate investor confidence and drive future growth."
+        ],
+        "confidence": 0.9
+      },
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Despite near-term concerns, Tesla's long-term growth potential remains strong due to its leadership in electric vehicles, AI, and sustainable energy, supported by strong fundamentals, positive innovations, and improving market sentiment.",
+        "evidence": [
+          "Tesla's advancements in autonomous driving technology and energy storage solutions position it as a leader in the green energy transition, driving long-term value.",
+          "The company's expanding global EV market share and growing autonomy capabilities create significant moat against competitors.",
+          "Strong cash flow generation allows for continued innovation and debt reduction, strengthening financials.",
+          "Recent positive developments in battery technology and AI integration enhance competitive advantage."
+        ],
+        "counterarguments": [
+          "Near-term technical bearishness due to resistance levels and declining momentum.",
+          "Cautious sentiment from production concerns and upcoming EV launches.",
+          "Market-wide risks including potential economic downturns or regulatory changes."
+        ],
+        "confidence": 0.85
+      }
+    ],
+    "bear_rounds": [
+      {
+        "stance": "BEAR",
+        "final_label": "BEARISH",
+        "consensus_summary": "Tesla faces significant near-term challenges including production delays, cautious market sentiment, and declining momentum near resistance levels. While long-term potential exists, the immediate risks and bearish indicators outweigh them.",
+        "evidence": [
+          "Technical analysis indicates TSLA is approaching resistance levels with declining momentum.",
+          "Tesla Inc. (TSLA) has experienced a significant drop in its stock price, primarily due to concerns over the company's ability to meet its production targets and the upcoming launch of its new electric vehicle model. The market sentiment has shifted towards caution, with analysts suggesting a potential bearish trend in the near term."
+        ],
+        "counterarguments": [
+          "Tesla is facing short-term challenges but has strong long-term potential.",
+          "The upcoming launch of its new electric vehicle model may offset current challenges."
+        ],
+        "confidence": 0.95
+      },
+      {
+        "stance": "BEAR",
+        "final_label": "BEARISH",
+        "consensus_summary": "Tesla faces near-term challenges including production concerns and cautious market sentiment, with bearish indicators from technical analysis and fundamentals.",
+        "evidence": [
+          "Technical analysis shows TSLA approaching resistance levels with declining momentum.",
+          "Market sentiment is cautious due to concerns over production targets and upcoming EV launches.",
+          "Analysts suggest a potential bearish trend in the near term."
+        ],
+        "counterarguments": [
+          "Tesla has strong long-term potential from innovation and market leadership.",
+          "Strategic initiatives may drive future growth despite current challenges."
+        ],
+        "confidence": 0.75
+      },
+      {
+        "stance": "BEAR",
+        "final_label": "BEARISH",
+        "consensus_summary": "Tesla faces near-term headwinds with declining momentum, concerns over production targets and new model launches, despite long-term potential in electric vehicles and AI.",
+        "evidence": [
+          "Technical analysis indicates TSLA is approaching resistance levels with declining momentum.",
+          "Tesla Inc. (TSLA) has experienced a significant drop in its stock price, primarily due to concerns over the company's ability to meet its production targets and the upcoming launch of its new electric vehicle model."
+        ],
+        "counterarguments": [
+          "Despite near-term concerns, Tesla's long-term growth potential remains strong due to its leadership in electric vehicles, AI, and sustainable energy, supported by strong fundamentals, positive innovations, and improving market sentiment."
+        ],
+        "confidence": 0.85
+      }
+    ],
+    "discussion": "Despite near-term concerns, Tesla's long-term growth potential remains strong due to its leadership in electric vehicles, AI, and sustainable energy, supported by strong fundamentals, positive innovations, and improving market sentiment.\n\nTesla faces near-term headwinds with declining momentum, concerns over production targets and new model launches, despite long-term potential in electric vehicles and AI."
+  },
+  "risk": {
+    "risk_score": 35,
+    "breach_flags": [
+      "long-term potential vs near-term headwinds"
+    ],
+    "explainers": [
+      "Tesla has strong long-term prospects in EVs and AI but faces near-term challenges like production issues and model launches.",
+      "Market sentiment is improving but momentum is declining, indicating a balanced but cautious outlook.",
+      "Fundamentals are supported by innovation but require monitoring for execution risks."
+    ]
+  },
+  "manager_decision": {
+    "decision": "require_manual",
+    "reason": "Tesla has strong long-term potential but near-term headwinds; need more data to assess risk vs. reward.",
+    "next_steps": "Request additional data on production targets and upcoming model launches.",
+    "role": "RISK_MANAGER",
+    "timestamp": "2026-02-20T12:56:02.571734"
+  },
+  "trader_proposal": {
+    "ticker": "TSLA",
+    "side": "NO_TRADE",
+    "size": 0.0,
+    "entry": 0.0,
+    "stop": 0.0,
+    "target": 0.0,
+    "rationale": "Tesla has strong long-term potential but near-term headwinds; need more data to assess risk vs. reward.",
+    "confidence": 5.0,
+    "created_by": "TRADER",
+    "timestamp": "2026-02-20T12:56:06.677072"
+  },
+  "trace": [
+    {
+      "at": "2026-02-20T12:55:03.976047",
+      "stage": "PREFETCH",
+      "tool": "alpha_fetch",
+      "function": "OVERVIEW",
+      "symbol": "TSLA",
+      "tickers": null,
+      "params": {},
+      "status": "api_error",
+      "api_issue": {
+        "kind": "Information",
+        "message": "We have detected your API key as BSE23K9THV7KR1X7 and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits."
+      },
+      "tool_called": true,
+      "cache_hit": false,
+      "response_keys": [
+        "Information"
+      ],
+      "response_preview": "{\"Information\": \"We have detected your API key as BSE23K9THV7KR1X7 and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits.\"}",
+      "rag_stored": false
+    },
+    {
+      "at": "2026-02-20T12:55:04.870236",
+      "stage": "PREFETCH",
+      "tool": "alpha_fetch",
+      "function": "NEWS_SENTIMENT",
+      "symbol": null,
+      "tickers": "TSLA",
+      "params": {
+        "time_from": "20251226T0000",
+        "time_to": "20251226T2359",
+        "limit": "200",
+        "sort": "EARLIEST",
+        "as_of_date": "2025-12-26"
+      },
+      "cache_bypass": "as_of_date",
+      "status": "api_error",
+      "api_issue": {
+        "kind": "Information",
+        "message": "Thank you for using Alpha Vantage! Please consider spreading out your free API requests more sparingly (1 request per second). You may subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to lift the free key rate limit (25 requests per day), raise the per-second burst limit, and instantly unlock all premium endpoints"
+      },
+      "tool_called": true,
+      "cache_hit": false,
+      "response_keys": [
+        "Information"
+      ],
+      "response_preview": "{\"Information\": \"Thank you for using Alpha Vantage! Please consider spreading out your free API requests more sparingly (1 request per second). You may subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to lift the free key rate limit (25 requests per day), raise the per-second burst limit, and instantly unlock all premium endpoints\"}",
+      "rag_stored": false
+    }
+  ]
+}

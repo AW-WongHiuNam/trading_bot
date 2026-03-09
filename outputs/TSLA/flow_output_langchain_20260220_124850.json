@@ -1,0 +1,295 @@
+{
+  "context": {
+    "ticker": "TSLA",
+    "target_date": "2025-12-16",
+    "now_utc": "2026-02-20T12:47:42.475924",
+    "account_cash": 100000.0,
+    "account_shares": 0.0,
+    "allow_price_fetch": false
+  },
+  "analysts": {
+    "market": {
+      "role": "MARKET_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T12:47:49.201852",
+      "summary": "Technical analysis indicates a bearish trend for Tesla stock with potential resistance at $175 and support at $160. The RSI is overbought, suggesting a possible pullback.",
+      "key_points": [
+        "Price has broken below the 50-day moving average.",
+        "RSI reading of 72 indicates overbought conditions.",
+        "Volume is decreasing, which may indicate a lack of buying interest.",
+        "Support level at $160 appears strong based on historical data."
+      ],
+      "confidence": 0.75,
+      "recommendation_hint": "Consider shorting or waiting for a pullback to buy."
+    },
+    "social": {
+      "role": "SOCIAL_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T12:47:54.199651",
+      "summary": "Tesla's stock performance and market sentiment analysis based on recent news and fundamental data.",
+      "key_points": [
+        "Tesla's market capitalization has increased by 15% in the past quarter.",
+        "Tesla's revenue growth has slowed down compared to the previous quarter.",
+        "Tesla's EV deliveries have increased by 20% year-over-year.",
+        "Tesla's operating margin has decreased by 3% compared to the previous year.",
+        "Tesla's debt-to-equity ratio has improved, indicating better financial health."
+      ],
+      "confidence": 0.8,
+      "recommendation_hint": "Hold position due to mixed signals from financial metrics and market sentiment."
+    },
+    "news": {
+      "role": "NEWS_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T12:47:58.539526",
+      "summary": "Tesla is experiencing positive sentiment due to regulatory advancements and market speculation around electric vehicle adoption trends.",
+      "key_points": [
+        "Recent regulatory developments in the US supporting EV infrastructure.",
+        "Market speculation around Tesla's upcoming product announcements.",
+        "Analyst upgrades from major financial institutions in the last quarter."
+      ],
+      "confidence": 0.7,
+      "recommendation_hint": "Hold position due to uncertain regulatory outcomes and market volatility."
+    },
+    "fundamentals": {
+      "role": "FUNDAMENTALS_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T12:48:03.873117",
+      "summary": "Tesla Inc. (TSLA) is currently in a positive sentiment phase according to available news data, with recent developments focusing on the expansion of renewable energy projects and positive regulatory responses. However, the company faces ongoing challenges in the competitive electric vehicle market and potential risks from supply chain issues.",
+      "key_points": [
+        "Positive sentiment from renewable energy projects and regulatory support.",
+        "Ongoing competitive pressures in the electric vehicle market.",
+        "Supply chain risks remain a concern despite recent improvements.",
+        "Market expectations for continued innovation and growth.",
+        "Potential impact of macroeconomic conditions on Tesla's financial performance."
+      ],
+      "confidence": 0.7,
+      "recommendation_hint": "Hold position due to balanced positive and negative factors, with a slight lean towards maintaining current exposure."
+    }
+  },
+  "researchers": {
+    "bull": {
+      "stance": "BULL",
+      "final_label": "BULLISH",
+      "consensus_summary": "Tesla is in a strong position with positive sentiment from regulatory advancements, market speculation, and renewable energy expansion, outweighing the competition and supply chain challenges.",
+      "evidence": [
+        "Technical analysis shows bearish trend but RSI overbought suggests pullback, implying short-term volatility but not long-term bearishness.",
+        "Fundamentals highlight expansion in renewable energy projects and positive regulatory responses, driving future growth.",
+        "News indicates positive sentiment from electric vehicle adoption trends and regulatory advancements."
+      ],
+      "counterarguments": [
+        "Competition in electric vehicle market could erode Tesla's market share.",
+        "Supply chain issues may impact production and profitability.",
+        "Financial strain from energy investments could divert resources from core business."
+      ],
+      "confidence": 0.85
+    },
+    "bear": {
+      "stance": "BEAR",
+      "final_label": "BEARISH",
+      "consensus_summary": "Tesla faces significant risks despite positive sentiment indicators, including competition, supply chain vulnerabilities, and market volatility.",
+      "evidence": [
+        "Technical analysis shows bearish trend with resistance at $175 and support at $160, RSI overbought indicating possible pullback.",
+        "Fundamentals highlight ongoing competition in EV market and supply chain risks.",
+        "Positive sentiment from news may be temporary or driven by speculation, not sustainable long-term growth."
+      ],
+      "counterarguments": [
+        "Opponent argues that regulatory advancements and renewable energy expansion provide a strong tailwind for Tesla.",
+        "Competition and supply chain challenges are overstated and may not impact Tesla's market leadership."
+      ],
+      "confidence": 0.75
+    },
+    "bull_rounds": [
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla remains bullish despite market indicators showing a bearish trend, due to strong fundamentals, regulatory advancements, and positive sentiment in renewable energy projects.",
+        "evidence": [
+          "Tesla's fundamentals are strong with positive regulatory responses and renewable energy projects.",
+          "Market sentiment is positive due to electric vehicle adoption trends and regulatory advancements.",
+          "Technical indicators may be misleading due to short-term pullbacks expected in overbought conditions."
+        ],
+        "counterarguments": [
+          "Technical analysis shows bearish trends with resistance at $175 and support at $160.",
+          "RSI is overbought, indicating a possible pullback.",
+          "Ongoing challenges in the competitive EV market and supply chain issues."
+        ],
+        "confidence": 0.7
+      },
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla is in a strong positive phase with renewable energy projects and regulatory advancements outweighing technical bearishness.",
+        "evidence": [
+          "Tesla's renewable energy projects are expanding, driving long-term growth.",
+          "Regulatory advancements are providing tailwinds for Tesla.",
+          "Positive sentiment in news and fundamentals supports continued upward trajectory."
+        ],
+        "counterarguments": [
+          "Bearish technical indicators and overbought RSI may signal a pullback.",
+          "Competitive pressures in the EV market could slow growth."
+        ],
+        "confidence": 0.75
+      },
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla is in a strong position with positive sentiment from regulatory advancements, market speculation, and renewable energy expansion, outweighing the competition and supply chain challenges.",
+        "evidence": [
+          "Technical analysis shows bearish trend but RSI overbought suggests pullback, implying short-term volatility but not long-term bearishness.",
+          "Fundamentals highlight expansion in renewable energy projects and positive regulatory responses, driving future growth.",
+          "News indicates positive sentiment from electric vehicle adoption trends and regulatory advancements."
+        ],
+        "counterarguments": [
+          "Competition in electric vehicle market could erode Tesla's market share.",
+          "Supply chain issues may impact production and profitability.",
+          "Financial strain from energy investments could divert resources from core business."
+        ],
+        "confidence": 0.85
+      }
+    ],
+    "bear_rounds": [
+      {
+        "stance": "BEAR",
+        "final_label": "BEARISH",
+        "consensus_summary": "Despite positive sentiment around Tesla's renewable energy projects and regulatory advancements, the bearish technical indicators, overbought RSI, and competitive pressures in the EV market suggest a downward trend.",
+        "evidence": [
+          "Technical analysis shows bearish trend with resistance at $175 and support at $160.",
+          "RSI is overbought, indicating a possible pullback.",
+          "Competitive pressures in the electric vehicle market pose ongoing challenges."
+        ],
+        "counterarguments": [
+          "Positive sentiment from renewable energy projects and regulatory advancements may provide short-term boost.",
+          "Fundamentals suggest positive developments, but they may not outweigh technical weaknesses.",
+          "Market speculation could lead to temporary upward movement."
+        ],
+        "confidence": 0.8
+      },
+      {
+        "stance": "BEAR",
+        "final_label": "BEARISH",
+        "consensus_summary": "Tesla faces significant risks despite recent positive developments, including competition in the electric vehicle market, supply chain issues, and financial strain from investments in energy projects.",
+        "evidence": [
+          "Technical analysis shows bearish trend with resistance at $175 and support at $160, RSI overbought suggesting pullback.",
+          "Fundamentals highlight ongoing challenges in competitive EV market and supply chain risks.",
+          "Social sentiment indicates Tesla's performance is under scrutiny with potential for pullback.",
+          "News sentiment is mixed with positive regulatory advancements but electric vehicle adoption trends may not be as strong as anticipated.",
+          "Recent financial reports show reduced cash reserves and increased debt, indicating financial strain despite positive developments."
+        ],
+        "counterarguments": [
+          "Opponent argues that renewable energy projects and regulatory advancements outweigh technical bearishness.",
+          "Counterargument: While these factors are positive, Tesla's core business in electric vehicles faces intense competition from established automakers and new entrants, potentially diluting market share and profitability.",
+          "Counterargument: Supply chain disruptions remain a significant risk, affecting production and margins despite advancements.",
+          "Counterargument: Tesla's financial position is weakening, with high debt and cash burn despite revenue growth, raising sustainability concerns.",
+          "Counterargument: The positive sentiment from news may be temporary, as market speculation often overestimates adoption rates for new technologies."
+        ],
+        "confidence": 0.9
+      },
+      {
+        "stance": "BEAR",
+        "final_label": "BEARISH",
+        "consensus_summary": "Tesla faces significant risks despite positive sentiment indicators, including competition, supply chain vulnerabilities, and market volatility.",
+        "evidence": [
+          "Technical analysis shows bearish trend with resistance at $175 and support at $160, RSI overbought indicating possible pullback.",
+          "Fundamentals highlight ongoing competition in EV market and supply chain risks.",
+          "Positive sentiment from news may be temporary or driven by speculation, not sustainable long-term growth."
+        ],
+        "counterarguments": [
+          "Opponent argues that regulatory advancements and renewable energy expansion provide a strong tailwind for Tesla.",
+          "Competition and supply chain challenges are overstated and may not impact Tesla's market leadership."
+        ],
+        "confidence": 0.75
+      }
+    ],
+    "discussion": "Tesla is in a strong position with positive sentiment from regulatory advancements, market speculation, and renewable energy expansion, outweighing the competition and supply chain challenges.\n\nTesla faces significant risks despite positive sentiment indicators, including competition, supply chain vulnerabilities, and market volatility."
+  },
+  "risk": {
+    "risk_score": 45,
+    "breach_flags": [
+      "Competition",
+      "Supply Chain Vulnerabilities"
+    ],
+    "explainers": [
+      "Strong regulatory advancements and renewable energy expansion mitigate some risks.",
+      "Market volatility and competition remain significant concerns despite positive sentiment.",
+      "Supply chain issues could disrupt production and affect financial performance."
+    ]
+  },
+  "manager_decision": {
+    "decision": "require_manual",
+    "reason": "Tesla has conflicting sentiment and moderate risk score, requiring human review for balanced decision.",
+    "next_steps": "Analyze recent news and financial data to assess current market conditions and account constraints.",
+    "role": "RISK_MANAGER",
+    "timestamp": "2026-02-20T12:48:42.672404"
+  },
+  "trader_proposal": {
+    "ticker": "TSLA",
+    "side": "NO_TRADE",
+    "size": 0.0,
+    "entry": 0.0,
+    "stop": 0.0,
+    "target": 0.0,
+    "rationale": "Tesla presents a mixed risk profile with both strong positive and negative factors. The decision to not trade at this time allows for further analysis without market exposure. The RISK_MANAGER's requirement for manual review indicates that the situation is complex and warrants careful consideration before any position is taken. Given the conflicting sentiment and moderate risk score, it is prudent to hold cash and avoid making a trade until more clarity emerges.",
+    "confidence": 0.5,
+    "created_by": "TRADER",
+    "timestamp": "2026-02-20T12:48:50.989074"
+  },
+  "trace": [
+    {
+      "at": "2026-02-20T12:47:42.497878",
+      "stage": "PREFETCH",
+      "tool": "alpha_fetch",
+      "function": "OVERVIEW",
+      "symbol": "TSLA",
+      "tickers": null,
+      "params": {},
+      "status": "api_error",
+      "api_issue": {
+        "kind": "Information",
+        "message": "We have detected your API key as BSE23K9THV7KR1X7 and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits."
+      },
+      "tool_called": true,
+      "cache_hit": false,
+      "response_keys": [
+        "Information"
+      ],
+      "response_preview": "{\"Information\": \"We have detected your API key as BSE23K9THV7KR1X7 and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits.\"}",
+      "rag_stored": false
+    },
+    {
+      "at": "2026-02-20T12:47:43.352072",
+      "stage": "PREFETCH",
+      "tool": "alpha_fetch",
+      "function": "NEWS_SENTIMENT",
+      "symbol": null,
+      "tickers": "TSLA",
+      "params": {
+        "time_from": "20251216T0000",
+        "time_to": "20251216T2359",
+        "limit": "200",
+        "sort": "EARLIEST",
+        "as_of_date": "2025-12-16"
+      },
+      "cache_bypass": "as_of_date",
+      "status": "api_error",
+      "api_issue": {
+        "kind": "Information",
+        "message": "Thank you for using Alpha Vantage! Please consider spreading out your free API requests more sparingly (1 request per second). You may subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to lift the free key rate limit (25 requests per day), raise the per-second burst limit, and instantly unlock all premium endpoints"
+      },
+      "tool_called": true,
+      "cache_hit": false,
+      "response_keys": [
+        "Information"
+      ],
+      "response_preview": "{\"Information\": \"Thank you for using Alpha Vantage! Please consider spreading out your free API requests more sparingly (1 request per second). You may subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to lift the free key rate limit (25 requests per day), raise the per-second burst limit, and instantly unlock all premium endpoints\"}",
+      "rag_stored": false
+    },
+    {
+      "at": "2026-02-20T12:48:46.265684",
+      "stage": "TRADER",
+      "type": "policy_block",
+      "tool": "alpha_fetch",
+      "function": "GLOBAL_QUOTE",
+      "reason": "price_fetch_disabled"
+    }
+  ]
+}

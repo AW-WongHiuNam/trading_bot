@@ -1,0 +1,345 @@
+{
+  "context": {
+    "ticker": "TSLA",
+    "target_date": "2025-11-18",
+    "now_utc": "2026-02-20T12:24:47.409648",
+    "account_cash": 100000.0,
+    "account_shares": 0.0,
+    "allow_price_fetch": false
+  },
+  "analysts": {
+    "market": {
+      "role": "MARKET_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T12:24:55.427336",
+      "summary": "Tesla Inc. (TSLA) is facing challenges due to declining quarterly earnings and revenue growth, despite a strong analyst target price based on future potential. The company's fundamentals show profitability but with moderate margins, and its market capitalization remains high. The current sentiment appears mixed, influenced by past price reactions to earnings reports and upcoming events.",
+      "key_points": [
+        "Declining quarterly earnings and revenue growth (YOY: -0.606% and -0.031%) indicate recent operational pressures.",
+        "Strong analyst target price of $421.73 suggests confidence in future performance despite current metrics.",
+        "Moderate profitability metrics (Operating Margin 4.7%, Return on Equity 4.93%) indicate sustainable operations but not exceptional.",
+        "High market capitalization ($1.54 trillion) implies significant valuation expectations from the market.",
+        "Past price reaction to earnings reports (2024) shows volatility, with a -7.3% drop post-earnings.",
+        "Current sentiment is mixed, balancing analyst optimism with recent financial performance concerns."
+      ],
+      "confidence": 0.7,
+      "recommendation_hint": "Hold position due to mixed signals; consider buying if earnings exceed expectations or target price is reached."
+    },
+    "social": {
+      "role": "SOCIAL_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T12:25:01.730869",
+      "summary": "Tesla Inc. maintains strong fundamentals despite recent revenue declines, with healthy profit margins and significant analyst target prices. The company's diversification into energy storage and solar aligns with its long-term growth strategy.",
+      "key_points": [
+        "Strong profit margins (Operating Margin TTM: 4.7%, Profit Margin: 4.0%)",
+        "Revenue growth slightly negative (-0.031% Q/Q) but remains in line with industry standards",
+        "High market capitalization (€1.54T) and strong analyst ratings (17 'Buy' recommendations)",
+        "Recent quarterly earnings show slight decline (-0.606% YoY)",
+        "Significant potential in energy storage and solar business segments",
+        "High P/E ratio (384.41) suggests growth expectations but may indicate overvaluation",
+        "No dividend, focusing on reinvestment for future growth"
+      ],
+      "confidence": 75.0,
+      "recommendation_hint": "Hold position for now, monitor upcoming earnings reports and developments in energy storage sector."
+    },
+    "news": {
+      "role": "NEWS_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T12:25:08.514728",
+      "summary": "Tesla Inc. maintains a strong market position in the electric vehicle and clean energy sectors with a market capitalization of $1.54 trillion. However, recent financial metrics indicate a slight decline in profitability and revenue growth. The company's stock is currently trading at a significant discount to its analyst target price, suggesting potential undervaluation. Tesla's expansion into energy storage and solar markets provides diversification but faces increasing competition. The company's high P/E ratio reflects market optimism despite recent underperformance.",
+      "key_points": [
+        "Market Capitalization: $1.54 trillion",
+        "Revenue: $94.8 billion (TTM)",
+        "EPS: $1.07 (TTM)",
+        "Analyst Target Price: $421.73",
+        "P/E Ratio: 384.41",
+        "Gross Profit: $17.09 billion (TTM)",
+        "Revenue Per Share: $29.4 (TTM)",
+        "Market Position: Leading in electric vehicles and energy storage",
+        "Potential Undervaluation: Trading below analyst target price"
+      ],
+      "confidence": 0.75,
+      "recommendation_hint": "Hold position due to mixed financial performance, but monitor for potential catalysts in the energy sector."
+    },
+    "fundamentals": {
+      "role": "FUNDAMENTALS_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T12:25:14.461229",
+      "summary": "Tesla Inc. is a leading electric vehicle and clean energy company with a market cap of $1.54 trillion. The company faces challenges in the competitive EV market but benefits from strong brand loyalty and innovation in energy storage and solar products. Recent financial metrics show profitability but with modest margins. Analysts maintain a Strong Buy recommendation with a target price of $421.73.",
+      "key_points": [
+        "Tesla leads the EV market with significant market share in plug-in and battery electric vehicles.",
+        "Tesla has diversified into solar and energy storage, becoming a major player in clean energy solutions.",
+        "The company maintains a strong brand image and customer loyalty, driving sustained demand.",
+        "Financial metrics indicate profitability with modest margins, though recent quarterly earnings show slight declines.",
+        "Analysts project continued growth, with a target price significantly above current levels."
+      ],
+      "confidence": 0.7,
+      "recommendation_hint": "Hold for short-term, consider long-term growth potential."
+    }
+  },
+  "researchers": {
+    "bull": {
+      "stance": "BULL",
+      "final_label": "BULLISH",
+      "consensus_summary": "Tesla maintains strong fundamentals with profitability, healthy margins, and a high market cap despite recent declines. Analysts remain optimistic with a strong buy recommendation and target price, supported by diversification into energy storage and solar, and market leadership in EV and clean energy sectors.",
+      "evidence": [
+        "Tesla's fundamentals show profitability with moderate margins and a high market cap.",
+        "Analysts maintain a Strong Buy recommendation with a target price of $421.73, suggesting potential for future growth.",
+        "Diversification into energy storage and solar aligns with long-term growth strategies and provides resilience against EV market competition.",
+        "Market cap of $1.54 trillion indicates strong market confidence, and recent financials, despite declines, still show profitability.",
+        "Trading at a discount to target price suggests undervaluation, presenting a buying opportunity."
+      ],
+      "counterarguments": [
+        "Recent declines in profitability and revenue growth indicate potential risks to future performance.",
+        "Competition in the EV and energy storage markets could challenge Tesla's market position and profitability.",
+        "High P/E ratio may not be sustainable if growth does not materialize as expected."
+      ],
+      "confidence": 0.85
+    },
+    "bear": {
+      "stance": "BEAR",
+      "final_label": "BEARISH",
+      "consensus_summary": "Tesla faces mixed sentiment with declining profitability, revenue growth, and high valuation metrics, despite strengths in brand loyalty and diversification. Analysts' optimism is tempered by recent underperformance and market competition.",
+      "evidence": [
+        "Tesla's declining quarterly earnings and revenue growth despite strong target prices.",
+        "Moderate profit margins despite high market cap.",
+        "Current stock trading at discount to target prices, suggesting undervaluation.",
+        "High P/E ratio reflecting market optimism despite underperformance.",
+        "Competition in energy storage and solar markets.",
+        "Moderate margins despite profitability.",
+        "Analysts' strong buy recommendation may overlook risks of underperformance and competition.",
+        "Market leadership in EV and clean energy sectors is challenged by competition."
+      ],
+      "counterarguments": [
+        "Tesla maintains profitability and strong margins, supported by brand loyalty and innovation.",
+        "Diversification into energy storage and solar provides long-term growth potential.",
+        "Analysts' target prices reflect future potential, not current performance.",
+        "Market cap indicates strong investor confidence despite recent declines.",
+        "Strong analyst recommendations and target prices may justify current valuation."
+      ],
+      "confidence": 0.95
+    },
+    "bull_rounds": [
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla Inc. (TSLA) presents a compelling investment case with strong fundamentals, innovative products, and analyst optimism despite recent financial headwinds. The company's diversification into energy storage and solar, coupled with a high market cap, positions it well for long-term growth.",
+        "evidence": [
+          "Tesla maintains a market cap of $1.54 trillion, indicating strong market confidence.",
+          "Strong brand loyalty and innovation in energy storage and solar products provide competitive advantages.",
+          "Analysts maintain a Strong Buy recommendation with a target price of $421.73, suggesting potential upside.",
+          "The stock trades at a discount to the target price, indicating undervaluation.",
+          "Diversification into energy storage and solar markets mitigates risks in the EV sector."
+        ],
+        "counterarguments": [
+          "Declining quarterly earnings and revenue growth in recent periods raise concerns about near-term performance.",
+          "The high P/E ratio may indicate excessive valuation given recent underperformance.",
+          "Moderate profit margins and modest margins suggest vulnerability to competitive pressures.",
+          "Market capitalization remains high despite financial metrics showing slight declines."
+        ],
+        "confidence": 0.8
+      },
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla maintains strong fundamentals with healthy profit margins, significant analyst target prices, and diversification into energy storage and solar. Despite recent financial declines, the company's market position and innovation in key sectors support long-term growth.",
+        "evidence": [
+          "Tesla's fundamentals show profitability with moderate margins and strong market capitalization.",
+          "Analysts maintain a Strong Buy recommendation with a target price of $421.73.",
+          "The company's diversification into energy storage and solar aligns with long-term growth strategies.",
+          "Tesla is trading at a discount to its analyst target price, suggesting undervaluation.",
+          "The company maintains a strong market position in electric vehicles and clean energy sectors."
+        ],
+        "counterarguments": [
+          "Declining profitability and revenue growth may indicate short-term challenges.",
+          "High P/E ratio could signal overvaluation despite recent underperformance.",
+          "Competitive pressures in the EV market may hinder future growth."
+        ],
+        "confidence": 0.85
+      },
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla maintains strong fundamentals with profitability, healthy margins, and a high market cap despite recent declines. Analysts remain optimistic with a strong buy recommendation and target price, supported by diversification into energy storage and solar, and market leadership in EV and clean energy sectors.",
+        "evidence": [
+          "Tesla's fundamentals show profitability with moderate margins and a high market cap.",
+          "Analysts maintain a Strong Buy recommendation with a target price of $421.73, suggesting potential for future growth.",
+          "Diversification into energy storage and solar aligns with long-term growth strategies and provides resilience against EV market competition.",
+          "Market cap of $1.54 trillion indicates strong market confidence, and recent financials, despite declines, still show profitability.",
+          "Trading at a discount to target price suggests undervaluation, presenting a buying opportunity."
+        ],
+        "counterarguments": [
+          "Recent declines in profitability and revenue growth indicate potential risks to future performance.",
+          "Competition in the EV and energy storage markets could challenge Tesla's market position and profitability.",
+          "High P/E ratio may not be sustainable if growth does not materialize as expected."
+        ],
+        "confidence": 0.85
+      }
+    ],
+    "bear_rounds": [
+      {
+        "stance": "BEAR",
+        "final_label": "BEARISH",
+        "consensus_summary": "Tesla faces mixed sentiment with strong fundamentals but declining profitability and revenue, high P/E ratio, and analyst target prices reflecting optimism rather than current performance.",
+        "evidence": [
+          "Tesla's fundamentals show profitability but with moderate margins.",
+          "Current sentiment is mixed due to declining quarterly earnings and revenue growth.",
+          "Tesla's stock trades at a discount to target prices, indicating undervaluation concerns.",
+          "The company's diversification into energy storage and solar faces increasing competition.",
+          "The high P/E ratio reflects market optimism despite recent underperformance."
+        ],
+        "counterarguments": [
+          "Strong brand loyalty and innovation in energy storage provide competitive advantages.",
+          "Analysts maintain a Strong Buy recommendation with a target price of $421.73, suggesting potential for recovery.",
+          "Market cap remains high, indicating confidence from investors.",
+          "Diversification into energy storage and solar aligns with long-term growth strategies."
+        ],
+        "confidence": 0.7
+      },
+      {
+        "stance": "BEAR",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla remains a strong investment despite recent financial declines, with robust fundamentals, analyst optimism, and diversification into energy storage and solar sectors.",
+        "evidence": [
+          "Strong market position in EV and clean energy sectors with high market cap.",
+          "Significant analyst target prices and strong buy recommendations.",
+          "Diversification into energy storage and solar providing growth opportunities."
+        ],
+        "counterarguments": [
+          "Declining quarterly earnings and revenue growth in recent reports.",
+          "Current stock trading at discount to target prices, suggesting undervaluation.",
+          "High P/E ratio may indicate overvaluation given recent underperformance."
+        ],
+        "confidence": 0.85
+      },
+      {
+        "stance": "BEAR",
+        "final_label": "BEARISH",
+        "consensus_summary": "Tesla faces mixed sentiment with declining profitability, revenue growth, and high valuation metrics, despite strengths in brand loyalty and diversification. Analysts' optimism is tempered by recent underperformance and market competition.",
+        "evidence": [
+          "Tesla's declining quarterly earnings and revenue growth despite strong target prices.",
+          "Moderate profit margins despite high market cap.",
+          "Current stock trading at discount to target prices, suggesting undervaluation.",
+          "High P/E ratio reflecting market optimism despite underperformance.",
+          "Competition in energy storage and solar markets.",
+          "Moderate margins despite profitability.",
+          "Analysts' strong buy recommendation may overlook risks of underperformance and competition.",
+          "Market leadership in EV and clean energy sectors is challenged by competition."
+        ],
+        "counterarguments": [
+          "Tesla maintains profitability and strong margins, supported by brand loyalty and innovation.",
+          "Diversification into energy storage and solar provides long-term growth potential.",
+          "Analysts' target prices reflect future potential, not current performance.",
+          "Market cap indicates strong investor confidence despite recent declines.",
+          "Strong analyst recommendations and target prices may justify current valuation."
+        ],
+        "confidence": 0.95
+      }
+    ],
+    "discussion": "Tesla maintains strong fundamentals with profitability, healthy margins, and a high market cap despite recent declines. Analysts remain optimistic with a strong buy recommendation and target price, supported by diversification into energy storage and solar, and market leadership in EV and clean energy sectors.\n\nTesla faces mixed sentiment with declining profitability, revenue growth, and high valuation metrics, despite strengths in brand loyalty and diversification. Analysts' optimism is tempered by recent underperformance and market competition."
+  },
+  "risk": {
+    "risk_score": 50,
+    "breach_flags": [
+      "Moderate financial risk due to mixed sentiment"
+    ],
+    "explainers": [
+      "Tesla has strong fundamentals but faces declining profitability and high valuation",
+      "Analysts are optimistic but tempered by recent underperformance"
+    ]
+  },
+  "manager_decision": {
+    "decision": "require_manual",
+    "reason": "Moderate financial risk with conflicting signals and high uncertainty.",
+    "next_steps": "Gather additional data on recent performance and market sentiment.",
+    "role": "RISK_MANAGER",
+    "timestamp": "2026-02-20T12:25:56.247946"
+  },
+  "trader_proposal": {
+    "ticker": "TSLA",
+    "side": "NO_TRADE",
+    "size": 0.0,
+    "entry": 0.0,
+    "stop": 0.0,
+    "target": 0.0,
+    "rationale": "Based on conflicting signals and high uncertainty, no trade is recommended at this time.",
+    "confidence": 0.0,
+    "created_by": "TRADER",
+    "timestamp": "2026-02-20T12:26:00.207613"
+  },
+  "trace": [
+    {
+      "at": "2026-02-20T12:24:47.431414",
+      "stage": "PREFETCH",
+      "tool": "alpha_fetch",
+      "function": "OVERVIEW",
+      "symbol": "TSLA",
+      "tickers": null,
+      "params": {},
+      "status": "cache",
+      "tool_called": false,
+      "cache_hit": true,
+      "cache_age_sec": 13507.69587302208,
+      "response_keys": [
+        "Symbol",
+        "AssetType",
+        "Name",
+        "Description",
+        "CIK",
+        "Exchange",
+        "Currency",
+        "Country",
+        "Sector",
+        "Industry",
+        "Address",
+        "OfficialSite",
+        "FiscalYearEnd",
+        "LatestQuarter",
+        "MarketCapitalization",
+        "EBITDA",
+        "PERatio",
+        "PEGRatio",
+        "BookValue",
+        "DividendPerShare",
+        "DividendYield",
+        "EPS",
+        "RevenuePerShareTTM",
+        "ProfitMargin",
+        "OperatingMarginTTM"
+      ],
+      "response_preview": "{\"Symbol\": \"TSLA\", \"AssetType\": \"Common Stock\", \"Name\": \"Tesla Inc\", \"Description\": \"Tesla, Inc. is an American electric vehicle and clean energy company based in Palo Alto, California. Tesla's current products include electric cars, battery energy storage from home to grid-scale, solar panels and solar roof tiles, as well as other related products and services. In 2020, Tesla had the highest sales in the plug-in and battery electric passenger car segments, capturing 16% of the plug-in market (which includes plug-in hybrids) and 23% of the battery-electric (purely electric) market. Through its subsidiary Tesla Energy, the company develops and is a major installer of solar photovoltaic energy generation systems in the United States. Tesla Energy is also one of the largest global suppliers of battery energy storage systems, with 3 GWh of battery storage supplied in 2020.\", \"CIK\": \"1318605\"...",
+      "rag_stored": true
+    },
+    {
+      "at": "2026-02-20T12:24:47.445209",
+      "stage": "PREFETCH",
+      "tool": "alpha_fetch",
+      "function": "NEWS_SENTIMENT",
+      "symbol": null,
+      "tickers": "TSLA",
+      "params": {
+        "time_from": "20251118T0000",
+        "time_to": "20251118T2359",
+        "limit": "200",
+        "sort": "EARLIEST",
+        "as_of_date": "2025-11-18"
+      },
+      "cache_bypass": "as_of_date",
+      "status": "api_error",
+      "api_issue": {
+        "kind": "Information",
+        "message": "We have detected your API key as BSE23K9THV7KR1X7 and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits."
+      },
+      "tool_called": true,
+      "cache_hit": false,
+      "response_keys": [
+        "Information"
+      ],
+      "response_preview": "{\"Information\": \"We have detected your API key as BSE23K9THV7KR1X7 and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits.\"}",
+      "rag_stored": false
+    }
+  ],
+  "output_paths": {
+    "latest": "flow_output_langchain.json",
+    "archive": "outputs/TSLA/flow_output_langchain_20260220_122600.json"
+  }
+}

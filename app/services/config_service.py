@@ -4,7 +4,7 @@ from app.db.models import AgentConfig, PromptConfig
 
 DEFAULT_CONFIG = {
     "enabled_agents": ["market", "social", "news", "fundamentals", "risk", "manager", "trader"],
-    "model": "qwen2.5:14b",
+    "model": "deepseek-r1:latest",
     "params": {},
 }
 

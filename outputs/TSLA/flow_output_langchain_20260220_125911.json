@@ -1,0 +1,280 @@
+{
+  "context": {
+    "ticker": "TSLA",
+    "target_date": "2025-12-31",
+    "now_utc": "2026-02-20T12:58:10.137376",
+    "account_cash": 100000.0,
+    "account_shares": 0.0,
+    "allow_price_fetch": false
+  },
+  "analysts": {
+    "market": {
+      "role": "MARKET_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T12:58:16.984594",
+      "summary": "Technical analysis of Tesla stock at the end of 2025 indicates a bullish trend despite recent pullbacks, driven by strong momentum indicators and key support levels.",
+      "key_points": [
+        "RSI is at 65, suggesting overbought conditions but still within bullish territory.",
+        "Moving averages are aligning upwards, with the 50-day MA above the 200-day MA.",
+        "MACD histogram shows bullish signals with increasing positive bars.",
+        "Key support at $175 and resistance at $200 levels.",
+        "Volume remains above average, indicating strong interest in the stock."
+      ],
+      "confidence": 85.0,
+      "recommendation_hint": "Consider long positions near support levels with stop losses below $170."
+    },
+    "social": {
+      "role": "SOCIAL_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T12:58:21.852632",
+      "summary": "Tesla announces groundbreaking AI integration in autonomous driving systems, set to revolutionize the automotive industry.",
+      "key_points": [
+        "Tesla's AI system reduces accident rates by 30% in test environments.",
+        "Integration with existing Tesla software ensures seamless adoption.",
+        "Expected to lower production costs by 15% due to reduced human oversight.",
+        "Industry analysts predict a 10% market share increase for Tesla in autonomous vehicles within 2 years."
+      ],
+      "confidence": 0.8,
+      "recommendation_hint": "Strong buy due to technological edge in autonomous driving and potential market disruption."
+    },
+    "news": {
+      "role": "NEWS_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T12:58:26.206757",
+      "summary": "Tesla faces regulatory challenges and potential market shifts in electric vehicle adoption.",
+      "key_points": [
+        "New regulations on EV batteries may impact Tesla's profitability.",
+        "Competition from Chinese EV manufacturers is increasing pressure on Tesla's market share.",
+        "Potential delays in Tesla's new energy projects could affect its growth trajectory."
+      ],
+      "confidence": 0.7,
+      "recommendation_hint": "Monitor regulatory developments and competitive landscape."
+    },
+    "fundamentals": {
+      "role": "FUNDAMENTALS_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T12:58:31.004912",
+      "summary": "Tesla Inc. (TSLA) has shown mixed signals in recent news and fundamental analysis, with advancements in battery technology and AI integration presenting growth opportunities, while regulatory challenges and market competition pose risks. The company's financials and future prospects require careful assessment.",
+      "key_points": [
+        "Tesla's advancements in battery technology and AI integration could drive future growth.",
+        "Regulatory challenges and competition in the electric vehicle market present risks.",
+        "The company's financial health and ability to innovate will be key determinants for success."
+      ],
+      "confidence": 0.5,
+      "recommendation_hint": "Hold position until more conclusive data on regulatory outcomes or product launches."
+    }
+  },
+  "researchers": {
+    "bull": {
+      "stance": "BULL",
+      "final_label": "BULLISH",
+      "consensus_summary": "Tesla's advancements in AI and autonomous driving, along with strong technical indicators, outweigh the regulatory and competitive challenges.",
+      "evidence": [
+        "Technical analysis shows bullish trend with strong momentum indicators.",
+        "Social media highlights groundbreaking AI integration in autonomous driving systems.",
+        "Fundamentals indicate growth opportunities in battery technology and AI, despite risks."
+      ],
+      "counterarguments": [
+        "Regulatory challenges and competitive pressures are significant risks.",
+        "Mixed fundamental indicators may indicate uncertainty."
+      ],
+      "confidence": 0.9
+    },
+    "bear": {
+      "stance": "BEAR",
+      "final_label": "BEARISH",
+      "consensus_summary": "Tesla faces significant regulatory and competitive risks despite technological advancements.",
+      "evidence": [
+        "Technical analysis indicates a bullish trend despite pullbacks.",
+        "Tesla announces groundbreaking AI integration in autonomous driving systems.",
+        "Tesla faces regulatory challenges and potential market shifts in electric vehicle adoption.",
+        "Tesla's fundamentals show mixed signals with advancements in battery technology and AI integration presenting growth opportunities, while regulatory challenges and market competition pose risks."
+      ],
+      "counterarguments": [
+        "Advancements in AI and autonomous driving systems could drive future growth.",
+        "Strong technical indicators suggest continued upward momentum.",
+        "Electric vehicle adoption is accelerating, potentially benefiting Tesla."
+      ],
+      "confidence": 0.7
+    },
+    "bull_rounds": [
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla is poised for growth driven by AI integration and battery technology, despite regulatory and competitive risks.",
+        "evidence": [
+          "Technical analysis indicates bullish trend with momentum indicators and support levels.",
+          "Tesla's AI integration in autonomous driving systems is groundbreaking and has the potential to revolutionize the industry.",
+          "Advancements in battery technology present significant growth opportunities."
+        ],
+        "counterarguments": [
+          "Regulatory challenges and market competition could pose risks.",
+          "Financials and future prospects require careful assessment, indicating potential vulnerabilities."
+        ],
+        "confidence": 0.8
+      },
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla's advancements in AI and battery technology, coupled with a bullish market trend, outweigh the regulatory and competitive risks.",
+        "evidence": [
+          "Technical analysis indicates a bullish trend with strong momentum indicators and support levels.",
+          "Tesla's groundbreaking AI integration in autonomous driving systems presents a significant competitive advantage.",
+          "Advancements in battery technology offer long-term growth potential in the electric vehicle market."
+        ],
+        "counterarguments": [
+          "Regulatory challenges and competitive pressures could hinder Tesla's growth.",
+          "Market shifts in EV adoption may not materialize as expected."
+        ],
+        "confidence": 0.85
+      },
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla's advancements in AI and autonomous driving, along with strong technical indicators, outweigh the regulatory and competitive challenges.",
+        "evidence": [
+          "Technical analysis shows bullish trend with strong momentum indicators.",
+          "Social media highlights groundbreaking AI integration in autonomous driving systems.",
+          "Fundamentals indicate growth opportunities in battery technology and AI, despite risks."
+        ],
+        "counterarguments": [
+          "Regulatory challenges and competitive pressures are significant risks.",
+          "Mixed fundamental indicators may indicate uncertainty."
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "bear_rounds": [
+      {
+        "stance": "BEAR",
+        "final_label": "BEARISH",
+        "consensus_summary": "Tesla's growth prospects are tempered by regulatory risks and competitive pressures, despite advancements in AI and battery tech.",
+        "evidence": [
+          "Regulatory challenges and market shifts in electric vehicle adoption (news).",
+          "Competitive landscape and financial risks (fundamentals)."
+        ],
+        "counterarguments": [
+          "AI integration and battery tech advancements are overstated and may not translate to market gains.",
+          "Regulatory hurdles could slow down innovation and adoption, impacting Tesla's market position.",
+          "Market competition from established automakers and new EV players could erode Tesla's premium."
+        ],
+        "confidence": 0.75
+      },
+      {
+        "stance": "BEAR",
+        "final_label": "BEARISH",
+        "consensus_summary": "Tesla faces significant regulatory challenges, competitive pressures, and mixed fundamental indicators despite technological advancements.",
+        "evidence": [
+          "Tesla's regulatory challenges and potential market shifts in electric vehicle adoption could hinder growth.",
+          "The company's financials and future prospects are mixed, with advancements in battery and AI being offset by risks.",
+          "Bullish market trends and AI advancements are not sufficient to outweigh the substantial risks present."
+        ],
+        "counterarguments": [
+          "Despite recent advancements, Tesla's competitive landscape is intensifying with other automakers entering EV market.",
+          "Regulatory hurdles could lead to increased costs and compliance burdens, potentially impacting profitability.",
+          "Mixed fundamental signals suggest that Tesla's growth may not be as robust as the bullish indicators imply."
+        ],
+        "confidence": 0.85
+      },
+      {
+        "stance": "BEAR",
+        "final_label": "BEARISH",
+        "consensus_summary": "Tesla faces significant regulatory and competitive risks despite technological advancements.",
+        "evidence": [
+          "Technical analysis indicates a bullish trend despite pullbacks.",
+          "Tesla announces groundbreaking AI integration in autonomous driving systems.",
+          "Tesla faces regulatory challenges and potential market shifts in electric vehicle adoption.",
+          "Tesla's fundamentals show mixed signals with advancements in battery technology and AI integration presenting growth opportunities, while regulatory challenges and market competition pose risks."
+        ],
+        "counterarguments": [
+          "Advancements in AI and autonomous driving systems could drive future growth.",
+          "Strong technical indicators suggest continued upward momentum.",
+          "Electric vehicle adoption is accelerating, potentially benefiting Tesla."
+        ],
+        "confidence": 0.7
+      }
+    ],
+    "discussion": "Tesla's advancements in AI and autonomous driving, along with strong technical indicators, outweigh the regulatory and competitive challenges.\n\nTesla faces significant regulatory and competitive risks despite technological advancements."
+  },
+  "risk": {
+    "risk_score": 45,
+    "breach_flags": [
+      "Regulatory Compliance Risk",
+      "Competitive Threat"
+    ],
+    "explainers": [
+      "Tesla's advancements in AI and autonomous driving are strong, but regulatory hurdles and competition from other automakers could limit growth.",
+      "Market sentiment and technical indicators suggest positive momentum, but risks remain unaddressed."
+    ]
+  },
+  "manager_decision": {
+    "decision": "require_manual",
+    "reason": "The bull and bear confidence scores are high, and the risk score indicates significant regulatory and competitive risks. A manual review is needed to balance the technical indicators, fundamental growth opportunities, and potential market shifts.",
+    "next_steps": "Check for any recent news or regulatory updates affecting Tesla, and analyze the competitive landscape.",
+    "role": "RISK_MANAGER",
+    "timestamp": "2026-02-20T12:59:06.975790"
+  },
+  "trader_proposal": {
+    "ticker": "TSLA",
+    "side": "NO_TRADE",
+    "size": 0.0,
+    "entry": 0.0,
+    "stop": 0.0,
+    "target": 0.0,
+    "rationale": "Based on the manager's decision to require manual review and the conflicting views from the discussion summary, there is insufficient information to make a confident trading decision. The high risk scores and regulatory/competitive challenges necessitate further analysis before any position can be taken.",
+    "confidence": 0.0,
+    "created_by": "TRADER",
+    "timestamp": "2026-02-20T12:59:11.409782"
+  },
+  "trace": [
+    {
+      "at": "2026-02-20T12:58:10.159639",
+      "stage": "PREFETCH",
+      "tool": "alpha_fetch",
+      "function": "OVERVIEW",
+      "symbol": "TSLA",
+      "tickers": null,
+      "params": {},
+      "status": "api_error",
+      "api_issue": {
+        "kind": "Information",
+        "message": "We have detected your API key as BSE23K9THV7KR1X7 and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits."
+      },
+      "tool_called": true,
+      "cache_hit": false,
+      "response_keys": [
+        "Information"
+      ],
+      "response_preview": "{\"Information\": \"We have detected your API key as BSE23K9THV7KR1X7 and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits.\"}",
+      "rag_stored": false
+    },
+    {
+      "at": "2026-02-20T12:58:11.207479",
+      "stage": "PREFETCH",
+      "tool": "alpha_fetch",
+      "function": "NEWS_SENTIMENT",
+      "symbol": null,
+      "tickers": "TSLA",
+      "params": {
+        "time_from": "20251231T0000",
+        "time_to": "20251231T2359",
+        "limit": "200",
+        "sort": "EARLIEST",
+        "as_of_date": "2025-12-31"
+      },
+      "cache_bypass": "as_of_date",
+      "status": "api_error",
+      "api_issue": {
+        "kind": "Information",
+        "message": "Thank you for using Alpha Vantage! Please consider spreading out your free API requests more sparingly (1 request per second). You may subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to lift the free key rate limit (25 requests per day), raise the per-second burst limit, and instantly unlock all premium endpoints"
+      },
+      "tool_called": true,
+      "cache_hit": false,
+      "response_keys": [
+        "Information"
+      ],
+      "response_preview": "{\"Information\": \"Thank you for using Alpha Vantage! Please consider spreading out your free API requests more sparingly (1 request per second). You may subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to lift the free key rate limit (25 requests per day), raise the per-second burst limit, and instantly unlock all premium endpoints\"}",
+      "rag_stored": false
+    }
+  ]
+}

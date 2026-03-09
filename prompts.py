@@ -6,6 +6,8 @@ REQUIREMENTS:
  Do NOT wrap the JSON in markdown or code fences (no ```).
  Output must start with '{' and end with '}'.
 - If you need more data, you may request a tool call by returning a JSON with a `tool_call` field.
+- Respect SCENARIO_CONTEXT (current time, target_date, account state).
+- When requesting price data, always include `params.as_of_date` equal to target_date.
 
 INPUT:
 {input}
@@ -22,7 +24,7 @@ OUTPUT JSON SCHEMA:
 }
 
 TOOL CALL FORMAT (if needed):
-{ "tool_call": { "tool": "alpha_fetch", "function": "NEWS_SENTIMENT", "tickers": "TSLA" } }
+{ "tool_call": { "tool": "alpha_fetch", "function": "NEWS_SENTIMENT", "tickers": "TSLA", "params": { "as_of_date": "2026-02-12" } } }
 
 RAG SEARCH TOOL (optional):
 Use this to retrieve references from the vector database.
@@ -44,6 +46,8 @@ REQUIREMENTS:
 - Do NOT wrap the JSON in markdown or code fences (no ```).
 - Output must start with '{' and end with '}'.
 - If you need additional data, return ONLY a tool_call JSON using the exact format below.
+- Respect SCENARIO_CONTEXT and do not assume today's market data.
+- For any price-related tool call, include `params.as_of_date` as target_date.
 
 OUTPUT JSON SCHEMA:
 {
@@ -57,7 +61,7 @@ OUTPUT JSON SCHEMA:
 }
 
 TOOL CALL FORMAT (if needed):
-{ "tool_call": { "tool": "alpha_fetch", "function": "NEWS_SENTIMENT", "tickers": "TSLA" } }
+{ "tool_call": { "tool": "alpha_fetch", "function": "NEWS_SENTIMENT", "tickers": "TSLA", "params": { "as_of_date": "2026-02-12" } } }
 
 RAG SEARCH TOOL (optional):
 { "tool_call": { "tool": "rag_search", "query": "recent TSLA news", "symbol": "TSLA", "types": ["news","tool_result","stage_output"], "days": 30, "top_k": 5 } }
@@ -77,6 +81,7 @@ REQUIREMENTS:
 - Output must start with '{' and end with '}'.
 - Do NOT include reasoning, chain-of-thought, or any extra commentary.
 - If you need additional data, return ONLY a tool_call JSON using the exact format below.
+- Respect SCENARIO_CONTEXT and anchor points to target_date.
 
 OUTPUT JSON SCHEMA:
 {
@@ -89,7 +94,7 @@ OUTPUT JSON SCHEMA:
 }
 
 TOOL CALL FORMAT (if needed):
-{ "tool_call": { "tool": "alpha_fetch", "function": "NEWS_SENTIMENT", "tickers": "TSLA" } }
+{ "tool_call": { "tool": "alpha_fetch", "function": "NEWS_SENTIMENT", "tickers": "TSLA", "params": { "as_of_date": "2026-02-12" } } }
 
 RAG SEARCH TOOL (optional):
 { "tool_call": { "tool": "rag_search", "query": "key risks for TSLA", "symbol": "TSLA", "types": ["stage_output","tool_result"], "days": 90, "top_k": 5 } }
@@ -111,9 +116,10 @@ REQUIREMENTS:
 - Do NOT wrap the JSON in markdown or code fences (no ```).
 - Output must start with '{' and end with '}'.
 - If you need additional data, return ONLY a tool_call JSON using the exact format below.
+- Respect SCENARIO_CONTEXT and evaluate risk at target_date.
 
 TOOL CALL FORMAT (if needed):
-{ "tool_call": { "tool": "alpha_fetch", "function": "NEWS_SENTIMENT", "tickers": "TSLA" } }
+{ "tool_call": { "tool": "alpha_fetch", "function": "NEWS_SENTIMENT", "tickers": "TSLA", "params": { "as_of_date": "2026-02-12" } } }
 
 RAG SEARCH TOOL (optional):
 { "tool_call": { "tool": "rag_search", "query": "relevant risk references", "symbol": "TSLA", "types": ["stage_output","tool_result"], "days": 90, "top_k": 5 } }
@@ -136,6 +142,7 @@ REQUIREMENTS:
 - Output must start with '{' and end with '}'.
 - Do NOT include reasoning, chain-of-thought, or any extra commentary.
 - If you need additional data, return ONLY a tool_call JSON using the exact format below.
+- Respect SCENARIO_CONTEXT and include account constraints in decision trade-off.
 
 OUTPUT JSON SCHEMA:
 {
@@ -145,7 +152,7 @@ OUTPUT JSON SCHEMA:
 }
 
 TOOL CALL FORMAT (if needed):
-{ "tool_call": { "tool": "alpha_fetch", "function": "NEWS_SENTIMENT", "tickers": "TSLA" } }
+{ "tool_call": { "tool": "alpha_fetch", "function": "NEWS_SENTIMENT", "tickers": "TSLA", "params": { "as_of_date": "2026-02-12" } } }
 
 RAG SEARCH TOOL (optional):
 { "tool_call": { "tool": "rag_search", "query": "past decisions about TSLA", "symbol": "TSLA", "types": ["stage_output"], "days": 180, "top_k": 5 } }
@@ -166,6 +173,13 @@ REQUIREMENTS:
 - Output must start with '{' and end with '}'.
 - Do NOT include reasoning, chain-of-thought, or any extra commentary.
 - If you need additional market data, return ONLY a tool_call JSON using the exact format below.
+- Respect SCENARIO_CONTEXT fields:
+  - now_utc (current runtime)
+  - target_date (decision date)
+  - account_cash (available cash)
+  - account_shares (current holdings)
+- Position sizing must not exceed account constraints.
+- For price tool calls, ALWAYS include `params.as_of_date = target_date`.
 
 OUTPUT JSON SCHEMA:
 {
@@ -181,7 +195,7 @@ OUTPUT JSON SCHEMA:
 }
 
 TOOL CALL FORMAT (if needed):
-{ "tool_call": { "tool": "alpha_fetch", "function": "GLOBAL_QUOTE", "symbol": "TSLA" } }
+{ "tool_call": { "tool": "alpha_fetch", "function": "GLOBAL_QUOTE", "symbol": "TSLA", "params": { "as_of_date": "2026-02-12" } } }
 
 RAG SEARCH TOOL (optional):
 { "tool_call": { "tool": "rag_search", "query": "latest TSLA trade context", "symbol": "TSLA", "types": ["tool_result","stage_output"], "days": 30, "top_k": 5 } }

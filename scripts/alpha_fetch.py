@@ -2,9 +2,9 @@
 """Fetch various Alpha Vantage endpoints and save to JSON/JSONL files.
 
 Usage examples:
-  python alpha_fetch.py --apikey YOUR_KEY --function NEWS_SENTIMENT --tickers AAPL --out data/aapl_news.json
-  python alpha_fetch.py --apikey YOUR_KEY --function TIME_SERIES_DAILY --symbol IBM --out data/ibm_daily.json
-  python alpha_fetch.py --apikey YOUR_KEY --function NEWS_SENTIMENT --tickers AAPL --jsonl --out data/aapl_news.jsonl
+    python scripts/alpha_fetch.py --apikey YOUR_KEY --function NEWS_SENTIMENT --tickers AAPL --out data/aapl_news.json
+    python scripts/alpha_fetch.py --apikey YOUR_KEY --function TIME_SERIES_DAILY --symbol IBM --out data/ibm_daily.json
+    python scripts/alpha_fetch.py --apikey YOUR_KEY --function NEWS_SENTIMENT --tickers AAPL --jsonl --out data/aapl_news.jsonl
 
 The script writes the full API response by default. For news-like endpoints that return
 an article `feed`, using `--jsonl` will write each feed item as one JSON object per line
@@ -20,6 +20,7 @@ from typing import Any, Dict
 
 import requests
 
+from alpha_key_rotation import build_rotator, is_alpha_quota_error
 from config import get_settings
 
 try:
@@ -30,16 +31,51 @@ except Exception:
 API_URL = "https://www.alphavantage.co/query"
 
 
-def fetch_av(function: str, api_key: str, params: Dict[str, str], retries: int = 3, backoff: float = 1.0) -> Dict[str, Any]:
+def fetch_av(function: str, api_key: str | None, params: Dict[str, str], retries: int = 3, backoff: float = 1.0) -> Dict[str, Any]:
+    cfg = get_settings()
+    rotator = None
+    if not api_key:
+        multi_keys_csv = ",".join(cfg.alphavantage_api_keys) if cfg.alphavantage_api_keys else ""
+        rotator = build_rotator(
+            single_key=cfg.alphavantage_api_key,
+            multi_keys_csv=multi_keys_csv,
+            per_key_limit=cfg.alphavantage_key_daily_limit,
+        )
+        if rotator is None:
+            raise ValueError(
+                "Alpha Vantage API key is required. Set ALPHAVANTAGE_API_KEY or ALPHAVANTAGE_API_KEYS in .env."
+            )
+
     params = dict(params)
-    params.update({"function": function, "apikey": api_key})
 
     attempt = 0
+    rotate_tries = 0
+    max_rotate_tries = 0
+    if rotator is not None:
+        max_rotate_tries = max(len(rotator.keys), 1)
+
     while True:
         try:
-            resp = requests.get(API_URL, params=params, timeout=15)
+            selected = None
+            active_key = api_key
+            if rotator is not None:
+                selected = rotator.acquire()
+                active_key = selected.api_key
+
+            request_params = dict(params)
+            request_params.update({"function": function, "apikey": active_key})
+            resp = requests.get(API_URL, params=request_params, timeout=15)
             resp.raise_for_status()
-            return resp.json()
+            payload = resp.json()
+
+            if selected is not None:
+                exhausted = is_alpha_quota_error(payload)
+                rotator.mark_request(selected, exhausted=exhausted)
+                if exhausted and rotate_tries < max_rotate_tries:
+                    rotate_tries += 1
+                    continue
+
+            return payload
         except requests.RequestException:
             attempt += 1
             if attempt > retries:
@@ -74,9 +110,7 @@ def main() -> None:
     args = parser.parse_args()
 
     cfg = get_settings()
-    api_key = args.apikey or cfg.alphavantage_api_key
-    if not api_key:
-        raise ValueError("Alpha Vantage API key is required. Set ALPHAVANTAGE_API_KEY in .env or pass --apikey.")
+    api_key = args.apikey if args.apikey else None
 
     params: Dict[str, str] = {}
     if args.symbol:

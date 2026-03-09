@@ -1,0 +1,265 @@
+{
+  "context": {
+    "ticker": "TSLA",
+    "target_date": "2025-11-14",
+    "now_utc": "2026-02-20T14:53:30.102532",
+    "account_cash": 95554.83105979314,
+    "account_shares": 0.0,
+    "allow_price_fetch": false
+  },
+  "analysts": {
+    "market": {
+      "role": "MARKET_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T14:53:37.078489",
+      "summary": "Technical analysis of Tesla stock indicates potential bullish momentum despite recent volatility, with key support and resistance levels identified.",
+      "key_points": [
+        "RSI above 50 suggests upward momentum.",
+        "MACD crossover indicates potential buy signal.",
+        "Support at $200 and resistance at $220.",
+        "Volume analysis shows increasing buying interest."
+      ],
+      "confidence": 0.7,
+      "recommendation_hint": "Consider long positions near support levels."
+    },
+    "social": {
+      "role": "SOCIAL_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T14:53:42.086868",
+      "summary": "Tesla announces new electric vehicle model with advanced AI features.",
+      "key_points": [
+        "New Model X with integrated AI navigation system.",
+        "Partnership with leading AI company for autonomous driving.",
+        "Scheduled release in Q1 2026.",
+        "Expected to increase market share in luxury EV segment."
+      ],
+      "confidence": 0.75,
+      "recommendation_hint": "Consider buying ahead of the expected release date."
+    },
+    "news": {
+      "role": "NEWS_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T14:53:47.288923",
+      "summary": "Tesla's recent news indicates a mixed sentiment with advancements in technology but concerns over market competition and financial performance.",
+      "key_points": [
+        "Tesla announces new battery technology with improved energy density.",
+        "Reports indicate increased competition in the electric vehicle market.",
+        "Tesla's Q3 earnings show mixed results with revenue growth but margin pressures.",
+        "CEO Elon Musk continues to be a focal point in regulatory and innovation discussions."
+      ],
+      "confidence": 0.7,
+      "recommendation_hint": "Hold position due to balanced sentiment but monitor for competitive developments."
+    },
+    "fundamentals": {
+      "role": "FUNDAMENTALS_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T14:53:53.321483",
+      "summary": "Tesla's market position remains strong with recent developments in AI and energy storage, but there are concerns about increasing competition and profit margins.",
+      "key_points": [
+        "CEO Elon Musk's announcements on AI advancements and Tesla Bot have generated significant buzz.",
+        "Strong Q4 earnings report with better-than-expected margins.",
+        "Increasing competition in EV market, particularly from Chinese manufacturers.",
+        "Potential regulatory challenges regarding autonomous driving technology.",
+        "Positive sentiment around Tesla's energy storage business."
+      ],
+      "confidence": 0.8,
+      "recommendation_hint": "Hold position due to mixed sentiment and competitive pressures, but monitor developments in AI and energy storage."
+    }
+  },
+  "researchers": {
+    "bull": {
+      "stance": "BULL",
+      "final_label": "BULLISH",
+      "consensus_summary": "Tesla maintains a strong market position with innovative advancements in AI and electric vehicles, despite competitive pressures.",
+      "evidence": [
+        "Tesla's recent advancements in AI and electric vehicles highlight its technological edge.",
+        "Strong fundamentals in AI and energy storage sectors position Tesla for growth.",
+        "Market analysis shows potential for bullish momentum despite volatility."
+      ],
+      "counterarguments": [
+        "Competitive pressures from other automakers and tech companies could erode Tesla's market share.",
+        "Concerns over profit margins may persist if costs increase with scaling."
+      ],
+      "confidence": 0.9
+    },
+    "bear": {
+      "stance": "BEAR",
+      "final_label": "BULLISH",
+      "consensus_summary": "Tesla's market position remains strong with innovative advancements, but risks from competition and margins exist.",
+      "evidence": [
+        "Technical analysis shows bullish momentum and support levels.",
+        "Tesla announces new EV model with advanced AI features."
+      ],
+      "counterarguments": [],
+      "confidence": 0.8
+    },
+    "bull_rounds": [
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla's advancements in AI and electric vehicle technology, along with strong market position, support a bullish outlook despite competition concerns.",
+        "evidence": [
+          "Technical analysis indicates potential bullish momentum with key support and resistance levels.",
+          "Tesla announces new electric vehicle model with advanced AI features.",
+          "Fundamentals show strong market position with developments in AI and energy storage."
+        ],
+        "counterarguments": [
+          "Concerns about increasing competition and profit margins are present but not sufficient to outweigh the positive developments."
+        ],
+        "confidence": 0.85
+      },
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla's recent developments in AI and electric vehicle technology, along with strong market position, suggest continued growth potential despite competitive pressures.",
+        "evidence": [
+          "Tesla announces new electric vehicle model with advanced AI features (social).",
+          "Tesla's fundamentals show strong market position with advancements in AI and energy storage (fundamentals)."
+        ],
+        "counterarguments": [
+          "Concerns over market competition and financial performance (news)."
+        ],
+        "confidence": 0.85
+      },
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla maintains a strong market position with innovative advancements in AI and electric vehicles, despite competitive pressures.",
+        "evidence": [
+          "Tesla's recent advancements in AI and electric vehicles highlight its technological edge.",
+          "Strong fundamentals in AI and energy storage sectors position Tesla for growth.",
+          "Market analysis shows potential for bullish momentum despite volatility."
+        ],
+        "counterarguments": [
+          "Competitive pressures from other automakers and tech companies could erode Tesla's market share.",
+          "Concerns over profit margins may persist if costs increase with scaling."
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "bear_rounds": [
+      {
+        "stance": "BEAR",
+        "final_label": "BULLISH|BEARISH|NEUTRAL",
+        "consensus_summary": "",
+        "evidence": [
+          ""
+        ],
+        "counterarguments": [
+          ""
+        ],
+        "confidence": 0.0
+      },
+      {
+        "stance": "BEAR",
+        "final_label": "BEARISH",
+        "consensus_summary": "Tesla faces increasing competitive pressures and concerns over profit margins despite recent advancements.",
+        "evidence": [
+          "Tesla's market position is strong but competition is intensifying, potentially eroding profit margins.",
+          "Recent news indicates concerns over financial performance and competitive threats in the electric vehicle market."
+        ],
+        "counterarguments": [
+          "The opponent argues that Tesla's AI and EV advancements will drive growth despite competition."
+        ],
+        "confidence": 0.9
+      },
+      {
+        "stance": "BEAR",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla's market position remains strong with innovative advancements, but risks from competition and margins exist.",
+        "evidence": [
+          "Technical analysis shows bullish momentum and support levels.",
+          "Tesla announces new EV model with advanced AI features."
+        ],
+        "counterarguments": [],
+        "confidence": 0.8
+      }
+    ],
+    "discussion": "Tesla maintains a strong market position with innovative advancements in AI and electric vehicles, despite competitive pressures.\n\nTesla's market position remains strong with innovative advancements, but risks from competition and margins exist."
+  },
+  "risk": {
+    "risk_score": 35,
+    "breach_flags": [
+      "Market competition risk",
+      "Margin pressure risk"
+    ],
+    "explainers": [
+      "Tesla faces competition from other automakers and tech companies on electric vehicles and AI.",
+      "Recent news shows potential margin pressures from raw material costs and increased competition."
+    ]
+  },
+  "manager_decision": {
+    "decision": "require_manual",
+    "reason": "Confidence and risk score indicate mixed signals; need to verify recent market conditions and account constraints.",
+    "next_steps": "Check account cash balance and market conditions for TSLA purchase.",
+    "role": "RISK_MANAGER",
+    "timestamp": "2026-02-20T14:54:31.307179"
+  },
+  "trader_proposal": {
+    "ticker": "TSLA",
+    "side": "BUY",
+    "size": 100.0,
+    "entry": 210.0,
+    "stop": 200.0,
+    "target": 230.0,
+    "rationale": "Tesla maintains strong market position with innovative advancements in AI and electric vehicles, despite competitive pressures.",
+    "confidence": 0.7,
+    "created_by": "TRADER",
+    "timestamp": "2026-02-20T14:54:36.172712"
+  },
+  "trace": [
+    {
+      "at": "2026-02-20T14:53:30.151005",
+      "stage": "PREFETCH",
+      "tool": "alpha_fetch",
+      "function": "OVERVIEW",
+      "symbol": "TSLA",
+      "tickers": null,
+      "params": {},
+      "status": "api_error",
+      "api_issue": {
+        "kind": "Information",
+        "message": "We have detected your API key as BSE23K9THV7KR1X7 and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits."
+      },
+      "tool_called": true,
+      "cache_hit": false,
+      "response_keys": [
+        "Information"
+      ],
+      "response_preview": "{\"Information\": \"We have detected your API key as BSE23K9THV7KR1X7 and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits.\"}",
+      "rag_stored": false
+    },
+    {
+      "at": "2026-02-20T14:53:31.144927",
+      "stage": "PREFETCH",
+      "tool": "alpha_fetch",
+      "function": "NEWS_SENTIMENT",
+      "symbol": null,
+      "tickers": "TSLA",
+      "params": {
+        "time_from": "20251114T0000",
+        "time_to": "20251114T2359",
+        "limit": "200",
+        "sort": "EARLIEST",
+        "as_of_date": "2025-11-14"
+      },
+      "cache_bypass": "as_of_date",
+      "status": "api_error",
+      "api_issue": {
+        "kind": "Information",
+        "message": "Thank you for using Alpha Vantage! Please consider spreading out your free API requests more sparingly (1 request per second). You may subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to lift the free key rate limit (25 requests per day), raise the per-second burst limit, and instantly unlock all premium endpoints"
+      },
+      "tool_called": true,
+      "cache_hit": false,
+      "response_keys": [
+        "Information"
+      ],
+      "response_preview": "{\"Information\": \"Thank you for using Alpha Vantage! Please consider spreading out your free API requests more sparingly (1 request per second). You may subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to lift the free key rate limit (25 requests per day), raise the per-second burst limit, and instantly unlock all premium endpoints\"}",
+      "rag_stored": false
+    }
+  ],
+  "output_paths": {
+    "latest": "flow_output_langchain.json",
+    "archive": "outputs/TSLA/flow_output_langchain_20260220_145436.json"
+  }
+}

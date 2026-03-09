@@ -20,9 +20,9 @@ def get_db():
 def analyze(payload: AnalyzeJobIn, bg: BackgroundTasks, db: Session = Depends(get_db)):
     job_id = create_job(db, payload.ticker, payload.target_date)
     if settings.jobs_fake_run:
-        run_job(db, job_id, payload.ticker, payload.target_date)
+        run_job(db, job_id, payload.ticker, payload.target_date, payload.account_cash, payload.account_shares)
     else:
-        bg.add_task(run_job, db, job_id, payload.ticker, payload.target_date)
+        bg.add_task(run_job, db, job_id, payload.ticker, payload.target_date, payload.account_cash, payload.account_shares)
     return {"jobId": job_id}
 
 

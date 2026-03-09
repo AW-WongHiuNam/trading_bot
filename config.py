@@ -10,6 +10,8 @@ from dotenv import load_dotenv
 @dataclass
 class Settings:
     alphavantage_api_key: str = ""
+    alphavantage_api_keys: tuple[str, ...] = ()
+    alphavantage_key_daily_limit: int = 25
     sqlite_path: str = "vector_store.sqlite"
     sqlite_table: str = "api_calls"
     vector_index_path: str = "vector_index.bin"
@@ -51,8 +53,13 @@ def load_config(dotenv_path: str = ".env") -> Settings:
     if os.path.exists(dotenv_path):
         load_dotenv(dotenv_path)
 
+    raw_multi_keys = os.getenv("ALPHAVANTAGE_API_KEYS", "")
+    parsed_multi_keys = tuple([k.strip() for k in raw_multi_keys.split(",") if k.strip()])
+
     return Settings(
         alphavantage_api_key=os.getenv("ALPHAVANTAGE_API_KEY", ""),
+        alphavantage_api_keys=parsed_multi_keys,
+        alphavantage_key_daily_limit=_get_int("ALPHAVANTAGE_KEY_DAILY_LIMIT", 25),
         sqlite_path=os.getenv("SQLITE_PATH", "vector_store.sqlite"),
         sqlite_table=os.getenv("SQLITE_TABLE", "api_calls"),
         vector_index_path=os.getenv("VECTOR_INDEX_PATH", "vector_index.bin"),

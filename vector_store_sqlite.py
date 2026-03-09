@@ -24,6 +24,21 @@ class OllamaEmbeddings:
     def __init__(self, model: str = "nomic-embed-text", ollama_url: Optional[str] = None):
         self.model = model
         self.ollama_url = ollama_url or "http://127.0.0.1:11434/api/embeddings"
+        self.retries = int(os.environ.get("OLLAMA_EMBED_RETRIES", "4"))
+        self.backoff_sec = float(os.environ.get("OLLAMA_EMBED_BACKOFF_SEC", "1.0"))
+        self.min_interval_sec = float(os.environ.get("OLLAMA_EMBED_MIN_INTERVAL_SEC", "0.35"))
+        self.timeout_sec = int(os.environ.get("OLLAMA_EMBED_TIMEOUT_SEC", "90"))
+        self._req_lock = threading.Lock()
+        self._last_request_at = 0.0
+
+    def _throttle(self) -> None:
+        if self.min_interval_sec <= 0:
+            return
+        now = time.time()
+        wait = (self._last_request_at + float(self.min_interval_sec)) - now
+        if wait > 0:
+            time.sleep(wait)
+        self._last_request_at = time.time()
 
     def embed_batch(self, texts: List[str]) -> List[List[float]]:
         if not texts:
@@ -31,9 +46,22 @@ class OllamaEmbeddings:
         vectors: List[List[float]] = []
         for t in texts:
             payload = {"model": self.model, "prompt": t or ""}
-            resp = requests.post(self.ollama_url, json=payload, timeout=60)
-            resp.raise_for_status()
-            data = resp.json()
+            attempt = 0
+            data = None
+            while True:
+                try:
+                    with self._req_lock:
+                        self._throttle()
+                        resp = requests.post(self.ollama_url, json=payload, timeout=self.timeout_sec)
+                    resp.raise_for_status()
+                    data = resp.json()
+                    break
+                except requests.RequestException:
+                    attempt += 1
+                    if attempt > self.retries:
+                        raise
+                    time.sleep(self.backoff_sec * (2 ** (attempt - 1)))
+
             if isinstance(data, dict):
                 if "embedding" in data and isinstance(data["embedding"], list) and data["embedding"]:
                     vectors.append(data["embedding"])
@@ -104,6 +132,12 @@ class VectorStore:
         self.ann_space = ann_space
         self.ann_ef = ann_ef
         self.ann_m = ann_m
+        self.allow_mock_fallback = _env_truthy("VECTOR_ALLOW_MOCK_FALLBACK")
+        self.embed_fail_max = max(1, int(os.environ.get("OLLAMA_EMBED_FAIL_MAX", "3")))
+        self.embed_cooldown_sec = max(1.0, float(os.environ.get("OLLAMA_EMBED_COOLDOWN_SEC", "30")))
+        self._embed_failures = 0
+        self._embed_cooldown_until = 0.0
+        self._embed_last_warn_at = 0.0
 
         self._conn_lock = threading.Lock()
         self._ensure_db()
@@ -308,7 +342,7 @@ class VectorStore:
                 import traceback
 
                 traceback.print_exc()
-                if not isinstance(self.embedder, MockEmbeddings):
+                if self.allow_mock_fallback and not isinstance(self.embedder, MockEmbeddings):
                     self.embedder = MockEmbeddings(dim=self.vector_dim)
                     embs = self.embedder.embed_batch(docs)
                 else:
@@ -352,6 +386,29 @@ class VectorStore:
             return a.tolist()
         return (a / norm).tolist()
 
+    def _embedding_available(self) -> bool:
+        now = time.time()
+        if now >= float(self._embed_cooldown_until):
+            return True
+        # avoid log spam; warn at most once every 15s
+        if (now - float(self._embed_last_warn_at)) >= 15.0:
+            remain = max(0.0, float(self._embed_cooldown_until) - now)
+            print(f"VectorStore: embedding in cooldown ({remain:.1f}s remaining), skip store")
+            self._embed_last_warn_at = now
+        return False
+
+    def _on_embed_success(self) -> None:
+        self._embed_failures = 0
+        self._embed_cooldown_until = 0.0
+
+    def _on_embed_failure(self, err: Exception) -> None:
+        self._embed_failures += 1
+        print(f"VectorStore: embedding failed ({self._embed_failures}/{self.embed_fail_max}): {type(err).__name__}: {err}")
+        if self._embed_failures >= self.embed_fail_max:
+            self._embed_cooldown_until = time.time() + float(self.embed_cooldown_sec)
+            self._embed_failures = 0
+            print(f"VectorStore: enter embedding cooldown for {self.embed_cooldown_sec:.0f}s")
+
     def store_json(self, obj: Any, metadata: Optional[Dict[str, Any]] = None) -> None:
         """Store a single JSON object as one vector item (no chunking)."""
         try:
@@ -382,22 +439,22 @@ class VectorStore:
         payload.setdefault("chunk", 0)
         payload.setdefault("is_test", _env_truthy("RAG_IS_TEST"))
 
+        if not self._embedding_available():
+            raise RuntimeError("Embedding temporarily unavailable (cooldown)")
+
         try:
             embeddings = self.embedder.embed_batch([doc])
+            self._on_embed_success()
             print("VectorStore.store_response: got 1 embedding")
-        except Exception:
-            import traceback
-
-            print("VectorStore.store_response: embed_batch raised an exception:")
-            traceback.print_exc()
-            if not isinstance(self.embedder, MockEmbeddings):
+        except Exception as e:
+            self._on_embed_failure(e)
+            if self.allow_mock_fallback and not isinstance(self.embedder, MockEmbeddings):
                 try:
                     print("VectorStore.store_response: falling back to MockEmbeddings and retrying")
                     self.embedder = MockEmbeddings(dim=self.vector_dim)
                     embeddings = self.embedder.embed_batch([doc])
                     print("VectorStore.store_response: got 1 mock embedding")
                 except Exception:
-                    traceback.print_exc()
                     raise
             else:
                 raise

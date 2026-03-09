@@ -19,7 +19,7 @@ if "ollama" not in sys.modules:
     stub.generate = lambda *_, **__: {"response": "ok"}
     sys.modules["ollama"] = stub
 
-import multi_agent_chat as mac  # noqa: E402  # after stub
+import scripts.multi_agent_chat as mac  # noqa: E402  # after stub
 
 
 class DummyVectorStore:

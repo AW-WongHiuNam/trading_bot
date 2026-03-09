@@ -15,8 +15,8 @@
 
 **檔案與工具**
 - `vector_store_sqlite.py`：SQLite + hnswlib 封裝，提供 `store_response()`、`retrieve()`、`build_context()`、`answer_query()`。
-- `alpha_fetch.py`：抓取 Alpha Vantage 後呼叫 `VectorStore.store_response()` 儲存回應。
-- `view_vectors.py`：列出 SQLite 內容的小工具。
+- `scripts/alpha_fetch.py`：抓取 Alpha Vantage 後呼叫 `VectorStore.store_response()` 儲存回應。
+- `scripts/view_vectors.py`：列出 SQLite 內容的小工具。
 
 **資料結構（schema）**
 - `id`：UUID（在 `store_response` 內產生）。
@@ -56,6 +56,7 @@
 - `ANN_INDEX_SPACE`: `ip`（內積，需正規化）或 `l2`
 - `ANN_EF` / `ANN_M`: hnswlib 建構與查詢參數
 - `VECTOR_FORCE_MOCK_EMBED`: 強制使用 MockEmbeddings（測試用）
+- `VECTOR_ALLOW_MOCK_FALLBACK`: 當 Ollama embedding 失敗時，是否允許自動改用 MockEmbeddings（預設關閉）
 - `OLLAMA_EMBED_URL`: Ollama 嵌入端點
 - `RAG_IS_TEST`: 寫入資料時自動加上 `metadata.is_test=true`（測試資料標記）
 - `RAG_INCLUDE_TEST`: 檢索時允許回傳 `is_test=true` 的資料（預設不回傳）
@@ -63,11 +64,11 @@
 **查看資料**
 - 列出向量：
 ```
-python view_vectors.py --sqlite ./vector_store.sqlite --table api_calls --limit 200
+python scripts/view_vectors.py --sqlite ./vector_store.sqlite --table api_calls --limit 200
 ```
 - 依 metadata 過濾：
 ```
-python view_vectors.py --sqlite ./vector_store.sqlite --filter-key type --filter-value api_response
+python scripts/view_vectors.py --sqlite ./vector_store.sqlite --filter-key type --filter-value api_response
 ```
 
 **注意事項**

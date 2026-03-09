@@ -1,0 +1,274 @@
+{
+  "context": {
+    "ticker": "TSLA",
+    "target_date": "2025-10-10",
+    "now_utc": "2026-02-20T14:06:19.001391",
+    "account_cash": 98905.83120709474,
+    "account_shares": 0.0,
+    "allow_price_fetch": false
+  },
+  "analysts": {
+    "market": {
+      "role": "MARKET_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T14:06:26.533031",
+      "summary": "Technical analysis indicates that TSLA's price is currently below its 50-day and 200-day moving averages, suggesting a bearish trend. The relative strength index (RSI) is in the oversold territory, indicating potential for a short-term rebound. However, the overall trend remains downward due to higher timeframe indicators.",
+      "key_points": [
+        "Price below key moving averages (50 and 200 days).",
+        "RSI in oversold territory (below 30).",
+        "MACD histogram showing negative momentum.",
+        "Support levels at $175 and $170, resistance at $200."
+      ],
+      "confidence": 0.7,
+      "recommendation_hint": "Consider short-term tactical plays but maintain a long-term bearish stance."
+    },
+    "social": {
+      "role": "SOCIAL_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T14:06:31.092635",
+      "summary": "Tesla's stock is expected to face challenges due to upcoming regulatory changes and potential competition in the electric vehicle market.",
+      "key_points": [
+        "Regulatory changes may impact Tesla's operations.",
+        "Increased competition in the electric vehicle market could affect market share.",
+        "Potential delays in new product launches might affect short-term performance."
+      ],
+      "confidence": 0.7,
+      "recommendation_hint": "Hold or consider shorting due to regulatory risks and competitive pressures."
+    },
+    "news": {
+      "role": "NEWS_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T14:06:35.758558",
+      "summary": "Tesla faces increasing competition and challenges in the electric vehicle market, impacting its future growth prospects.",
+      "key_points": [
+        "Tesla's market share is declining due to competition from domestic automakers.",
+        "Cybertruck delays and production challenges may affect Tesla's delivery targets.",
+        "Increasing regulatory scrutiny on EV subsidies could impact Tesla's financial performance."
+      ],
+      "confidence": 0.7,
+      "recommendation_hint": "Monitor competitor developments and Tesla's quarterly earnings for updated guidance."
+    },
+    "fundamentals": {
+      "role": "FUNDAMENTALS_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T14:06:41.549172",
+      "summary": "Tesla Inc. (TSLA) has recently been the subject of increased social media buzz, particularly around its advancements in battery technology and the introduction of new electric vehicle models. The sentiment on social media appears to be positive, with users expressing excitement about the company's innovations and potential market leadership. However, there are also concerns regarding the company's recent financial performance and guidance, which have been a topic of discussion among investors and analysts.",
+      "key_points": [
+        "Increased positive sentiment on social media regarding Tesla's battery technology and new EV models.",
+        "Discussions around Tesla's financial performance and guidance have generated some concern.",
+        "Social media buzz has been higher than average in the last few weeks, suggesting increased investor interest.",
+        "Analysts and retail investors are actively debating Tesla's future prospects based on recent news and product announcements."
+      ],
+      "confidence": 0.8,
+      "recommendation_hint": "Monitor for any shifts in sentiment following upcoming earnings reports or product launches."
+    }
+  },
+  "researchers": {
+    "bull": {
+      "stance": "BULL",
+      "final_label": "BULLISH",
+      "consensus_summary": "Despite challenges from competition and regulatory changes, Tesla's recent innovations, positive social media sentiment, and improving technical indicators position the company for long-term growth.",
+      "evidence": [
+        "Technical indicators suggest potential for short-term rebound despite downward trend.",
+        "Social media buzz around battery technology and new EV models is positive.",
+        "Fundamentals show increased discussion about innovations and market leadership."
+      ],
+      "counterarguments": [
+        "Competition and regulatory changes pose risks to Tesla's growth.",
+        "Recent financial performance has been questioned by some investors."
+      ],
+      "confidence": 0.85
+    },
+    "bear": {
+      "stance": "BEAR",
+      "final_label": "BEARISH",
+      "consensus_summary": "Tesla faces significant challenges from increased competition and regulatory pressures, despite recent innovations. The bearish case is strengthened by downward technical trends and concerns over financial performance, though positive sentiment exists.",
+      "evidence": [
+        "Technical analysis shows TSLA below key moving averages with a downward overall trend despite short-term oversold RSI.",
+        "Social media and news highlight competition and regulatory challenges that could hinder growth.",
+        "Fundamentals indicate concerns over recent financial performance and guidance, despite positive buzz on innovations."
+      ],
+      "counterarguments": [
+        "Opponent argues that Tesla's innovations and positive social media sentiment, along with improving technicals, support long-term growth.",
+        "Counterargument: While innovations exist, the competitive landscape and financial weaknesses may outweigh these positives, especially given the bearish technicals and market context."
+      ],
+      "confidence": 0.75
+    },
+    "bull_rounds": [
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla's advancements in battery technology and new electric vehicle models, coupled with positive social media sentiment, suggest strong future growth despite challenges from competition and regulatory changes.",
+        "evidence": [
+          "Social media buzz around Tesla's battery technology and new EV models indicates positive sentiment.",
+          "Fundamentals show Tesla's innovations are generating excitement and potential market leadership.",
+          "Technical indicators, though bearish short-term, show potential for a rebound due to oversold RSI."
+        ],
+        "counterarguments": [
+          "Market data indicates TSLA is below moving averages and RSI is oversold, which could indicate weakness.",
+          "Social media sentiment is mixed with concerns about financial performance.",
+          "News and market reports highlight increasing competition and regulatory challenges."
+        ],
+        "confidence": 0.75
+      },
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Despite market indicators showing a bearish trend, Tesla's innovations in battery technology and EV models, along with positive social media sentiment, suggest strong long-term potential.",
+        "evidence": [
+          "Fundamentals indicate Tesla's advancements in battery technology and new EV models are generating excitement on social media.",
+          "Technical analysis shows potential for a short-term rebound due to oversold RSI, despite the downward trend."
+        ],
+        "counterarguments": [
+          "Market indicators show bearish trends and increased competition, but these may be temporary and Tesla's innovations could offset these challenges.",
+          "Regulatory changes and competition could impact Tesla, but the company's leadership in EV and battery tech may mitigate these risks."
+        ],
+        "confidence": 0.9
+      },
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Despite challenges from competition and regulatory changes, Tesla's recent innovations, positive social media sentiment, and improving technical indicators position the company for long-term growth.",
+        "evidence": [
+          "Technical indicators suggest potential for short-term rebound despite downward trend.",
+          "Social media buzz around battery technology and new EV models is positive.",
+          "Fundamentals show increased discussion about innovations and market leadership."
+        ],
+        "counterarguments": [
+          "Competition and regulatory changes pose risks to Tesla's growth.",
+          "Recent financial performance has been questioned by some investors."
+        ],
+        "confidence": 0.85
+      }
+    ],
+    "bear_rounds": [
+      {
+        "stance": "BEAR",
+        "final_label": "BEARISH",
+        "consensus_summary": "Tesla faces significant headwinds from increased competition, regulatory challenges, and mixed market indicators despite positive social sentiment.",
+        "evidence": [
+          "Technical indicators show TSLA below key moving averages with downward long-term trends.",
+          "Fundamentals highlight concerns over recent financial performance and guidance.",
+          "Market sentiment is bearish due to oversold RSI indicating short-term rebound potential but overall downtrend.",
+          "Social media buzz is primarily around competition and regulatory issues rather than sustained growth.",
+          "News emphasizes Tesla's struggles with competition and regulatory changes, undermining future growth prospects."
+        ],
+        "counterarguments": [
+          "Tesla's advancements in battery technology and EV models could provide a competitive edge.",
+          "Positive social media sentiment may indicate strong consumer and investor confidence.",
+          "Technical indicators suggest short-term rebound potential due to oversold conditions."
+        ],
+        "confidence": 0.85
+      },
+      {
+        "stance": "BEAR",
+        "final_label": "BEARISH",
+        "consensus_summary": "Tesla faces challenges from increased competition and regulatory changes, despite positive sentiment on social media and recent innovations.",
+        "evidence": [
+          "Technical analysis shows TSLA below key moving averages with a downward trend.",
+          "Social media buzz is positive but overshadowed by concerns about financial performance and competition.",
+          "News highlights Tesla's struggles with competition and regulatory challenges."
+        ],
+        "counterarguments": [
+          "Opponent argues that innovations in battery tech and EV models, along with positive social media, indicate strong long-term potential."
+        ],
+        "confidence": 0.85
+      },
+      {
+        "stance": "BEAR",
+        "final_label": "BEARISH",
+        "consensus_summary": "Tesla faces significant challenges from increased competition and regulatory pressures, despite recent innovations. The bearish case is strengthened by downward technical trends and concerns over financial performance, though positive sentiment exists.",
+        "evidence": [
+          "Technical analysis shows TSLA below key moving averages with a downward overall trend despite short-term oversold RSI.",
+          "Social media and news highlight competition and regulatory challenges that could hinder growth.",
+          "Fundamentals indicate concerns over recent financial performance and guidance, despite positive buzz on innovations."
+        ],
+        "counterarguments": [
+          "Opponent argues that Tesla's innovations and positive social media sentiment, along with improving technicals, support long-term growth.",
+          "Counterargument: While innovations exist, the competitive landscape and financial weaknesses may outweigh these positives, especially given the bearish technicals and market context."
+        ],
+        "confidence": 0.75
+      }
+    ],
+    "discussion": "Despite challenges from competition and regulatory changes, Tesla's recent innovations, positive social media sentiment, and improving technical indicators position the company for long-term growth.\n\nTesla faces significant challenges from increased competition and regulatory pressures, despite recent innovations. The bearish case is strengthened by downward technical trends and concerns over financial performance, though positive sentiment exists."
+  },
+  "risk": {
+    "risk_score": 50,
+    "breach_flags": [],
+    "explainers": []
+  },
+  "manager_decision": {
+    "decision": "require_manual",
+    "reason": "The risk_score is neutral at 50, and the bull and bear confidence levels are close (0.85 and 0.75). The account has sufficient cash, but the target date is in the past, which may indicate a need for more recent data or a reassessment. Manual review is required to reconcile conflicting signals and determine the appropriate action.",
+    "next_steps": "Fetch the latest news sentiment and fundamental data for TSLA as of the target date to get a more accurate picture. Also, review the account constraints and potential risks associated with the trade.",
+    "role": "RISK_MANAGER",
+    "timestamp": "2026-02-20T14:07:19.600591"
+  },
+  "trader_proposal": {
+    "ticker": "TSLA",
+    "side": "NO_TRADE",
+    "size": 0.0,
+    "entry": 0.0,
+    "stop": 0.0,
+    "target": 0.0,
+    "rationale": "The risk_score is neutral at 50, and the bull and bear confidence levels are close (0.85 and 0.75). The account has sufficient cash, but the target date is in the past, which may indicate a need for more recent data or a reassessment. Manual review is required to reconcile conflicting signals and determine the appropriate action.",
+    "confidence": 0.5,
+    "created_by": "TRADER",
+    "timestamp": "2026-02-20T14:07:24.821127"
+  },
+  "trace": [
+    {
+      "at": "2026-02-20T14:06:19.049377",
+      "stage": "PREFETCH",
+      "tool": "alpha_fetch",
+      "function": "OVERVIEW",
+      "symbol": "TSLA",
+      "tickers": null,
+      "params": {},
+      "status": "api_error",
+      "api_issue": {
+        "kind": "Information",
+        "message": "We have detected your API key as BSE23K9THV7KR1X7 and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits."
+      },
+      "tool_called": true,
+      "cache_hit": false,
+      "response_keys": [
+        "Information"
+      ],
+      "response_preview": "{\"Information\": \"We have detected your API key as BSE23K9THV7KR1X7 and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits.\"}",
+      "rag_stored": false
+    },
+    {
+      "at": "2026-02-20T14:06:20.319939",
+      "stage": "PREFETCH",
+      "tool": "alpha_fetch",
+      "function": "NEWS_SENTIMENT",
+      "symbol": null,
+      "tickers": "TSLA",
+      "params": {
+        "time_from": "20251010T0000",
+        "time_to": "20251010T2359",
+        "limit": "200",
+        "sort": "EARLIEST",
+        "as_of_date": "2025-10-10"
+      },
+      "cache_bypass": "as_of_date",
+      "status": "api_error",
+      "api_issue": {
+        "kind": "Information",
+        "message": "Thank you for using Alpha Vantage! Please consider spreading out your free API requests more sparingly (1 request per second). You may subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to lift the free key rate limit (25 requests per day), raise the per-second burst limit, and instantly unlock all premium endpoints"
+      },
+      "tool_called": true,
+      "cache_hit": false,
+      "response_keys": [
+        "Information"
+      ],
+      "response_preview": "{\"Information\": \"Thank you for using Alpha Vantage! Please consider spreading out your free API requests more sparingly (1 request per second). You may subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to lift the free key rate limit (25 requests per day), raise the per-second burst limit, and instantly unlock all premium endpoints\"}",
+      "rag_stored": false
+    }
+  ],
+  "output_paths": {
+    "latest": "flow_output_langchain.json",
+    "archive": "outputs/TSLA/flow_output_langchain_20260220_140724.json"
+  }
+}

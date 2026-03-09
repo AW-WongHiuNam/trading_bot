@@ -15,7 +15,7 @@ import sqlite3
 import time
 
 from config import get_settings
-from multi_agent_chat import Agent, handle_tool_request
+from scripts.multi_agent_chat import Agent, handle_tool_request
 from vector_store_sqlite import VectorStore
 
 

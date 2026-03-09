@@ -1,0 +1,290 @@
+{
+  "context": {
+    "ticker": "TSLA",
+    "target_date": "2026-01-21",
+    "now_utc": "2026-02-20T13:11:56.054136",
+    "account_cash": 100000.0,
+    "account_shares": 0.0,
+    "allow_price_fetch": false
+  },
+  "analysts": {
+    "market": {
+      "role": "MARKET_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T13:12:02.786427",
+      "summary": "Technical analysis indicates a potential bullish reversal pattern forming on TSLA's daily chart with increasing volume.",
+      "key_points": [
+        "RSI reading of 52 indicates neutral territory but approaching overbought levels.",
+        "MACD showing bullish crossover with positive momentum.",
+        "Bollinger Bands suggesting price is in the upper third, indicating overbought conditions but with room for consolidation.",
+        "Daily candlestick pattern resembling a bullish harami after a downtrend."
+      ],
+      "confidence": 0.7,
+      "recommendation_hint": "Consider initiating a long position with a stop loss below the recent low."
+    },
+    "social": {
+      "role": "SOCIAL_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T13:12:08.231342",
+      "summary": "Tesla is experiencing a mixed sentiment in the market with recent developments including advancements in autonomous driving technology and positive environmental initiatives. However, there are concerns regarding the company's valuation and potential regulatory issues.",
+      "key_points": [
+        "Elon Musk's AI-focused roadmap for Tesla could drive long-term growth.",
+        "Environmental initiatives and carbon neutral goals are receiving positive attention.",
+        "Valuation concerns and potential regulatory challenges could impact short-term performance.",
+        "Recent news highlights advancements in autonomous driving and battery technology.",
+        "Market sentiment is cautious due to high valuation and competition in the EV sector."
+      ],
+      "confidence": 0.7,
+      "recommendation_hint": "Hold position due to mixed sentiment; consider selling if valuation remains high or buying if there are significant positive catalysts."
+    },
+    "news": {
+      "role": "NEWS_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T13:12:13.536389",
+      "summary": "Tesla's stock is facing downward pressure due to declining vehicle deliveries and concerns over the company's ability to meet production targets. However, the company remains a leader in electric vehicle technology and has shown resilience in its energy storage business.",
+      "key_points": [
+        "Tesla delivered 1.2M vehicles globally in 2025, missing the target by 10%",
+        "CEO Elon Musk continues to drive innovation in battery technology",
+        "Market sentiment is cautious but fundamentals remain strong",
+        "Competition in the EV market is intensifying with new entrants like Rivian and Ford",
+        "Tesla's energy storage business has seen significant growth"
+      ],
+      "confidence": 0.7,
+      "recommendation_hint": "Hold position until market sentiment improves"
+    },
+    "fundamentals": {
+      "role": "FUNDAMENTALS_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T13:12:18.738065",
+      "summary": "Tesla's recent developments and market sentiment as of January 21, 2026, indicate mixed signals with positive innovation in EV technology but challenges in production and profitability.",
+      "key_points": [
+        "Tesla announced a breakthrough in battery technology with a 30% increase in energy density.",
+        "Recent production delays have caused a 15% shortfall in Q1 vehicle deliveries compared to projections.",
+        "Market sentiment is cautiously optimistic with a slight positive trend in analyst ratings.",
+        "Competitive pressures from new EV entrants have intensified, affecting Tesla's market share in the premium segment."
+      ],
+      "confidence": 0.75,
+      "recommendation_hint": "Hold position due to uncertain production recovery and competitive landscape."
+    }
+  },
+  "researchers": {
+    "bull": {
+      "stance": "BULL",
+      "final_label": "BULLISH",
+      "consensus_summary": "Tesla maintains a strong position in electric vehicle technology and energy storage, with recent innovations and resilience despite challenges in production and valuation.",
+      "evidence": [
+        "Advancements in autonomous driving technology position Tesla as a leader in the future of transportation.",
+        "Resilience in Tesla's energy storage business provides a stable revenue stream and diversification.",
+        "Tesla's leadership in electric vehicle technology remains unmatched, driving long-term growth potential."
+      ],
+      "counterarguments": [
+        "Declining vehicle deliveries and production challenges are temporary issues that can be overcome with scaling and efficiency improvements.",
+        "Valuation concerns may be overblown given Tesla's market dominance and future growth prospects."
+      ],
+      "confidence": 0.9
+    },
+    "bear": {
+      "stance": "BEAR",
+      "final_label": "BEARISH",
+      "consensus_summary": "Tesla faces mixed signals with positive innovation but challenges in production, profitability, and valuation.",
+      "evidence": [
+        "Tesla's stock is facing downward pressure due to declining vehicle deliveries and concerns over production targets.",
+        "The company remains a leader in electric vehicle technology and has shown resilience in its energy storage business.",
+        "Tesla's recent developments and market sentiment indicate mixed signals with positive innovation in EV technology but challenges in production and profitability."
+      ],
+      "counterarguments": [
+        "Tesla maintains a strong position in electric vehicle technology and energy storage, with recent innovations and resilience despite challenges in production and valuation.",
+        "Technical analysis indicates a potential bullish reversal pattern forming on TSLA's daily chart with increasing volume.",
+        "Tesla is experiencing a mixed sentiment in the market with recent developments including advancements in autonomous driving technology and positive environmental initiatives."
+      ],
+      "confidence": 0.8
+    },
+    "bull_rounds": [
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla remains a compelling investment despite recent challenges, driven by innovation in EV technology, leadership in energy storage, and potential for growth in autonomous driving.",
+        "evidence": [
+          "Technical analysis shows a bullish reversal pattern with increasing volume.",
+          "Advancements in autonomous driving technology and positive environmental initiatives.",
+          "Resilience in Tesla's energy storage business.",
+          "Leadership in electric vehicle technology"
+        ],
+        "counterarguments": [
+          "Declining vehicle deliveries and concerns over production targets.",
+          "Valuation concerns and regulatory issues.",
+          "Downward pressure on stock due to recent developments."
+        ],
+        "confidence": 0.85
+      },
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla continues to lead in electric vehicle innovation and energy storage, despite recent challenges.",
+        "evidence": [
+          "Tesla's advancements in autonomous driving technology are creating new market opportunities.",
+          "The company's energy storage business has shown strong growth and resilience.",
+          "Tesla remains a leader in sustainable transportation technology."
+        ],
+        "counterarguments": [
+          "Concerns about declining deliveries and production targets can be mitigated by Tesla's ability to adapt and innovate.",
+          "Valuation risks may be offset by the company's dominant position in the EV market."
+        ],
+        "confidence": 0.8
+      },
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla maintains a strong position in electric vehicle technology and energy storage, with recent innovations and resilience despite challenges in production and valuation.",
+        "evidence": [
+          "Advancements in autonomous driving technology position Tesla as a leader in the future of transportation.",
+          "Resilience in Tesla's energy storage business provides a stable revenue stream and diversification.",
+          "Tesla's leadership in electric vehicle technology remains unmatched, driving long-term growth potential."
+        ],
+        "counterarguments": [
+          "Declining vehicle deliveries and production challenges are temporary issues that can be overcome with scaling and efficiency improvements.",
+          "Valuation concerns may be overblown given Tesla's market dominance and future growth prospects."
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "bear_rounds": [
+      {
+        "stance": "BEAR",
+        "final_label": "BEARISH",
+        "consensus_summary": "Tesla faces a challenging investment case with downward pressure from declining deliveries, production concerns, valuation risks, and regulatory issues.",
+        "evidence": [
+          "Technical analysis indicates a potential bullish reversal pattern forming on TSLA's daily chart with increasing volume.",
+          "Tesla is experiencing a mixed sentiment in the market with recent developments including advancements in autonomous driving technology and positive environmental initiatives. However, there are concerns regarding the company's valuation and potential regulatory issues.",
+          "Tesla's stock is facing downward pressure due to declining vehicle deliveries and concerns over the company's ability to meet production targets.",
+          "Tesla's recent developments and market sentiment as of January 21, 2026, indicate mixed signals with positive innovation in EV technology but challenges in production and profitability."
+        ],
+        "counterarguments": [
+          "Opponent argues Tesla's innovation in EV technology and leadership in energy storage drive growth potential.",
+          "Opponent highlights potential for growth in autonomous driving.",
+          "Tesla's resilience in its energy storage business is cited as a strength."
+        ],
+        "confidence": 0.75
+      },
+      {
+        "stance": "BEAR",
+        "final_label": "BEARISH",
+        "consensus_summary": "Tesla faces mixed signals with advancements in autonomous driving and environmental initiatives, but declining deliveries, production challenges, and valuation concerns create a bearish outlook.",
+        "evidence": [
+          "Tesla's declining vehicle deliveries and concerns over meeting production targets (news, fundamentals).",
+          "Mixed market sentiment with regulatory issues and valuation concerns (social, fundamentals).",
+          "Technical analysis shows a potential bullish reversal, but context suggests it may be unreliable given the downward pressure (market)."
+        ],
+        "counterarguments": [
+          "Advancements in autonomous driving and environmental initiatives (social).",
+          "Leadership in electric vehicle technology and resilience in energy storage (news)."
+        ],
+        "confidence": 0.5
+      },
+      {
+        "stance": "BEAR",
+        "final_label": "BEARISH",
+        "consensus_summary": "Tesla faces mixed signals with positive innovation but challenges in production, profitability, and valuation.",
+        "evidence": [
+          "Tesla's stock is facing downward pressure due to declining vehicle deliveries and concerns over production targets.",
+          "The company remains a leader in electric vehicle technology and has shown resilience in its energy storage business.",
+          "Tesla's recent developments and market sentiment indicate mixed signals with positive innovation in EV technology but challenges in production and profitability."
+        ],
+        "counterarguments": [
+          "Tesla maintains a strong position in electric vehicle technology and energy storage, with recent innovations and resilience despite challenges in production and valuation.",
+          "Technical analysis indicates a potential bullish reversal pattern forming on TSLA's daily chart with increasing volume.",
+          "Tesla is experiencing a mixed sentiment in the market with recent developments including advancements in autonomous driving technology and positive environmental initiatives."
+        ],
+        "confidence": 0.8
+      }
+    ],
+    "discussion": "Tesla maintains a strong position in electric vehicle technology and energy storage, with recent innovations and resilience despite challenges in production and valuation.\n\nTesla faces mixed signals with positive innovation but challenges in production, profitability, and valuation."
+  },
+  "risk": {
+    "risk_score": 50,
+    "breach_flags": [
+      "Operational Risk",
+      "Market Risk"
+    ],
+    "explainers": [
+      "Tesla faces challenges in production and profitability.",
+      "Valuation concerns despite innovation.",
+      "Operational challenges may impact delivery of products.",
+      "Market sentiment could be volatile due to mixed signals."
+    ]
+  },
+  "manager_decision": {
+    "decision": "require_manual",
+    "reason": "Tesla has mixed signals with a risk score of 50, indicating moderate risk. Production and valuation challenges are significant, and the bull/bear confidence levels are high but balanced. More information is needed to make a confident decision.",
+    "next_steps": "Fetch the latest news sentiment for TSLA as of the target date to assess current market sentiment.",
+    "role": "RISK_MANAGER",
+    "timestamp": "2026-02-20T13:12:56.979580"
+  },
+  "trader_proposal": {
+    "ticker": "TSLA",
+    "side": "NO_TRADE",
+    "size": 0.0,
+    "entry": 0.0,
+    "stop": 0.0,
+    "target": 0.0,
+    "rationale": "The manager decision requires manual intervention due to mixed signals and moderate risk. More information is needed, so no trade is recommended at this time.",
+    "confidence": 0.0,
+    "created_by": "TRADER",
+    "timestamp": "2026-02-20T13:13:01.086775"
+  },
+  "trace": [
+    {
+      "at": "2026-02-20T13:11:56.087901",
+      "stage": "PREFETCH",
+      "tool": "alpha_fetch",
+      "function": "OVERVIEW",
+      "symbol": "TSLA",
+      "tickers": null,
+      "params": {},
+      "status": "api_error",
+      "api_issue": {
+        "kind": "Information",
+        "message": "We have detected your API key as BSE23K9THV7KR1X7 and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits."
+      },
+      "tool_called": true,
+      "cache_hit": false,
+      "response_keys": [
+        "Information"
+      ],
+      "response_preview": "{\"Information\": \"We have detected your API key as BSE23K9THV7KR1X7 and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits.\"}",
+      "rag_stored": false
+    },
+    {
+      "at": "2026-02-20T13:11:57.022763",
+      "stage": "PREFETCH",
+      "tool": "alpha_fetch",
+      "function": "NEWS_SENTIMENT",
+      "symbol": null,
+      "tickers": "TSLA",
+      "params": {
+        "time_from": "20260121T0000",
+        "time_to": "20260121T2359",
+        "limit": "200",
+        "sort": "EARLIEST",
+        "as_of_date": "2026-01-21"
+      },
+      "cache_bypass": "as_of_date",
+      "status": "api_error",
+      "api_issue": {
+        "kind": "Information",
+        "message": "Thank you for using Alpha Vantage! Please consider spreading out your free API requests more sparingly (1 request per second). You may subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to lift the free key rate limit (25 requests per day), raise the per-second burst limit, and instantly unlock all premium endpoints"
+      },
+      "tool_called": true,
+      "cache_hit": false,
+      "response_keys": [
+        "Information"
+      ],
+      "response_preview": "{\"Information\": \"Thank you for using Alpha Vantage! Please consider spreading out your free API requests more sparingly (1 request per second). You may subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to lift the free key rate limit (25 requests per day), raise the per-second burst limit, and instantly unlock all premium endpoints\"}",
+      "rag_stored": false
+    }
+  ],
+  "output_paths": {
+    "latest": "flow_output_langchain.json",
+    "archive": "outputs/TSLA/flow_output_langchain_20260220_131301.json"
+  }
+}

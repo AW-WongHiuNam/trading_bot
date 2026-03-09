@@ -1,0 +1,329 @@
+{
+  "context": {
+    "ticker": "TSLA",
+    "target_date": "2025-11-06",
+    "now_utc": "2026-02-20T12:15:12.427920",
+    "account_cash": 100000.0,
+    "account_shares": 0.0,
+    "allow_price_fetch": false
+  },
+  "analysts": {
+    "market": {
+      "role": "MARKET_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T12:15:19.170745",
+      "summary": "Tesla's technical analysis shows a bearish trend with the stock trading below key support levels and facing resistance near the $200 mark. The RSI indicates overbought conditions, suggesting a potential pullback, while the MACD crossover signals a possible downtrend continuation. Overall, the technical indicators point to a cautious outlook for TSLA in the near term.",
+      "key_points": [
+        "Stock is trading below the 50-day and 200-day moving averages.",
+        "RSI at 65 indicates overbought conditions.",
+        "MACD showing a bearish crossover with the signal line.",
+        "Key support at $190, resistance at $200.",
+        "Downward trend channel formation."
+      ],
+      "confidence": 75.0,
+      "recommendation_hint": "Consider short-term defensive positions or wait for confirmation below $190 for potential upside."
+    },
+    "social": {
+      "role": "SOCIAL_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T12:15:25.833394",
+      "summary": "Tesla Inc. is a leading electric vehicle and clean energy company with a strong market position in the auto industry. Despite recent challenges in quarterly earnings, the company maintains a robust financial foundation with healthy profit margins and significant market capitalization. Analysts project a strong buy consensus with a target price of $421.73, indicating potential upside from current levels.",
+      "key_points": [
+        "Tesla holds the highest sales in the plug-in and battery electric passenger car segments.",
+        "The company has a market capitalization of $1,543,450,264,000 and operates in the CONSUMER CYCLICAL sector.",
+        "Tesla's operating margin TTM is 4.7%, and profit margin is 4.0%, reflecting operational efficiency.",
+        "The PERatio stands at 384.41, which is high but justified by growth expectations.",
+        "Analyst consensus strongly favors a Strong Buy recommendation with a target price of $421.73."
+      ],
+      "confidence": 0.8,
+      "recommendation_hint": "Hold position for medium-term appreciation, considering the strong buy analyst consensus and potential for market upside from current valuation."
+    },
+    "news": {
+      "role": "NEWS_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T12:15:32.802961",
+      "summary": "Tesla Inc. continues to dominate the electric vehicle market with a significant share, though recent financial metrics indicate a slight decline in performance. The company's market capitalization and profitability metrics are still strong, but analysts project a potential upside in the near term.",
+      "key_points": [
+        "Tesla holds 16% of the plug-in market and 23% of the battery-electric market, maintaining its leadership position.",
+        "Market capitalization stands at $1.54 trillion, with a high P/E ratio of 384.41.",
+        "Profit margin and operating margin are low at 4% and 4.7% respectively, reflecting the capital-intensive nature of the industry.",
+        "Analyst target price is $421.73, which is below the current market price, indicating a potential downside.",
+        "Quarterly earnings and revenue growth are negative at -0.606% and -0.031% YoY respectively.",
+        "The company is expanding into clean energy solutions including solar and battery storage systems.",
+        "Tesla is transitioning to a more sustainable energy ecosystem, enhancing its long-term growth prospects.",
+        "The company is investing in AI and autonomous driving, positioning itself for future technological advancements."
+      ],
+      "confidence": 0.8,
+      "recommendation_hint": "Hold position due to mixed signals from financial metrics and analyst views. Monitor upcoming earnings reports and developments in the energy sector."
+    },
+    "fundamentals": {
+      "role": "FUNDAMENTALS_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T12:15:39.132084",
+      "summary": "Tesla Inc., operating in the auto manufacturers sector, demonstrated resilience with a 23% market share in battery electric vehicles and a 16% share in plug-in vehicles. Despite a slight decline in quarterly earnings growth and revenue, the company's fundamentals remain strong with a market capitalization of $1.54 trillion and an analyst target price of $421.73.",
+      "key_points": [
+        "Tesla holds 23% market share in battery electric vehicles.",
+        "16% market share in plug-in vehicles.",
+        "Market capitalization stands at $1.54 trillion.",
+        "Analyst target price is $421.73.",
+        "Recent quarterly earnings growth was -0.606%, and revenue growth was -0.031%.",
+        "The company has a strong operating margin of 4.7% and return on equity of 4.93%.",
+        "Tesla Energy is a significant player in solar PV systems and battery storage.",
+        "The company is expanding into energy storage and solar products beyond electric vehicles."
+      ],
+      "confidence": 0.8,
+      "recommendation_hint": "Hold position until further news emerges."
+    }
+  },
+  "researchers": {
+    "bull": {
+      "stance": "BULL",
+      "final_label": "BULLISH",
+      "consensus_summary": "Tesla remains a strong investment despite near-term technical challenges, with fundamentals, analyst targets, and market position supporting long-term growth.",
+      "evidence": [
+        "Analysts project a strong buy consensus with a target price of $421.73, representing significant upside from current levels.",
+        "Tesla maintains a robust financial foundation with healthy profit margins and a market capitalization of $1.54 trillion.",
+        "Tesla continues to dominate the electric vehicle market with a 23% share in battery electric vehicles.",
+        "Despite a slight decline in quarterly earnings, fundamentals remain strong with analyst target prices indicating potential upside.",
+        "The company's market position in clean energy and auto industry provides diversification and resilience."
+      ],
+      "counterarguments": [
+        "Technical indicators suggest bearish trends and potential pullbacks.",
+        "RSI indicates overbought conditions, which could lead to a temporary decline.",
+        "MACD signals a possible downtrend continuation, adding near-term risk."
+      ],
+      "confidence": 0.75
+    },
+    "bear": {
+      "stance": "BEAR",
+      "final_label": "BEARISH",
+      "consensus_summary": "Tesla faces near-term technical weakness and headwinds despite strong fundamentals and analyst targets.",
+      "evidence": [
+        "Technical indicators show bearish trends with stock trading below support and overbought conditions suggesting a pullback.",
+        "Analyst target prices are set at $421.73, but current price is below that, and near-term pullbacks may not reflect intrinsic value.",
+        "Fundamentals show slight declines in quarterly earnings and revenue, though market position remains strong.",
+        "Market sentiment remains cautious despite strong market share in EVs and profitability metrics."
+      ],
+      "counterarguments": [
+        "Strong market position and analyst targets suggest long-term potential despite near-term challenges.",
+        "Fundamentals remain strong with high market capitalization and resilience in EV market share.",
+        "Technical indicators may be temporary, and the stock could bounce above resistance levels."
+      ],
+      "confidence": 0.75
+    },
+    "bull_rounds": [
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla remains a strong investment despite recent challenges, with robust market share, strong financials, and high analyst target prices.",
+        "evidence": [
+          "Tesla holds 23% market share in battery electric vehicles and 16% in plug-in vehicles.",
+          "Analysts project a target price of $421.73, indicating potential upside from current levels.",
+          "Strong market capitalization of $1.54 trillion and healthy profit margins.",
+          "Robust financial foundation despite slight earnings decline."
+        ],
+        "counterarguments": [
+          "Technical indicators suggest bearish trend and overbought conditions.",
+          "Recent quarterly earnings showed slight decline in performance."
+        ],
+        "confidence": 0.75
+      },
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Despite bearish technical indicators, Tesla's strong fundamentals, market position, and analyst target prices suggest a bullish outlook.",
+        "evidence": [
+          "Analysts project a target price of $421.73, which is above current levels.",
+          "Tesla maintains strong financials with healthy profit margins and a market cap of $1.54 trillion.",
+          "The company holds significant market share in electric vehicles (23% in BEVs).",
+          "Fundamentals remain strong despite slight earnings declines."
+        ],
+        "counterarguments": [
+          "Bearish technical indicators such as RSI overbought and MACD downtrend signals.",
+          "Current stock price below support levels and facing resistance at $200."
+        ],
+        "confidence": 0.8
+      },
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla remains a strong investment despite near-term technical challenges, with fundamentals, analyst targets, and market position supporting long-term growth.",
+        "evidence": [
+          "Analysts project a strong buy consensus with a target price of $421.73, representing significant upside from current levels.",
+          "Tesla maintains a robust financial foundation with healthy profit margins and a market capitalization of $1.54 trillion.",
+          "Tesla continues to dominate the electric vehicle market with a 23% share in battery electric vehicles.",
+          "Despite a slight decline in quarterly earnings, fundamentals remain strong with analyst target prices indicating potential upside.",
+          "The company's market position in clean energy and auto industry provides diversification and resilience."
+        ],
+        "counterarguments": [
+          "Technical indicators suggest bearish trends and potential pullbacks.",
+          "RSI indicates overbought conditions, which could lead to a temporary decline.",
+          "MACD signals a possible downtrend continuation, adding near-term risk."
+        ],
+        "confidence": 0.75
+      }
+    ],
+    "bear_rounds": [
+      {
+        "stance": "BEAR",
+        "final_label": "BEARISH",
+        "consensus_summary": "Tesla faces a challenging near-term outlook with bearish technical indicators, despite strong fundamentals and market position.",
+        "evidence": [
+          "Technical analysis shows TSLA trading below support levels with bearish indicators like RSI overbought and MACD suggesting downtrend continuation.",
+          "Analysts' target prices project a $421.73 upside, but this may not be achievable given current market conditions and technical weakness.",
+          "Despite strong market share and fundamentals, Tesla's quarterly earnings declined slightly, raising concerns about near-term performance.",
+          "Tesla's stock faces resistance near $200, which is a psychological barrier and may limit upward momentum.",
+          "Market sentiment appears cautious, with technical indicators signaling potential pullbacks despite strong fundamentals."
+        ],
+        "counterarguments": [
+          "Tesla maintains a dominant market share in electric vehicles and strong fundamentals, which could drive long-term growth.",
+          "Analysts project a strong buy with a target price of $421.73, suggesting significant upside potential despite short-term challenges.",
+          "The company's robust financial position and market capitalization indicate resilience against near-term headwinds."
+        ],
+        "confidence": 0.85
+      },
+      {
+        "stance": "BEAR",
+        "final_label": "BEARISH",
+        "consensus_summary": "Tesla's technical indicators are bearish, while fundamentals and analyst targets are bullish. The debate remains inconclusive.",
+        "evidence": [
+          "Tesla is trading below key support levels and facing resistance near $200.",
+          "RSI indicates overbought conditions suggesting a potential pullback.",
+          "MACD crossover signals a possible downtrend continuation.",
+          "Analyst target price is $421.73, but current price is below that and technicals are bearish."
+        ],
+        "counterarguments": [
+          "Fundamentals are strong with high market share and profitability.",
+          "Analysts project a strong buy with target price $421.73.",
+          "Tesla dominates the electric vehicle market with significant market share."
+        ],
+        "confidence": 0.7
+      },
+      {
+        "stance": "BEAR",
+        "final_label": "BEARISH",
+        "consensus_summary": "Tesla faces near-term technical weakness and headwinds despite strong fundamentals and analyst targets.",
+        "evidence": [
+          "Technical indicators show bearish trends with stock trading below support and overbought conditions suggesting a pullback.",
+          "Analyst target prices are set at $421.73, but current price is below that, and near-term pullbacks may not reflect intrinsic value.",
+          "Fundamentals show slight declines in quarterly earnings and revenue, though market position remains strong.",
+          "Market sentiment remains cautious despite strong market share in EVs and profitability metrics."
+        ],
+        "counterarguments": [
+          "Strong market position and analyst targets suggest long-term potential despite near-term challenges.",
+          "Fundamentals remain strong with high market capitalization and resilience in EV market share.",
+          "Technical indicators may be temporary, and the stock could bounce above resistance levels."
+        ],
+        "confidence": 0.75
+      }
+    ],
+    "discussion": "Tesla remains a strong investment despite near-term technical challenges, with fundamentals, analyst targets, and market position supporting long-term growth.\n\nTesla faces near-term technical weakness and headwinds despite strong fundamentals and analyst targets."
+  },
+  "risk": {
+    "risk_score": 30,
+    "breach_flags": [
+      "Market sentiment negative",
+      "Technical weakness"
+    ],
+    "explainers": [
+      "Tesla faces near-term technical challenges",
+      "Strong fundamentals support long-term growth",
+      "Market sentiment might be negative"
+    ]
+  },
+  "manager_decision": {
+    "decision": "require_manual",
+    "reason": "Mixed technical and fundamental signals with high confidence in both directions, requiring human judgment to balance near-term risks with long-term potential.",
+    "next_steps": "Review latest technical indicators and market sentiment for Tesla to inform final decision.",
+    "role": "RISK_MANAGER",
+    "timestamp": "2026-02-20T12:16:19.199526"
+  },
+  "trader_proposal": {
+    "ticker": "TSLA",
+    "side": "NO_TRADE",
+    "size": 0.0,
+    "entry": 0.0,
+    "stop": 0.0,
+    "target": 0.0,
+    "rationale": "Mixed technical and fundamental signals with high confidence in both directions, requiring human judgment to balance near-term risks with long-term potential. Account constraints and lack of clear price data prevent automatic trading decision.",
+    "confidence": 0.0,
+    "created_by": "TRADER",
+    "timestamp": "2026-02-20T12:16:23.492271"
+  },
+  "trace": [
+    {
+      "at": "2026-02-20T12:15:12.449295",
+      "stage": "PREFETCH",
+      "tool": "alpha_fetch",
+      "function": "OVERVIEW",
+      "symbol": "TSLA",
+      "tickers": null,
+      "params": {},
+      "status": "cache",
+      "tool_called": false,
+      "cache_hit": true,
+      "cache_age_sec": 12932.712748765945,
+      "response_keys": [
+        "Symbol",
+        "AssetType",
+        "Name",
+        "Description",
+        "CIK",
+        "Exchange",
+        "Currency",
+        "Country",
+        "Sector",
+        "Industry",
+        "Address",
+        "OfficialSite",
+        "FiscalYearEnd",
+        "LatestQuarter",
+        "MarketCapitalization",
+        "EBITDA",
+        "PERatio",
+        "PEGRatio",
+        "BookValue",
+        "DividendPerShare",
+        "DividendYield",
+        "EPS",
+        "RevenuePerShareTTM",
+        "ProfitMargin",
+        "OperatingMarginTTM"
+      ],
+      "response_preview": "{\"Symbol\": \"TSLA\", \"AssetType\": \"Common Stock\", \"Name\": \"Tesla Inc\", \"Description\": \"Tesla, Inc. is an American electric vehicle and clean energy company based in Palo Alto, California. Tesla's current products include electric cars, battery energy storage from home to grid-scale, solar panels and solar roof tiles, as well as other related products and services. In 2020, Tesla had the highest sales in the plug-in and battery electric passenger car segments, capturing 16% of the plug-in market (which includes plug-in hybrids) and 23% of the battery-electric (purely electric) market. Through its subsidiary Tesla Energy, the company develops and is a major installer of solar photovoltaic energy generation systems in the United States. Tesla Energy is also one of the largest global suppliers of battery energy storage systems, with 3 GWh of battery storage supplied in 2020.\", \"CIK\": \"1318605\"...",
+      "rag_stored": true
+    },
+    {
+      "at": "2026-02-20T12:15:12.462076",
+      "stage": "PREFETCH",
+      "tool": "alpha_fetch",
+      "function": "NEWS_SENTIMENT",
+      "symbol": null,
+      "tickers": "TSLA",
+      "params": {
+        "time_from": "20251106T0000",
+        "time_to": "20251106T2359",
+        "limit": "200",
+        "sort": "EARLIEST",
+        "as_of_date": "2025-11-06"
+      },
+      "cache_bypass": "as_of_date",
+      "status": "api_error",
+      "api_issue": {
+        "kind": "Information",
+        "message": "We have detected your API key as BSE23K9THV7KR1X7 and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits."
+      },
+      "tool_called": true,
+      "cache_hit": false,
+      "response_keys": [
+        "Information"
+      ],
+      "response_preview": "{\"Information\": \"We have detected your API key as BSE23K9THV7KR1X7 and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits.\"}",
+      "rag_stored": false
+    }
+  ],
+  "output_paths": {
+    "latest": "flow_output_langchain.json",
+    "archive": "outputs/TSLA/flow_output_langchain_20260220_121623.json"
+  }
+}

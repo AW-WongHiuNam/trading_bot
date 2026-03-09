@@ -50,6 +50,12 @@ class FlowState(TypedDict, total=False):
     trace: list[dict]
     baseline: dict
     baseline_ctx: str
+    target_date: str
+    now_utc: str
+    account_cash: float
+    account_shares: float
+    scenario_ctx: str
+    allow_price_fetch: bool
 
     analysts: dict
     bull: dict
@@ -122,6 +128,11 @@ def _get_rag_store():
 
 
 def _rag_store_json(payload: Any, *, metadata: dict[str, Any], trace_event: dict | None = None) -> bool:
+    if _env_truthy("RAG_DISABLE_WRITE"):
+        if isinstance(trace_event, dict):
+            trace_event["rag_write_disabled"] = True
+        return False
+
     vs = _get_rag_store()
     if vs is None:
         return False
@@ -217,6 +228,110 @@ def _alpha_cache_lookup(
         return (json.loads(doc), age)
     except Exception:
         return ({"text": doc}, age)
+
+
+def _alpha_cache_lookup_news_as_of(
+    *,
+    tickers: str,
+    as_of_date: str,
+    max_age_sec: float | None,
+    max_scan: int = 1200,
+) -> tuple[object | None, float | None]:
+    """Lookup cached NEWS_SENTIMENT by exact tickers + params.as_of_date.
+
+    This prevents accidental reuse of future-dated news blobs while still
+    allowing DB-first behavior in backtesting mode.
+    """
+    vs = _get_rag_store()
+    if vs is None:
+        return (None, None)
+
+    min_created_at = None
+    if max_age_sec is not None and float(max_age_sec) > 0:
+        min_created_at = time.time() - float(max_age_sec)
+
+    try:
+        with vs._conn() as conn:  # type: ignore[attr-defined]
+            cur = conn.cursor()
+            cur.execute(
+                f"SELECT document, metadata, created_at FROM {vs.table_name} ORDER BY idx DESC LIMIT ?",  # type: ignore[attr-defined]
+                (max(int(max_scan), 1),),
+            )
+            rows = cur.fetchall() or []
+    except Exception:
+        return (None, None)
+
+    for doc, md_raw, created_at in rows:
+        if min_created_at is not None:
+            try:
+                if float(created_at) < float(min_created_at):
+                    continue
+            except Exception:
+                pass
+
+        try:
+            md = json.loads(md_raw) if isinstance(md_raw, str) else {}
+        except Exception:
+            md = {}
+
+        if (md.get("source") != "alpha_tool") or (md.get("tool") != "alpha_fetch"):
+            continue
+        if md.get("function") != "NEWS_SENTIMENT":
+            continue
+        if md.get("alpha_ok") is not True:
+            continue
+        if (md.get("tickers") or "") != (tickers or ""):
+            continue
+
+        params = md.get("params") if isinstance(md.get("params"), dict) else {}
+        if str(params.get("as_of_date") or "") != str(as_of_date or ""):
+            continue
+
+        age = None
+        try:
+            age = max(0.0, time.time() - float(created_at))
+        except Exception:
+            age = None
+
+        try:
+            return (json.loads(doc), age)
+        except Exception:
+            return ({"text": doc}, age)
+
+    return (None, None)
+
+
+def _clip_news_payload_as_of(payload: object, as_of_date: str) -> object:
+    """Drop news items newer than as_of_date (YYYY-MM-DD) from payload."""
+    if not isinstance(payload, dict):
+        return payload
+    if "feed" not in payload or not isinstance(payload.get("feed"), list):
+        return payload
+
+    cutoff = str(as_of_date or "").replace("-", "")
+    if len(cutoff) != 8 or not cutoff.isdigit():
+        return payload
+
+    clipped = []
+    changed = False
+    for item in payload.get("feed", []):
+        if not isinstance(item, dict):
+            clipped.append(item)
+            continue
+        published = str(item.get("time_published") or "")[:8]
+        if len(published) == 8 and published.isdigit() and published > cutoff:
+            changed = True
+            continue
+        clipped.append(item)
+
+    if not changed:
+        return payload
+
+    out = dict(payload)
+    out["feed"] = clipped
+    out["feed_clipped_as_of"] = as_of_date
+    out["feed_clipped_count"] = max(0, len(payload.get("feed", [])) - len(clipped))
+    return out
 
 
 def _run_llm_prompt_once(
@@ -466,6 +581,10 @@ def _call_alpha_traced(
         "params": params or {},
     }
 
+    date_specific = isinstance(params, dict) and _is_nonempty_str(params.get("as_of_date"))
+    as_of_date = str((params or {}).get("as_of_date") or "") if date_specific else ""
+    news_as_of_mode = function == "NEWS_SENTIMENT" and date_specific and _is_nonempty_str(tickers)
+
     def _alpha_api_issue(payload: object) -> tuple[str, str] | None:
         if not isinstance(payload, dict):
             return None
@@ -478,8 +597,30 @@ def _call_alpha_traced(
 
     # Prefer using cached tool results when available to avoid rate limits.
     # (You can still force fresh calls by clearing the SQLite table.)
-    cached_any, cached_age = _alpha_cache_lookup(function=function, symbol=symbol, tickers=tickers, max_age_sec=None)
-    cached_fresh, cached_fresh_age = _alpha_cache_lookup(function=function, symbol=symbol, tickers=tickers, max_age_sec=86400)
+    if news_as_of_mode:
+        cached_any, cached_age = _alpha_cache_lookup_news_as_of(
+            tickers=str(tickers or ""),
+            as_of_date=as_of_date,
+            max_age_sec=None,
+        )
+        cached_fresh, cached_fresh_age = _alpha_cache_lookup_news_as_of(
+            tickers=str(tickers or ""),
+            as_of_date=as_of_date,
+            max_age_sec=86400,
+        )
+        ev["cache_mode"] = "news_as_of_db_first"
+    elif date_specific:
+        cached_any, cached_age = (None, None)
+        cached_fresh, cached_fresh_age = (None, None)
+        ev["cache_bypass"] = "as_of_date"
+    else:
+        cached_any, cached_age = _alpha_cache_lookup(function=function, symbol=symbol, tickers=tickers, max_age_sec=None)
+        cached_fresh, cached_fresh_age = _alpha_cache_lookup(function=function, symbol=symbol, tickers=tickers, max_age_sec=86400)
+
+    if news_as_of_mode and cached_fresh is not None:
+        cached_fresh = _clip_news_payload_as_of(cached_fresh, as_of_date)
+    if news_as_of_mode and cached_any is not None:
+        cached_any = _clip_news_payload_as_of(cached_any, as_of_date)
 
     if cached_fresh is not None:
         ev["status"] = "cache"
@@ -493,9 +634,26 @@ def _call_alpha_traced(
         _trace_append(trace, ev)
         return cached_fresh  # type: ignore[return-value]
 
+    # Strict DB-first mode for backtesting news snapshots:
+    # if ticker + as_of_date has any cached NEWS_SENTIMENT row, never call API.
+    if news_as_of_mode and cached_any is not None:
+        ev["status"] = "cache"
+        ev["tool_called"] = False
+        ev["cache_hit"] = True
+        ev["cache_age_sec"] = cached_age
+        ev["cache_mode"] = "news_as_of_db_only_hit"
+        if isinstance(cached_any, dict):
+            ev["response_keys"] = list(cached_any.keys())[:25]
+        ev["response_preview"] = _trim_json(cached_any, max_chars=900)
+        ev["rag_stored"] = True
+        _trace_append(trace, ev)
+        return cached_any  # type: ignore[return-value]
+
     try:
         _alpha_throttle()
         res = call_alpha(function, symbol=symbol, tickers=tickers, params=params)
+        if news_as_of_mode:
+            res = _clip_news_payload_as_of(res, as_of_date)
 
         issue = _alpha_api_issue(res)
         if issue is not None:
@@ -1086,12 +1244,28 @@ def trader_chain(manager_decision: dict, discussion_summary: str, model: str = N
     return parsed
 
 
-def run_langchain_flow(template_path="OUTPUT_TEMPLATE.TXT", model: str = None, ticker: str = "TSLA") -> dict:
+def run_langchain_flow(
+    template_path="OUTPUT_TEMPLATE.TXT",
+    model: str = None,
+    ticker: str = "TSLA",
+    target_date: str | None = None,
+    account_cash: float = 100000.0,
+    account_shares: float = 0.0,
+    allow_price_fetch: bool = False,
+) -> dict:
     # Backward-compatible entrypoint name.
     # Now prefers LangGraph for orchestration; falls back to legacy sequential flow
     # if LangGraph isn't installed.
     if USE_LANGGRAPH:
-        return run_langgraph_flow(template_path=template_path, model=model, ticker=ticker)
+        return run_langgraph_flow(
+            template_path=template_path,
+            model=model,
+            ticker=ticker,
+            target_date=target_date,
+            account_cash=account_cash,
+            account_shares=account_shares,
+            allow_price_fetch=allow_price_fetch,
+        )
     return _run_legacy_sequential_flow(template_path=template_path, model=model, ticker=ticker)
 
 
@@ -1163,7 +1337,15 @@ def _run_legacy_sequential_flow(template_path: str, model: str | None, ticker: s
     return final
 
 
-def run_langgraph_flow(template_path: str = "OUTPUT_TEMPLATE.TXT", model: str | None = None, ticker: str = "TSLA") -> dict:
+def run_langgraph_flow(
+    template_path: str = "OUTPUT_TEMPLATE.TXT",
+    model: str | None = None,
+    ticker: str = "TSLA",
+    target_date: str | None = None,
+    account_cash: float = 100000.0,
+    account_shares: float = 0.0,
+    allow_price_fetch: bool = False,
+) -> dict:
     """LangGraph-orchestrated version of the flow (Flow #2).
 
     In this version, the *tool_call loop* and *schema retry* are implemented at the graph layer
@@ -1172,6 +1354,34 @@ def run_langgraph_flow(template_path: str = "OUTPUT_TEMPLATE.TXT", model: str | 
     """
     if not USE_LANGGRAPH:
         raise RuntimeError("langgraph is not installed. Add 'langgraph' to requirements.txt and reinstall.")
+
+    now_utc = datetime.utcnow().isoformat()
+    flow_target_date = target_date or datetime.utcnow().date().isoformat()
+
+    def _news_params_for_target(day_iso: str) -> dict[str, str]:
+        try:
+            base = datetime.strptime(day_iso, "%Y-%m-%d")
+            from_ts = (base.replace(hour=0, minute=0, second=0, microsecond=0)).strftime("%Y%m%dT0000")
+            to_ts = (base.replace(hour=23, minute=59, second=0, microsecond=0)).strftime("%Y%m%dT2359")
+            return {"time_from": from_ts, "time_to": to_ts, "limit": "200", "sort": "EARLIEST", "as_of_date": day_iso}
+        except Exception:
+            return {"as_of_date": day_iso}
+
+    scenario_ctx = (
+        "\n\nSCENARIO_CONTEXT:\n"
+        + _trim_json(
+            {
+                "ticker": ticker,
+                "now_utc": now_utc,
+                "target_date": flow_target_date,
+                "account_cash": float(account_cash),
+                "account_shares": float(account_shares),
+                "allow_price_fetch": bool(allow_price_fetch),
+            }
+        )
+        + "\nUse target_date as the as-of date for all market data requests."
+        + ("\nPRICE_FETCH_POLICY: price fetch is allowed with as_of_date." if allow_price_fetch else "\nPRICE_FETCH_POLICY: price fetch is DISALLOWED; use news/fundamental context only.")
+    )
 
     def _prompt_for_kind(kind: str) -> tuple[str, list[str]]:
         if kind == "MARKET":
@@ -1191,7 +1401,14 @@ def run_langgraph_flow(template_path: str = "OUTPUT_TEMPLATE.TXT", model: str | 
     def node_load_template(state: FlowState) -> FlowState:
         import json as _json
 
-        with open(template_path, "r", encoding="utf-8") as f:
+        resolved_template_path = template_path
+        if not os.path.isabs(resolved_template_path) and not os.path.exists(resolved_template_path):
+            repo_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+            candidate = os.path.join(repo_root, resolved_template_path)
+            if os.path.exists(candidate):
+                resolved_template_path = candidate
+
+        with open(resolved_template_path, "r", encoding="utf-8") as f:
             data = _json.load(f)
 
         stages = data.get("stages", {})
@@ -1199,6 +1416,12 @@ def run_langgraph_flow(template_path: str = "OUTPUT_TEMPLATE.TXT", model: str | 
             **state,
             "ticker": ticker,
             "model": model,
+            "target_date": flow_target_date,
+            "now_utc": now_utc,
+            "account_cash": float(account_cash),
+            "account_shares": float(account_shares),
+            "scenario_ctx": scenario_ctx,
+            "allow_price_fetch": bool(allow_price_fetch),
             "market_report": stages.get("MARKET_ANALYST", {}).get("market_report", {}).get("preview", ""),
             "social_report": stages.get("SOCIAL_ANALYST", {}).get("sentiment_report", {}).get("preview", ""),
             "news_report": stages.get("NEWS_ANALYST", {}).get("news_report", {}).get("preview", ""),
@@ -1209,17 +1432,20 @@ def run_langgraph_flow(template_path: str = "OUTPUT_TEMPLATE.TXT", model: str | 
     def node_prefetch(state: FlowState) -> FlowState:
         trace = state.get("trace") or []
         baseline: dict[str, Any] = {}
-        for fn, kwargs in [
-            ("GLOBAL_QUOTE", {"symbol": ticker}),
+        prefetch_calls: list[tuple[str, dict[str, Any]]] = [
             ("OVERVIEW", {"symbol": ticker}),
-            ("NEWS_SENTIMENT", {"tickers": ticker}),
-        ]:
+            ("NEWS_SENTIMENT", {"tickers": ticker, "params": _news_params_for_target(flow_target_date)}),
+        ]
+        if state.get("allow_price_fetch"):
+            prefetch_calls.insert(0, ("GLOBAL_QUOTE", {"symbol": ticker, "params": {"as_of_date": flow_target_date}}))
+
+        for fn, kwargs in prefetch_calls:
             try:
                 baseline[fn] = _call_alpha_traced(function=fn, trace=trace, stage="PREFETCH", **kwargs)
             except Exception as e:
                 baseline[fn] = {"error": str(e)}
 
-        baseline_ctx = "\n\nBASELINE_TOOL_CONTEXT:\n" + _trim_json(baseline)
+        baseline_ctx = scenario_ctx + "\n\nBASELINE_TOOL_CONTEXT:\n" + _trim_json(baseline)
         return {**state, "trace": trace, "baseline": baseline, "baseline_ctx": baseline_ctx}
 
     # -------- Shared work pipeline nodes --------
@@ -1273,10 +1499,22 @@ def run_langgraph_flow(template_path: str = "OUTPUT_TEMPLATE.TXT", model: str | 
             sym = tc.get("symbol")
             ticks = tc.get("tickers")
             params = tc.get("params") if isinstance(tc.get("params"), dict) else None
-            try:
-                tool_res = _call_alpha_traced(function=fn, symbol=sym, tickers=ticks, params=params, trace=state.get("trace"), stage=state.get("work_stage") or "")
-            except Exception as e:
-                tool_res = {"error": str(e)}
+            fn_upper = str(fn or "").upper()
+            if (not state.get("allow_price_fetch")) and fn_upper in {"GLOBAL_QUOTE", "TIME_SERIES_DAILY", "TIME_SERIES_INTRADAY", "TIME_SERIES_WEEKLY", "TIME_SERIES_MONTHLY", "TIME_SERIES_DAILY_ADJUSTED"}:
+                _trace_append(state.get("trace"), {
+                    "at": _now_iso(),
+                    "stage": state.get("work_stage") or "",
+                    "type": "policy_block",
+                    "tool": "alpha_fetch",
+                    "function": fn_upper,
+                    "reason": "price_fetch_disabled",
+                })
+                tool_res = {"error": "price_fetch_disabled_by_policy", "function": fn_upper, "allowed": False}
+            else:
+                try:
+                    tool_res = _call_alpha_traced(function=fn, symbol=sym, tickers=ticks, params=params, trace=state.get("trace"), stage=state.get("work_stage") or "")
+                except Exception as e:
+                    tool_res = {"error": str(e)}
 
         appended = (state.get("work_input") or "") + "\n\nTOOL_RESULT:\n" + json.dumps(tool_res, ensure_ascii=False)
         return {**state, "work_input": appended, "work_tool_iter": int(state.get("work_tool_iter") or 0) + 1}
@@ -1322,10 +1560,22 @@ def run_langgraph_flow(template_path: str = "OUTPUT_TEMPLATE.TXT", model: str | 
             params = tc.get("params") if isinstance(tc.get("params"), dict) else None
             if not fn:
                 continue
-            try:
-                tool_blob[fn] = _call_alpha_traced(function=fn, symbol=sym, tickers=ticks, params=params, trace=state.get("trace"), stage=state.get("work_stage") or "")
-            except Exception as e:
-                tool_blob[fn] = {"error": str(e)}
+            fn_upper = str(fn).upper()
+            if (not state.get("allow_price_fetch")) and fn_upper in {"GLOBAL_QUOTE", "TIME_SERIES_DAILY", "TIME_SERIES_INTRADAY", "TIME_SERIES_WEEKLY", "TIME_SERIES_MONTHLY", "TIME_SERIES_DAILY_ADJUSTED"}:
+                _trace_append(state.get("trace"), {
+                    "at": _now_iso(),
+                    "stage": state.get("work_stage") or "",
+                    "type": "policy_block",
+                    "tool": "alpha_fetch",
+                    "function": fn_upper,
+                    "reason": "price_fetch_disabled",
+                })
+                tool_blob[fn] = {"error": "price_fetch_disabled_by_policy", "function": fn_upper, "allowed": False}
+            else:
+                try:
+                    tool_blob[fn] = _call_alpha_traced(function=fn, symbol=sym, tickers=ticks, params=params, trace=state.get("trace"), stage=state.get("work_stage") or "")
+                except Exception as e:
+                    tool_blob[fn] = {"error": str(e)}
 
         tool_ctx = "\n\nAUTO_TOOL_CONTEXT:\n" + _trim_json(tool_blob)
         _trace_append(state.get("trace"), {"at": _now_iso(), "stage": state.get("work_stage") or "", "type": "retry", "reason": "schema_missing_after_tools", "missing": missing, "pass": 2})
@@ -1407,6 +1657,16 @@ def run_langgraph_flow(template_path: str = "OUTPUT_TEMPLATE.TXT", model: str | 
         return {"work_schema_pass": 0, "work_tool_iter": 0, "work_missing": [], "work_output": "", "work_parsed": {}}
 
     def node_prepare_market(state: FlowState) -> FlowState:
+        allow_price = bool(state.get("allow_price_fetch"))
+        market_auto_tools = [
+            {"function": "NEWS_SENTIMENT", "tickers": ticker, "params": _news_params_for_target(flow_target_date)},
+        ]
+        if allow_price:
+            market_auto_tools = [
+                {"function": "GLOBAL_QUOTE", "symbol": ticker, "params": {"as_of_date": flow_target_date}},
+                {"function": "TIME_SERIES_DAILY", "symbol": ticker, "params": {"outputsize": "compact", "as_of_date": flow_target_date}},
+            ] + market_auto_tools
+
         return {
             **state,
             **_reset_work(state),
@@ -1415,10 +1675,7 @@ def run_langgraph_flow(template_path: str = "OUTPUT_TEMPLATE.TXT", model: str | 
             "work_input": (state.get("market_report") or "") + (state.get("baseline_ctx") or ""),
             "work_required": ["summary", "key_points", "confidence", "recommendation_hint"],
             "work_schema_hint": '{ "role":"MARKET_ANALYST","ticker":"","timestamp":"","summary":"","key_points":[],"confidence":0.0,"recommendation_hint":"" }',
-            "work_auto_tool_calls": [
-                {"function": "GLOBAL_QUOTE", "symbol": ticker},
-                {"function": "TIME_SERIES_DAILY", "symbol": ticker, "params": {"outputsize": "compact"}},
-            ],
+            "work_auto_tool_calls": market_auto_tools,
             "work_next": "prepare_social",
         }
 
@@ -1431,7 +1688,7 @@ def run_langgraph_flow(template_path: str = "OUTPUT_TEMPLATE.TXT", model: str | 
             "work_input": (state.get("social_report") or "") + (state.get("baseline_ctx") or ""),
             "work_required": ["summary", "key_points", "confidence", "recommendation_hint"],
             "work_schema_hint": '{ "role":"SOCIAL_ANALYST","ticker":"","timestamp":"","summary":"","key_points":[],"confidence":0.0,"recommendation_hint":"" }',
-            "work_auto_tool_calls": [{"function": "NEWS_SENTIMENT", "tickers": ticker}],
+            "work_auto_tool_calls": [{"function": "NEWS_SENTIMENT", "tickers": ticker, "params": _news_params_for_target(flow_target_date)}],
             "work_next": "prepare_news",
         }
 
@@ -1444,7 +1701,7 @@ def run_langgraph_flow(template_path: str = "OUTPUT_TEMPLATE.TXT", model: str | 
             "work_input": (state.get("news_report") or "") + (state.get("baseline_ctx") or ""),
             "work_required": ["summary", "key_points", "confidence", "recommendation_hint"],
             "work_schema_hint": '{ "role":"NEWS_ANALYST","ticker":"","timestamp":"","summary":"","key_points":[],"confidence":0.0,"recommendation_hint":"" }',
-            "work_auto_tool_calls": [{"function": "NEWS_SENTIMENT", "tickers": ticker}],
+            "work_auto_tool_calls": [{"function": "NEWS_SENTIMENT", "tickers": ticker, "params": _news_params_for_target(flow_target_date)}],
             "work_next": "prepare_fundamentals",
         }
 
@@ -1478,6 +1735,7 @@ def run_langgraph_flow(template_path: str = "OUTPUT_TEMPLATE.TXT", model: str | 
     def node_prepare_bull_debate(state: FlowState) -> FlowState:
         round_n = int(state.get("debate_round") or 1)
         base = _merged_analyst_summaries(state)
+        scenario = state.get("scenario_ctx") or ""
         debate_ctx = (
             f"\n\nDEBATE_ROUND: {round_n}\n"
             "YOUR_ROLE: BULL_RESEARCHER\n"
@@ -1490,16 +1748,17 @@ def run_langgraph_flow(template_path: str = "OUTPUT_TEMPLATE.TXT", model: str | 
             "work_stage": f"BULL_DEBATE_R{round_n}",
             "work_kind": "RESEARCHER",
             "work_stance": "BULL",
-            "work_input": base + debate_ctx,
+            "work_input": scenario + "\n\n" + base + debate_ctx,
             "work_required": ["final_label", "consensus_summary", "evidence", "counterarguments", "confidence"],
             "work_schema_hint": '{ "stance":"BULL|BEAR","final_label":"BULLISH|BEARISH|NEUTRAL","consensus_summary":"","evidence":[],"counterarguments":[],"confidence":0.0 }',
-            "work_auto_tool_calls": [{"function": "NEWS_SENTIMENT", "tickers": ticker}],
+            "work_auto_tool_calls": [{"function": "NEWS_SENTIMENT", "tickers": ticker, "params": _news_params_for_target(flow_target_date)}],
             "work_next": "prepare_bear_debate",
         }
 
     def node_prepare_bear_debate(state: FlowState) -> FlowState:
         round_n = int(state.get("debate_round") or 1)
         base = _merged_analyst_summaries(state)
+        scenario = state.get("scenario_ctx") or ""
         debate_ctx = (
             f"\n\nDEBATE_ROUND: {round_n}\n"
             "YOUR_ROLE: BEAR_RESEARCHER\n"
@@ -1512,10 +1771,10 @@ def run_langgraph_flow(template_path: str = "OUTPUT_TEMPLATE.TXT", model: str | 
             "work_stage": f"BEAR_DEBATE_R{round_n}",
             "work_kind": "RESEARCHER",
             "work_stance": "BEAR",
-            "work_input": base + debate_ctx,
+            "work_input": scenario + "\n\n" + base + debate_ctx,
             "work_required": ["final_label", "consensus_summary", "evidence", "counterarguments", "confidence"],
             "work_schema_hint": '{ "stance":"BULL|BEAR","final_label":"BULLISH|BEARISH|NEUTRAL","consensus_summary":"","evidence":[],"counterarguments":[],"confidence":0.0 }',
-            "work_auto_tool_calls": [{"function": "NEWS_SENTIMENT", "tickers": ticker}],
+            "work_auto_tool_calls": [{"function": "NEWS_SENTIMENT", "tickers": ticker, "params": _news_params_for_target(flow_target_date)}],
             "work_next": "route_after_bear",
         }
 
@@ -1534,12 +1793,13 @@ def run_langgraph_flow(template_path: str = "OUTPUT_TEMPLATE.TXT", model: str | 
         return {**state, "discussion_summary": discussion_summary}
 
     def node_prepare_risk(state: FlowState) -> FlowState:
+        scenario = state.get("scenario_ctx") or ""
         return {
             **state,
             **_reset_work(state),
             "work_stage": "RISK_ANALYST",
             "work_kind": "RISK_ANALYST",
-            "work_input": state.get("discussion_summary") or "",
+            "work_input": scenario + "\n\n" + (state.get("discussion_summary") or ""),
             "work_required": ["risk_score", "breach_flags", "explainers"],
             "work_schema_hint": '{ "risk_score":0, "breach_flags":[], "explainers":[] }',
             "work_auto_tool_calls": [],
@@ -1547,6 +1807,7 @@ def run_langgraph_flow(template_path: str = "OUTPUT_TEMPLATE.TXT", model: str | 
         }
 
     def node_prepare_manager(state: FlowState) -> FlowState:
+        scenario = state.get("scenario_ctx") or ""
         aggregated_info = json.dumps(
             {
                 "discussion_summary": state.get("discussion_summary") or "",
@@ -1561,25 +1822,36 @@ def run_langgraph_flow(template_path: str = "OUTPUT_TEMPLATE.TXT", model: str | 
             **_reset_work(state),
             "work_stage": "RISK_MANAGER",
             "work_kind": "RISK_MANAGER",
-            "work_input": aggregated_info,
+            "work_input": scenario + "\n\n" + aggregated_info,
             "work_required": ["decision", "reason", "next_steps"],
             "work_schema_hint": '{ "decision":"approve|reject|require_manual", "reason":"", "next_steps":"" }',
-            "work_auto_tool_calls": [{"function": "NEWS_SENTIMENT", "tickers": ticker}],
+            "work_auto_tool_calls": [{"function": "NEWS_SENTIMENT", "tickers": ticker, "params": _news_params_for_target(flow_target_date)}],
             "work_next": "prepare_trader",
         }
 
     def node_prepare_trader(state: FlowState) -> FlowState:
-        payload = {"manager_decision": state.get("manager_decision") or {}, "discussion_summary": state.get("discussion_summary") or ""}
+        allow_price = bool(state.get("allow_price_fetch"))
+        scenario = state.get("scenario_ctx") or ""
+        payload = {
+            "manager_decision": state.get("manager_decision") or {},
+            "discussion_summary": state.get("discussion_summary") or "",
+            "scenario": {
+                "now_utc": state.get("now_utc"),
+                "target_date": state.get("target_date"),
+                "account_cash": state.get("account_cash"),
+                "account_shares": state.get("account_shares"),
+            },
+        }
         raw_input = json.dumps(payload, ensure_ascii=False)
         return {
             **state,
             **_reset_work(state),
             "work_stage": "TRADER",
             "work_kind": "TRADER",
-            "work_input": raw_input,
+            "work_input": scenario + "\n\n" + raw_input,
             "work_required": ["ticker", "side", "size", "entry", "stop", "target", "rationale", "confidence"],
             "work_schema_hint": '{ "ticker":"", "side":"BUY|SELL|NO_TRADE", "size":0.0, "entry":0.0, "stop":0.0, "target":0.0, "rationale":"", "confidence":0.0, "created_by":"TRADER" }',
-            "work_auto_tool_calls": [{"function": "GLOBAL_QUOTE", "symbol": ticker}],
+            "work_auto_tool_calls": ([{"function": "GLOBAL_QUOTE", "symbol": ticker, "params": {"as_of_date": flow_target_date}}] if allow_price else []),
             "work_next": "finalize",
         }
 
@@ -1590,6 +1862,14 @@ def run_langgraph_flow(template_path: str = "OUTPUT_TEMPLATE.TXT", model: str | 
         import json as _json
 
         final = {
+            "context": {
+                "ticker": ticker,
+                "target_date": flow_target_date,
+                "now_utc": now_utc,
+                "account_cash": float(account_cash),
+                "account_shares": float(account_shares),
+                "allow_price_fetch": bool(allow_price_fetch),
+            },
             "analysts": state.get("analysts") or {},
             "researchers": {
                 "bull": state.get("bull") or {},
@@ -1701,5 +1981,15 @@ def run_langgraph_flow(template_path: str = "OUTPUT_TEMPLATE.TXT", model: str | 
     graph.add_edge("finalize", END)
 
     app = graph.compile()
-    out_state: FlowState = app.invoke({"template_path": template_path, "ticker": ticker, "model": model})
+    out_state: FlowState = app.invoke({
+        "template_path": template_path,
+        "ticker": ticker,
+        "model": model,
+        "target_date": flow_target_date,
+        "now_utc": now_utc,
+        "account_cash": float(account_cash),
+        "account_shares": float(account_shares),
+        "scenario_ctx": scenario_ctx,
+        "allow_price_fetch": bool(allow_price_fetch),
+    })
     return out_state.get("final") or {}

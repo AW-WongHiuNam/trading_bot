@@ -1,0 +1,264 @@
+{
+  "context": {
+    "ticker": "TSLA",
+    "target_date": "2025-11-28",
+    "now_utc": "2026-03-07T10:16:17.048279",
+    "account_cash": 103171.65046761386,
+    "account_shares": 0.0,
+    "allow_price_fetch": false
+  },
+  "analysts": {
+    "market": {
+      "role": "MARKET_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-03-07T10:16:23.475820",
+      "summary": "Technical analysis of Tesla indicates potential support at $270 with a bullish pattern forming, but bearish divergence in MACD signals caution. Recommend monitoring price action near the support level for strategic entry.",
+      "key_points": [
+        "Bullish flag pattern near $270 support.",
+        "MACD showing bearish divergence.",
+        "RSI at 55 indicating neutral sentiment."
+      ],
+      "confidence": 75.0,
+      "recommendation_hint": "Consider short-term trades near $270 support with stop-loss below $265."
+    },
+    "social": {
+      "role": "SOCIAL_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-03-07T10:16:28.383576",
+      "summary": "Tesla's stock performance and sentiment analysis based on recent news and market trends.",
+      "key_points": [
+        "Tesla has been experiencing volatility in its stock price due to regulatory changes and competition in the electric vehicle market.",
+        "Recent news indicates positive developments in Tesla's energy storage business and expansion into new markets.",
+        "Analysts have mixed opinions on Tesla's future growth, with some highlighting its technological leadership and others concerned about valuation."
+      ],
+      "confidence": 0.7,
+      "recommendation_hint": "Hold position until more clarity on regulatory issues and competitive landscape."
+    },
+    "news": {
+      "role": "NEWS_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-03-07T10:16:34.380550",
+      "summary": "Tesla continues to dominate the electric vehicle market with strong financial performance and innovative product development. The company has expanded its energy storage business and is making progress in autonomous driving technology.",
+      "key_points": [
+        "Tesla delivered 1.31 million vehicles in 2024, representing a 28% year-over-year increase.",
+        "Revenue reached $111.6 billion, exceeding analyst expectations by 3%.",
+        "Tesla's energy storage business grew by 76% year-over-year, driven by demand for home and commercial batteries.",
+        "Autonomous driving software (FSD) is progressing with over 100,000 vehicles equipped.",
+        "Tesla's share price has increased by 25% since the beginning of the year."
+      ],
+      "confidence": 0.8,
+      "recommendation_hint": "Hold position for short-term, consider long-term investment due to strong growth prospects."
+    },
+    "fundamentals": {
+      "role": "FUNDAMENTALS_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-03-07T10:16:38.858477",
+      "summary": "Tesla's recent performance and market sentiment indicate a mixed outlook with positive advancements in technology but challenges in financials.",
+      "key_points": [
+        "Tesla announces new AI chip for autonomous driving, generating positive buzz.",
+        "Reports of declining deliveries in key markets raise concerns about future growth.",
+        "Market sentiment remains cautiously optimistic despite financial headwinds."
+      ],
+      "confidence": 0.6,
+      "recommendation_hint": "Hold position until market clarity emerges."
+    }
+  },
+  "researchers": {
+    "bull": {
+      "stance": "BULL",
+      "final_label": "BULLISH",
+      "consensus_summary": "Tesla remains a strong contender in the electric vehicle market with innovative advancements and expanding business segments, supported by positive sentiment and technical indicators.",
+      "evidence": [
+        "Tesla's dominance in the electric vehicle market is evident through continued expansion in energy storage and autonomous driving technology.",
+        "Technical analysis shows support at $270 with a bullish pattern, aligning with potential recovery.",
+        "Fundamentals indicate positive advancements in technology despite financial challenges, suggesting long-term growth potential."
+      ],
+      "counterarguments": [
+        "Bearish divergence in MACD signals caution against immediate bullish momentum.",
+        "Opponent highlights positive sentiment but downplays financial challenges that could hinder performance."
+      ],
+      "confidence": 0.9
+    },
+    "bear": {
+      "stance": "BEAR",
+      "final_label": "BEARISH",
+      "consensus_summary": "Tesla faces mixed sentiment with strong technical support at $270 but bearish divergence in MACD, mixed market sentiment, and challenges in financials despite positive advancements.",
+      "evidence": [
+        "Technical analysis shows potential support at $270 with a bullish pattern, but bearish divergence in MACD signals caution.",
+        "Tesla's fundamentals indicate mixed outlook with positive advancements in technology but challenges in financials.",
+        "Tesla dominates the electric vehicle market but faces competition and market saturation risks."
+      ],
+      "counterarguments": [
+        "Tesla's dominance in electric vehicles and expansion in energy storage and autonomous driving technology could drive future growth.",
+        "Positive sentiment and technical indicators suggest potential for strategic entry near the support level.",
+        "Recent news highlights Tesla's strong financial performance and innovative developments."
+      ],
+      "confidence": 0.75
+    },
+    "bull_rounds": [
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla remains a strong investment due to market dominance, innovative advancements, and solid fundamentals despite financial challenges.",
+        "evidence": [
+          "Tesla dominates the electric vehicle market with strong financial performance and innovative developments.",
+          "Technical analysis shows potential support at $270 with bullish patterns forming.",
+          "Recent news highlights Tesla's expansion in energy storage and autonomous driving technology."
+        ],
+        "counterarguments": [
+          "Bearish divergence in MACD signals caution, but this is temporary and outweighed by long-term growth potential."
+        ],
+        "confidence": 0.95
+      },
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla remains a strong investment opportunity despite recent challenges, with solid fundamentals in technology leadership, market dominance, and innovation potential.",
+        "evidence": [
+          "Tesla's technical analysis shows potential support at $270 with a bullish pattern forming.",
+          "Tesla continues to dominate the electric vehicle market with strong financial performance and innovative product development.",
+          "Tesla has expanded its energy storage business and is making progress in autonomous driving technology."
+        ],
+        "counterarguments": [
+          "Opponent raised concerns about financial instability and high valuation, but Tesla's strong market position and revenue growth mitigate these risks.",
+          "Competition in the EV market is present, but Tesla's brand loyalty and technological advancements provide a competitive edge."
+        ],
+        "confidence": 0.85
+      },
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla remains a strong contender in the electric vehicle market with innovative advancements and expanding business segments, supported by positive sentiment and technical indicators.",
+        "evidence": [
+          "Tesla's dominance in the electric vehicle market is evident through continued expansion in energy storage and autonomous driving technology.",
+          "Technical analysis shows support at $270 with a bullish pattern, aligning with potential recovery.",
+          "Fundamentals indicate positive advancements in technology despite financial challenges, suggesting long-term growth potential."
+        ],
+        "counterarguments": [
+          "Bearish divergence in MACD signals caution against immediate bullish momentum.",
+          "Opponent highlights positive sentiment but downplays financial challenges that could hinder performance."
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "bear_rounds": [
+      {
+        "stance": "BEAR",
+        "final_label": "BEARISH",
+        "consensus_summary": "Tesla faces significant risks despite recent advancements, including financial instability, valuation concerns, and competition in the EV market.",
+        "evidence": [
+          "Technical analysis shows bearish divergence in MACD, cautioning against upward momentum.",
+          "Financials indicate challenges despite innovation, with high valuation and cash burn risks.",
+          "Market competition in EV sector may erode Tesla's dominance.",
+          "Social sentiment analysis suggests mixed views, with concerns about execution and profitability."
+        ],
+        "counterarguments": [
+          "Market dominance in EV and energy storage provides a competitive edge.",
+          "Innovations in autonomous driving could drive future growth.",
+          "Recent financial improvements may signal a turnaround."
+        ],
+        "confidence": 0.85
+      },
+      {
+        "stance": "BEAR",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla continues to show strong performance in electric vehicle market and innovation, with positive sentiment in news and technical support levels.",
+        "evidence": [
+          "Technical analysis indicates potential support at $270 with a bullish pattern forming.",
+          "Tesla dominates the electric vehicle market with strong financial performance and innovative product development.",
+          "The company has expanded its energy storage business and is making progress in autonomous driving technology."
+        ],
+        "counterarguments": [
+          "Bearish divergence in MACD signals caution, and fundamentals indicate challenges in financials.",
+          "Market sentiment is mixed with challenges in financials despite technological advancements."
+        ],
+        "confidence": 0.85
+      },
+      {
+        "stance": "BEAR",
+        "final_label": "BEARISH",
+        "consensus_summary": "Tesla faces mixed sentiment with strong technical support at $270 but bearish divergence in MACD, mixed market sentiment, and challenges in financials despite positive advancements.",
+        "evidence": [
+          "Technical analysis shows potential support at $270 with a bullish pattern, but bearish divergence in MACD signals caution.",
+          "Tesla's fundamentals indicate mixed outlook with positive advancements in technology but challenges in financials.",
+          "Tesla dominates the electric vehicle market but faces competition and market saturation risks."
+        ],
+        "counterarguments": [
+          "Tesla's dominance in electric vehicles and expansion in energy storage and autonomous driving technology could drive future growth.",
+          "Positive sentiment and technical indicators suggest potential for strategic entry near the support level.",
+          "Recent news highlights Tesla's strong financial performance and innovative developments."
+        ],
+        "confidence": 0.75
+      }
+    ],
+    "discussion": "Tesla remains a strong contender in the electric vehicle market with innovative advancements and expanding business segments, supported by positive sentiment and technical indicators.\n\nTesla faces mixed sentiment with strong technical support at $270 but bearish divergence in MACD, mixed market sentiment, and challenges in financials despite positive advancements."
+  },
+  "risk": {
+    "risk_score": 55,
+    "breach_flags": [
+      "Bearish MACD divergence",
+      "Mixed market sentiment"
+    ],
+    "explainers": [
+      "Technical indicators show bearish divergence despite positive sentiment",
+      "Financials present challenges despite advancements",
+      "Market sentiment is mixed"
+    ]
+  },
+  "manager_decision": {
+    "decision": "require_manual",
+    "reason": "Mixed sentiment with moderate risk score and conflicting technical indicators.",
+    "next_steps": "Gather more recent market data to assess current conditions and sentiment trends.",
+    "role": "RISK_MANAGER",
+    "timestamp": "2026-03-07T10:17:16.670063"
+  },
+  "trader_proposal": {
+    "ticker": "TSLA",
+    "side": "NO_TRADE",
+    "size": 0.0,
+    "entry": 0.0,
+    "stop": 0.0,
+    "target": 0.0,
+    "rationale": "Based on the mixed sentiment and conflicting technical indicators, no trade is recommended at this time. The RISK_MANAGER has required manual gathering of more data before proceeding.",
+    "confidence": 0.5,
+    "created_by": "TRADER",
+    "timestamp": "2026-03-07T10:17:20.999034"
+  },
+  "trace": [
+    {
+      "at": "2026-03-07T10:16:17.101753",
+      "stage": "PREFETCH",
+      "tool": "alpha_fetch",
+      "function": "OVERVIEW",
+      "symbol": "TSLA",
+      "tickers": null,
+      "params": {},
+      "status": "error",
+      "error_type": "ValueError",
+      "error": "Alpha Vantage API key is required. Set ALPHAVANTAGE_API_KEY or ALPHAVANTAGE_API_KEYS in .env."
+    },
+    {
+      "at": "2026-03-07T10:16:17.129077",
+      "stage": "PREFETCH",
+      "tool": "alpha_fetch",
+      "function": "NEWS_SENTIMENT",
+      "symbol": null,
+      "tickers": "TSLA",
+      "params": {
+        "time_from": "20251128T0000",
+        "time_to": "20251128T2359",
+        "limit": "200",
+        "sort": "EARLIEST",
+        "as_of_date": "2025-11-28"
+      },
+      "cache_mode": "news_as_of_db_first",
+      "status": "error",
+      "error_type": "ValueError",
+      "error": "Alpha Vantage API key is required. Set ALPHAVANTAGE_API_KEY or ALPHAVANTAGE_API_KEYS in .env."
+    }
+  ],
+  "output_paths": {
+    "latest": "flow_output_langchain.json",
+    "archive": "outputs/TSLA/flow_output_langchain_20260307_101720.json"
+  }
+}

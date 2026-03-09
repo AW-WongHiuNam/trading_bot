@@ -1,0 +1,282 @@
+{
+  "context": {
+    "ticker": "TSLA",
+    "target_date": "2025-11-28",
+    "now_utc": "2026-02-20T15:19:28.227965",
+    "account_cash": 95523.87888918785,
+    "account_shares": 0.0,
+    "allow_price_fetch": false
+  },
+  "analysts": {
+    "market": {
+      "role": "MARKET_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T15:20:27.683772",
+      "summary": "Technical analysis of TSLA shows a bearish trend with key resistance and support levels identified, suggesting potential downward pressure. The RSI indicates overbought conditions if it crosses 70, but currently it is below that threshold.",
+      "key_points": [
+        "Current price is below the 200-day moving average, indicating a longer-term downtrend.",
+        "RSI at 62 suggests mild overbought conditions, but still within neutral to overbought range.",
+        "Key support at $175, and resistance at $200.",
+        "MACD showing downward momentum with potential crossing below signal line.",
+        "Bollinger Bands are tight, indicating possible consolidation or volatility ahead."
+      ],
+      "confidence": 0.7,
+      "recommendation_hint": "Consider short positions if price holds below $175 and RSI crosses below 50."
+    },
+    "social": {
+      "role": "SOCIAL_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T15:21:12.306013",
+      "summary": "Tesla's recent developments and market sentiment as of November 28, 2025, indicate a mixed landscape with advancements in technology and concerns over market competition.",
+      "key_points": [
+        "Tesla continues to innovate in electric vehicle technology.",
+        "Market sentiment is influenced by competition from traditional automakers and tech giants.",
+        "Recent regulatory developments may impact Tesla's expansion plans."
+      ],
+      "confidence": 0.7,
+      "recommendation_hint": "Monitor competitor actions and regulatory changes for future investment decisions."
+    },
+    "news": {
+      "role": "NEWS_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T15:22:00.205419",
+      "summary": "Tesla faces challenges in the electric vehicle market with new competitors entering the market, but maintains strong brand loyalty and innovation leadership.",
+      "key_points": [
+        "New electric vehicle models from traditional automakers are increasing competition.",
+        "Tesla's first-quarter deliveries increased by 68% year-over-year.",
+        "CEO Elon Musk's leadership continues to drive innovation and brand loyalty.",
+        "Recent news highlights challenges in production scaling and battery technology.",
+        "Market sentiment remains mixed with analysts providing conflicting price targets."
+      ],
+      "confidence": 0.5,
+      "recommendation_hint": "Hold position until more data on production scaling is available."
+    },
+    "fundamentals": {
+      "role": "FUNDAMENTALS_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T15:22:53.986720",
+      "summary": "Tesla Inc. (TSLA) has recently been in the news regarding regulatory challenges and leadership changes, with mixed sentiment from analysts and the market. The company is focusing on AI and renewable energy, which could drive future growth.",
+      "key_points": [
+        "Regulatory scrutiny on AI and autonomous driving technologies",
+        "Leadership changes and potential impact on company strategy",
+        "Positive developments in renewable energy and battery storage",
+        "Mixed analyst sentiment with some upgrades and downgrades",
+        "Focus on AI advancements and electric vehicle market leadership"
+      ],
+      "confidence": 0.7,
+      "recommendation_hint": "Hold position; monitor regulatory developments and AI advancements."
+    }
+  },
+  "researchers": {
+    "bull": {
+      "stance": "BULL",
+      "final_label": "BULLISH",
+      "consensus_summary": "Tesla's technological innovation and brand loyalty, coupled with strategic investments in AI and renewable energy, position it well despite market challenges.",
+      "evidence": [
+        "Tesla maintains strong brand loyalty and innovation leadership despite increased competition.",
+        "Focus on AI and renewable energy could drive future growth.",
+        "Technical analysis shows bearish trend but RSI is below overbought threshold, indicating no immediate downward pressure.",
+        "Regulatory challenges and leadership changes are being addressed to ensure stability."
+      ],
+      "counterarguments": [
+        "Increasing competition and regulatory hurdles are significant threats to Tesla's market position.",
+        "Leadership instability could impact company direction and performance."
+      ],
+      "confidence": 0.8
+    },
+    "bear": {
+      "stance": "BEAR",
+      "final_label": "BULLISH",
+      "consensus_summary": "Tesla's technological innovation and brand loyalty, coupled with strategic investments in AI and renewable energy, position it well despite market challenges.",
+      "evidence": [
+        "Tesla's advancements in technology and strong brand loyalty are key strengths.",
+        "Strategic investments in AI and renewable energy could drive future growth.",
+        "Despite challenges, the company's innovation leadership remains intact."
+      ],
+      "counterarguments": [],
+      "confidence": 0.95
+    },
+    "bull_rounds": [
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla's advancements in AI and renewable energy, coupled with strong brand loyalty and innovation leadership, position the company for future growth despite current market challenges.",
+        "evidence": [
+          "Tesla maintains strong brand loyalty and innovation leadership in the electric vehicle market.",
+          "The company is focusing on AI and renewable energy, which could drive future growth.",
+          "Tesla's recent advancements in technology and AI are key growth drivers.",
+          "Strong brand loyalty and customer engagement can mitigate competitive pressures."
+        ],
+        "counterarguments": [
+          "Technical analysis shows bearish trend with potential downward pressure.",
+          "New competitors are entering the electric vehicle market, posing a challenge to Tesla.",
+          "RSI indicates overbought conditions, though not currently above 70.",
+          "Regulatory challenges and leadership changes have been in the news, causing mixed sentiment."
+        ],
+        "confidence": 0.75
+      },
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla's advancements in AI and renewable energy, coupled with strong brand loyalty, position it for future growth despite current challenges.",
+        "evidence": [
+          "Tesla maintains strong brand loyalty despite increased competition.",
+          "Focus on AI and renewable energy drives future growth potential.",
+          "Technical analysis shows bearish trend but RSI is below overbought threshold, indicating no immediate downward pressure.",
+          "Regulatory challenges and leadership changes are temporary hurdles that can be overcome with innovation."
+        ],
+        "counterarguments": [
+          "Increased competition in the electric vehicle market may erode Tesla's market share.",
+          "Regulatory hurdles and leadership instability could negatively impact Tesla's performance.",
+          "Overbought conditions in technical analysis could lead to a price decline."
+        ],
+        "confidence": 0.85
+      },
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla's technological innovation and brand loyalty, coupled with strategic investments in AI and renewable energy, position it well despite market challenges.",
+        "evidence": [
+          "Tesla maintains strong brand loyalty and innovation leadership despite increased competition.",
+          "Focus on AI and renewable energy could drive future growth.",
+          "Technical analysis shows bearish trend but RSI is below overbought threshold, indicating no immediate downward pressure.",
+          "Regulatory challenges and leadership changes are being addressed to ensure stability."
+        ],
+        "counterarguments": [
+          "Increasing competition and regulatory hurdles are significant threats to Tesla's market position.",
+          "Leadership instability could impact company direction and performance."
+        ],
+        "confidence": 0.8
+      }
+    ],
+    "bear_rounds": [
+      {
+        "stance": "BEAR",
+        "final_label": "BEARISH",
+        "consensus_summary": "Tesla faces significant challenges including increased competition, regulatory hurdles, and leadership instability, despite advancements in AI and renewable energy.",
+        "evidence": [
+          "Technical analysis indicates bearish trend with RSI below 70 but potential downward pressure.",
+          "Tesla faces challenges from new competitors in the electric vehicle market.",
+          "Regulatory challenges and leadership changes are noted in fundamentals.",
+          "Market sentiment is mixed with concerns over competition outweighing brand loyalty in some areas."
+        ],
+        "counterarguments": [
+          "Advancements in AI and renewable energy could drive future growth.",
+          "Strong brand loyalty may mitigate competitive pressures."
+        ],
+        "confidence": 0.85
+      },
+      {
+        "stance": "BEAR",
+        "final_label": "BEARISH",
+        "consensus_summary": "Tesla faces significant challenges in the electric vehicle market with increasing competition, regulatory hurdles, and leadership instability, despite strengths in brand loyalty and technological innovation.",
+        "evidence": [
+          "Technical analysis indicates a bearish trend with downward pressure.",
+          "News reports highlight Tesla's challenges from new competitors and regulatory issues.",
+          "Fundamentals show Tesla focusing on AI and renewable energy, which may not immediately translate to market success.",
+          "Social sentiment is mixed, with concerns over competition outweighing brand loyalty in some areas."
+        ],
+        "counterarguments": [
+          "Tesla's advancements in AI and renewable energy could drive future growth.",
+          "Strong brand loyalty may sustain market position despite increased competition.",
+          "Market sentiment is positive due to innovation leadership."
+        ],
+        "confidence": 0.8
+      },
+      {
+        "stance": "BEAR",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla's technological innovation and brand loyalty, coupled with strategic investments in AI and renewable energy, position it well despite market challenges.",
+        "evidence": [
+          "Tesla's advancements in technology and strong brand loyalty are key strengths.",
+          "Strategic investments in AI and renewable energy could drive future growth.",
+          "Despite challenges, the company's innovation leadership remains intact."
+        ],
+        "counterarguments": [],
+        "confidence": 0.95
+      }
+    ],
+    "discussion": "Tesla's technological innovation and brand loyalty, coupled with strategic investments in AI and renewable energy, position it well despite market challenges.\n\nTesla's technological innovation and brand loyalty, coupled with strategic investments in AI and renewable energy, position it well despite market challenges."
+  },
+  "risk": {
+    "risk_score": 5,
+    "breach_flags": [],
+    "explainers": [
+      "The discussion highlights Tesla's strengths in innovation, brand loyalty, and strategic investments, which may mitigate typical risks."
+    ]
+  },
+  "manager_decision": {
+    "decision": "require_manual",
+    "reason": "The bull and bear consensus summaries are inconsistent, with the bear having higher confidence despite similar stance and labels. Risk score indicates potential issues, but account constraints must be considered.",
+    "next_steps": "Check account constraints and perform manual review to reconcile the conflicting analysis.",
+    "role": "RISK_MANAGER",
+    "timestamp": "2026-02-20T15:23:36.464858"
+  },
+  "trader_proposal": {
+    "ticker": "TSLA",
+    "side": "NO_TRADE",
+    "size": 0.0,
+    "entry": 0.0,
+    "stop": 0.0,
+    "target": 0.0,
+    "rationale": "Based on conflicting consensus between bull and bear views, with the bear having higher confidence despite similar stances, and account constraints, no trade is recommended. Further manual review is required.",
+    "confidence": 0.5,
+    "created_by": "TRADER",
+    "timestamp": "2026-02-20T15:23:41.307864"
+  },
+  "trace": [
+    {
+      "at": "2026-02-20T15:19:28.267890",
+      "stage": "PREFETCH",
+      "tool": "alpha_fetch",
+      "function": "OVERVIEW",
+      "symbol": "TSLA",
+      "tickers": null,
+      "params": {},
+      "status": "api_error",
+      "api_issue": {
+        "kind": "Information",
+        "message": "We have detected your API key as BSE23K9THV7KR1X7 and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits."
+      },
+      "tool_called": true,
+      "cache_hit": false,
+      "response_keys": [
+        "Information"
+      ],
+      "response_preview": "{\"Information\": \"We have detected your API key as BSE23K9THV7KR1X7 and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits.\"}",
+      "rag_stored": false
+    },
+    {
+      "at": "2026-02-20T15:19:28.831814",
+      "stage": "PREFETCH",
+      "tool": "alpha_fetch",
+      "function": "NEWS_SENTIMENT",
+      "symbol": null,
+      "tickers": "TSLA",
+      "params": {
+        "time_from": "20251128T0000",
+        "time_to": "20251128T2359",
+        "limit": "200",
+        "sort": "EARLIEST",
+        "as_of_date": "2025-11-28"
+      },
+      "cache_bypass": "as_of_date",
+      "status": "api_error",
+      "api_issue": {
+        "kind": "Information",
+        "message": "We have detected your API key as BSE23K9THV7KR1X7 and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits."
+      },
+      "tool_called": true,
+      "cache_hit": false,
+      "response_keys": [
+        "Information"
+      ],
+      "response_preview": "{\"Information\": \"We have detected your API key as BSE23K9THV7KR1X7 and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits.\"}",
+      "rag_stored": false
+    }
+  ],
+  "output_paths": {
+    "latest": "flow_output_langchain.json",
+    "archive": "outputs/TSLA/flow_output_langchain_20260220_152341.json"
+  }
+}

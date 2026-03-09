@@ -20,7 +20,7 @@ if ROOT not in sys.path:
 
 from config import get_settings
 from vector_store_sqlite import VectorStore
-from multi_agent_chat import Agent, handle_tool_request
+from scripts.multi_agent_chat import Agent, handle_tool_request
 import sqlite3
 import os
 

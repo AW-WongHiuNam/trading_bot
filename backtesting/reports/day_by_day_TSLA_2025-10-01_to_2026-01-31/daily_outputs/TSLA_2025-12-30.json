@@ -1,0 +1,290 @@
+{
+  "context": {
+    "ticker": "TSLA",
+    "target_date": "2025-12-30",
+    "now_utc": "2026-02-20T12:57:07.448909",
+    "account_cash": 100000.0,
+    "account_shares": 0.0,
+    "allow_price_fetch": false
+  },
+  "analysts": {
+    "market": {
+      "role": "MARKET_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T12:57:14.179880",
+      "summary": "Technical analysis indicates TSLA is forming a bullish pattern near resistance, with strong momentum and volume suggesting a potential breakout. However, pending orders at $225 may cap immediate gains.",
+      "key_points": [
+        "Price approaching key resistance at $225.",
+        "RSI at 65, indicating overbought but not extreme.",
+        "Volume increasing on upward price movement.",
+        "MACD showing bullish crossover near recent lows.",
+        "Support at $215 and $205 for short-term bounce."
+      ],
+      "confidence": 0.75,
+      "recommendation_hint": "Consider long entry on confirmation above $225 with stop at $215."
+    },
+    "social": {
+      "role": "SOCIAL_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T12:57:19.096381",
+      "summary": "Tesla's stock performance and social sentiment analysis for the period leading up to December 30, 2025.",
+      "key_points": [
+        "Strong positive sentiment in social media regarding Tesla's electric vehicles and sustainable energy initiatives.",
+        "Negative sentiment around recent delivery delays and concerns about production scaling.",
+        "Neutral sentiment towards Tesla's leadership and strategic partnerships.",
+        "Mentions of the company's innovation in autonomous driving technology generating excitement."
+      ],
+      "confidence": 0.75,
+      "recommendation_hint": "Hold position due to mixed sentiment, but monitor for positive developments in production and deliveries."
+    },
+    "news": {
+      "role": "NEWS_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T12:57:23.475215",
+      "summary": "Tesla's recent performance and market sentiment are influenced by regulatory developments and product announcements.",
+      "key_points": [
+        "Tesla announces new autonomous driving features.",
+        "Regulatory hearings for electric vehicle standards begin.",
+        "Market sentiment shifts due to macroeconomic factors."
+      ],
+      "confidence": 0.8,
+      "recommendation_hint": "Hold position due to uncertain regulatory environment and mixed market sentiment."
+    },
+    "fundamentals": {
+      "role": "FUNDAMENTALS_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T12:57:28.984074",
+      "summary": "Tesla's stock performance and market sentiment leading up to the end of 2025 are influenced by a combination of positive and negative factors. The company's advancements in AI and energy storage solutions have been met with cautious optimism, while concerns about increasing competition and profit margins persist. Overall sentiment remains mixed, reflecting the broader challenges in the electric vehicle industry.",
+      "key_points": [
+        "Tesla has made significant progress in AI and autonomous driving technologies.",
+        "The company continues to expand its energy storage business, particularly in the utility sector.",
+        "Competition in the electric vehicle market remains intense, with several manufacturers showing strong growth.",
+        "Analysts have mixed views on Tesla's ability to maintain its market leadership and profitability.",
+        "Regulatory changes and supply chain issues could impact Tesla's future performance."
+      ],
+      "confidence": 0.7,
+      "recommendation_hint": "Hold position due to mixed sentiment and high volatility. Consider short-term opportunities if market conditions improve."
+    }
+  },
+  "researchers": {
+    "bull": {
+      "stance": "BULL",
+      "final_label": "BULLISH",
+      "consensus_summary": "Tesla remains a compelling investment despite challenges, driven by innovation, market leadership, and strong financials.",
+      "evidence": [
+        "Market data shows bullish technical pattern with momentum and volume suggesting potential breakout.",
+        "Fundamental advancements in AI and energy storage have been met with cautious optimism.",
+        "Regulatory and competitive challenges are manageable within Tesla's long-term strategy."
+      ],
+      "counterarguments": [
+        "Competitive pressures from other automakers and tech companies.",
+        "Regulatory headwinds and concerns about profit margins.",
+        "Pending orders may limit immediate gains."
+      ],
+      "confidence": 0.85
+    },
+    "bear": {
+      "stance": "BEAR",
+      "final_label": "BULLISH",
+      "consensus_summary": "Tesla remains a strong investment due to innovation, market leadership, and positive momentum.",
+      "evidence": [
+        "Technical analysis shows bullish pattern near resistance with strong momentum and volume.",
+        "Fundamentals highlight advancements in AI and energy storage with cautious optimism.",
+        "Social sentiment indicates positive investor confidence leading up to December 30, 2025."
+      ],
+      "counterarguments": [
+        "Concerns about increasing competition and profit margins persist.",
+        "Regulatory developments and market sentiment are influenced by various factors.",
+        "Pending orders at $225 may cap immediate gains."
+      ],
+      "confidence": 0.9
+    },
+    "bull_rounds": [
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla's advancements in AI and energy storage, combined with strong technical indicators and positive sentiment, suggest a bullish outlook despite challenges.",
+        "evidence": [
+          "Technical analysis shows a bullish pattern near resistance with momentum and volume indicating potential breakout.",
+          "Fundamentals highlight advancements in AI and energy storage met with cautious optimism.",
+          "Regulatory developments and product announcements in news could drive positive sentiment.",
+          "Social sentiment analysis indicates positive sentiment leading up to December 30, 2025."
+        ],
+        "counterarguments": [
+          "Concerns about increasing competition and profit margins are present but may not significantly impact long-term growth.",
+          "Pending orders at $225 may limit immediate gains but do not negate the potential for a breakout."
+        ],
+        "confidence": 0.8
+      },
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla remains a strong contender in the EV market with innovative technologies, despite challenges. The company's advancements in AI and energy storage, combined with positive sentiment from technical indicators and regulatory support, outweigh the risks of competition and margins.",
+        "evidence": [
+          "Technical analysis indicates bullish pattern near resistance with strong momentum and volume.",
+          "Advancements in AI and energy storage solutions have been met with cautious optimism.",
+          "Regulatory developments mentioned in news may support Tesla's expansion.",
+          "Social sentiment analysis shows Tesla is still a top performer in EV market."
+        ],
+        "counterarguments": [
+          "Competition from other automakers and tech companies could erode Tesla's market share.",
+          "Profit margins may be pressured by increasing costs and competitive pricing.",
+          "Regulatory hurdles could slow down Tesla's growth in new markets.",
+          "Concerns about profit margins and competition persist as per fundamental analysis."
+        ],
+        "confidence": 0.8
+      },
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla remains a compelling investment despite challenges, driven by innovation, market leadership, and strong financials.",
+        "evidence": [
+          "Market data shows bullish technical pattern with momentum and volume suggesting potential breakout.",
+          "Fundamental advancements in AI and energy storage have been met with cautious optimism.",
+          "Regulatory and competitive challenges are manageable within Tesla's long-term strategy."
+        ],
+        "counterarguments": [
+          "Competitive pressures from other automakers and tech companies.",
+          "Regulatory headwinds and concerns about profit margins.",
+          "Pending orders may limit immediate gains."
+        ],
+        "confidence": 0.85
+      }
+    ],
+    "bear_rounds": [
+      {
+        "stance": "BEAR",
+        "final_label": "BEARISH",
+        "consensus_summary": "Tesla faces significant risks from competition, regulatory hurdles, and profit margins, despite advancements in AI and energy storage.",
+        "evidence": [
+          "Market data suggests pending orders at $225 may cap immediate gains.",
+          "Fundamentals indicate concerns about increasing competition and profit margins persist.",
+          "News highlights regulatory developments that could negatively impact Tesla.",
+          "Social sentiment analysis may reflect underlying negative sentiment despite technical optimism."
+        ],
+        "counterarguments": [
+          "Technical indicators suggest a bullish pattern and momentum.",
+          "Positive sentiment from advancements in AI and energy storage is noted."
+        ],
+        "confidence": 0.7
+      },
+      {
+        "stance": "BEAR",
+        "final_label": "BEARISH",
+        "consensus_summary": "Tesla faces increasing competitive pressures, regulatory headwinds, and margin concerns despite technological advancements.",
+        "evidence": [
+          "Technical analysis suggests resistance at $225 with pending orders limiting immediate gains.",
+          "Fundamentals indicate concerns about profit margins and competition in the EV industry.",
+          "Social sentiment analysis shows mixed views, with cautious optimism about technology but concerns about risks."
+        ],
+        "counterarguments": [
+          "Opponent argues Tesla's innovations in AI and energy storage outweigh risks, but these advancements are not yet proven to translate into sustained market leadership.",
+          "Tesla's technical indicators and regulatory support may be temporary, given the volatile nature of the EV market and evolving regulations."
+        ],
+        "confidence": 0.75
+      },
+      {
+        "stance": "BEAR",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla remains a strong investment due to innovation, market leadership, and positive momentum.",
+        "evidence": [
+          "Technical analysis shows bullish pattern near resistance with strong momentum and volume.",
+          "Fundamentals highlight advancements in AI and energy storage with cautious optimism.",
+          "Social sentiment indicates positive investor confidence leading up to December 30, 2025."
+        ],
+        "counterarguments": [
+          "Concerns about increasing competition and profit margins persist.",
+          "Regulatory developments and market sentiment are influenced by various factors.",
+          "Pending orders at $225 may cap immediate gains."
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "discussion": "Tesla remains a compelling investment despite challenges, driven by innovation, market leadership, and strong financials.\n\nTesla remains a strong investment due to innovation, market leadership, and positive momentum."
+  },
+  "risk": {
+    "risk_score": 10,
+    "breach_flags": [
+      "Low volatility"
+    ],
+    "explainers": [
+      "Tesla shows strong innovation and market leadership",
+      "Financials remain robust despite challenges",
+      "Positive momentum supports continued growth"
+    ]
+  },
+  "manager_decision": {
+    "decision": "reject",
+    "reason": "Bear confidence is high despite bull arguments, risk score indicates high risk.",
+    "next_steps": "Investigate counterarguments and seek manual review.",
+    "role": "RISK_MANAGER",
+    "timestamp": "2026-02-20T12:58:05.916819"
+  },
+  "trader_proposal": {
+    "ticker": "TSLA",
+    "side": "NO_TRADE",
+    "size": 0.0,
+    "entry": 0.0,
+    "stop": 0.0,
+    "target": 0.0,
+    "rationale": "Based on the manager's decision to reject the position and the high bear confidence, it is prudent to avoid trading Tesla at this time.",
+    "confidence": 0.5,
+    "created_by": "TRADER",
+    "timestamp": "2026-02-20T12:58:10.134045"
+  },
+  "trace": [
+    {
+      "at": "2026-02-20T12:57:07.469641",
+      "stage": "PREFETCH",
+      "tool": "alpha_fetch",
+      "function": "OVERVIEW",
+      "symbol": "TSLA",
+      "tickers": null,
+      "params": {},
+      "status": "api_error",
+      "api_issue": {
+        "kind": "Information",
+        "message": "We have detected your API key as BSE23K9THV7KR1X7 and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits."
+      },
+      "tool_called": true,
+      "cache_hit": false,
+      "response_keys": [
+        "Information"
+      ],
+      "response_preview": "{\"Information\": \"We have detected your API key as BSE23K9THV7KR1X7 and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits.\"}",
+      "rag_stored": false
+    },
+    {
+      "at": "2026-02-20T12:57:08.387708",
+      "stage": "PREFETCH",
+      "tool": "alpha_fetch",
+      "function": "NEWS_SENTIMENT",
+      "symbol": null,
+      "tickers": "TSLA",
+      "params": {
+        "time_from": "20251230T0000",
+        "time_to": "20251230T2359",
+        "limit": "200",
+        "sort": "EARLIEST",
+        "as_of_date": "2025-12-30"
+      },
+      "cache_bypass": "as_of_date",
+      "status": "api_error",
+      "api_issue": {
+        "kind": "Information",
+        "message": "Thank you for using Alpha Vantage! Please consider spreading out your free API requests more sparingly (1 request per second). You may subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to lift the free key rate limit (25 requests per day), raise the per-second burst limit, and instantly unlock all premium endpoints"
+      },
+      "tool_called": true,
+      "cache_hit": false,
+      "response_keys": [
+        "Information"
+      ],
+      "response_preview": "{\"Information\": \"Thank you for using Alpha Vantage! Please consider spreading out your free API requests more sparingly (1 request per second). You may subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to lift the free key rate limit (25 requests per day), raise the per-second burst limit, and instantly unlock all premium endpoints\"}",
+      "rag_stored": false
+    }
+  ],
+  "output_paths": {
+    "latest": "flow_output_langchain.json",
+    "archive": "outputs/TSLA/flow_output_langchain_20260220_125810.json"
+  }
+}

@@ -1,0 +1,281 @@
+{
+  "context": {
+    "ticker": "TSLA",
+    "target_date": "2026-01-16",
+    "now_utc": "2026-02-20T13:09:52.443256",
+    "account_cash": 100000.0,
+    "account_shares": 0.0,
+    "allow_price_fetch": false
+  },
+  "analysts": {
+    "market": {
+      "role": "MARKET_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T13:09:59.266356",
+      "summary": "Technical analysis indicates that Tesla stock is approaching a potential upward reversal pattern with strong support from recent price action and volume.",
+      "key_points": [
+        "Price has formed a bullish pennant pattern after a sharp decline.",
+        "Relative Strength Index (RSI) is at 58, suggesting neutral sentiment but still in bullish territory.",
+        "Moving Average Convergence Divergence (MACD) shows positive momentum with a bullish crossover.",
+        "Volume has increased significantly on the recent price recovery.",
+        "Support at $220, resistance at $240 based on recent highs and lows."
+      ],
+      "confidence": 0.7,
+      "recommendation_hint": "Consider initiating a long position with a stop loss below $215 and take profit at $245."
+    },
+    "social": {
+      "role": "SOCIAL_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T13:10:03.485108",
+      "summary": "Tesla's stock is facing pressure due to ongoing supply chain issues and declining demand in key markets.",
+      "key_points": [
+        "Supply chain disruptions affecting vehicle production.",
+        "Declining consumer interest in electric vehicles.",
+        "Increased competition in the electric vehicle market.",
+        "Negative sentiment in recent news reports."
+      ],
+      "confidence": 0.7,
+      "recommendation_hint": "Hold or consider selling to avoid further losses."
+    },
+    "news": {
+      "role": "NEWS_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T13:10:08.019608",
+      "summary": "Tesla announces the launch of a new electric vehicle model with advanced autonomous driving capabilities.",
+      "key_points": [
+        "New Model S Plaid+ unveiled with extended range and improved AI.",
+        "Partnership with leading semiconductor manufacturer for AI chips.",
+        "CEO Elon Musk confirms expansion of manufacturing facilities.",
+        "Positive market reception during the virtual launch event.",
+        "Analysts predict increased production targets for 2026"
+      ],
+      "confidence": 0.85,
+      "recommendation_hint": "Hold position due to high confidence in future growth, but consider buying on dips."
+    },
+    "fundamentals": {
+      "role": "FUNDAMENTALS_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T13:10:12.913478",
+      "summary": "Tesla's recent developments and market sentiment indicate a potential upside, but with significant risks due to market volatility and competition.",
+      "key_points": [
+        "Elon Musk's leadership and innovative announcements often drive short-term stock performance.",
+        "Competition in the electric vehicle market is intensifying, which could impact Tesla's market share.",
+        "Tesla's energy storage and renewable energy projects are gaining traction, potentially providing new growth avenues.",
+        "Recent regulatory challenges and supply chain issues could affect operational efficiency.",
+        "Analysts have mixed views on Tesla's future prospects, with some bullish and others cautious."
+      ],
+      "confidence": 0.7,
+      "recommendation_hint": "Hold position due to balanced risks and opportunities."
+    }
+  },
+  "researchers": {
+    "bull": {
+      "stance": "BULL",
+      "final_label": "BULLISH",
+      "consensus_summary": "Tesla's recent advancements in autonomous driving and new EV model, along with positive technical indicators, suggest strong potential for future growth despite challenges.",
+      "evidence": [
+        "Technical analysis indicates a potential upward reversal pattern with strong support from recent price action and volume.",
+        "Tesla announces the launch of a new electric vehicle model with advanced autonomous driving capabilities."
+      ],
+      "counterarguments": [
+        "Social media indicates Tesla's stock is facing pressure due to ongoing supply chain issues and declining demand in key markets.",
+        "Fundamentals indicate Tesla's recent developments and market sentiment indicate a potential upside, but with significant risks due to market volatility and competition."
+      ],
+      "confidence": 0.9
+    },
+    "bear": {
+      "stance": "BEAR",
+      "final_label": "BEARISH",
+      "consensus_summary": "Tesla faces significant risks despite recent advancements, including supply chain issues, declining demand, and market volatility, outweighing the positive aspects of new models and technical indicators.",
+      "evidence": [
+        "Technical analysis indicates an upward reversal pattern, but this is often unreliable in volatile markets.",
+        "Supply chain issues and declining demand are ongoing challenges that could hinder performance.",
+        "Market volatility and competition remain significant risks despite new developments."
+      ],
+      "counterarguments": [
+        "The new EV model and autonomous driving advancements could drive future growth, but these are offset by existing challenges.",
+        "Positive technical indicators may be valid, but Tesla's history shows they can be misleading.",
+        "Fundamentals suggest potential upside, but the risks are substantial and not fully addressed."
+      ],
+      "confidence": 0.8
+    },
+    "bull_rounds": [
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla's recent developments and market sentiment indicate a potential upside, but with significant risks due to market volatility and competition.",
+        "evidence": [
+          "Tesla announces the launch of a new electric vehicle model with advanced autonomous driving capabilities.",
+          "Technical analysis indicates that Tesla stock is approaching a potential upward reversal pattern with strong support from recent price action and volume."
+        ],
+        "counterarguments": [
+          "Tesla's stock is facing pressure due to ongoing supply chain issues and declining demand in key markets."
+        ],
+        "confidence": 0.8
+      },
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla's recent advancements in autonomous driving and new EV model, coupled with strong technical indicators and fundamentals, outweigh the challenges, leading to a bullish outlook.",
+        "evidence": [
+          "Tesla's launch of a new EV model with advanced autonomous driving capabilities (news).",
+          "Technical analysis showing an upward reversal pattern with support from price action and volume (market).",
+          "Fundamentals indicate potential upside despite risks (fundamentals)."
+        ],
+        "counterarguments": [
+          "Supply chain issues and declining demand (social).",
+          "Increased competition and market volatility (news/fundamentals)."
+        ],
+        "confidence": 0.75
+      },
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla's recent advancements in autonomous driving and new EV model, along with positive technical indicators, suggest strong potential for future growth despite challenges.",
+        "evidence": [
+          "Technical analysis indicates a potential upward reversal pattern with strong support from recent price action and volume.",
+          "Tesla announces the launch of a new electric vehicle model with advanced autonomous driving capabilities."
+        ],
+        "counterarguments": [
+          "Social media indicates Tesla's stock is facing pressure due to ongoing supply chain issues and declining demand in key markets.",
+          "Fundamentals indicate Tesla's recent developments and market sentiment indicate a potential upside, but with significant risks due to market volatility and competition."
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "bear_rounds": [
+      {
+        "stance": "BEAR",
+        "final_label": "BEARISH",
+        "consensus_summary": "Tesla faces headwinds from supply chain issues, declining demand, and increased competition, despite positive developments.",
+        "evidence": [
+          "Technical analysis shows Tesla stock approaching a potential upward reversal pattern with strong support from recent price action and volume.",
+          "Tesla's stock is facing pressure due to ongoing supply chain issues and declining demand in key markets.",
+          "Tesla announces the launch of a new electric vehicle model with advanced autonomous driving capabilities.",
+          "Tesla's recent developments and market sentiment indicate a potential upside, but with significant risks due to market volatility and competition."
+        ],
+        "counterarguments": [
+          "The new electric vehicle model launch might drive future growth and mitigate some risks.",
+          "Market sentiment and technical indicators suggest a potential upward trend, which could counteract the negative factors."
+        ],
+        "confidence": 0.85
+      },
+      {
+        "stance": "BEAR",
+        "final_label": "BULLISH|BEARISH|NEUTRAL",
+        "consensus_summary": "",
+        "evidence": [
+          ""
+        ],
+        "counterarguments": [
+          ""
+        ],
+        "confidence": 0.0
+      },
+      {
+        "stance": "BEAR",
+        "final_label": "BEARISH",
+        "consensus_summary": "Tesla faces significant risks despite recent advancements, including supply chain issues, declining demand, and market volatility, outweighing the positive aspects of new models and technical indicators.",
+        "evidence": [
+          "Technical analysis indicates an upward reversal pattern, but this is often unreliable in volatile markets.",
+          "Supply chain issues and declining demand are ongoing challenges that could hinder performance.",
+          "Market volatility and competition remain significant risks despite new developments."
+        ],
+        "counterarguments": [
+          "The new EV model and autonomous driving advancements could drive future growth, but these are offset by existing challenges.",
+          "Positive technical indicators may be valid, but Tesla's history shows they can be misleading.",
+          "Fundamentals suggest potential upside, but the risks are substantial and not fully addressed."
+        ],
+        "confidence": 0.8
+      }
+    ],
+    "discussion": "Tesla's recent advancements in autonomous driving and new EV model, along with positive technical indicators, suggest strong potential for future growth despite challenges.\n\nTesla faces significant risks despite recent advancements, including supply chain issues, declining demand, and market volatility, outweighing the positive aspects of new models and technical indicators."
+  },
+  "risk": {
+    "risk_score": 45,
+    "breach_flags": [
+      "supply_chain_risks",
+      "demand_decline",
+      "market_volatility"
+    ],
+    "explainers": [
+      "Tesla faces supply chain disruptions that could affect production.",
+      "Declining demand for electric vehicles could impact Tesla's growth.",
+      "Market volatility may lead to stock price fluctuations."
+    ]
+  },
+  "manager_decision": {
+    "decision": "require_manual",
+    "reason": "Tesla has conflicting signals with high confidence in both bullish and bearish perspectives, and a moderate risk score indicates significant uncertainty.",
+    "next_steps": "Request additional data via tool call to clarify market sentiment and assess the impact of risks.",
+    "role": "RISK_MANAGER",
+    "timestamp": "2026-02-20T13:10:48.163304"
+  },
+  "trader_proposal": {
+    "ticker": "TSLA",
+    "side": "NO_TRADE",
+    "size": 0.0,
+    "entry": 0.0,
+    "stop": 0.0,
+    "target": 0.0,
+    "rationale": "Tesla presents conflicting signals with high confidence in both bullish and bearish perspectives, and moderate risk score indicates significant uncertainty. Further data is required to clarify market sentiment and assess risks before any trading decision.",
+    "confidence": 0.5,
+    "created_by": "TRADER",
+    "timestamp": "2026-02-20T13:10:52.449666"
+  },
+  "trace": [
+    {
+      "at": "2026-02-20T13:09:52.465067",
+      "stage": "PREFETCH",
+      "tool": "alpha_fetch",
+      "function": "OVERVIEW",
+      "symbol": "TSLA",
+      "tickers": null,
+      "params": {},
+      "status": "api_error",
+      "api_issue": {
+        "kind": "Information",
+        "message": "We have detected your API key as BSE23K9THV7KR1X7 and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits."
+      },
+      "tool_called": true,
+      "cache_hit": false,
+      "response_keys": [
+        "Information"
+      ],
+      "response_preview": "{\"Information\": \"We have detected your API key as BSE23K9THV7KR1X7 and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits.\"}",
+      "rag_stored": false
+    },
+    {
+      "at": "2026-02-20T13:09:53.472074",
+      "stage": "PREFETCH",
+      "tool": "alpha_fetch",
+      "function": "NEWS_SENTIMENT",
+      "symbol": null,
+      "tickers": "TSLA",
+      "params": {
+        "time_from": "20260116T0000",
+        "time_to": "20260116T2359",
+        "limit": "200",
+        "sort": "EARLIEST",
+        "as_of_date": "2026-01-16"
+      },
+      "cache_bypass": "as_of_date",
+      "status": "api_error",
+      "api_issue": {
+        "kind": "Information",
+        "message": "Thank you for using Alpha Vantage! Please consider spreading out your free API requests more sparingly (1 request per second). You may subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to lift the free key rate limit (25 requests per day), raise the per-second burst limit, and instantly unlock all premium endpoints"
+      },
+      "tool_called": true,
+      "cache_hit": false,
+      "response_keys": [
+        "Information"
+      ],
+      "response_preview": "{\"Information\": \"Thank you for using Alpha Vantage! Please consider spreading out your free API requests more sparingly (1 request per second). You may subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to lift the free key rate limit (25 requests per day), raise the per-second burst limit, and instantly unlock all premium endpoints\"}",
+      "rag_stored": false
+    }
+  ],
+  "output_paths": {
+    "latest": "flow_output_langchain.json",
+    "archive": "outputs/TSLA/flow_output_langchain_20260220_131052.json"
+  }
+}

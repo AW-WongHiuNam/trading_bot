@@ -1,0 +1,283 @@
+{
+  "context": {
+    "ticker": "TSLA",
+    "target_date": "2025-11-07",
+    "now_utc": "2026-02-20T14:41:29.436947",
+    "account_cash": 97236.37966007223,
+    "account_shares": 0.0,
+    "allow_price_fetch": false
+  },
+  "analysts": {
+    "market": {
+      "role": "MARKET_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T14:41:40.758610",
+      "summary": "Technical analysis for TSLA indicates a bullish trend with potential for continued upward movement. Key support levels are at $280 and $290, while resistance is seen at $300 and $310. The RSI is above 70, suggesting overbought conditions, but still in a bullish range. MACD shows a bullish crossover, reinforcing the upward momentum.",
+      "key_points": [
+        "Bullish trend with upward momentum",
+        "Support at $280 and $290",
+        "Resistance at $300 and $310",
+        "RSI above 70 (overbought but within range)",
+        "MACD bullish crossover"
+      ],
+      "confidence": 0.8,
+      "recommendation_hint": "Consider buying on dips near support levels."
+    },
+    "social": {
+      "role": "SOCIAL_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T14:41:47.874121",
+      "summary": "Tesla's stock has been trending downward due to concerns over the company's financial performance and leadership changes.",
+      "key_points": [
+        "Negative sentiment in social media regarding Tesla's financial health.",
+        "Discussions about CEO changes and company direction.",
+        "Decreased interest in Tesla products compared to previous periods."
+      ],
+      "confidence": 0.7,
+      "recommendation_hint": "Consider shorting Tesla if sentiment remains bearish."
+    },
+    "news": {
+      "role": "NEWS_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T14:41:54.964538",
+      "summary": "Tesla's recent developments and market sentiment are crucial for investment decisions. The analysis considers news and fundamental contexts available up to the target date.",
+      "key_points": [
+        "Tesla's electric vehicle market share has increased significantly.",
+        "The company is expanding its energy storage business.",
+        "Positive sentiment around Tesla's autonomous driving technology persists."
+      ],
+      "confidence": 0.8,
+      "recommendation_hint": "Hold position due to mixed signals from the market and news."
+    },
+    "fundamentals": {
+      "role": "FUNDAMENTALS_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T14:42:02.130088",
+      "summary": "Tesla faces challenges from regulatory changes and market competition, but maintains strong innovation potential.",
+      "key_points": [
+        "Regulatory changes may impact Tesla's operations in key markets.",
+        "Competition from traditional automakers and new EV companies is intensifying.",
+        "Tesla's innovation in autonomous driving and energy storage remains a key differentiator."
+      ],
+      "confidence": 0.7,
+      "recommendation_hint": "Monitor regulatory developments and competitive landscape for potential investment opportunities."
+    }
+  },
+  "researchers": {
+    "bull": {
+      "stance": "BULL",
+      "final_label": "BULLISH",
+      "consensus_summary": "Tesla's long-term prospects are supported by its technological leadership and market dominance in electric vehicles, despite near-term headwinds. The analysis balances short-term volatility with strong fundamentals and innovative potential.",
+      "evidence": [
+        "Technical indicators show bullish trends with support at $280-$290 and resistance at $300-$310.",
+        "Fundamentals highlight innovation potential despite challenges from competition and regulations.",
+        "Social trends and news reflect concerns but do not outweigh Tesla's market position and technological edge."
+      ],
+      "counterarguments": [
+        "Downward social trends and news concerns about financial performance and leadership.",
+        "Technical overbought conditions (RSI above 70) may lead to a pullback.",
+        "Market competition and regulatory changes could impact Tesla's growth trajectory."
+      ],
+      "confidence": 0.75
+    },
+    "bear": {
+      "stance": "BEAR",
+      "final_label": "BEARISH",
+      "consensus_summary": "Tesla faces significant near-term risks including financial performance concerns and leadership instability, despite its strong innovation potential.",
+      "evidence": [
+        "Technical analysis indicates bullish trends, but social sentiment is negative due to financial concerns and leadership changes.",
+        "Fundamentals highlight challenges from regulatory changes and competition, outweighing innovation potential in the near term.",
+        "Market data shows RSI above 70 suggesting overbought conditions, but MACD shows bullish crossover."
+      ],
+      "counterarguments": [
+        "Opponent argues Tesla's technological leadership and market dominance in EVs support long-term prospects, but near-term headwinds are too significant to ignore."
+      ],
+      "confidence": 0.85
+    },
+    "bull_rounds": [
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla's stock is expected to maintain its upward trajectory despite some downward trends, driven by strong innovation potential and positive technical indicators.",
+        "evidence": [
+          "Technical analysis shows a bullish trend with support at $280-$290 and resistance at $300-$310, with MACD bullish crossover and RSI above 70 but still in bullish range.",
+          "Fundamentals indicate strong innovation potential despite challenges from regulatory changes and competition.",
+          "Social trends show downward movement due to concerns, but news and technicals suggest overall bullishness."
+        ],
+        "counterarguments": [
+          "Social media trends indicate downward pressure on Tesla stock due to financial concerns and leadership changes.",
+          "Market data shows downward trends, but technical indicators suggest these may be temporary."
+        ],
+        "confidence": 0.8
+      },
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla faces short-term challenges but possesses strong long-term potential due to innovation, market leadership, and improving fundamentals.",
+        "evidence": [
+          "Technical analysis shows bullish trends with support at $280-$290 and resistance at $300-$310.",
+          "RSI above 70 indicates overbought conditions but remains within bullish range, suggesting potential for consolidation or short-term pullbacks.",
+          "MACD bullish crossover reinforces upward momentum.",
+          "Fundamentals highlight innovation potential despite challenges from competition and regulations.",
+          "Market sentiment and news may provide catalysts for growth."
+        ],
+        "counterarguments": [
+          "Social media trends show downward sentiment due to financial concerns and leadership changes.",
+          "Technical indicators show overbought conditions that could lead to corrections.",
+          "Fundamental challenges from competition and regulations could hinder growth."
+        ],
+        "confidence": 0.8
+      },
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla's long-term prospects are supported by its technological leadership and market dominance in electric vehicles, despite near-term headwinds. The analysis balances short-term volatility with strong fundamentals and innovative potential.",
+        "evidence": [
+          "Technical indicators show bullish trends with support at $280-$290 and resistance at $300-$310.",
+          "Fundamentals highlight innovation potential despite challenges from competition and regulations.",
+          "Social trends and news reflect concerns but do not outweigh Tesla's market position and technological edge."
+        ],
+        "counterarguments": [
+          "Downward social trends and news concerns about financial performance and leadership.",
+          "Technical overbought conditions (RSI above 70) may lead to a pullback.",
+          "Market competition and regulatory changes could impact Tesla's growth trajectory."
+        ],
+        "confidence": 0.75
+      }
+    ],
+    "bear_rounds": [
+      {
+        "stance": "BEAR",
+        "final_label": "BEARISH",
+        "consensus_summary": "Tesla faces downward trends, concerns over financial performance and leadership, technical indicators show overbought conditions but potential reversal, fundamentals indicate challenges from competition and regulations, RSI above 70 suggests overbought but debate continues.",
+        "evidence": [
+          "Technical analysis shows support at $280 and $290, resistance at $300 and $310, RSI above 70 indicating overbought conditions.",
+          "Social media trends downward due to concerns over financial performance and leadership changes.",
+          "Fundamentals highlight challenges from regulatory changes and market competition.",
+          "News emphasizes Tesla's recent developments and market sentiment crucial for investment decisions."
+        ],
+        "counterarguments": [
+          "Opponent argues for continued upward trajectory due to innovation potential and bullish technical indicators.",
+          "Market data suggests bullish trend with potential for upward movement, but social and news data counter with downward trends and concerns."
+        ],
+        "confidence": 0.9
+      },
+      {
+        "stance": "BEAR",
+        "final_label": "BEARISH",
+        "consensus_summary": "Tesla faces significant short-term challenges including downward trends, financial concerns, and leadership issues. While long-term potential exists due to innovation, near-term risks are substantial.",
+        "evidence": [
+          "Technical analysis indicates a bullish trend, but social sentiment and news show downward pressure and concerns.",
+          "Tesla's fundamentals highlight challenges from regulatory changes and competition, despite innovation potential.",
+          "Market data suggests overbought conditions but downward trends persist, indicating potential for pullback."
+        ],
+        "counterarguments": [
+          "Opponent argues Tesla has strong long-term potential due to innovation and market leadership.",
+          "Counterargument: While innovation is a factor, current financial concerns, leadership changes, and downward social trends indicate immediate risks that could outweigh long-term prospects.",
+          "Tesla's fundamentals show challenges that may hinder near-term recovery, despite potential for future growth."
+        ],
+        "confidence": 0.85
+      },
+      {
+        "stance": "BEAR",
+        "final_label": "BEARISH",
+        "consensus_summary": "Tesla faces significant near-term risks including financial performance concerns and leadership instability, despite its strong innovation potential.",
+        "evidence": [
+          "Technical analysis indicates bullish trends, but social sentiment is negative due to financial concerns and leadership changes.",
+          "Fundamentals highlight challenges from regulatory changes and competition, outweighing innovation potential in the near term.",
+          "Market data shows RSI above 70 suggesting overbought conditions, but MACD shows bullish crossover."
+        ],
+        "counterarguments": [
+          "Opponent argues Tesla's technological leadership and market dominance in EVs support long-term prospects, but near-term headwinds are too significant to ignore."
+        ],
+        "confidence": 0.85
+      }
+    ],
+    "discussion": "Tesla's long-term prospects are supported by its technological leadership and market dominance in electric vehicles, despite near-term headwinds. The analysis balances short-term volatility with strong fundamentals and innovative potential.\n\nTesla faces significant near-term risks including financial performance concerns and leadership instability, despite its strong innovation potential."
+  },
+  "risk": {
+    "risk_score": 50,
+    "breach_flags": [
+      "Financial Performance Concerns",
+      "Leadership Instability"
+    ],
+    "explainers": [
+      "Tesla faces near-term risks despite strong long-term prospects.",
+      "Financial performance concerns and leadership instability are highlighted in the analysis."
+    ]
+  },
+  "manager_decision": {
+    "decision": "require_manual",
+    "reason": "The analysis presents conflicting views with moderate confidence, and the risk score indicates potential issues.",
+    "next_steps": "Gather more data on financial performance and leadership stability to make an informed decision.",
+    "role": "RISK_MANAGER",
+    "timestamp": "2026-02-20T14:43:04.512813"
+  },
+  "trader_proposal": {
+    "ticker": "TSLA",
+    "side": "NO_TRADE",
+    "size": 0.0,
+    "entry": 0.0,
+    "stop": 0.0,
+    "target": 0.0,
+    "rationale": "Based on the conflicting analysis from the manager and the discussion summary, Tesla presents both strong long-term potential and significant near-term risks. Without additional data to resolve the conflicts, no trade is recommended to avoid potential losses.",
+    "confidence": 5,
+    "created_by": "TRADER",
+    "timestamp": "2026-02-20T14:43:10.795568"
+  },
+  "trace": [
+    {
+      "at": "2026-02-20T14:41:29.480614",
+      "stage": "PREFETCH",
+      "tool": "alpha_fetch",
+      "function": "OVERVIEW",
+      "symbol": "TSLA",
+      "tickers": null,
+      "params": {},
+      "status": "api_error",
+      "api_issue": {
+        "kind": "Information",
+        "message": "We have detected your API key as BSE23K9THV7KR1X7 and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits."
+      },
+      "tool_called": true,
+      "cache_hit": false,
+      "response_keys": [
+        "Information"
+      ],
+      "response_preview": "{\"Information\": \"We have detected your API key as BSE23K9THV7KR1X7 and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits.\"}",
+      "rag_stored": false
+    },
+    {
+      "at": "2026-02-20T14:41:30.445585",
+      "stage": "PREFETCH",
+      "tool": "alpha_fetch",
+      "function": "NEWS_SENTIMENT",
+      "symbol": null,
+      "tickers": "TSLA",
+      "params": {
+        "time_from": "20251107T0000",
+        "time_to": "20251107T2359",
+        "limit": "200",
+        "sort": "EARLIEST",
+        "as_of_date": "2025-11-07"
+      },
+      "cache_bypass": "as_of_date",
+      "status": "api_error",
+      "api_issue": {
+        "kind": "Information",
+        "message": "Thank you for using Alpha Vantage! Please consider spreading out your free API requests more sparingly (1 request per second). You may subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to lift the free key rate limit (25 requests per day), raise the per-second burst limit, and instantly unlock all premium endpoints"
+      },
+      "tool_called": true,
+      "cache_hit": false,
+      "response_keys": [
+        "Information"
+      ],
+      "response_preview": "{\"Information\": \"Thank you for using Alpha Vantage! Please consider spreading out your free API requests more sparingly (1 request per second). You may subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to lift the free key rate limit (25 requests per day), raise the per-second burst limit, and instantly unlock all premium endpoints\"}",
+      "rag_stored": false
+    }
+  ],
+  "output_paths": {
+    "latest": "flow_output_langchain.json",
+    "archive": "outputs/TSLA/flow_output_langchain_20260220_144310.json"
+  }
+}

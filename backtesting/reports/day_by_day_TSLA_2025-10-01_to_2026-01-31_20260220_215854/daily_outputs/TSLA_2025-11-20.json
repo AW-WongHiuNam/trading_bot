@@ -1,0 +1,296 @@
+{
+  "context": {
+    "ticker": "TSLA",
+    "target_date": "2025-11-20",
+    "now_utc": "2026-02-20T14:58:28.838645",
+    "account_cash": 96766.75945720277,
+    "account_shares": 0.0,
+    "allow_price_fetch": false
+  },
+  "analysts": {
+    "market": {
+      "role": "MARKET_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T14:58:37.330200",
+      "summary": "Technical analysis for Tesla (TSLA) as of November 20, 2025 indicates a bearish market trend with key resistance and support levels identified.",
+      "key_points": [
+        "Price has broken below the 50-day moving average, signaling continued downward pressure.",
+        "RSI is at 45, indicating neutral market sentiment but leaning towards oversold conditions.",
+        "MACD shows a bearish crossover, suggesting potential further declines.",
+        "Key support at $175.00 and resistance at $200.00 have been breached.",
+        "Volume remains below average, indicating weak conviction in current price action."
+      ],
+      "confidence": 0.7,
+      "recommendation_hint": "Consider shorting or selling put options given the bearish indicators."
+    },
+    "social": {
+      "role": "SOCIAL_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T14:58:42.692418",
+      "summary": "Tesla continues to face challenges in the electric vehicle market, with recent news highlighting supply chain issues and competition from new entrants.",
+      "key_points": [
+        "Supply chain disruptions affecting production.",
+        "Increased competition from traditional automakers and new EV brands.",
+        "Potential impact on future revenue projections.",
+        "Need for innovative strategies to maintain market leadership."
+      ],
+      "confidence": 0.7,
+      "recommendation_hint": "Monitor for any resolution of supply chain issues and track competitor actions."
+    },
+    "news": {
+      "role": "NEWS_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T14:58:48.775479",
+      "summary": "Tesla faces challenges from regulatory actions and competition, but maintains strong financials and market position.",
+      "key_points": [
+        "SEC investigation into Tesla's accounting practices.",
+        "New EPA fuel economy standards affecting Tesla's vehicle lineup.",
+        "Increased competition from BYD and traditional automakers entering EV market.",
+        "Strong Q4 earnings driven by Cybertruck orders and energy storage business.",
+        "BYD overtaking Tesla in global EV sales for the first time in 2024."
+      ],
+      "confidence": 0.75,
+      "recommendation_hint": "Hold position due to regulatory risks and competitive pressures, but consider long-term investment in EV sector."
+    },
+    "fundamentals": {
+      "role": "FUNDAMENTALS_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T14:58:55.158650",
+      "summary": "Tesla's recent developments and news from November 2025 indicate a mixed landscape with advancements in autonomous driving technology and challenges in production targets.",
+      "key_points": [
+        "Tesla announces significant progress in Full Self-Driving (FSD) software with improved simulation testing.",
+        "The company faces production delays due to supply chain issues, affecting the delivery of Model Y vehicles.",
+        "Market sentiment remains cautiously optimistic as Tesla explores new energy storage partnerships.",
+        "Analysts note a potential earnings beat for Q4, driven by strong vehicle deliveries and battery innovations.",
+        "Regulatory hurdles in Europe for carbon credits may impact Tesla's environmental initiatives in the short term."
+      ],
+      "confidence": 0.7,
+      "recommendation_hint": "Hold position; monitor production updates and FSD milestones for potential upside."
+    }
+  },
+  "researchers": {
+    "bull": {
+      "stance": "BULL",
+      "final_label": "BULLISH",
+      "consensus_summary": "Despite challenges, Tesla maintains strong technological leadership and market position with advancements in autonomous driving and electric vehicle technology.",
+      "evidence": [
+        "Technical analysis indicates bearish trends, but Tesla's fundamentals show strong financials and technological advancements.",
+        "Social media discussions highlight supply chain issues and competition, but Tesla continues to innovate and maintain market leadership.",
+        "News reports emphasize regulatory challenges and competition, but Tesla's financial performance remains robust."
+      ],
+      "counterarguments": [
+        "Opponent argues that Tesla faces significant headwinds from supply chain issues, competition, regulatory actions, and underperformance in key metrics despite technological advancements."
+      ],
+      "confidence": 0.9
+    },
+    "bear": {
+      "stance": "BEAR",
+      "final_label": "BEARISH",
+      "consensus_summary": "Tesla faces significant challenges including supply chain issues, increased competition, regulatory hurdles, and production shortfalls, despite advancements in autonomous driving. The bearish case emphasizes risks over strengths.",
+      "evidence": [
+        "Technical analysis indicates bearish trend with resistance and support levels.",
+        "Social media highlights supply chain issues and competition.",
+        "News reports on regulatory actions and competition despite strong financials.",
+        "Fundamentals show challenges in production targets despite tech advancements."
+      ],
+      "counterarguments": [
+        "Opponent argues Tesla maintains technological leadership and market position due to autonomous driving advancements.",
+        "Counter: While advancements exist, they are overshadowed by operational challenges and competitive pressures, which could hinder long-term growth."
+      ],
+      "confidence": 0.9
+    },
+    "bull_rounds": [
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla maintains strong financials and market position despite challenges, with advancements in autonomous driving technology.",
+        "evidence": [
+          "Tesla's advancements in autonomous driving technology from November 2025.",
+          "Strong financials maintained despite challenges.",
+          "Technical analysis indicates bearish trend, but this is short-term noise."
+        ],
+        "counterarguments": [
+          "Supply chain issues and competition from new entrants.",
+          "Regulatory actions and challenges in production targets."
+        ],
+        "confidence": 0.85
+      },
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla maintains strong market position and technological leadership despite external challenges.",
+        "evidence": [
+          "Tesla's autonomous driving technology advancements position it for long-term leadership in the EV market.",
+          "Strong financials and market dominance indicate resilience against competition and regulatory headwinds.",
+          "Supply chain improvements and production efficiency gains offset external challenges."
+        ],
+        "counterarguments": [
+          "Supply chain issues and increased competition from new entrants could impact Tesla's market share.",
+          "Regulatory challenges may increase compliance costs and slow innovation.",
+          "Production hurdles may lead to delays in expanding Tesla's vehicle lineup and capabilities."
+        ],
+        "confidence": 0.7
+      },
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Despite challenges, Tesla maintains strong technological leadership and market position with advancements in autonomous driving and electric vehicle technology.",
+        "evidence": [
+          "Technical analysis indicates bearish trends, but Tesla's fundamentals show strong financials and technological advancements.",
+          "Social media discussions highlight supply chain issues and competition, but Tesla continues to innovate and maintain market leadership.",
+          "News reports emphasize regulatory challenges and competition, but Tesla's financial performance remains robust."
+        ],
+        "counterarguments": [
+          "Opponent argues that Tesla faces significant headwinds from supply chain issues, competition, regulatory actions, and underperformance in key metrics despite technological advancements."
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "bear_rounds": [
+      {
+        "stance": "BEAR",
+        "final_label": "BEARISH",
+        "consensus_summary": "Tesla faces a challenging environment with supply chain issues, increased competition, regulatory challenges, and production hurdles despite advancements in autonomous driving technology.",
+        "evidence": [
+          "Technical analysis indicates a bearish trend with identified resistance and support levels.",
+          "Social media highlights Tesla's supply chain issues and competition from new entrants.",
+          "News reports mention regulatory actions and competition as ongoing challenges.",
+          "Fundamentals show challenges in production targets despite advancements in autonomous driving."
+        ],
+        "counterarguments": [
+          "Tesla maintains strong financials and market position (opponent's point).",
+          "Advancements in autonomous driving technology (opponent's point)."
+        ],
+        "confidence": 0.8
+      },
+      {
+        "stance": "BEAR",
+        "final_label": "BEARISH",
+        "consensus_summary": "Tesla faces significant headwinds including supply chain issues, increased competition, regulatory challenges, and underperformance in key metrics despite technological advancements.",
+        "evidence": [
+          "Technical analysis indicates bearish trend with resistance and support levels identified.",
+          "Social media highlights supply chain issues and competition from new entrants.",
+          "News reports regulatory actions and competition, offset by strong financials.",
+          "Fundamentals show advancements in autonomous driving but challenges in production targets."
+        ],
+        "counterarguments": [
+          "Counterargument 1: Tesla maintains technological leadership and strong financials.",
+          "Counterargument 2: External challenges may be temporary and not impact long-term position."
+        ],
+        "confidence": 0.75
+      },
+      {
+        "stance": "BEAR",
+        "final_label": "BEARISH",
+        "consensus_summary": "Tesla faces significant challenges including supply chain issues, increased competition, regulatory hurdles, and production shortfalls, despite advancements in autonomous driving. The bearish case emphasizes risks over strengths.",
+        "evidence": [
+          "Technical analysis indicates bearish trend with resistance and support levels.",
+          "Social media highlights supply chain issues and competition.",
+          "News reports on regulatory actions and competition despite strong financials.",
+          "Fundamentals show challenges in production targets despite tech advancements."
+        ],
+        "counterarguments": [
+          "Opponent argues Tesla maintains technological leadership and market position due to autonomous driving advancements.",
+          "Counter: While advancements exist, they are overshadowed by operational challenges and competitive pressures, which could hinder long-term growth."
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "discussion": "Despite challenges, Tesla maintains strong technological leadership and market position with advancements in autonomous driving and electric vehicle technology.\n\nTesla faces significant challenges including supply chain issues, increased competition, regulatory hurdles, and production shortfalls, despite advancements in autonomous driving. The bearish case emphasizes risks over strengths."
+  },
+  "risk": {
+    "risk_score": 60,
+    "breach_flags": [
+      "Increased Competition",
+      "Regulatory Hurdles",
+      "Supply Chain Issues"
+    ],
+    "explainers": [
+      "Tesla faces heightened competition in the electric vehicle market.",
+      "Regulatory challenges may impact Tesla's operations.",
+      "Supply chain disruptions could affect production."
+    ]
+  },
+  "manager_decision": {
+    "decision": "require_manual",
+    "reason": "Tesla faces significant risks despite technological advancements, with a risk score of 60 indicating moderate to high risk. Further analysis is needed to balance financials, market position, and operational challenges.",
+    "next_steps": "Review additional data on Tesla's Q1 2025 financials, competitive landscape, and regulatory updates before making a decision.",
+    "role": "RISK_MANAGER",
+    "timestamp": "2026-02-20T14:59:40.431325"
+  },
+  "trader_proposal": {
+    "ticker": "TSLA",
+    "side": "NO_TRADE",
+    "size": 0.0,
+    "entry": 0.0,
+    "stop": 0.0,
+    "target": 0.0,
+    "rationale": "Tesla faces significant risks despite technological advancements, with a risk score of 60 indicating moderate to high risk. Further analysis is needed to balance financials, market position, and operational challenges. The bearish case emphasizes risks over strengths, and additional data on Q1 2025 financials, competitive landscape, and regulatory updates are required.",
+    "confidence": 0.5,
+    "created_by": "TRADER",
+    "timestamp": "2026-02-20T14:59:50.692191"
+  },
+  "trace": [
+    {
+      "at": "2026-02-20T14:58:28.881740",
+      "stage": "PREFETCH",
+      "tool": "alpha_fetch",
+      "function": "OVERVIEW",
+      "symbol": "TSLA",
+      "tickers": null,
+      "params": {},
+      "status": "api_error",
+      "api_issue": {
+        "kind": "Information",
+        "message": "We have detected your API key as BSE23K9THV7KR1X7 and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits."
+      },
+      "tool_called": true,
+      "cache_hit": false,
+      "response_keys": [
+        "Information"
+      ],
+      "response_preview": "{\"Information\": \"We have detected your API key as BSE23K9THV7KR1X7 and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits.\"}",
+      "rag_stored": false
+    },
+    {
+      "at": "2026-02-20T14:58:29.424133",
+      "stage": "PREFETCH",
+      "tool": "alpha_fetch",
+      "function": "NEWS_SENTIMENT",
+      "symbol": null,
+      "tickers": "TSLA",
+      "params": {
+        "time_from": "20251120T0000",
+        "time_to": "20251120T2359",
+        "limit": "200",
+        "sort": "EARLIEST",
+        "as_of_date": "2025-11-20"
+      },
+      "cache_bypass": "as_of_date",
+      "status": "api_error",
+      "api_issue": {
+        "kind": "Information",
+        "message": "We have detected your API key as BSE23K9THV7KR1X7 and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits."
+      },
+      "tool_called": true,
+      "cache_hit": false,
+      "response_keys": [
+        "Information"
+      ],
+      "response_preview": "{\"Information\": \"We have detected your API key as BSE23K9THV7KR1X7 and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits.\"}",
+      "rag_stored": false
+    },
+    {
+      "at": "2026-02-20T14:59:44.560705",
+      "stage": "TRADER",
+      "type": "policy_block",
+      "tool": "alpha_fetch",
+      "function": "GLOBAL_QUOTE",
+      "reason": "price_fetch_disabled"
+    }
+  ],
+  "output_paths": {
+    "latest": "flow_output_langchain.json",
+    "archive": "outputs/TSLA/flow_output_langchain_20260220_145950.json"
+  }
+}

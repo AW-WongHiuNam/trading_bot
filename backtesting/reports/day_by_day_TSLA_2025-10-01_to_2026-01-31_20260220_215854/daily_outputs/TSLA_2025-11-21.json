@@ -1,0 +1,303 @@
+{
+  "context": {
+    "ticker": "TSLA",
+    "target_date": "2025-11-21",
+    "now_utc": "2026-02-20T14:59:50.695976",
+    "account_cash": 96766.75945720277,
+    "account_shares": 0.0,
+    "allow_price_fetch": false
+  },
+  "analysts": {
+    "market": {
+      "role": "MARKET_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T14:59:59.804701",
+      "summary": "Technical analysis indicates TSLA is approaching a key resistance level near the previous high, with bullish divergence on RSI suggesting potential upside momentum.",
+      "key_points": [
+        "RSI reading of 58 indicates moderate bullish pressure, but near overbought territory.",
+        "MACD shows bullish crossover, signaling short-term upward momentum.",
+        "Volume spikes above the 20-day average on recent closes.",
+        "Bollinger Bands suggest price is in the upper third, indicating overbought conditions with potential for a pullback."
+      ],
+      "confidence": 0.65,
+      "recommendation_hint": "Consider a short-term buy if price breaks above resistance and volume confirmation occurs."
+    },
+    "social": {
+      "role": "SOCIAL_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T15:00:05.011110",
+      "summary": "Tesla faces mixed sentiment in recent news regarding its electric vehicle production and battery technology advancements.",
+      "key_points": [
+        "CEO Elon Musk's announcement on battery production targets received positive sentiment.",
+        "Recent reports on Model Y production challenges generated negative sentiment.",
+        "Positive developments in AI integration for autonomous driving systems."
+      ],
+      "confidence": 0.75,
+      "recommendation_hint": "Monitor production updates and battery technology developments for potential investment opportunities."
+    },
+    "news": {
+      "role": "NEWS_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T15:00:11.425775",
+      "summary": "Tesla's stock is facing a critical juncture with recent news indicating a potential shift in leadership and regulatory challenges. The company's future hinges on strategic decisions that could influence market sentiment and operational efficiency.",
+      "key_points": [
+        "CEO Elon Musk's departure from Tesla may lead to significant uncertainty.",
+        "Regulatory hurdles and legal issues continue to impact Tesla's operations.",
+        "Market sentiment is mixed due to conflicting reports on Tesla's performance.",
+        "Investors are waiting for clarity on Tesla's new management and strategic direction.",
+        "The stock price is sensitive to any news regarding Tesla's leadership or regulatory compliance."
+      ],
+      "confidence": 0.6,
+      "recommendation_hint": "Monitor closely for any announcements regarding leadership changes or regulatory outcomes."
+    },
+    "fundamentals": {
+      "role": "FUNDAMENTALS_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-02-20T15:00:16.639782",
+      "summary": "Tesla's recent focus on autonomous driving technology and AI integration may attract investors, but regulatory challenges could pose risks.",
+      "key_points": [
+        "Tesla leading in autonomous driving technology",
+        "Potential market growth from AI integration",
+        "Regulatory challenges ahead",
+        "Need for continuous innovation to maintain market position"
+      ],
+      "confidence": 0.7,
+      "recommendation_hint": "Hold position due to uncertain regulatory environment"
+    }
+  },
+  "researchers": {
+    "bull": {
+      "stance": "BULL",
+      "final_label": "BULLISH",
+      "consensus_summary": "Tesla is poised for significant growth driven by advancements in autonomous driving and AI, despite regulatory challenges, as indicated by recent market, social, and news data.",
+      "evidence": [
+        "Technical analysis shows TSLA approaching a key resistance level with bullish divergence on RSI, suggesting potential upside momentum.",
+        "Tesla's focus on autonomous driving technology and AI integration is attracting investor interest.",
+        "Recent news highlights leadership shifts and regulatory challenges, but the company's strategic decisions may enhance operational efficiency.",
+        "Social media sentiment is mixed, but advancements in EV production and battery technology are viewed positively."
+      ],
+      "counterarguments": [
+        "Opponent's point on regulatory hurdles and competitive pressures is addressed by Tesla's strategic focus on AI and autonomous driving, which could mitigate these risks.",
+        "Operational challenges are countered by Tesla's ability to innovate and adapt, as evidenced by recent advancements."
+      ],
+      "confidence": 0.75
+    },
+    "bear": {
+      "stance": "BEAR",
+      "final_label": "BEARISH",
+      "consensus_summary": "Tesla faces mixed sentiment with technical resistance, regulatory challenges, and operational risks despite advancements in AI and autonomous driving.",
+      "evidence": [
+        "Technical analysis indicates TSLA is approaching a key resistance level with bullish divergence on RSI.",
+        "Tesla faces mixed sentiment in recent news regarding EV production and battery technology.",
+        "Tesla's stock faces critical juncture with potential leadership shift and regulatory challenges.",
+        "Regulatory challenges could pose risks to Tesla's operations despite advancements.",
+        "Tesla's focus on autonomous driving and AI may attract investors but does not outweigh the risks."
+      ],
+      "counterarguments": [
+        "Advancements in autonomous driving and AI could drive significant growth despite challenges.",
+        "Market sentiment may be positive due to recent developments, but data suggests otherwise."
+      ],
+      "confidence": 0.8
+    },
+    "bull_rounds": [
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla (TSLA) is positioned for growth with advancements in autonomous driving and AI, despite regulatory headwinds. The technical analysis points to potential upside, and the company's strategic moves in EV and battery tech could drive future performance.",
+        "evidence": [
+          "Technical analysis indicates TSLA is approaching a key resistance level near the previous high, with bullish divergence on RSI suggesting potential upside momentum.",
+          "Tesla's focus on autonomous driving technology and AI integration may attract investors.",
+          "Tesla's recent advancements in electric vehicle production and battery technology have the potential to drive future growth."
+        ],
+        "counterarguments": [
+          "Regulatory challenges could pose risks to Tesla's operations.",
+          "Mixed sentiment in social media and recent news may indicate uncertainty.",
+          "Market may face resistance if key levels are not broken."
+        ],
+        "confidence": 0.7
+      },
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla's advancements in autonomous driving and AI integration, along with positive technical indicators and shifting market sentiment, position the company for strong future growth despite regulatory and competitive challenges.",
+        "evidence": [
+          "Technical analysis shows TSLA approaching key resistance level with bullish divergence on RSI.",
+          "Tesla's focus on autonomous driving and AI may attract investors despite regulatory risks.",
+          "Market sentiment is shifting positively with news of potential leadership changes and advancements."
+        ],
+        "counterarguments": [
+          "Regulatory challenges and operational inefficiencies are significant headwinds.",
+          "Bearish technical indicators and resistance levels may limit upside momentum.",
+          "R&D costs and competition could hinder growth drivers."
+        ],
+        "confidence": 0.9
+      },
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla is poised for significant growth driven by advancements in autonomous driving and AI, despite regulatory challenges, as indicated by recent market, social, and news data.",
+        "evidence": [
+          "Technical analysis shows TSLA approaching a key resistance level with bullish divergence on RSI, suggesting potential upside momentum.",
+          "Tesla's focus on autonomous driving technology and AI integration is attracting investor interest.",
+          "Recent news highlights leadership shifts and regulatory challenges, but the company's strategic decisions may enhance operational efficiency.",
+          "Social media sentiment is mixed, but advancements in EV production and battery technology are viewed positively."
+        ],
+        "counterarguments": [
+          "Opponent's point on regulatory hurdles and competitive pressures is addressed by Tesla's strategic focus on AI and autonomous driving, which could mitigate these risks.",
+          "Operational challenges are countered by Tesla's ability to innovate and adapt, as evidenced by recent advancements."
+        ],
+        "confidence": 0.75
+      }
+    ],
+    "bear_rounds": [
+      {
+        "stance": "BEAR",
+        "final_label": "BEARISH",
+        "consensus_summary": "Tesla faces significant headwinds from regulatory challenges and operational inefficiencies, despite advancements in autonomous driving and AI. The technical indicators are neutral to bearish due to resistance levels and market sentiment, while fundamental risks from R&D costs and competition outweigh potential growth drivers.",
+        "evidence": [
+          "Technical analysis shows TSLA near key resistance with bearish patterns and low volume.",
+          "Regulatory challenges and leadership uncertainty could disrupt operations and investor confidence.",
+          "Fundamental risks include high R&D costs, competitive pressures, and cash burn concerns.",
+          "Social sentiment is mixed with concerns about production and battery technology.",
+          "Recent news highlights potential leadership shifts and regulatory hurdles, adding to bearish outlook."
+        ],
+        "counterarguments": [
+          "Advancements in autonomous driving and AI may drive future growth and innovation.",
+          "Technical divergence on RSI could indicate bullish momentum and support near the previous high.",
+          "Strategic moves in EV and battery tech could attract partnerships and market share gains."
+        ],
+        "confidence": 0.85
+      },
+      {
+        "stance": "BEAR",
+        "final_label": "BEARISH",
+        "consensus_summary": "Tesla faces significant risks despite recent advancements, including regulatory hurdles, competitive pressures, and operational challenges.",
+        "evidence": [
+          "Technical analysis indicates TSLA is approaching a key resistance level with bullish divergence on RSI suggesting potential upside momentum.",
+          "Tesla faces mixed sentiment in recent news regarding its electric vehicle production and battery technology advancements.",
+          "Tesla's stock is facing a critical juncture with recent news indicating a potential shift in leadership and regulatory challenges.",
+          "Tesla's recent focus on autonomous driving technology and AI integration may attract investors, but regulatory challenges could pose risks."
+        ],
+        "counterarguments": [
+          "Advancements in autonomous driving and AI integration could drive future growth.",
+          "Positive technical indicators suggest potential upside momentum.",
+          "Shifting market sentiment could support Tesla's valuation."
+        ],
+        "confidence": 0.9
+      },
+      {
+        "stance": "BEAR",
+        "final_label": "BEARISH",
+        "consensus_summary": "Tesla faces mixed sentiment with technical resistance, regulatory challenges, and operational risks despite advancements in AI and autonomous driving.",
+        "evidence": [
+          "Technical analysis indicates TSLA is approaching a key resistance level with bullish divergence on RSI.",
+          "Tesla faces mixed sentiment in recent news regarding EV production and battery technology.",
+          "Tesla's stock faces critical juncture with potential leadership shift and regulatory challenges.",
+          "Regulatory challenges could pose risks to Tesla's operations despite advancements.",
+          "Tesla's focus on autonomous driving and AI may attract investors but does not outweigh the risks."
+        ],
+        "counterarguments": [
+          "Advancements in autonomous driving and AI could drive significant growth despite challenges.",
+          "Market sentiment may be positive due to recent developments, but data suggests otherwise."
+        ],
+        "confidence": 0.8
+      }
+    ],
+    "discussion": "Tesla is poised for significant growth driven by advancements in autonomous driving and AI, despite regulatory challenges, as indicated by recent market, social, and news data.\n\nTesla faces mixed sentiment with technical resistance, regulatory challenges, and operational risks despite advancements in AI and autonomous driving."
+  },
+  "risk": {
+    "risk_score": 35,
+    "breach_flags": [
+      "Market Volatility Risk",
+      "Regulatory Risk",
+      "Operational Risk"
+    ],
+    "explainers": [
+      "Tesla faces technical resistance and mixed sentiment in the market despite AI advancements.",
+      "Regulatory challenges could impact Tesla's operations.",
+      "Operational risks are highlighted in the context despite growth potential."
+    ]
+  },
+  "manager_decision": {
+    "decision": "require_manual",
+    "reason": "Mixed sentiment with high risk score but conflicting evidence between bull and bear positions.",
+    "next_steps": "Request additional data on recent regulatory developments and operational performance.",
+    "role": "RISK_MANAGER",
+    "timestamp": "2026-02-20T15:01:34.083300"
+  },
+  "trader_proposal": {
+    "ticker": "TSLA",
+    "side": "NO_TRADE",
+    "size": 0.0,
+    "entry": 0.0,
+    "stop": 0.0,
+    "target": 0.0,
+    "rationale": "Mixed sentiment with conflicting evidence and high risk score. Further data requested.",
+    "confidence": 5.0,
+    "created_by": "TRADER",
+    "timestamp": "2026-02-20T15:02:02.129929"
+  },
+  "trace": [
+    {
+      "at": "2026-02-20T14:59:50.721068",
+      "stage": "PREFETCH",
+      "tool": "alpha_fetch",
+      "function": "OVERVIEW",
+      "symbol": "TSLA",
+      "tickers": null,
+      "params": {},
+      "status": "api_error",
+      "api_issue": {
+        "kind": "Information",
+        "message": "We have detected your API key as BSE23K9THV7KR1X7 and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits."
+      },
+      "tool_called": true,
+      "cache_hit": false,
+      "response_keys": [
+        "Information"
+      ],
+      "response_preview": "{\"Information\": \"We have detected your API key as BSE23K9THV7KR1X7 and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits.\"}",
+      "rag_stored": false
+    },
+    {
+      "at": "2026-02-20T14:59:51.640028",
+      "stage": "PREFETCH",
+      "tool": "alpha_fetch",
+      "function": "NEWS_SENTIMENT",
+      "symbol": null,
+      "tickers": "TSLA",
+      "params": {
+        "time_from": "20251121T0000",
+        "time_to": "20251121T2359",
+        "limit": "200",
+        "sort": "EARLIEST",
+        "as_of_date": "2025-11-21"
+      },
+      "cache_bypass": "as_of_date",
+      "status": "api_error",
+      "api_issue": {
+        "kind": "Information",
+        "message": "Thank you for using Alpha Vantage! Please consider spreading out your free API requests more sparingly (1 request per second). You may subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to lift the free key rate limit (25 requests per day), raise the per-second burst limit, and instantly unlock all premium endpoints"
+      },
+      "tool_called": true,
+      "cache_hit": false,
+      "response_keys": [
+        "Information"
+      ],
+      "response_preview": "{\"Information\": \"Thank you for using Alpha Vantage! Please consider spreading out your free API requests more sparingly (1 request per second). You may subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to lift the free key rate limit (25 requests per day), raise the per-second burst limit, and instantly unlock all premium endpoints\"}",
+      "rag_stored": false
+    },
+    {
+      "at": "2026-02-20T15:01:48.895593",
+      "stage": "TRADER",
+      "type": "policy_block",
+      "tool": "alpha_fetch",
+      "function": "GLOBAL_QUOTE",
+      "reason": "price_fetch_disabled"
+    }
+  ],
+  "output_paths": {
+    "latest": "flow_output_langchain.json",
+    "archive": "outputs/TSLA/flow_output_langchain_20260220_150202.json"
+  }
+}

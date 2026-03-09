@@ -1,0 +1,10 @@
+date,cash_before,cash_after,shares_context,sanity_passed,sanity_error_count,side,size,signal_confidence,trade_executed,trade_reason,entry_date,exit_date,entry_price,exit_price,net_return,pnl,daily_output,discussion,bull_rounds,bear_rounds
+2026-01-05,100000.0,100013.39199784936,0.0,True,0,BUY,0.16,0.9,True,executed,2026-01-06,2026-01-13,446.38,447.2,0.0008369998655853605,13.391997849365769,backtesting/reports/day_by_day_TSLA_2026-01-05_to_2026-01-07_20260220_215419/daily_outputs/TSLA_2026-01-05.json,"Tesla's long-term prospects remain strong despite current challenges, driven by technological leadership, market dominance in EVs, and innovative capabilities.
+
+Tesla faces significant regulatory and supply chain challenges that could hinder its growth, despite technological strengths.",3,3
+2026-01-06,100013.39199784936,100079.10623414692,0.0,True,0,BUY,0.1,0.85,True,executed,2026-01-07,2026-01-14,435.9,439.2,0.006570543702684129,65.71423629755485,backtesting/reports/day_by_day_TSLA_2026-01-05_to_2026-01-07_20260220_215419/daily_outputs/TSLA_2026-01-06.json,"Tesla's long-term prospects remain strong despite recent challenges, driven by innovation in battery technology, leadership in sustainable energy, and potential for growth in autonomous driving.
+
+Tesla faces significant competitive pressures and operational challenges despite recent positive developments in battery technology and sustainable energy initiatives.",3,3
+2026-01-07,100079.10623414692,99819.30401784198,0.0,True,0,SELL,0.1,0.85,True,executed,2026-01-08,2026-01-15,427.89,438.57,-0.025959685900581942,-259.80221630494265,backtesting/reports/day_by_day_TSLA_2026-01-05_to_2026-01-07_20260220_215419/daily_outputs/TSLA_2026-01-07.json,"Tesla is positioned to overcome current challenges through innovation and market leadership.
+
+Tesla faces significant regulatory challenges, production delays, and increasing competition, which could hinder its market position and financial performance.",3,3

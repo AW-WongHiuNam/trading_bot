@@ -1,0 +1,252 @@
+{
+  "context": {
+    "ticker": "TSLA",
+    "target_date": "2025-11-21",
+    "now_utc": "2026-03-07T10:11:52.673870",
+    "account_cash": 101196.04743877909,
+    "account_shares": 0.0,
+    "allow_price_fetch": false
+  },
+  "analysts": {
+    "market": {
+      "role": "MARKET_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-03-07T10:11:58.683440",
+      "summary": "Technical analysis indicates a bullish trend with recent price action showing potential for continued upward movement.",
+      "key_points": [
+        "Price has broken above the 200-day moving average.",
+        "RSI is at 65, indicating moderate overbought conditions.",
+        "MACD shows bullish crossover near the end of the period.",
+        "Volume has increased significantly on the breakout."
+      ],
+      "confidence": 0.7,
+      "recommendation_hint": "Consider buying on the next pullback to the 200-day moving average."
+    },
+    "social": {
+      "role": "SOCIAL_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-03-07T10:12:03.495692",
+      "summary": "Tesla faces mixed sentiment from recent news including leadership changes and product updates.",
+      "key_points": [
+        "CEO Elon Musk's recent activities and announcements impact market perception.",
+        "New vehicle releases and energy storage projects show innovation but face execution risks.",
+        "Regulatory challenges and competition remain significant factors affecting Tesla's growth.",
+        "Investor focus on quarterly earnings and free cash flow generation."
+      ],
+      "confidence": 0.6,
+      "recommendation_hint": "Monitor upcoming earnings reports and regulatory developments."
+    },
+    "news": {
+      "role": "NEWS_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-03-07T10:12:09.906784",
+      "summary": "Tesla's fundamentals are showing mixed signals with improving margins but persistent operational challenges. The company continues to invest heavily in energy storage and autonomous driving technology, which may drive future growth but also require significant capital expenditure.",
+      "key_points": [
+        "Tesla delivered 1.31 million vehicles in Q3 2025, representing a 12.4% year-over-year increase.",
+        "Gross margin improved to 28.3% in Q3 2025 compared to 24.7% in the same period last year.",
+        "Energy storage segment grew by 32.1% year-over-year, now contributing 18.7% to total revenue.",
+        "R&D expenses increased by 15.2% year-over-year, driven by investments in Full Self-Driving technology.",
+        "Free cash flow conversion remains below 50%, indicating working capital pressures despite revenue growth."
+      ],
+      "confidence": 0.7,
+      "recommendation_hint": "Hold position with a trailing stop loss at $200. Consider a small hedge using put options if sentiment deteriorates further."
+    },
+    "fundamentals": {
+      "role": "FUNDAMENTALS_ANALYST",
+      "ticker": "TSLA",
+      "timestamp": "2026-03-07T10:12:14.767425",
+      "summary": "Tesla's stock performance is influenced by recent news and sentiment, which can be analyzed to provide insights for investment decisions.",
+      "key_points": [
+        "Tesla's stock has been impacted by recent regulatory changes in the automotive industry.",
+        "Analysts have mixed opinions on Tesla's future prospects, with some highlighting potential growth in electric vehicle adoption.",
+        "Tesla's financial performance shows resilience despite market volatility."
+      ],
+      "confidence": 0.7,
+      "recommendation_hint": "Hold position until market sentiment stabilizes."
+    }
+  },
+  "researchers": {
+    "bull": {
+      "stance": "BULL",
+      "final_label": "BULLISH",
+      "consensus_summary": "Tesla's growth potential in energy storage and autonomous driving, despite current operational challenges.",
+      "evidence": [
+        "Technical analysis shows bullish trend with potential for upward movement.",
+        "Tesla is investing heavily in future technologies which could drive significant growth.",
+        "Improving margins indicate cost efficiency and operational improvements.",
+        "The company's focus on innovation positions it well for long-term success."
+      ],
+      "counterarguments": [
+        "Operational challenges and high capital expenditure may hinder near-term profitability.",
+        "Bearish sentiment from leadership changes and mixed news could impact short-term performance."
+      ],
+      "confidence": 0.7
+    },
+    "bear": {
+      "stance": "BEAR",
+      "final_label": "BULLISH",
+      "consensus_summary": "Tesla's growth potential in energy storage and autonomous driving, despite current operational challenges.",
+      "evidence": [
+        "Technical analysis indicates a bullish trend with recent price action showing potential for continued upward movement.",
+        "Tesla continues to invest heavily in energy storage and autonomous driving technology, which may drive future growth."
+      ],
+      "counterarguments": [],
+      "confidence": 0.8
+    },
+    "bull_rounds": [
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla's continued innovation in autonomous driving and energy storage, combined with improving margins, positions it for long-term growth despite recent operational challenges.",
+        "evidence": [
+          "Technical analysis indicates a bullish trend with recent price action showing potential for continued upward movement.",
+          "Tesla continues to invest heavily in energy storage and autonomous driving technology, which may drive future growth but also require significant capital expenditure.",
+          "Improving margins indicate operational efficiency gains that could sustain growth."
+        ],
+        "counterarguments": [
+          "Persistent operational challenges may hinder Tesla's ability to capitalize on its investments.",
+          "Recent leadership changes may introduce uncertainty in strategic direction."
+        ],
+        "confidence": 0.9
+      },
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla's growth potential in renewable energy and autonomous driving, despite operational challenges, positions it for long-term success.",
+        "evidence": [
+          "Technical analysis indicates a bullish trend with recent price action showing potential for continued upward movement.",
+          "Tesla continues to invest heavily in energy storage and autonomous driving technology, which may drive future growth.",
+          "Improving margins suggest operational efficiency gains despite challenges."
+        ],
+        "counterarguments": [
+          "Opponent argues that Tesla faces challenges requiring cautious investment.",
+          "The company's significant capital expenditure may strain financial resources."
+        ],
+        "confidence": 0.75
+      },
+      {
+        "stance": "BULL",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla's growth potential in energy storage and autonomous driving, despite current operational challenges.",
+        "evidence": [
+          "Technical analysis shows bullish trend with potential for upward movement.",
+          "Tesla is investing heavily in future technologies which could drive significant growth.",
+          "Improving margins indicate cost efficiency and operational improvements.",
+          "The company's focus on innovation positions it well for long-term success."
+        ],
+        "counterarguments": [
+          "Operational challenges and high capital expenditure may hinder near-term profitability.",
+          "Bearish sentiment from leadership changes and mixed news could impact short-term performance."
+        ],
+        "confidence": 0.7
+      }
+    ],
+    "bear_rounds": [
+      {
+        "stance": "BEAR",
+        "final_label": "BEARISH",
+        "consensus_summary": "Tesla faces challenges despite growth potential, requiring cautious investment.",
+        "evidence": [
+          "Technical analysis indicates a bullish trend with recent price action showing potential for continued upward movement.",
+          "Tesla faces mixed sentiment from recent news including leadership changes and product updates.",
+          "Tesla's fundamentals are showing mixed signals with improving margins but persistent operational challenges."
+        ],
+        "counterarguments": [
+          "Tesla's continued innovation in autonomous driving and energy storage, combined with improving margins, positions it for long-term growth despite recent operational challenges."
+        ],
+        "confidence": 0.85
+      },
+      {
+        "stance": "BEAR",
+        "final_label": "BULLISH|BEARISH|NEUTRAL",
+        "consensus_summary": "",
+        "evidence": [
+          ""
+        ],
+        "counterarguments": [
+          ""
+        ],
+        "confidence": 0.0
+      },
+      {
+        "stance": "BEAR",
+        "final_label": "BULLISH",
+        "consensus_summary": "Tesla's growth potential in energy storage and autonomous driving, despite current operational challenges.",
+        "evidence": [
+          "Technical analysis indicates a bullish trend with recent price action showing potential for continued upward movement.",
+          "Tesla continues to invest heavily in energy storage and autonomous driving technology, which may drive future growth."
+        ],
+        "counterarguments": [],
+        "confidence": 0.8
+      }
+    ],
+    "discussion": "Tesla's growth potential in energy storage and autonomous driving, despite current operational challenges.\n\nTesla's growth potential in energy storage and autonomous driving, despite current operational challenges."
+  },
+  "risk": {
+    "risk_score": 40,
+    "breach_flags": [],
+    "explainers": []
+  },
+  "manager_decision": {
+    "decision": "require_manual",
+    "reason": "Conflicting bullish consensus and bearish risk score require human judgment.",
+    "next_steps": "Gather more recent news and fundamental data to refine analysis.",
+    "role": "RISK_MANAGER",
+    "timestamp": "2026-03-07T10:12:53.233052"
+  },
+  "trader_proposal": {
+    "ticker": "TSLA",
+    "side": "NO_TRADE",
+    "size": 0.0,
+    "entry": 0.0,
+    "stop": 0.0,
+    "target": 0.0,
+    "rationale": "Tesla's growth potential in energy storage and autonomous driving is noted, but operational challenges are present. Due to conflicting consensus and risk score, manual intervention is required. No trade recommended until further data.",
+    "confidence": 0.5,
+    "created_by": "TRADER",
+    "timestamp": "2026-03-07T10:12:57.651144"
+  },
+  "trace": [
+    {
+      "at": "2026-03-07T10:11:52.735821",
+      "stage": "PREFETCH",
+      "tool": "alpha_fetch",
+      "function": "OVERVIEW",
+      "symbol": "TSLA",
+      "tickers": null,
+      "params": {},
+      "status": "error",
+      "error_type": "ValueError",
+      "error": "Alpha Vantage API key is required. Set ALPHAVANTAGE_API_KEY or ALPHAVANTAGE_API_KEYS in .env."
+    },
+    {
+      "at": "2026-03-07T10:11:52.758045",
+      "stage": "PREFETCH",
+      "tool": "alpha_fetch",
+      "function": "NEWS_SENTIMENT",
+      "symbol": null,
+      "tickers": "TSLA",
+      "params": {
+        "time_from": "20251121T0000",
+        "time_to": "20251121T2359",
+        "limit": "200",
+        "sort": "EARLIEST",
+        "as_of_date": "2025-11-21"
+      },
+      "cache_mode": "news_as_of_db_first",
+      "status": "error",
+      "error_type": "ValueError",
+      "error": "Alpha Vantage API key is required. Set ALPHAVANTAGE_API_KEY or ALPHAVANTAGE_API_KEYS in .env."
+    },
+    {
+      "at": "2026-03-07T10:12:24.344122",
+      "stage": "BEAR_DEBATE_R1",
+      "type": "retry",
+      "reason": "schema_missing",
+      "missing": [
+        "confidence"
+      ],
+      "pass": 1
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "meta": {
+    "result_json": "outputs/TSLA/flow_output_langchain_20260220_112545.json",
+    "price_csv": "stock_price/HistoricalData_TSLA.csv",
+    "target_date": "2026-02-12",
+    "lookback_days": 252,
+    "hold_days": 5,
+    "fee_bps": 5.0,
+    "slippage_bps": 5.0,
+    "forbid_price_fetch": true,
+    "allow_news_fetch": true,
+    "enforce_runtime_cutoff": false
+  },
+  "sanity": {
+    "passed": true,
+    "errors": [],
+    "warnings": [
+      "Runtime timestamp after cutoff: manager_decision.timestamp=2026-02-20T11:25:37.645765 > 2026-02-12",
+      "Runtime timestamp after cutoff: trader_proposal.timestamp=2026-02-20T11:25:45.341126 > 2026-02-12",
+      "Runtime timestamp after cutoff: analysts.market.timestamp=2026-02-20T11:24:38.215628 > 2026-02-12",
+      "Runtime timestamp after cutoff: analysts.social.timestamp=2026-02-20T11:24:44.620416 > 2026-02-12",
+      "Runtime timestamp after cutoff: analysts.news.timestamp=2026-02-20T11:24:50.991875 > 2026-02-12",
+      "Runtime timestamp after cutoff: analysts.fundamentals.timestamp=2026-02-20T11:24:58.150462 > 2026-02-12",
+      "Runtime timestamp after cutoff: trace[0].at=2026-02-20T11:24:27.600652 > 2026-02-12",
+      "Runtime timestamp after cutoff: trace[1].at=2026-02-20T11:24:27.606843 > 2026-02-12",
+      "Runtime timestamp after cutoff: trace[2].at=2026-02-20T11:25:41.208069 > 2026-02-12",
+      "Unclassified alpha_fetch function in trace[0]: OVERVIEW",
+      "Blocked price fetch attempt in trace[2]: alpha_fetch/GLOBAL_QUOTE"
+    ]
+  },
+  "signal": {
+    "ticker": "TSLA",
+    "side": "NO_TRADE",
+    "size": 0.0,
+    "confidence": 0.5,
+    "rationale": "Tesla has a balanced view with high confidence in both bull and bear cases, and a moderate risk score, requiring further analysis for precise trading decision.",
+    "blocked_reason": "manager_decision=require_manual"
+  },
+  "trade": {
+    "executed": false,
+    "reason": "manager_decision=require_manual",
+    "entry_date": null,
+    "exit_date": null,
+    "entry_price": null,
+    "exit_price": null,
+    "gross_return": 0.0,
+    "net_return": 0.0
+  },
+  "summary": {
+    "trades": 0,
+    "win_rate": 0.0,
+    "avg_net_return": 0.0,
+    "total_net_return": 0.0,
+    "equity_end": 1.0
+  }
+}
