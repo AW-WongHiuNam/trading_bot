@@ -1,10 +1,13 @@
 import os
-from fastapi.testclient import TestClient
-from app.main import app
 
 os.environ.setdefault("JOBS_FAKE_RUN", "1")
 os.environ.setdefault("STOCK_FAKE_DATA", "1")
 
+from fastapi.testclient import TestClient
+from app.db.init_db import init_db
+from app.main import app
+
+init_db()
 client = TestClient(app)
 
 
@@ -48,3 +51,33 @@ def test_stock():
     assert r.status_code == 200
     assert r.json()["ticker"] == "TSLA"
     assert len(r.json()["points"]) > 0
+
+
+def test_backtesting_endpoints_and_trade_history():
+    r = client.post(
+        "/api/v1/backtesting/analyze",
+        json={
+            "ticker": "NVDA",
+            "start_date": "2025-10-01",
+            "end_date": "2025-10-03",
+            "decision_policy": "auto",
+        },
+    )
+    assert r.status_code == 200
+    job_id = r.json()["jobId"]
+
+    r = client.get(f"/api/v1/backtesting/status?jobId={job_id}")
+    assert r.status_code == 200
+    assert r.json()["status"] in ["completed", "running", "queued", "failed"]
+
+    r = client.get(f"/api/v1/backtesting/result?jobId={job_id}")
+    assert r.status_code == 200
+    assert r.json()["jobId"] == job_id
+
+    r = client.get("/api/v1/backtesting/list")
+    assert r.status_code == 200
+    assert isinstance(r.json().get("items"), list)
+
+    r = client.get("/api/v1/trade-history?ticket=NVDA&start=2025-10-01&end=2025-10-31")
+    assert r.status_code == 200
+    assert isinstance(r.json().get("items"), list)

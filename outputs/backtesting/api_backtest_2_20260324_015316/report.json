@@ -1,0 +1,35 @@
+{
+  "meta": {
+    "ticker": "NVDA",
+    "start_date": "2025-10-01",
+    "end_date": "2025-10-03",
+    "decision_policy": "auto"
+  },
+  "summary": {
+    "trades": 1,
+    "win_rate": 1.0,
+    "avg_return": 0.012,
+    "total_return": 0.012,
+    "final_cash": 101200.0,
+    "trading_days": 1
+  },
+  "artifacts": {
+    "daily_outputs_dir": "",
+    "daily_summary_csv": ""
+  },
+  "days": [
+    {
+      "ticker": "NVDA",
+      "date": "2025-10-01",
+      "side": "BUY",
+      "size": 0.2,
+      "trade_executed": true,
+      "entry_date": "2025-10-01",
+      "exit_date": "2025-10-03",
+      "entry_price": 100.0,
+      "exit_price": 101.2,
+      "net_return": 0.012,
+      "pnl": 1200.0
+    }
+  ]
+}
