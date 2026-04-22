@@ -4,6 +4,7 @@ __pycache__/
 .env
 app/data/app.db
 app/data/backtesting_price_cache/
+flow_output_langchain.json
 vector_index.bin
 vector_store.sqlite
 vector_store.sqlite-shm
