@@ -43,6 +43,11 @@ Request body:
 }
 ```
 
+Notes:
+- `price_csv` is optional.
+- If omitted, the backtesting service now tries to fetch stock data from EasyTradingBackend `POST /api/price` and writes a compatible cached CSV for the existing backtesting engine.
+- If that backend fetch fails, it falls back to `stock_price/HistoricalData_<TICKER>.csv`.
+
 Response:
 ```json
 {

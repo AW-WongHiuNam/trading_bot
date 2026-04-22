@@ -1252,6 +1252,7 @@ def run_langchain_flow(
     account_cash: float = 100000.0,
     account_shares: float = 0.0,
     allow_price_fetch: bool = False,
+    recursion_limit: int | None = None,
 ) -> dict:
     # Backward-compatible entrypoint name.
     # Now prefers LangGraph for orchestration; falls back to legacy sequential flow
@@ -1265,6 +1266,7 @@ def run_langchain_flow(
             account_cash=account_cash,
             account_shares=account_shares,
             allow_price_fetch=allow_price_fetch,
+            recursion_limit=recursion_limit,
         )
     return _run_legacy_sequential_flow(template_path=template_path, model=model, ticker=ticker)
 
@@ -1345,6 +1347,7 @@ def run_langgraph_flow(
     account_cash: float = 100000.0,
     account_shares: float = 0.0,
     allow_price_fetch: bool = False,
+    recursion_limit: int | None = None,
 ) -> dict:
     """LangGraph-orchestrated version of the flow (Flow #2).
 
@@ -1981,6 +1984,18 @@ def run_langgraph_flow(
     graph.add_edge("finalize", END)
 
     app = graph.compile()
+    if recursion_limit is None:
+        try:
+            recursion_limit = int(os.environ.get("LANGGRAPH_RECURSION_LIMIT", "320"))
+        except Exception:
+            recursion_limit = 320
+    try:
+        recursion_limit = int(recursion_limit)
+    except Exception:
+        recursion_limit = 320
+    # This graph has many nodes and can legitimately exceed 120 steps when retries occur.
+    recursion_limit = max(120, min(recursion_limit, 5000))
+
     out_state: FlowState = app.invoke({
         "template_path": template_path,
         "ticker": ticker,
@@ -1991,5 +2006,5 @@ def run_langgraph_flow(
         "account_shares": float(account_shares),
         "scenario_ctx": scenario_ctx,
         "allow_price_fetch": bool(allow_price_fetch),
-    })
+    }, {"recursion_limit": recursion_limit})
     return out_state.get("final") or {}

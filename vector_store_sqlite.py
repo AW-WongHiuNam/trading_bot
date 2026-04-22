@@ -23,13 +23,30 @@ def _env_truthy(name: str) -> bool:
 class OllamaEmbeddings:
     def __init__(self, model: str = "nomic-embed-text", ollama_url: Optional[str] = None):
         self.model = model
-        self.ollama_url = ollama_url or "http://127.0.0.1:11434/api/embeddings"
+        self.ollama_url = ollama_url or "http://127.0.0.1:11434/api/embed"
         self.retries = int(os.environ.get("OLLAMA_EMBED_RETRIES", "4"))
         self.backoff_sec = float(os.environ.get("OLLAMA_EMBED_BACKOFF_SEC", "1.0"))
         self.min_interval_sec = float(os.environ.get("OLLAMA_EMBED_MIN_INTERVAL_SEC", "0.35"))
         self.timeout_sec = int(os.environ.get("OLLAMA_EMBED_TIMEOUT_SEC", "90"))
+        self.max_chars = max(512, int(os.environ.get("OLLAMA_EMBED_MAX_CHARS", "12000")))
+        self.min_chars = max(128, int(os.environ.get("OLLAMA_EMBED_MIN_CHARS", "512")))
         self._req_lock = threading.Lock()
         self._last_request_at = 0.0
+
+    def _is_context_length_error(self, status_code: Optional[int], body: str) -> bool:
+        if status_code != 400:
+            return False
+        msg = (body or "").lower()
+        return (
+            "context length" in msg
+            or "input length exceeds" in msg
+            or "too long" in msg
+            or "maximum context length" in msg
+        )
+
+    def _next_shrink_len(self, current_len: int) -> int:
+        # Conservative step-down to quickly fit model limits while preserving signal.
+        return max(self.min_chars, int(current_len * 0.7))
 
     def _throttle(self) -> None:
         if self.min_interval_sec <= 0:
@@ -45,7 +62,15 @@ class OllamaEmbeddings:
             return []
         vectors: List[List[float]] = []
         for t in texts:
-            payload = {"model": self.model, "prompt": t or ""}
+            text = (t or "").replace("\x00", " ").strip()
+            if len(text) > self.max_chars:
+                text = text[: self.max_chars]
+            # /api/embed expects `input`, while /api/embeddings expects `prompt`.
+            use_input_key = "/api/embed" in self.ollama_url and "/api/embeddings" not in self.ollama_url
+            payload = {
+                "model": self.model,
+                ("input" if use_input_key else "prompt"): ([text] if use_input_key else text),
+            }
             attempt = 0
             data = None
             while True:
@@ -56,11 +81,76 @@ class OllamaEmbeddings:
                     resp.raise_for_status()
                     data = resp.json()
                     break
-                except requests.RequestException:
+                except requests.RequestException as e:
+                    # Some Ollama versions accept `input` as string only for /api/embed.
+                    status_code = getattr(getattr(e, "response", None), "status_code", None)
+                    if status_code == 400:
+                        body = ""
+                        try:
+                            body = (e.response.text or "").strip()  # type: ignore[union-attr]
+                        except Exception:
+                            body = ""
+                        if body:
+                            print(f"VectorStore: embed 400 response body: {body[:500]}")
+                        if self._is_context_length_error(status_code, body):
+                            if len(text) <= self.min_chars:
+                                raise ValueError(
+                                    f"Embedding input still exceeds model context window at {len(text)} chars"
+                                ) from e
+                            new_len = self._next_shrink_len(len(text))
+                            if new_len >= len(text):
+                                new_len = max(self.min_chars, len(text) - 1)
+                            text = text[:new_len]
+                            payload = {
+                                "model": self.model,
+                                ("input" if use_input_key else "prompt"): ([text] if use_input_key else text),
+                            }
+                            print(f"VectorStore: shrinking embedding input to {new_len} chars due to context limit")
+                            continue
+                    if use_input_key and status_code == 400 and isinstance(payload.get("input"), list):
+                        alt_payload = {"model": self.model, "input": text}
+                        try:
+                            with self._req_lock:
+                                self._throttle()
+                                alt_resp = requests.post(self.ollama_url, json=alt_payload, timeout=self.timeout_sec)
+                            alt_resp.raise_for_status()
+                            data = alt_resp.json()
+                            break
+                        except requests.RequestException as alt_e:
+                            alt_status = getattr(getattr(alt_e, "response", None), "status_code", None)
+                            alt_body = ""
+                            if alt_status == 400:
+                                try:
+                                    alt_body = (alt_e.response.text or "").strip()  # type: ignore[union-attr]
+                                except Exception:
+                                    alt_body = ""
+                            if self._is_context_length_error(alt_status, alt_body):
+                                if len(text) <= self.min_chars:
+                                    raise ValueError(
+                                        f"Embedding input still exceeds model context window at {len(text)} chars"
+                                    ) from alt_e
+                                new_len = self._next_shrink_len(len(text))
+                                if new_len >= len(text):
+                                    new_len = max(self.min_chars, len(text) - 1)
+                                text = text[:new_len]
+                                payload = {"model": self.model, "input": [text]}
+                                print(f"VectorStore: shrinking embedding input to {new_len} chars due to context limit")
+                                continue
+                            e = alt_e
                     attempt += 1
                     if attempt > self.retries:
                         raise
                     time.sleep(self.backoff_sec * (2 ** (attempt - 1)))
+
+            # Some Ollama builds may return empty embeddings when the wrong key is used.
+            # Retry once with the alternate key shape before failing.
+            if isinstance(data, dict) and data.get("embeddings") == []:
+                alt_payload = {"model": self.model, ("prompt" if use_input_key else "input"): text}
+                with self._req_lock:
+                    self._throttle()
+                    alt_resp = requests.post(self.ollama_url, json=alt_payload, timeout=self.timeout_sec)
+                alt_resp.raise_for_status()
+                data = alt_resp.json()
 
             if isinstance(data, dict):
                 if "embedding" in data and isinstance(data["embedding"], list) and data["embedding"]:

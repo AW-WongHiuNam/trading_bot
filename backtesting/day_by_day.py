@@ -7,6 +7,7 @@ import os
 import sys
 from datetime import datetime
 from pathlib import Path
+from typing import Callable, Any
 
 if __package__ is None or __package__ == "":
     sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -53,6 +54,7 @@ def run_period(
     enforce_runtime_cutoff: bool,
     decision_policy: str,
     out_dir: Path,
+    progress_callback: Callable[[dict[str, Any]], None] | None = None,
 ) -> dict:
     from chains.langchain_chains import run_langchain_flow
 
@@ -78,6 +80,20 @@ def run_period(
 
     for idx, day in enumerate(trading_days, start=1):
         day_iso = day.isoformat()
+        if progress_callback is not None:
+            try:
+                progress_callback(
+                    {
+                        "event": "day_started",
+                        "ticker": ticker,
+                        "date": day_iso,
+                        "index": idx,
+                        "total": total_days,
+                        "progress": 5 + int((idx / max(total_days, 1)) * 90),
+                    }
+                )
+            except Exception:
+                pass
         print(f"[day_by_day] {idx}/{total_days} ({(idx / total_days) * 100:.1f}%) running {ticker} @ {day_iso}", flush=True)
 
         flow = run_langchain_flow(
@@ -158,6 +174,31 @@ def run_period(
             "bear_rounds": len(((flow.get("researchers") or {}).get("bear_rounds") or [])),
         }
         rows.append(row)
+        if progress_callback is not None:
+            try:
+                progress_callback(
+                    {
+                        "event": "day_completed",
+                        "ticker": ticker,
+                        "date": day_iso,
+                        "index": idx,
+                        "total": total_days,
+                        "progress": 5 + int((idx / max(total_days, 1)) * 90),
+                        "sanity_passed": sanity.passed,
+                        "side": signal.side,
+                        "size": signal.size,
+                        "trade_executed": trade.executed,
+                        "entry_date": row.get("entry_date"),
+                        "exit_date": row.get("exit_date"),
+                        "entry_price": row.get("entry_price"),
+                        "exit_price": row.get("exit_price"),
+                        "net_return": row.get("net_return"),
+                        "pnl": pnl,
+                        "cash_after": cash,
+                    }
+                )
+            except Exception:
+                pass
         print(
             f"[day_by_day] done {day_iso} | sanity={sanity.passed} | side={signal.side} | executed={trade.executed} | cash={cash:.2f}",
             flush=True,

@@ -1,0 +1,10 @@
+outputs/
+__pycache__/
+*.py[cod]
+.env
+app/data/app.db
+app/data/backtesting_price_cache/
+vector_index.bin
+vector_store.sqlite
+vector_store.sqlite-shm
+vector_store.sqlite-wal

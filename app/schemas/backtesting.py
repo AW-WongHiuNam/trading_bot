@@ -1,5 +1,7 @@
 from pydantic import BaseModel
 
+from app.schemas.trade import TradeHistoryItem
+
 
 class BacktestingAnalyzeIn(BaseModel):
     ticker: str
@@ -19,6 +21,7 @@ class BacktestingStatusOut(BaseModel):
     progress: int
     error: str | None
     latest_state: dict | None
+    trade_history: list[TradeHistoryItem] = []
 
 
 class BacktestingJobItem(BaseModel):
@@ -43,3 +46,4 @@ class BacktestingResultOut(BaseModel):
     summary: dict | None
     report_path: str | None
     artifacts: dict | None = None
+    trade_history: list[TradeHistoryItem] = []

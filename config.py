@@ -19,7 +19,7 @@ class Settings:
     ann_ef: int = 200
     ann_m: int = 16
     vector_dim: int = 768
-    ollama_embed_url: Optional[str] = "http://127.0.0.1:11434/api/embeddings"
+    ollama_embed_url: Optional[str] = "http://127.0.0.1:11434/api/embed"
     ollama_embed_model: str = "nomic-embed-text:latest"
     ollama_completion_url: str = "http://127.0.0.1:11434/completion"
     ollama_chat_model: str = "qwen2.5:14b"
@@ -67,7 +67,7 @@ def load_config(dotenv_path: str = ".env") -> Settings:
         ann_ef=_get_int("ANN_EF", 200),
         ann_m=_get_int("ANN_M", 16),
         vector_dim=_get_int("VECTOR_DIM", 768),
-        ollama_embed_url=os.getenv("OLLAMA_EMBED_URL", "http://127.0.0.1:11434/api/embeddings"),
+        ollama_embed_url=os.getenv("OLLAMA_EMBED_URL", "http://127.0.0.1:11434/api/embed"),
         ollama_embed_model=os.getenv("OLLAMA_EMBED_MODEL", "nomic-embed-text:latest"),
         ollama_completion_url=os.getenv("OLLAMA_COMPLETION_URL", "http://127.0.0.1:11434/completion"),
         ollama_chat_model=os.getenv("OLLAMA_CHAT_MODEL", "qwen2.5:14b"),
